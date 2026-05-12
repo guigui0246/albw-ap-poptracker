@@ -812,3 +812,20 @@ function ir_big_key() return hasAny({ "keysy_big", "ir_big_key" }) end
 function noAPConnection()
     return AutoTracker:GetConnectionState("AP") < 2
 end
+
+function update_p_merge_items()
+    if has_amount("p_merge", 1) then
+        local p_bracelet = Tracker:FindObjectForCode("p_bracelet")
+        p_bracelet.CurrentStage = 2
+    end
+    if has_amount("p_merge", 2) then
+        local quake = Tracker:FindObjectForCode("quake")
+        quake.CurrentStage = 1
+    end
+end
+
+ScriptHost:AddWatchForCode(
+    "p_merge_watcher",
+    "p_merge",
+    update_p_merge_items
+)
