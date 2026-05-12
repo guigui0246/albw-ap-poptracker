@@ -19,11 +19,11 @@
       "display_name": "Full Map Tracker (Horizontal) QHD+ recommended",
       "flags": ["ap"]
     },
-    "z_map_vertical": {
+    "map_vertical": {
       "display_name": "Full Map Tracker (Vertical) QHD+ recommended",
       "flags": ["ap"]
     },
-    "zz_items_only": {
+    "items_only": {
       "display_name": "Item-only Tracker",
       "flags": ["ap"]
     }
