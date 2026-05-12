@@ -2,9 +2,11 @@
 
 This is a [PopTracker](https://poptracker.github.io/) pack meant for tracking items and checks in The Legend of Zelda: A Link Between Worlds Randomizer runs.
 
+Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap-poptracker)
+
 ## Version History
 
-[](https://github.com/Legendgreat/albw-ap-poptracker/tree/master#version_history)
+[](https://github.com/guigui0246/albw-ap-poptracker/tree/master#version_history)
 
 ### 1.4.2
 
@@ -275,7 +277,7 @@ The tracker's logic is based on [z17-randomizer](https://github.com/rickfay/z17-
 
 ## Getting Started
 
-[](https://github.com/Legendgreat/albw-ap-poptracker/tree/master#getting-started)
+[](https://github.com/guigui0246/albw-ap-poptracker/tree/master#getting-started)
 
 ### Dependencies
 
@@ -289,19 +291,19 @@ The tracker's logic is based on [z17-randomizer](https://github.com/rickfay/z17-
 
 ### Untrackable Items and Locations
 
-[](https://github.com/Legendgreat/albw-ap-poptracker/tree/master#untrackable-items-and-locations)
+[](https://github.com/guigui0246/albw-ap-poptracker/tree/master#untrackable-items-and-locations)
 
-Not all locations are randomized, and thus not auto-trackable. See [Untrackable Items and Locations](https://github.com/Legendgreat/albw-ap-poptracker/blob/main/docs/UNTRACKABLE.md) for a list of untrackable items and locations.
+Not all locations are randomized, and thus not auto-trackable. See [Untrackable Items and Locations](https://github.com/guigui0246/albw-ap-poptracker/blob/main/docs/UNTRACKABLE.md) for a list of untrackable items and locations.
 
 ### Tracker Guide
 
-[](https://github.com/Legendgreat/albw-ap-poptracker/tree/master#tracker-guide)
+[](https://github.com/guigui0246/albw-ap-poptracker/tree/master#tracker-guide)
 
-See the [Tracker Guide](https://github.com/Legendgreat/albw-ap-poptracker/blob/main/docs/GUIDE.md) for info about the tracker itself, and logic surrounding various settings, sages and pendants.
+See the [Tracker Guide](https://github.com/guigui0246/albw-ap-poptracker/blob/main/docs/GUIDE.md) for info about the tracker itself, and logic surrounding various settings, sages and pendants.
 
 ### Hot Keys
 
-[](https://github.com/Legendgreat/albw-ap-poptracker/tree/master#hot-keys)
+[](https://github.com/guigui0246/albw-ap-poptracker/tree/master#hot-keys)
 
 You can use these in any PopTracker package, including this one.
 
@@ -322,9 +324,11 @@ For any issues regarding the randomizer in general, check out [randomsalience's 
 
 ## Authors
 
-Author: [Legend](https://github.com/Legendgreat)
-
+Original author: [Legend](https://github.com/Legendgreat)
 Discord: legendgreat
+
+This fork is maintained by [guigui0246](https://github.com/guigui0246)
+Discord: guigui0246
 
 ## License
 
