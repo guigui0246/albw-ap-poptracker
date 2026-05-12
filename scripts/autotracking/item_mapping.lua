@@ -80,4 +80,5 @@ ITEM_MAPPING = {
     [BASE + 75] = {"tr_small_keys", "consumable"},
     [BASE + 76] = {"lc_compass", "toggle"},
     [BASE + 77] = {"lc_small_keys", "consumable"},
+    [BASE + 78] = {"p_merge", "progressive"},
 }
