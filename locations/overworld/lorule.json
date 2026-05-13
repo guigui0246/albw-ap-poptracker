@@ -481,7 +481,16 @@
             ]
           },
           {
-            "name": "Great Rupee Fairy (3000 Rupees)",
+            "name": "Great Rupee Fairy (3000 Rupees, farm at Treacherous Tower)",
+            "access_rules": [
+              "$access_ldm_west, $attack, [bombs]",
+              "$access_ldm_west, $attack, [hammer]",
+              "$access_ldm_west, $attack, [trod]",
+              "[glitched], $glitched_access_ldm_west, $attack, [bombs]",
+              "[glitched], $glitched_access_ldm_west, $attack, [hammer]",
+              "[glitched], $glitched_access_ldm_west, $attack, [trod]",
+              "[hell]"
+            ],
             "map_locations": [
               {
                 "map": "lorule",
