@@ -1258,5 +1258,19 @@
         "codes": "p_bottle, golden_bee, goldenbee"
       }
     ]
+  },
+  {
+    "name": "Progressive Merge",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "PM_Merge",
+        "codes": "p_merge"
+      },
+      {
+        "name": "PM_Quake",
+        "codes": "p_merge"
+      }
+    ]
   }
 ]

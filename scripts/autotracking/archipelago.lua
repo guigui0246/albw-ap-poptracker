@@ -84,6 +84,45 @@ function dump_table(o, depth)
     end
 end
 
+function hasAmount(item, amount)
+    return Tracker:ProviderCountForCode(item) >= amount
+end
+
+function syncDisplay()
+    local bracelet = Tracker:FindObjectForCode("p_bracelet")
+    local quake = Tracker:FindObjectForCode("quake")
+    local merge = Tracker:FindObjectForCode("p_merge")
+    if not bracelet and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+        print("syncMergeDisplay: could not find object for code p_bracelet")
+    end
+    if not quake and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+        print("syncMergeDisplay: could not find object for code quake")
+    end
+    if not merge and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+        print("syncMergeDisplay: could not find object for code p_merge")
+    end
+
+    if hasAmount("p_merge", 1) and bracelet and bracelet.CurrentStage < 2 then
+        bracelet.CurrentStage = 2
+    end
+
+    if merge and merge.CurrentStage >= 2 and quake and quake.CurrentStage < 1 then
+        quake.CurrentStage = 1
+    end
+
+    local bottles = Tracker:FindObjectForCode("p_bottle")
+    local bee = Tracker:FindObjectForCode("@Hyrule Overworld/Kakariko Village/Bee House/Bee Badge reward (Need golden bee)")
+    if not bee and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+        print("syncDisplay: could not find location for code @Hyrule Overworld/Kakariko Village/Bee House/Bee Badge reward (Need golden bee)")
+    end
+    if not bottles and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+        print("syncDisplay: could not find object for code p_bottle")
+    end
+    if bottles and bottles.Active and bee and bee.AvailableChestCount == 0 then
+        bottles.CurrentStage = 2
+    end
+end
+
 
 function onSetReply(key, value, old)
 end
@@ -173,7 +212,7 @@ function onClear(slot_data)
         elseif (key == "trials_required" and value == 0) or (key == "open_trials_door" and value == 1) then
             Tracker:FindObjectForCode("lc_trials_door").CurrentStage = 1
         end
-        
+
         if SLOT_CODES[key] then
             Tracker:FindObjectForCode(SLOT_CODES[key].code).CurrentStage = SLOT_CODES[key].mapping[value]
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
@@ -181,6 +220,7 @@ function onClear(slot_data)
         end
     end
     Tracker.BulkUpdate = false
+    syncDisplay()
 end
 
 -- called when an item gets collected
@@ -254,6 +294,7 @@ function onItem(index, item_id, item_name, player_number)
         print(string.format("local items: %s", dump_table(LOCAL_ITEMS)))
         print(string.format("global items: %s", dump_table(GLOBAL_ITEMS)))
     end
+    syncDisplay()
     can_finish()
 end
 
@@ -284,6 +325,7 @@ function onLocation(location_id, location_name)
             print(string.format("onLocation: could not find object for code %s", value))
         end
     end
+    syncDisplay()
     can_finish()
 end
 
@@ -295,7 +337,7 @@ function onScout(location_id, location_name, item_id, item_name, item_player)
     end
 end
 
--- called when a bounce message is received 
+-- called when a bounce message is received
 function onBounce(value)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_BOUNCE then
         print(string.format("called onBounce: %s", dump_table(value)))

@@ -184,7 +184,7 @@ SLOT_CODES =
         {
             [0] = 0, -- No quake
             [1] = 1, -- Quake
-            [2] = 2  -- Progressive Merge
+            [2] = 0  -- Progressive Merge
         }
     },
     -- mother_maiamai =
