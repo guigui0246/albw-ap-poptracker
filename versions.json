@@ -2,7 +2,7 @@
   "versions": [
     {
       "package_version": "1.5.1",
-      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.1/albw-ap-poptracker-v1.5.1.zip",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/v1.5.1/albw-ap-poptracker-v1.5.1.zip",
       "sha256": "0CAE116B7F55BF48727B3BE6563339DE21F5F72EF01FDDF9630DADC1DAD2C5BB",
       "changelog": [
         "Fix Desert Palace check display on overworld map",
