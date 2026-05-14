@@ -593,14 +593,14 @@
       {
         "img": "images/settings/Mother_Maiamai.png",
         "img_mods": "@disabled,overlay|images/settings/OFF.png",
-        "codes": "shuffle_maiamai_reward, shuffle_maiamai_reward_off",
+        "codes": "shuffle_maiamai_rewards, shuffle_maiamai_rewards_off",
         "name": "Mother Maiamai Shuffle (Off)",
         "inherit_codes": false
       },
       {
         "img": "images/settings/Mother_Maiamai.png",
         "img_mods": "overlay|images/settings/Shuffled.png",
-        "codes": "shuffle_maiamai_reward, shuffle_maiamai_reward_on",
+        "codes": "shuffle_maiamai_rewards, shuffle_maiamai_rewards_on",
         "name": "Mother Maiamai Shuffle (On)",
         "inherit_codes": false
       }

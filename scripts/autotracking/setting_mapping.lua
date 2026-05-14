@@ -187,9 +187,9 @@ SLOT_CODES =
             [2] = 0  -- Progressive Merge
         }
     },
-    shuffle_maiamai_reward =
+    shuffle_maiamai_rewards =
     {
-        code = "shuffle_maiamai_reward",
+        code = "shuffle_maiamai_rewards",
         mapping =
         {
             [0] = 0, -- Mother Maiamai default

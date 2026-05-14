@@ -762,7 +762,7 @@ function maiamaiUpgradeAvailable()
 end
 
 function forceShowMaiamais()
-    if Tracker:FindObjectForCode("shuffle_maiamai_reward").CurrentStage == 0 then
+    if Tracker:FindObjectForCode("shuffle_maiamai_rewards").CurrentStage == 0 then
         return false
     end
     if Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("maiamai_limit").CurrentStage then
