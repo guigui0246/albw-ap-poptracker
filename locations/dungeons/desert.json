@@ -330,7 +330,7 @@
           },
           {
             "name": "(1F) Big Chest (Behind Wall)",
-            "hosted_item": "dp_1f_big_chest_behind",
+            "hosted_item": "dp_1f_big_chest_behind_wall",
             "access_rules": [
               "{csmc_on, srod}",
               "$dp_small_keys|1, srod, $switch, $attack",
