@@ -761,8 +761,24 @@ function maiamaiUpgradeAvailable()
     end
 end
 
+function forceShowMaiamais()
+    if Tracker:FindObjectForCode("shuffle_maiamai_reward").CurrentStage == 0 then
+        return false
+    end
+    if Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("maiamai_limit").CurrentStage then
+        return false
+    end
+    return true
+end
+
 function motherMaiamai()
-    return Tracker:FindObjectForCode("nice_items").CurrentStage == 1
+    if Tracker:FindObjectForCode("nice_items").CurrentStage == 1 then
+        return true
+    end
+    if Tracker:FindObjectForCode("nice_items").CurrentStage == 0 then
+        return false
+    end
+    return forceShowMaiamais()
 end
 
 function canUpgradeItem()

@@ -118,7 +118,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -138,7 +138,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["flippers"]
               }
             ]
@@ -158,7 +158,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -178,7 +178,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["power_glove"]
               }
             ]
@@ -198,7 +198,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -218,7 +218,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -237,7 +237,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "titansmitt",
                   "power_glove, hammer",
@@ -262,7 +262,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge, titansmitt"]
               }
             ]
@@ -287,7 +287,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -307,7 +307,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -327,7 +327,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "flippers, merge",
                   "[hell], flippers, $beeBoost"
@@ -350,7 +350,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -370,7 +370,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "merge, flippers",
                   "[advanced], merge, $fakeFlippers",
@@ -396,7 +396,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "flippers",
                   "[advanced], $fakeFlippers",
@@ -424,7 +424,7 @@
                   "merge, crack_graveyard",
                   "not_cracksanity, merge, quake_on, crack_graveyard_lorule"
                 ],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           }
@@ -448,7 +448,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -467,7 +467,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["srod"]
               }
             ]
@@ -487,7 +487,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -507,7 +507,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled"],
+                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -532,7 +532,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -552,7 +552,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["trod"]
               }
             ]
@@ -572,7 +572,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -592,7 +592,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -612,7 +612,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge, titansmitt"]
               }
             ]
@@ -632,7 +632,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -652,7 +652,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["trod"]
               }
             ]
@@ -672,7 +672,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -697,7 +697,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -717,7 +717,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "flippers",
                   "[advanced], $fakeFlippers",
@@ -741,7 +741,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -761,7 +761,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -781,7 +781,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -801,7 +801,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt, merge"]
               }
             ]
@@ -826,7 +826,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
               }
             ]
@@ -846,7 +846,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["$access_desert, srod"]
               }
             ]
@@ -866,7 +866,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "$access_desert_palace, srod",
                   "[glitched], $glitched_access_desert_palace, srod"
@@ -895,7 +895,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -915,7 +915,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["bombs, flippers"]
               }
             ]
@@ -935,7 +935,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["flippers"]
               }
             ]
@@ -961,7 +961,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge"]
               }
             ]
@@ -981,7 +981,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "trod, flippers",
                   "trod, wv_gales, bell",
@@ -1006,7 +1006,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["flippers"]
               }
             ]
@@ -1026,7 +1026,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "flippers",
                   "[advanced], $fakeFlippers",
@@ -1050,7 +1050,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt, merge"]
               }
             ]
@@ -1085,7 +1085,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1105,7 +1105,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1125,7 +1125,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1144,7 +1144,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1163,7 +1163,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1183,7 +1183,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "fsword",
                   "bow",
@@ -1215,7 +1215,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["$cutGrass"]
               }
             ]
@@ -1235,7 +1235,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
               }
             ]
@@ -1264,7 +1264,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
               }
             ]
@@ -1285,7 +1285,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1304,7 +1304,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1335,7 +1335,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1355,7 +1355,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "flippers",
                   "[advanced], $fakeFlippers",
@@ -1379,7 +1379,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge, flippers", "[advanced], merge, boots"]
               }
             ]
@@ -1399,7 +1399,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge, $cutGrass"]
               }
             ]
@@ -1419,7 +1419,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["merge, flippers"]
               }
             ]
@@ -1439,7 +1439,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1459,7 +1459,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1480,7 +1480,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1500,7 +1500,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1520,7 +1520,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           }
@@ -1550,7 +1550,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1569,7 +1569,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
               }
             ]
@@ -1589,7 +1589,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1610,7 +1610,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1629,7 +1629,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1649,7 +1649,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled"]
+                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1668,7 +1668,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "[hard]",
                   // Grab a bush from lower screen and throw
@@ -1703,7 +1703,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["quake_on, merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1722,7 +1722,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
               }
             ]
@@ -1743,7 +1743,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1763,7 +1763,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1782,7 +1782,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1803,7 +1803,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1822,7 +1822,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["flippers"]
               }
             ]
@@ -1842,7 +1842,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["boots"]
               }
             ]
@@ -1869,7 +1869,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1888,7 +1888,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["flippers"]
               }
             ]
@@ -1908,7 +1908,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
               }
             ]
@@ -1946,7 +1946,7 @@
                   "[advanced], cracksanity, crack_lorule_hotfoot, $fakeFlippers",
                   "[hell], cracksanity, crack_lorule_hotfoot, $beeFakeFlippers"
                 ],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -1965,7 +1965,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "titansmitt, not_cracksanity, quake_on",
                   "titansmitt, cracksanity, crack_lake_lorule",
@@ -2009,7 +2009,7 @@
                   "[hell], $hell_access_dark_ruins, $beeBoost, scroll",
                   "[hell], $hell_access_dark_ruins, $beeFakeFlippers"
                 ],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -2040,7 +2040,7 @@
                   "[hell], $hell_access_dark_ruins, $beeBoost, scroll",
                   "[hell], $hell_access_dark_ruins, $beeFakeFlippers"
                 ],
-                "visibility_rules": ["maiamai_mayhem_on"]
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
           },
@@ -2059,7 +2059,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on"],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
                   "not_cracksanity, quake_on, flippers",
                   "cracksanity, crack_lake_lorule, flippers",
