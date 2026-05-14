@@ -6,7 +6,7 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 ## Version History
 
-[](https://github.com/guigui0246/albw-ap-poptracker/tree/master#version_history)
+[](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
 ### 1.5.1
 
