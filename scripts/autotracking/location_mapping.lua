@@ -104,7 +104,7 @@ LOCATION_MAPPING = {
     ------------------------
     --- Lorule Overworld ---
     ------------------------
-    
+
     [BASE + 203] = {"@Lorule Overworld/Skull Woods Area/n-Shaped House/Heart Piece"},
     [BASE + 204] = {"@Lorule Overworld/Skull Woods Area/Destroyed House/Heart Piece"},
     [BASE + 224] = {"@Lorule Overworld/Graveyard/Lorule Sanctuary/Entrance Chest"},
@@ -134,7 +134,7 @@ LOCATION_MAPPING = {
     [BASE + 167] = {"@Lorule Overworld/Lorule Castle Area/Big Bomb Flower Cave/Chest"},
     [BASE + 139] = {"@Lorule Overworld/Lorule Castle Area/Octoball Derby (Score 100+)/Heart Piece reward"},
     [BASE + 138] = {"@Lorule Overworld/Lorule Castle Area/Rupee Rush (Lorule) (Score 150+)/Heart Piece reward"},
-    [BASE + 159] = {"@Lorule Overworld/Lorule Castle Area/Great Rupee Fairy (3000 Rupees)/Bottle reward"},
+    [BASE + 159] = {"@Lorule Overworld/Lorule Castle Area/Great Rupee Fairy (3000 Rupees, farm at Treacherous Tower)/Bottle reward"},
     [BASE + 175] = {"@Lorule Overworld/Misery Mire/Sand Mini-Dungeon/Chest"},
     [BASE + 176] = {"@Lorule Overworld/Misery Mire Ledge/Chest"},
     [BASE + 179] = {"@Lorule Overworld/Turtle Rock Area/Lorule Lake Chest/Chest"},
@@ -286,7 +286,7 @@ LOCATION_MAPPING = {
 
 
 
-    
+
 
     ---------------
     --- Maiamai ---
@@ -337,7 +337,7 @@ LOCATION_MAPPING = {
     [BASE + 56] = {"@_Hyrule Maiamai/Lake Hylia/Hyrule Hotfoot Rock/Maiamai"},
     [BASE + 58] = {"@_Hyrule Maiamai/Lake Hylia/Lake Hylia Shallow Ring/Maiamai"},
     [BASE + 85] = {"@_Hyrule Maiamai/Lake Hylia/Lake Hylia Island Tile/Maiamai"},
-    
+
     [BASE + 205] = {"@_Lorule Maiamai/Skull Woods Area/Skull Woods Grass/Maiamai"},
     [BASE + 206] = {"@_Lorule Maiamai/Skull Woods Area/Skull Woods Skull/Maiamai"},
     [BASE + 207] = {"@_Lorule Maiamai/Skull Woods Area/Destroyed House Tree/Maiamai"},
@@ -382,7 +382,7 @@ LOCATION_MAPPING = {
     [BASE + 180] = {"@_Lorule Maiamai/Turtle Rock Area/Lorule Lake West Wall/Maiamai"},
     [BASE + 181] = {"@_Lorule Maiamai/Turtle Rock Area/Lorule Lake Rock/Maiamai"},
     [BASE + 182] = {"@_Lorule Maiamai/Turtle Rock Area/Lorule Lake Water/Maiamai"},
-    
+
     [BASE + 117] = {"@_Mountain Maiamai/Death Mountain Base Rock/Maiamai"},
     [BASE + 123] = {"@_Mountain Maiamai/Death Mountain West Ledge/Maiamai"},
     [BASE + 126] = {"@_Mountain Maiamai/Outside Hookshot Mini-Dungeon/Maiamai"},
