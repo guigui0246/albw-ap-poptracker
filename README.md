@@ -12,6 +12,7 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 - Fix Desert Palace check display on overworld map
 - Fix maiamai in minigames
+- Add tracking for the new Mother Maiamai settings (won't work until apworld gets updated)
 
 ### 1.5.0
 
