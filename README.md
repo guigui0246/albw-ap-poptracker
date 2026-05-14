@@ -8,6 +8,17 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/master#version_history)
 
+### 1.5.1
+
+- Fix Desert Palace check display on overworld map
+- Fix maiamai in minigames
+
+### 1.5.0
+
+- Added tracking for Progressive Merge
+- Fix golden bee issue
+- Fix Great Rupee Fairy farming logic
+
 ### 1.4.2
 
 #### Bug Fixes
