@@ -1,6 +1,26 @@
 {
   "versions": [
     {
+      "package_version": "1.5.1",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.1/albw-ap-poptracker-v1.5.1.zip",
+      "sha256": "0CAE116B7F55BF48727B3BE6563339DE21F5F72EF01FDDF9630DADC1DAD2C5BB",
+      "changelog": [
+        "Fix Desert Palace check display on overworld map",
+        "Fix maiamai display in minigames",
+        "Add tracking for the new Mother Maiamai settings (won't work until apworld gets updated)"
+      ]
+    },
+    {
+      "package_version": "1.5.0",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.0/albw-ap-poptracker-v1.5.0.zip",
+      "sha256": "885B69BDFA9F6AD27D0FD2D6D535DE439592A7D57CA9AE69D6D97931BFDDF474",
+      "changelog": [
+        "Fix the golden bee being auto-checked when you received multiple bottles",
+        "Add the new progressive merge item",
+        "Fix the great rupee fairy being marked in logic without access to the Treacherous Tower for rupee farming"
+      ]
+    },
+    {
       "package_version": "1.4.2",
       "download_url": "https://github.com/Legendgreat/albw-ap-poptracker/releases/download/v1.4.2/ALBW_AP_PopTracker_v1.4.2.zip",
       "sha256": "1A1D62F6BBADBC85F3A192B3159E430C47EA920DF43ABED1736AB0F8E461DE51",
