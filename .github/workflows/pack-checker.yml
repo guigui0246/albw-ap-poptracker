@@ -13,40 +13,4 @@ jobs:
     name: Validate pack with pack-checker
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install utilities
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq curl
-
-      - name: Get latest pack-checker URL
-        id: get_release
-        run: |
-          API="https://api.github.com/repos/PopTracker/pack-checker/releases/latest"
-          URL=$(curl -s "$API" | jq -r '.assets[] | select(.name | test("ubuntu-amd64")) | .browser_download_url')
-          if [ -z "$URL" ] || [ "$URL" = "null" ]; then
-            echo "No ubuntu-amd64 asset found in latest release" >&2
-            exit 1
-          fi
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-
-      - name: Download and extract pack-checker
-        run: |
-          curl -L "${{ steps.get_release.outputs.url }}" -o pack-checker.tar.gz
-          mkdir -p pack-checker-tmp
-          tar -xzf pack-checker.tar.gz -C pack-checker-tmp || true
-          BIN=$(find pack-checker-tmp -type f -executable -name 'pack*' -print -quit)
-          if [ -z "$BIN" ]; then
-            echo "No pack-checker binary found after extraction" >&2
-            ls -la pack-checker-tmp
-            exit 1
-          fi
-          chmod +x "$BIN"
-          echo "BIN=$BIN" >> "$GITHUB_ENV"
-
-      - name: Run pack-checker
-        run: |
-          echo "Running pack-checker binary: $BIN"
-          "$BIN" .
+      - uses: PopTracker/pack-checker-action@v1
