@@ -828,3 +828,17 @@ function ir_big_key() return hasAny({ "keysy_big", "ir_big_key" }) end
 function noAPConnection()
     return AutoTracker:GetConnectionState("AP") < 2
 end
+
+function access_ghosts() {
+    local ghosts = Tracker:FindObjectForCode("hint_ghosts")
+    if not ghosts then
+        return false
+    end
+    if ghosts.CurrentStage == 0 then
+        return false
+    end
+    if ghosts.CurrentStage == 1 then
+        return true
+    end
+    return has("hint_glasses")
+}

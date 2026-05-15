@@ -303,5 +303,15 @@ SLOT_CODES =
             [99] = 99,
             [100] = 100
         }
-    }
+    },
+    hint_ghosts =
+    {
+        code = "hint_ghosts",
+        mapping =
+        {
+            [0] = 0, -- Ghosts Off
+            [1] = 1, -- Ghosts Always On
+            [2] = 2  -- Shuffled Glasses Required
+        }
+    },
 }

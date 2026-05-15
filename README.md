@@ -8,6 +8,10 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+### 1.5.2
+
+- Hint ghosts
+
 ### 1.5.1
 
 - Fix Desert Palace check display on overworld map

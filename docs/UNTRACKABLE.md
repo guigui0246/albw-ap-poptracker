@@ -18,6 +18,10 @@ These items are available to be auto-tracked, but not very useful otherwise, so 
 
 ## Locations/checks
 
+#### Hint Ghosts
+
+All hint ghosts are untrackable.
+
 #### Weather Vanes
 
 All weather vanes are untrackable
