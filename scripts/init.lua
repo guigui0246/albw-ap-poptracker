@@ -8,7 +8,7 @@ require("scripts/items_import")
 
 --- Maps
 Tracker:AddMaps("maps.json")
-Tracker:AddMaps("floors.json")
+-- Tracker:AddMaps("floors.json")
 
 --- Layouts
 require("scripts/layouts_import")
