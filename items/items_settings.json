@@ -1320,16 +1320,17 @@
     "initial_stage_idx": 1,
     "stages": [
       {
-        "img": "images/items/hint_glasses.png",
-        "img_mods": "overlay|images/settings/On.png",
-        "codes": "hint_ghosts, hint_ghosts_on",
-        "name": "Hint Ghosts (Always On)",
+        "img": "images/settings/Hint_Ghost.png",
+        "disabled_img_mods": "@disabled,overlay|images/settings/OFF.png",
+        "img_mods": "overlay|images/settings/ON.png",
+        "codes": "hint_ghosts",
+        "name": "Hint Ghosts",
         "inherit_codes": false
       },
       {
-        "img": "images/items/hint_glasses.png",
-        "img_mods": "overlay|images/settings/Shuffled.png",
-        "codes": "hint_ghosts, hint_ghosts_shuffled",
+        "img": "images/settings/hint_glasses.png",
+        "img_mods": "overlay|images/settings/Need.png",
+        "codes": "hint_ghosts",
         "name": "Hint Ghosts (need Hint Glasses)",
         "inherit_codes": false
       }
