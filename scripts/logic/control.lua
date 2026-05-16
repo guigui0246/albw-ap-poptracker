@@ -829,7 +829,7 @@ function noAPConnection()
     return AutoTracker:GetConnectionState("AP") < 2
 end
 
-function access_ghosts() {
+function access_ghosts()
     local ghosts = Tracker:FindObjectForCode("hint_ghosts")
     if not ghosts then
         return false
@@ -841,4 +841,4 @@ function access_ghosts() {
         return true
     end
     return has("hint_glasses")
-}
+end
