@@ -1,4 +1,4 @@
-if string.gsub(Tracker.ActiveVariantUID, "z+_", "") ~= "items_only" then
+if not string.match(Tracker.ActiveVariantUID, "items_only$") then
   Tracker:AddLocations("locations/overworld/hyrule.json")
   Tracker:AddLocations("locations/overworld/lorule.json")
   Tracker:AddLocations("locations/overworld/death_mountain.json")
