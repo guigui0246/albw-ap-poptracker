@@ -1311,5 +1311,28 @@
         "inherit_codes": false
       }
     ]
+  },
+  {
+    "name": "Hint Ghosts",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": true,
+    "initial_stage_idx": 1,
+    "stages": [
+      {
+        "img": "images/items/hint_glasses.png",
+        "img_mods": "overlay|images/settings/On.png",
+        "codes": "hint_ghosts, hint_ghosts_on",
+        "name": "Hint Ghosts (Always On)",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/items/hint_glasses.png",
+        "img_mods": "overlay|images/settings/Shuffled.png",
+        "codes": "hint_ghosts, hint_ghosts_shuffled",
+        "name": "Hint Ghosts (need Hint Glasses)",
+        "inherit_codes": false
+      }
+    ]
   }
 ]

@@ -21,4 +21,5 @@ if string.gsub(Tracker.ActiveVariantUID, "z+_", "") ~= "items_only" then
   Tracker:AddLocations("locations/overworld/cracks_hyrule.json")
   Tracker:AddLocations("locations/overworld/cracks_lorule.json")
   Tracker:AddLocations("locations/overworld/maiamai.json")
+  Tracker:AddLocations("locations/overworld/ghosts.json")
 end

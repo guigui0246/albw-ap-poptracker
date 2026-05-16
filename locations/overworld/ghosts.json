@@ -1,0 +1,1042 @@
+[
+  {
+    // Removing the _ will make ghosts checks appear under overworld checks.
+    "name": "_Hyrule Ghosts",
+    "chest_unopened_img": "images/items/unknown_compass.png",
+    "chest_opened_img": "images/items/compass.png",
+    "access_rules": ["$access_ghosts"],
+    "children": [
+      {
+        "name": "Lost Woods Area",
+        "children": [
+          {
+            "name": "Fortune-Teller Tent",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 410,
+                "y": 672,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_FortuneTeller",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Lost Woods Chest",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 350,
+                "y": 183,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_LostWoods",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Death Mountain Access",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 350,
+                "y": 183,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DeathMountainAccess",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "River Area",
+        "children": [
+          {
+            "name": "Above Sanctuary Wall Posts",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 859,
+                "y": 696,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_AboveSanctuaryWallPosts",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Witch's House",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1600,
+                "y": 677,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_WitchsHouse",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Zora's Domain",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1789,
+                "y": 396,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_ZoraDomain",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "merge",
+                  "[hell], flippers, $beeBoost"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Waterfall Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1475,
+                "y": 559,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_WaterfallCave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "merge"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Graveyard Wall",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1112,
+                "y": 579,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_HyruleGraveyardWall",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Grave Entrance",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1112,
+                "y": 579,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_HyruleGraveEntrance",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kakariko Village",
+        "children": [
+          {
+            "name": "Kakariko Well",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 514,
+                "y": 949,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_KakarikoWell",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Kakariko Shady Guy",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 210,
+                "y": 1186,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_KakarikoShadyGuy",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Cucco Ranch",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 450,
+                "y": 1362,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_CuccoRanch",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Rupee Rush",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 450,
+                "y": 1362,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_RupeeRush",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Stylish Woman",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 450,
+                "y": 1362,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_StylishWoman",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyrule Castle Area",
+        "children": [
+          {
+            "name": "Hyrule Castle Rocks",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 845,
+                "y": 839,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_HyruleCastleRocks",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Behind Blacksmith",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 589,
+                "y": 1082,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_BehindBlacksmith",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Blacksmith Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 640,
+                "y": 919,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_BlacksmithCave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Eastern Ruins",
+        "children": [
+          {
+            "name": "Eastern Ruins River",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1473,
+                "y": 1421,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_EasternRuinsRiver",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Eastern Ruins Entrance",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1782,
+                "y": 1201,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_EasternRuinsEntrance",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Eastern Ruins Pegs",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1708,
+                "y": 1001,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_EasternRuinsPegs",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Eastern Ruins Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1908,
+                "y": 1478,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_EasternRuinsCave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Desert",
+        "children": [
+          {
+            "name": "Desert East",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 660,
+                "y": 1915,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DesertEast",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": ["$access_desert"]
+              }
+            ]
+          },
+          {
+            "name": "Desert Center",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 323,
+                "y": 1679,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DesertCenter",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": ["$access_desert"]
+              }
+            ]
+          },
+          {
+            "name": "Desert Southwest",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 186,
+                "y": 1802,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DesertSouthwest",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "$access_desert"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Southern Ruins",
+        "children": [
+          {
+            "name": "Southern Ruins Bomb Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1200,
+                "y": 1844,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_SouthernRuinsBombCave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lake Hylia",
+        "children": [
+          {
+            "name": "HoG Entrance",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1644,
+                "y": 1685,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_HoGEntrance",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "flippers",
+                  "wv_gales, bell",
+                  "[advanced], $fakeFlippers",
+                  "[advanced], irod, hookshot",
+                  "[hell], $beeFakeFlippers"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lake Hylia Bottle",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1824,
+                "y": 1837,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_LakeHyliaBottle",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Hotfoot",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1963,
+                "y": 1687,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_HyruleHotfoot",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    // Removing the _ will make ghost checks appear under overworld checks.
+    "name": "_Lorule Ghost",
+    "chest_unopened_img": "images/items/unknown_compass.png",
+    "chest_opened_img": "images/items/compass.png",
+    "access_rules": ["$access_ghosts"],
+    "children": [
+      {
+        "name": "Skull Woods Area",
+        "access_rules": ["$access_skull_woods_area"],
+        "children": [
+          {
+            "name": "n-Shaped House",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 289,
+                "y": 856,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_nShapedHouse",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Skull Woods Entrance",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 353,
+                "y": 752,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_SkullWoodsEntrance",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lorule Graveyard",
+        "access_rules": [
+          "^$access_lorule_graveyard",
+          "[lampless], $lampless_access_lorule_graveyard"
+        ],
+        "children": [
+          {
+            "name": "Lorule Graveyard Big Rock",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 895,
+                "y": 614,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_LoruleGraveyardBigRock",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dark Ruins",
+        "access_rules": [
+          "$access_dark_ruins",
+          "[glitched], $glitched_access_dark_ruins",
+          "[advanced], $advanced_access_dark_ruins",
+          "[hell], $hell_access_dark_ruins"
+        ],
+        "children": [
+          {
+            "name": "Dark Ruins Chasm",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1466,
+                "y": 590,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DarkRuinsChasm",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Dark Palace Entrance",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1581,
+                "y": 1135,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DarkPalaceEntrance",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "merge",
+                  "$warpLorule, wv_dark, bell"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Dark Maze Center",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1834,
+                "y": 914,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_DarkMazeCenter",
+                "item_count": 1,
+                "access_rules": ["merge"],
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lorule Castle Area",
+        "access_rules": [
+          "$access_central_lorule",
+          "[advanced], $advanced_access_central_lorule",
+          "[hell], $hell_access_central_lorule"
+        ],
+        "children": [
+          {
+            "name": "Lorule Fortune-Teller",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 600,
+                "y": 946,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_LoruleFortuneTeller",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              },
+              {
+                "name": "Ghost_LoruleFortuneTeller_(Inside)",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Thieves' Town House",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 466,
+                "y": 1172,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_ThievesTownHouse",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Great Rupee Fairy",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 455,
+                "y": 1345,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_GreatRupeeFairy",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Octoball Derby",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 603,
+                "y": 1456,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_OctoballDerby",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Rupee Rush",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 343,
+                "y": 1695,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_RupeeRush",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Vacant House",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1065,
+                "y": 1326,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_VacantHouse",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Swamp Palace Entrance",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 952,
+                "y": 1650,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_SwampPalaceEntrance_Left",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              },              {
+                "name": "Ghost_SwampPalaceEntrance_Right",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Misery Mire",
+        "access_rules": ["$access_misery_mire"],
+        "children": [
+          {
+            "name": "Misery Mire Heart Piece Ledge",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 460,
+                "y": 1800,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_MiseryMireHeartPieceLedge",
+                "item_count": 1,
+                "access_rules": ["merge"],
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Misery Mire Southwest",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 658,
+                "y": 1923,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_MiseryMireSouthwest",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": ["titansmitt"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turtle Rock Area",
+        "access_rules": ["merge"],
+        "children": [
+          {
+            "name": "Lorule Lake Bullied Turtle",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1351,
+                "y": 1950,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_LoruleLakeBulliedTurtle",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "not_cracksanity, quake_on",
+                  "cracksanity, crack_lake_lorule",
+                  "cracksanity, crack_river_lorule, flippers",
+                  "cracksanity, crack_lorule_hotfoot, flippers",
+                  "$warpLorule, bell, wv_turtle, flippers",
+                  "[glitched], $glitched_access_dark_ruins, $boost, flippers",
+                  "[advanced], $advanced_access_dark_ruins, $fakeFlippers",
+                  "[hell], $hell_access_dark_ruins, $beeFakeFlippers",
+                  "[advanced], cracksanity, crack_lorule_hotfoot, $fakeFlippers",
+                  "[hell], $hell_access_dark_ruins, $beeBoost, scroll",
+                  "[hell], cracksanity, crack_lorule_hotfoot"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Turtle Stuck to Wall",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1773,
+                "y": 1616,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "Turtle Rock Entrance",
+            "map_locations": [
+              {
+                "map": "lorule",
+                "x": 1675,
+                "y": 1698,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "not_cracksanity, quake_on, flippers",
+                  "cracksanity, crack_lake_lorule, flippers",
+                  "cracksanity, crack_river_lorule, flippers",
+                  "cracksanity, crack_lorule_hotfoot, flippers",
+                  "[advanced], cracksanity, crack_lorule_hotfoot, $fakeFlippers",
+                  "[hell], cracksanity, crack_lorule_hotfoot, $beeFakeFlippers",
+                  "$warpLorule, bell, wv_turtle",
+                  "[glitched], $glitched_access_dark_ruins, $boost, flippers",
+                  "[advanced], $advanced_access_dark_ruins, $fakeFlippers",
+                  "[hell], $hell_access_dark_ruins, $beeFakeFlippers"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
