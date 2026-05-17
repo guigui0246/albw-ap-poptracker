@@ -10,7 +10,9 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 ### 1.5.2
 
-- Hint ghosts
+- Added Hint ghosts
+- Fixed Maiamai auto-tracking counter
+- Fixed Vertical HD+ and Items Only layouts
 
 ### 1.5.1
 
