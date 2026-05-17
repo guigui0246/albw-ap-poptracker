@@ -1,6 +1,8 @@
 Tracker:AddItems("items/items.json")
 -- Tracker:AddItems("items/items_tfh.json")
 Tracker:AddItems("items/items_chests.json")
+Tracker:AddItems("items/items_hints.json")
+Tracker:AddItems("items/items_hints_hyrule.json")
 Tracker:AddItems("items/items_keys.json")
 -- Tracker:AddItems("items/items_maps.json")
 Tracker:AddItems("items/items_display.json")

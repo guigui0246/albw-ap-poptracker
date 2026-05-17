@@ -1,0 +1,16 @@
+{
+  "important_hints_panel": {
+    "type": "itemgrid",
+    "dropshadow": true,
+    "item_size": 48,
+    "item_margin": 2,
+    "margin": "8, 8, 8, 8",
+    "rows": [
+      ["important_hint_panel"],
+      ["fortune_teller_display"],
+      ["kakariko_well_display"],
+      ["lorule_fortune_teller_display"],
+      ["great_rupee_fairy_display"]
+    ]
+  }
+}

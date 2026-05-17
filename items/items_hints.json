@@ -1,0 +1,160 @@
+[
+  {
+    "name": "Important Hints Panel",
+    "type": "static",
+    "img": "images/items/unknown_compass.png",
+    "codes": "important_hint_panel"
+  },
+  {
+    "name": "Fortune Teller Hint Display",
+    "type": "static",
+    "img": "images/items/unknown_compass.png",
+    "overlay_font_size": 12,
+    "overlay_align": "left",
+    "codes": "fortune_teller_display"
+  },
+  {
+    "name": "Kakariko Well Hint Display",
+    "type": "static",
+    "img": "images/items/unknown_compass.png",
+    "overlay_font_size": 12,
+    "overlay_align": "left",
+    "codes": "kakariko_well_display"
+  },
+  {
+    "name": "Lorule Fortune Teller Hint Display",
+    "type": "static",
+    "img": "images/items/unknown_compass.png",
+    "overlay_font_size": 12,
+    "overlay_align": "left",
+    "codes": "lorule_fortune_teller_display"
+  },
+  {
+    "name": "Great Rupee Fairy Hint Display",
+    "type": "static",
+    "img": "images/items/unknown_compass.png",
+    "overlay_font_size": 12,
+    "overlay_align": "left",
+    "codes": "great_rupee_fairy_display"
+  },
+  {
+    "name": "Fortune Teller Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_item" }
+    ]
+  },
+  {
+    "name": "Fortune Teller Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "fortune_teller_region" }
+    ]
+  },
+  {
+    "name": "Kakariko Well Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_item" }
+    ]
+  },
+  {
+    "name": "Kakariko Well Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_well_region" }
+    ]
+  },
+  {
+    "name": "Lorule Fortune Teller Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_item" }
+    ]
+  },
+  {
+    "name": "Lorule Fortune Teller Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lorule_fortune_teller_region" }
+    ]
+  },
+  {
+    "name": "Great Rupee Fairy Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_item" }
+    ]
+  },
+  {
+    "name": "Great Rupee Fairy Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "great_rupee_fairy_region" }
+    ]
+  }
+]

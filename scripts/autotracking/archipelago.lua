@@ -1,6 +1,7 @@
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/hints.lua")
 
 CUR_INDEX = -1
 PLAYER_ID = -1
@@ -121,6 +122,10 @@ function syncDisplay()
     if bottles and bottles.Active and bee and bee.AvailableChestCount == 0 then
         bottles.CurrentStage = 2
     end
+
+    if RefreshHintSystem then
+        RefreshHintSystem()
+    end
 end
 
 
@@ -196,6 +201,9 @@ function onClear(slot_data)
     GLOBAL_ITEMS = {}
     resetItems(ITEM_MAPPING)
     resetLocations()
+    if ResetHintState then
+        ResetHintState()
+    end
     print(dump_table(slot_data))
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
@@ -218,6 +226,10 @@ function onClear(slot_data)
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
             print(string.format("onClear: could not find setting for id %s", key))
         end
+    end
+
+    if RefreshHintSystem then
+        RefreshHintSystem()
     end
     Tracker.BulkUpdate = false
     syncDisplay()

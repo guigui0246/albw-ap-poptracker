@@ -14,6 +14,15 @@
             "key": "item_grid_horizontal"
           }
         ]
+      },
+      {
+        "type": "group",
+        "header": "Important Hints",
+        "margin": "0,0",
+        "content": {
+          "type": "layout",
+          "key": "important_hints_panel"
+        }
       }
     ]
   }
