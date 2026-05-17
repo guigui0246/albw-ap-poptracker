@@ -634,8 +634,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 289,
-                "y": 856,
+                "x": 636,
+                "y": 187,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -653,8 +653,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 353,
-                "y": 752,
+                "x": 453,
+                "y": 722,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -681,8 +681,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 895,
-                "y": 614,
+                "x": 1235,
+                "y": 654,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -711,8 +711,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1466,
-                "y": 590,
+                "x": 1646,
+                "y": 652,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -730,8 +730,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1581,
-                "y": 1135,
+                "x": 1880,
+                "y": 870,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -753,8 +753,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1834,
-                "y": 914,
+                "x": 1684,
+                "y": 904,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -783,8 +783,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 600,
-                "y": 946,
+                "x": 682,
+                "y": 846,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -792,30 +792,6 @@
             "sections": [
               {
                 "name": "Ghost_LoruleFortuneTeller",
-                "item_count": 1,
-                "visibility_rules": ["hint_ghosts"]
-              },
-              {
-                "name": "Ghost_LoruleFortuneTeller_(Inside)",
-                "item_count": 1,
-                "visibility_rules": ["hint_ghosts"]
-              }
-            ]
-          },
-          {
-            "name": "Thieves' Town House",
-            "map_locations": [
-              {
-                "map": "lorule",
-                "x": 466,
-                "y": 1172,
-                "size": 32,
-                "shape": "trapezoid"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Ghost_ThievesTownHouse",
                 "item_count": 1,
                 "visibility_rules": ["hint_ghosts"]
               }
@@ -826,7 +802,7 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 455,
+                "x": 385,
                 "y": 1345,
                 "size": 32,
                 "shape": "trapezoid"
@@ -845,8 +821,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 603,
-                "y": 1456,
+                "x": 713,
+                "y": 1433,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -864,8 +840,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 343,
-                "y": 1695,
+                "x": 203,
+                "y": 1485,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -883,8 +859,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1065,
-                "y": 1326,
+                "x": 1078,
+                "y": 1372,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -902,8 +878,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 952,
-                "y": 1650,
+                "x": 966,
+                "y": 1950,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -931,8 +907,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 460,
-                "y": 1800,
+                "x": 360,
+                "y": 1600,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -951,8 +927,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 658,
-                "y": 1923,
+                "x": 242,
+                "y": 1928,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -977,8 +953,8 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1351,
-                "y": 1950,
+                "x": 1469,
+                "y": 1665,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -1009,15 +985,15 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1773,
-                "y": 1616,
+                "x": 1473,
+                "y": 1550,
                 "size": 32,
                 "shape": "trapezoid"
               }
             ],
             "sections": [
               {
-                "name": "Ghost",
+                "name": "Ghost_TurtleStuckToWall",
                 "item_count": 1,
                 "visibility_rules": ["hint_ghosts"]
               }
@@ -1028,15 +1004,15 @@
             "map_locations": [
               {
                 "map": "lorule",
-                "x": 1675,
-                "y": 1698,
+                "x": 1529,
+                "y": 1750,
                 "size": 32,
                 "shape": "trapezoid"
               }
             ],
             "sections": [
               {
-                "name": "Ghost",
+                "name": "Ghost_TurtleRockEntrance",
                 "item_count": 1,
                 "visibility_rules": ["hint_ghosts"],
                 "access_rules": [
