@@ -1316,23 +1316,26 @@
     "name": "Hint Ghosts",
     "type": "progressive",
     "loop": true,
-    "allow_disabled": true,
+    "allow_disabled": false,
     "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/settings/Hint_Ghost.png",
-        "disabled_img_mods": "@disabled,overlay|images/settings/OFF.png",
+        "img_mods": "@disabled,overlay|images/settings/OFF.png",
+        "codes": "",
+        "name": "Hint Ghosts (Off)"
+      },
+      {
+        "img": "images/settings/Hint_Ghost.png",
         "img_mods": "overlay|images/settings/ON.png",
         "codes": "hint_ghosts",
-        "name": "Hint Ghosts",
-        "inherit_codes": false
+        "name": "Hint Ghosts (On)"
       },
       {
         "img": "images/settings/hint_glasses.png",
         "img_mods": "overlay|images/settings/Need.png",
         "codes": "hint_ghosts",
-        "name": "Hint Ghosts (need Hint Glasses)",
-        "inherit_codes": false
+        "name": "Hint Ghosts (need Hint Glasses)"
       }
     ]
   }
