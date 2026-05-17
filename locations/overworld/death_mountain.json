@@ -696,5 +696,156 @@
         ]
       }
     ]
+  },
+  {
+    "name": "_Mountain Ghosts",
+    "access_rules": ["$access_ghosts"],
+    "chest_unopened_img": "images/items/unknown_compass.png",
+    "chest_opened_img": "images/items/compass.png",
+    "visibility_rules": ["hint_ghosts"],
+    "children": [
+      {
+        "name": "Death Mountain Volcano Ledge",
+        "map_locations": [
+          {
+            "map": "hyrule",
+            "x": 975,
+            "y": 175,
+            "size": 32,
+            "shape": "trapezoid"
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ghost_DeathMountainVolcanoLedge",
+            "item_count": 1,
+            "access_rules": [
+              "power_glove, merge",
+              "$access_dm_west_top",
+              "[glitched], merge",
+              "[advanced], $adv_glitched_access_dm_west_top",
+              "[hell], $hell_access_dm_west_top"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Mountain Cave",
+        "map_locations": [
+          {
+            "map": "hyrule",
+            "x": 1710,
+            "y": 172,
+            "size": 32,
+            "shape": "trapezoid"
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ghost_DeathMountainCave",
+            "item_count": 1,
+            "access_rules": [
+              "$access_dm_east_top",
+              "[glitched], merge, hookshot",
+              "[advanced], $adv_glitched_access_dm_east_top"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Floating Island",
+        "map_locations": [
+          {
+            "map": "hyrule",
+            "x": 1710,
+            "y": 87,
+            "size": 32,
+            "shape": "trapezoid"
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ghost_FloatingIsland",
+            "item_count": 1,
+            "access_rules": [
+              "$access_dm_east_top",
+              "[glitched], merge, hookshot",
+              "[advanced], $adv_glitched_access_dm_east_top"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tower of Hera",
+        "map_locations": [
+          {
+            "map": "hyrule",
+            "x": 1184,
+            "y": 120,
+            "size": 32,
+            "shape": "trapezoid"
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ghost_TowerOfHera",
+            "item_count": 1,
+            "access_rules": [
+              "power_glove, merge",
+              "$access_dm_west_top",
+              "[glitched], merge",
+              "[advanced], $adv_glitched_access_dm_west_top",
+              "[hell], $hell_access_dm_west_top"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Treacherous Tower",
+        "map_locations": [
+          {
+            "map": "lorule",
+            "x": 1133,
+            "y": 127,
+            "size": 32,
+            "shape": "trapezoid"
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ghost_TreacherousTower",
+            "item_count": 1,
+            "access_rules": [
+              "$access_ldm_west",
+              "[glitched], $glitched_access_ldm_west",
+              "[hell], $glitched_access_ldm_west"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Outside Ice Ruins",
+        "map_locations": [
+          {
+            "map": "lorule",
+            "x": 1920,
+            "y": 203,
+            "size": 32,
+            "shape": "trapezoid"
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ghost_OutsideIceRuins",
+            "item_count": 1,
+            "access_rules": [
+              "$access_ldm_east_top",
+              "[glitched], $glitched_access_ldm_east_top",
+              "[hell], $hell_access_ldm_east_top"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
