@@ -15,7 +15,7 @@ body:
       label: Pre-issue checklist
       description: Please make sure you have done all of the following steps first;
       options:
-        - label: I have searched the existing issues to make sure this hasn't already been reported.
+        - label: I have searched the existing issues to make sure this hasn't already been asked.
           required: true
         - label: I have made sure I am on the latest version of the tracker pack.
           required: true
