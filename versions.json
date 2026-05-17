@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "package_version": "1.5.2",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.2/albw-ap-poptracker-v1.5.2.zip",
+      "sha256": "CEBC6094D4850610875607FA02AAB3E8AED42609F7626FDDDA5D0F262EB0E666",
+      "changelog": [
+        "Fix maiamai auto-tracking",
+        "Fix Vertical HD+ and Items only layouts",
+        "Add hint ghost locations"
+      ]
+    },
+    {
       "package_version": "1.5.1",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/v1.5.1/albw-ap-poptracker-v1.5.1.zip",
       "sha256": "0CAE116B7F55BF48727B3BE6563339DE21F5F72EF01FDDF9630DADC1DAD2C5BB",
