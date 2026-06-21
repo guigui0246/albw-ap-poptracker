@@ -424,7 +424,7 @@
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"],
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
             "access_rules": [
               "$access_dm_west_base, power_glove",
               "[glitched], power_glove"
@@ -449,7 +449,7 @@
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"],
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
             "access_rules": [
               "power_glove, merge",
               "merge, $access_dm_west_top",
@@ -477,7 +477,7 @@
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"],
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
             "access_rules": [
               "$access_dm_east_top, merge",
               "[glitched], merge, hookshot",
@@ -503,7 +503,7 @@
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"],
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
             "access_rules": [
               "$access_dm_east_top, merge, power_glove",
               "[advanced], $adv_glitched_access_dm_east_top, merge, power_glove",
@@ -529,7 +529,7 @@
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"],
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
             "access_rules": [
               "power_glove, $access_dm_east_bottom",
               "[advanced], power_glove, $adv_glitched_access_dm_east_bottom"
@@ -554,7 +554,7 @@
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"],
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
             "access_rules": [
               "$access_ldm_west",
               "[glitched], $glitched_access_ldm_west"
@@ -585,7 +585,7 @@
               "[glitched], $glitched_access_ldm_west, titansmitt, nicebombs",
               "[hell], $glitched_access_ldm_west, titansmitt, bombs"
             ],
-            "visibility_rules": ["maiamai_mayhem_on"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
           }
         ]
       },
@@ -611,7 +611,7 @@
               "[glitched], $glitched_access_ldm_west, titansmitt",
               "[hell], $glitched_access_ldm_west, titansmitt"
             ],
-            "visibility_rules": ["maiamai_mayhem_on"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
           }
         ]
       },
@@ -637,7 +637,7 @@
               "[hell], $hell_access_ldm_east_base, merge"
             ],
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceshowmaiamais"]
           }
         ]
       },
@@ -665,7 +665,7 @@
               "[hell], trod, $break_skull, $hell_access_ldm_east_top"
             ],
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceshowmaiamais"]
           }
         ]
       },
@@ -691,7 +691,7 @@
               "[glitched], merge, $glitched_access_ldm_east_top",
               "[hell], merge, $hell_access_ldm_east_top"
             ],
-            "visibility_rules": ["maiamai_mayhem_on"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceshowmaiamais"]
           }
         ]
       }
