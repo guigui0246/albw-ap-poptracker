@@ -214,7 +214,11 @@ function onClear(slot_data)
         end
 
         if SLOT_CODES[key] then
-            Tracker:FindObjectForCode(SLOT_CODES[key].code).CurrentStage = SLOT_CODES[key].mapping[value]
+            if SLOT_CODES[key].code and SLOT_CODES[key].mapping and SLOT_CODES[key].mapping[value] ~= nil then
+                Tracker:FindObjectForCode(SLOT_CODES[key].code).CurrentStage = SLOT_CODES[key].mapping[value]
+            else
+                print(string.format("onClear: invalid slot code configuration for key %s", key))
+            end
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
             print(string.format("onClear: could not find setting for id %s", key))
         end
