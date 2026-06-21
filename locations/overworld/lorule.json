@@ -554,7 +554,7 @@
             "visibility_rules": ["cracksanity"]
           },
           {
-            "name": "Chest",
+            "name": "Heart Piece",
             "capture_item": true,
             "access_rules": [
               "merge, crack_mire_north",

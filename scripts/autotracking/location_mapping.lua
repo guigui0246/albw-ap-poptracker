@@ -136,7 +136,7 @@ LOCATION_MAPPING = {
     [BASE + 138] = {"@Lorule Overworld/Lorule Castle Area/Rupee Rush (Lorule) (Score 150+)/Heart Piece reward"},
     [BASE + 159] = {"@Lorule Overworld/Lorule Castle Area/Great Rupee Fairy (3000 Rupees, farm at Treacherous Tower)/Bottle reward"},
     [BASE + 175] = {"@Lorule Overworld/Misery Mire/Sand Mini-Dungeon/Chest"},
-    [BASE + 176] = {"@Lorule Overworld/Misery Mire Ledge/Chest"},
+    [BASE + 176] = {"@Lorule Overworld/Misery Mire Ledge/Heart Piece"},
     [BASE + 179] = {"@Lorule Overworld/Turtle Rock Area/Lorule Lake Chest/Chest"},
 
 
