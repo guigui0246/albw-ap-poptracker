@@ -507,7 +507,7 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais"],
+                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais, minigames_enabled"],
                 "access_rules": ["merge"]
               }
             ]
@@ -1649,7 +1649,7 @@
                 "name": "Maiamai",
                 "item_count": 1,
                 "access_rules": ["merge"],
-                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais"]
+                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais, minigames_enabled"]
               }
             ]
           },
