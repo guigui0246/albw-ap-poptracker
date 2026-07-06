@@ -315,4 +315,15 @@ SLOT_CODES =
             [2] = 2  -- Shuffled Glasses Required
         }
     },
+    keysy =
+    {
+        code = "keysy",
+        mapping =
+        {
+            [0] = 0, -- Keysy Off
+            [1] = 1, -- Keysy Small Keys Only
+            [2] = 2, -- Keysy Big Keys Only
+            [3] = 3  -- Keysy All Keys
+        }
+    }
 }
