@@ -101,7 +101,8 @@ SLOT_CODES =
         {
             [0] = 1,  -- Nice Items Vanilla
             [1] = 2,  -- Nice Items Shuffled (Junked)
-            [2] = 0   -- Nice Items Off (Junked)
+            [2] = 0,  -- Nice Items Off (Junked)
+            [3] = 2   -- Nice Items Upgrades (Junked)
         }
     },
     no_progression_enemies =

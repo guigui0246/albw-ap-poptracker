@@ -1272,5 +1272,60 @@
         "codes": "p_merge"
       }
     ]
+  },
+  {
+    "name": "Ice Rod Upgrade",
+    "type": "toggle",
+    "codes": "u_icerod"
+  },
+  {
+    "name": "Sand Rod Upgrade",
+    "type": "toggle",
+    "codes": "u_sandrod"
+  },
+  {
+    "name": "Tornado Rod Upgrade",
+    "type": "toggle",
+    "codes": "u_tornadorod"
+  },
+  {
+    "name": "Bombs Upgrade",
+    "type": "toggle",
+    "codes": "u_bombs"
+  },
+  {
+    "name": "Fire Rod Upgrade",
+    "type": "toggle",
+    "codes": "u_firerod"
+  },
+  {
+    "name": "Hookshot Upgrade",
+    "type": "toggle",
+    "codes": "u_hookshot"
+  },
+  {
+    "name": "Boomerang Upgrade",
+    "type": "toggle",
+    "codes": "u_boomerang"
+  },
+  {
+    "name": "Hammer Upgrade",
+    "type": "toggle",
+    "codes": "u_hammer"
+  },
+  {
+    "name": "Bow Upgrade",
+    "type": "toggle",
+    "codes": "u_bow"
+  },
+  {
+   "name": "Lamp Upgrade",
+    "type": "toggle",
+    "codes": "u_lamp"
+  },
+  {
+   "name": "Net Upgrade",
+    "type": "toggle",
+    "codes": "u_net"
   }
 ]

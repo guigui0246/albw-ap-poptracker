@@ -10,11 +10,11 @@ LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
 HOSTED = {}
 
-DEBUG_ON_CLEAR = false
-DEBUG_ON_ITEM = false
-DEBUG_ON_LOCATION = false
-DEBUG_ON_SCOUT = false
-DEBUG_ON_BOUNCE = false
+DEBUG_ON_CLEAR = true
+DEBUG_ON_ITEM = true
+DEBUG_ON_LOCATION = true
+DEBUG_ON_SCOUT = true
+DEBUG_ON_BOUNCE = true
 
 function resetItems(mapping_table)
     for _, value in pairs(mapping_table) do
@@ -120,6 +120,73 @@ function syncDisplay()
     end
     if bottles and bottles.Active and bee and bee.AvailableChestCount == 0 then
         bottles.CurrentStage = 2
+    end
+
+    if has("u_icerod") and has("p_icerod") then
+        local iceRod = Tracker:FindObjectForCode("p_icerod")
+        if iceRod and iceRod.CurrentStage < 2 then
+            iceRod.CurrentStage = 2
+        end
+    end
+    if has("u_sandrod") and has("p_sandrod") then
+        local sandRod = Tracker:FindObjectForCode("p_sandrod")
+        if sandRod and sandRod.CurrentStage < 2 then
+            sandRod.CurrentStage = 2
+        end
+    end
+    if has("u_tornadorod") and has("p_tornadorod") then
+        local tornadoRod = Tracker:FindObjectForCode("p_tornadorod")
+        if tornadoRod and tornadoRod.CurrentStage < 2 then
+            tornadoRod.CurrentStage = 2
+        end
+    end
+    if has("u_bombs") and has("p_bombs") then
+        local bombs = Tracker:FindObjectForCode("p_bombs")
+        if bombs and bombs.CurrentStage < 2 then
+            bombs.CurrentStage = 2
+        end
+    end
+    if has("u_firerod") and has("p_firerod") then
+        local fireRod = Tracker:FindObjectForCode("p_firerod")
+        if fireRod and fireRod.CurrentStage < 2 then
+            fireRod.CurrentStage = 2
+        end
+    end
+    if has("u_hookshot") and has("p_hookshot") then
+        local hookshot = Tracker:FindObjectForCode("p_hookshot")
+        if hookshot and hookshot.CurrentStage < 2 then
+            hookshot.CurrentStage = 2
+        end
+    end
+    if has("u_boomerang") and has("p_boomerang") then
+        local boomerang = Tracker:FindObjectForCode("p_boomerang")
+        if boomerang and boomerang.CurrentStage < 2 then
+            boomerang.CurrentStage = 2
+        end
+    end
+    if has("u_hammer") and has("p_hammer") then
+        local hammer = Tracker:FindObjectForCode("p_hammer")
+        if hammer and hammer.CurrentStage < 2 then
+            hammer.CurrentStage = 2
+        end
+    end
+    if has("u_bow") and has("p_bow") then
+        local bow = Tracker:FindObjectForCode("p_bow")
+        if bow and bow.CurrentStage < 2 then
+            bow.CurrentStage = 2
+        end
+    end
+    if has("u_lamp") and has("p_lamp") then
+        local lamp = Tracker:FindObjectForCode("p_lamp")
+        if lamp and lamp.CurrentStage < 2 then
+            lamp.CurrentStage = 2
+        end
+    end
+    if has("u_net") and has("p_net") then
+        local net = Tracker:FindObjectForCode("p_net")
+        if net and net.CurrentStage < 2 then
+            net.CurrentStage = 2
+        end
     end
 end
 

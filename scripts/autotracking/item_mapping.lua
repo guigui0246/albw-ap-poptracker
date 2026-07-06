@@ -81,4 +81,16 @@ ITEM_MAPPING = {
     [BASE + 76] = {"lc_compass", "toggle"},
     [BASE + 77] = {"lc_small_keys", "consumable"},
     [BASE + 78] = {"p_merge", "progressive"},
+
+    [BASE + 79] = {"u_icerod", "toggle"},
+    [BASE + 80] = {"u_sandrod", "toggle"},
+    [BASE + 81] = {"u_tornadorod", "toggle"},
+    [BASE + 82] = {"u_bombs", "toggle"},
+    [BASE + 83] = {"u_firerod", "toggle"},
+    [BASE + 84] = {"u_hookshot", "toggle"},
+    [BASE + 85] = {"u_boomerang", "toggle"},
+    [BASE + 86] = {"u_hammer", "toggle"},
+    [BASE + 87] = {"u_bow", "toggle"},
+    [BASE + 88] = {"u_lamp", "toggle"},
+    [BASE + 89] = {"u_net", "toggle"},
 }
