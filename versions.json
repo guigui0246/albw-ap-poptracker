@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.5.4",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.4/albw-ap-poptracker-v1.5.4.zip",
+      "sha256": "FDEC2212029725697F36A8DB8625673B73672FDCAB05342D768D9606081248FA",
+      "changelog": [
+        "Upgrade items",
+        "Auto-track keysy settings (waiting on apworld update)"
+      ]
+    },
+    {
       "package_version": "1.5.3",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.3/albw-ap-poptracker-v1.5.3.zip",
       "sha256": "345B13DE8C755C3A0575546EE2ADC853050E3A6394883D154F7C9C17EAFF2596",
