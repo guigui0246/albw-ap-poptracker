@@ -175,9 +175,9 @@
             "name": "Chest",
             "hosted_item": "tr_b1_grate_chest_small",
             "access_rules": [
-              "$enterTR, $tr_small_keys|1",
-              "[advanced], $advanced_enterTR, $tr_small_keys|1",
-              "[hell], $hell_enterTR, $tr_small_keys|1"
+              "$enterTR",
+              "[advanced], $advanced_enterTR",
+              "[hell], $hell_enterTR"
             ]
           }
         ]
@@ -196,10 +196,10 @@
             "name": "Chest",
             "hosted_item": "tr_b1_big_chest_top",
             "access_rules": [
-              "$enterTR, $shielded_switch",
-              "[hard], $enterTR",
-              "[advanced], $advanced_enterTR",
-              "[hell], $hell_enterTR"
+              "$enterTR, $tr_small_keys|1, $shielded_switch",
+              "[hard], $enterTR, $tr_small_keys|1",
+              "[advanced], $advanced_enterTR, $tr_small_keys|1",
+              "[hell], $hell_enterTR, $tr_small_keys|1"
             ]
           }
         ]
