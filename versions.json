@@ -1,7 +1,7 @@
 {
   "versions": [
     {
-      "package_version": "1.5.4",
+      "package_version": "1.5.5",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.5/albw-ap-poptracker-v1.5.5.zip",
       "sha256": "64E74FC746C473D61894ACCAA40D388221483BDC5F2C1D40F0AB693252C1EF5E",
       "changelog": [
