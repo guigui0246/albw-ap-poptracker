@@ -1,7 +1,7 @@
 [
   {
     "name": "Hyrule Cracks",
-    "access_rules": ["{merge, quake_on}", "merge, quake_on"],
+    "access_rules": ["{merge, quake_on, !$has_crack_map}", "merge, quake_on"],
     "children": [
       {
         "name": "Your House Crack",
@@ -40,7 +40,7 @@
         ]
       },
       {
-        "name": "Death Mountain West Crack",
+        "name": "Hyrule Death West Crack",
         "sections": [
           {
             "hosted_item": "crack_dm_west",
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "name": "Waterfall Crack",
+        "name": "Hyrule Waterfall Crack",
         "sections": [
           {
             "hosted_item": "crack_waterfall",
@@ -230,7 +230,7 @@
         ]
       },
       {
-        "name": "Swamp Pillar Crack",
+        "name": "Hyrule Swamp Pillar Crack",
         "sections": [
           {
             "hosted_item": "crack_swamp_pillar",
@@ -290,7 +290,7 @@
             "hosted_item": "crack_left_hyrule_paradox",
             "name": "Crack",
             "visibility_rules": ["cracksanity"],
-            "access_rules": ["{cracksanity}"]
+            "access_rules": ["{cracksanity, !$has_crack_map}"]
           }
         ],
         "map_locations": [
@@ -346,7 +346,7 @@
             "name": "Crack",
             "access_rules": [
               "crack_desert_pillar_right",
-              "{}",
+              "{!$has_crack_map}",
               "$access_desert"
             ],
             "visibility_rules": ["cracksanity"]
@@ -367,7 +367,7 @@
           {
             "hosted_item": "crack_desert_pillar_left",
             "name": "Crack",
-            "access_rules": ["{}", "$access_desert"],
+            "access_rules": ["{!$has_crack_map}", "$access_desert"],
             "visibility_rules": ["cracksanity"]
           }
         ],
@@ -396,7 +396,7 @@
             "hosted_item": "crack_desert_north",
             "access_rules": [
               "crack_desert_north",
-              "{cracksanity}",
+              "{cracksanity, !$has_crack_map}",
               "$access_desert, merge, bombs, srod",
               "$access_desert, merge, bombs, scroll",
               "[advanced], $access_desert, merge, bombs, $boost",
@@ -411,7 +411,7 @@
           {
             "hosted_item": "crack_desert_middle",
             "name": "Crack",
-            "access_rules": ["{}", "srod, $access_desert"],
+            "access_rules": ["{!$has_crack_map}", "srod, $access_desert"],
             "visibility_rules": ["cracksanity"]
           }
         ],
@@ -431,7 +431,7 @@
             "hosted_item": "crack_desert_sw",
             "name": "Crack",
             "access_rules": [
-              "{}",
+              "{!$has_crack_map}",
               "scroll, $access_desert",
               "[advanced], $boost, $access_desert",
               "[hell], $access_desert"
@@ -455,7 +455,7 @@
             "hosted_item": "crack_desert_palace",
             "name": "Crack",
             "access_rules": [
-              "{}",
+              "{!$has_crack_map}",
               "$access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
               "$access_desert_palace, [progression_enemies_off], [p_bombs], [srod], [titansmitt], [$switch], [$attack]",
               "[glitched], $glitched_access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
@@ -476,7 +476,7 @@
     ]
   },
   {
-    "name": "Hyrule Castle Crack",
+    "name": "[HC] Crack",
     "map_locations": [
       {
         "map": "hyrule",
@@ -501,7 +501,7 @@
           "swordless, merge, ^$knucklemaster",
           // Twoga is immune to Bow
           "[], merge, $barrier_skip",
-          "{cracksanity, merge, quake_on}"
+          "{cracksanity, merge, quake_on, !$has_crack_map}"
         ]
       }
     ]

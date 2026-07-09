@@ -125,11 +125,11 @@
         ],
         "sections": [
           {
-            "name": "Ledge Crack",
+            "name": "Lorule Graveyard Ledge Crack",
             "hosted_item": "crack_graveyard_lorule",
             "access_rules": [
               "crack_graveyard_lorule",
-              "{cracksanity, $inspect_crack_lorule}",
+              "{cracksanity, $inspect_crack_lorule, !$has_crack_map}",
               "bombs, merge, $access_lorule_graveyard",
               "bombs, merge, [lampless], $lampless_access_lorule_graveyard"
             ]
@@ -548,9 +548,9 @@
         ],
         "sections": [
           {
-            "name": "North Crack",
+            "name": "Mire North Crack",
             "hosted_item": "crack_mire_north",
-            "access_rules": ["crack_mire_north", "{$inspect_crack_lorule}"],
+            "access_rules": ["crack_mire_north", "{$inspect_crack_lorule, !$has_crack_map}"],
             "visibility_rules": ["cracksanity"]
           },
           {

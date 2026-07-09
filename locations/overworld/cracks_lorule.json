@@ -8,7 +8,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_vacant_house",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, $access_central_lorule"
         ],
         "visibility_rules": ["cracksanity"]
@@ -31,7 +31,7 @@
         "hosted_item": "crack_thieves_town",
         "access_rules": [
           "crack_thieves_town",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, $access_central_lorule"
         ]
       }
@@ -53,7 +53,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_swamp_pillar_lorule",
-          "{$inspect_down_crack_lorule}",
+          "{$inspect_down_crack_lorule, !$has_crack_map}",
           "merge, quake_on, $access_central_lorule"
         ],
         "visibility_rules": ["cracksanity"]
@@ -76,7 +76,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_left_lorule_paradox",
-          "{$inspect_down_crack_lorule}",
+          "{$inspect_down_crack_lorule, !$has_crack_map}",
           "merge, quake_on, $access_central_lorule"
         ],
         "visibility_rules": ["cracksanity"]
@@ -99,7 +99,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_right_lorule_paradox",
-          "{$inspect_down_crack_lorule}"
+          "{$inspect_down_crack_lorule, !$has_crack_map}"
         ],
         "visibility_rules": ["cracksanity"]
       }
@@ -122,7 +122,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_skull_woods_pillar",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_n-shaped_house",
           "merge, quake_on, crack_destroyed_house",
           "merge, quake_on, $warpLorule, wv_skull"
@@ -147,7 +147,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_destroyed_house",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_n-shaped_house",
           "merge, quake_on, crack_skull_woods_pillar",
           "merge, quake_on, $warpLorule, wv_skull"
@@ -172,7 +172,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_n-shaped_house",
-          "{$inspect_down_crack_lorule}",
+          "{$inspect_down_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_skull_woods_pillar",
           "merge, quake_on, crack_destroyed_house",
           "merge, quake_on, $warpLorule, wv_skull"
@@ -198,7 +198,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_mire_exit",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_mire_north",
           "merge, quake_on, crack_mire_pillar_left, flippers",
           "merge, quake_on, crack_mire_pillar_right",
@@ -227,7 +227,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_mire_pillar_right",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_mire_north",
           "merge, quake_on, crack_mire_pillar_left, flippers",
           "merge, quake_on, crack_mire_exit",
@@ -249,12 +249,12 @@
     ]
   },
   {
-    "name": "Mire Pillar Crack",
+    "name": "Mire Left Pillar Crack",
     "sections": [
       {
         "hosted_item": "crack_mire_pillar_left",
         "name": "Crack",
-        "access_rules": ["crack_mire_pillar_left", "{$inspect_crack_lorule}"],
+        "access_rules": ["crack_mire_pillar_left", "{$inspect_crack_lorule, !$has_crack_map}"],
         "visibility_rules": ["cracksanity"]
       }
     ],
@@ -275,7 +275,7 @@
         "hosted_item": "crack_mire_middle",
         "access_rules": [
           "crack_mire_middle",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_mire_sw",
           "[glitched], merge, quake_on, irod, trod, $access_misery_mire",
           "[advanced], merge, quake_on, nicebombs, $access_misery_mire",
@@ -301,7 +301,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_mire_sw",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_mire_middle",
           "[glitched], merge, quake_on, irod, trod, $access_misery_mire",
           "[advanced], merge, quake_on, nicebombs, $access_misery_mire",
@@ -327,7 +327,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_zaganaga",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "[advanced], merge, quake_on, $advanced_misery_mire_oob, crack_mire_north",
           "[advanced], merge, quake_on, $advanced_misery_mire_oob, crack_mire_pillar_left, flippers",
           "[advanced], merge, quake_on, $advanced_misery_mire_oob, crack_mire_pillar_right",
@@ -356,7 +356,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_philosopher",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_graveyard_lorule",
           "merge, quake_on, $warpLorule, wv_graveyard"
         ],
@@ -381,7 +381,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_kus_domain",
-          "{$inspect_down_crack_lorule}",
+          "{$inspect_down_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_dark_ruins_pillar",
           "merge, quake_on, crack_dark_ruins_se",
           "merge, quake_on, crack_waterfall_lorule, flippers",
@@ -407,7 +407,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_dark_ruins_pillar",
-          "{$inspect_down_crack_lorule}",
+          "{$inspect_down_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_kus_domain",
           "merge, quake_on, crack_dark_ruins_se",
           "merge, quake_on, crack_waterfall_lorule, flippers",
@@ -433,7 +433,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_dark_ruins_se",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_dark_ruins_pillar, bombs",
           "merge, quake_on, crack_kus_domain, bombs",
           "merge, quake_on, crack_waterfall_lorule, flippers, bombs",
@@ -459,7 +459,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_waterfall_lorule",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_dark_ruins_pillar",
           "merge, quake_on, crack_dark_ruins_se",
           "merge, quake_on, crack_kus_domain",
@@ -486,7 +486,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_lake_lorule",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "[glitched], merge, quake_on, $glitched_access_dark_ruins, $boost",
           "[advanced], merge, quake_on, $advanced_access_dark_ruins, $boost",
           "[hell], merge, quake_on, $hell_access_dark_ruins, $boost",
@@ -516,7 +516,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_river_lorule",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_lake_lorule, flippers",
           "merge, quake_on, crack_lorule_hotfoot, flippers",
           "[advanced], merge, quake_on, crack_lorule_hotfoot, $fakeFlippers",
@@ -543,7 +543,7 @@
         "name": "Crack",
         "access_rules": [
           "crack_lorule_hotfoot",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, crack_lake_lorule, flippers",
           "merge, quake_on, crack_river_lorule, flippers",
           "[advanced], merge, quake_on, crack_lorule_hotfoot, $fakeFlippers",
@@ -564,14 +564,14 @@
   },
   // Lorule Death Mountain
   {
-    "name": "Lorule Mountain West Crack",
+    "name": "Lorule Death West Crack",
     "sections": [
       {
         "hosted_item": "crack_lorule_dm_west",
         "name": "Crack",
         "access_rules": [
           "crack_lorule_dm_west",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, $access_ldm_west",
           "[glitched], merge, quake_on, $glitched_access_ldm_west"
         ],
@@ -595,7 +595,7 @@
         "hosted_item": "crack_lofi",
         "access_rules": [
           "crack_lofi",
-          "{cracksanity, $inspect_crack_lorule}",
+          "{cracksanity, $inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, trod, $access_ldm_east_top",
           "merge, quake_on, trod, [glitched], $glitched_access_ldm_east_top",
           "merge, quake_on, trod, [hell], $hell_access_ldm_east_top"
@@ -619,7 +619,7 @@
         "hosted_item": "crack_rom_lorule",
         "access_rules": [
           "crack_rom_lorule",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, $access_ldm_east_base",
           "merge, quake_on, [glitched], $glitched_access_ldm_east_base",
           "merge, quake_on, [hell], $hell_access_ldm_east_base"

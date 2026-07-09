@@ -1,6 +1,7 @@
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/crack_map.lua")
 
 CUR_INDEX = -1
 PLAYER_ID = -1
@@ -9,6 +10,7 @@ TEAM_NUMBER = 0
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
 HOSTED = {}
+CRACK_MAPPING = {}
 
 DEBUG_ON_CLEAR = true
 DEBUG_ON_ITEM = true
@@ -86,6 +88,53 @@ end
 
 function hasAmount(item, amount)
     return Tracker:ProviderCountForCode(item) >= amount
+end
+
+function has_crack_map()
+    if CRACK_MAPPING and next(CRACK_MAPPING) then
+        return true
+    end
+    return false
+end
+
+function updateCracks(important)
+    if CRACK_MAPPING then
+        for entrance, destination in pairs(CRACK_MAPPING) do
+            local location_code = CRACK_MAP[entrance]
+            local dest_code = CRACK_MAP[destination]
+            if location_code and dest_code then
+                if dest_code ~= important then
+                    local dest = Tracker:FindObjectForCode(dest_code)
+                    if dest then
+                        if has(location_code) then
+                            dest.Active = true
+                        else
+                            if location_code == important then
+                                dest.Active = false
+                            end
+                        end
+                    else
+                        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+                            print(string.format("syncDisplay: could not find destination for code %s", dest_code))
+                        end
+                    end
+                end
+            else
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+                    if not location_code then
+                        print(string.format("syncDisplay: could not find location code for name %s", entrance))
+                    end
+                    if not dest_code then
+                        print(string.format("syncDisplay: could not find destination code for name %s", destination))
+                    end
+                end
+            end
+        end
+    else
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+            print("syncDisplay: CRACK_MAPPING table is nil:")
+        end
+    end
 end
 
 function syncDisplay()
@@ -190,6 +239,12 @@ function syncDisplay()
     end
 end
 
+function syncDisplayCallback(code)
+    syncDisplay()
+    updateCracks(code)
+end
+
+ScriptHost:AddWatchForCode("syncDisplay", "*", syncDisplayCallback)
 
 function onSetReply(key, value, old)
 end
@@ -254,6 +309,16 @@ function toggleWeatherVanes(value)
     end
 end
 
+function Jsondecode(jsonString)
+    local result = {}
+
+    for key, value in string.gmatch(jsonString, '"([^"]+)":"([^"]+)"') do
+        result[key] = value
+    end
+
+    return result
+end
+
 function onClear(slot_data)
     CUR_INDEX = -1
     PLAYER_NUMBER = Archipelago.PlayerNumber or -1
@@ -263,9 +328,13 @@ function onClear(slot_data)
     GLOBAL_ITEMS = {}
     resetItems(ITEM_MAPPING)
     resetLocations()
-    print(dump_table(slot_data))
+    CRACK_MAPPING = {}
+    if slot_data["crack_map"] then
+        CRACK_MAPPING = Jsondecode(slot_data["crack_map"])
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
+        print(string.format("crack mapping:\n%s", dump_table(CRACK_MAPPING)))
     end
 
     for key, value in pairs(slot_data) do
@@ -365,7 +434,6 @@ function onItem(index, item_id, item_name, player_number)
         print(string.format("local items: %s", dump_table(LOCAL_ITEMS)))
         print(string.format("global items: %s", dump_table(GLOBAL_ITEMS)))
     end
-    syncDisplay()
     can_finish()
 end
 
@@ -396,7 +464,6 @@ function onLocation(location_id, location_name)
             print(string.format("onLocation: could not find object for code %s", value))
         end
     end
-    syncDisplay()
     can_finish()
 end
 

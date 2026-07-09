@@ -489,7 +489,7 @@
     ]
   },
   {
-    "name": "Lorule Castle Crack",
+    "name": "[LC] Crack",
     "map_locations": [
       {
         "map": "lorule",
@@ -509,7 +509,7 @@
         "hosted_item": "crack_lc",
         "access_rules": [
           "crack_lc",
-          "{$inspect_crack_lorule}",
+          "{$inspect_crack_lorule, !$has_crack_map}",
           "merge, quake_on, ^$lc2F, lc_trials_door_open"
         ],
         "visibility_rules": ["cracksanity"]

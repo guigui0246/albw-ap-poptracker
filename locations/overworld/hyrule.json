@@ -103,8 +103,8 @@
               },
               {
                 "hosted_item": "crack_rossos_house",
-                "name": "House Crack",
-                "access_rules": ["rosso", "{cracksanity, merge, quake_on}"],
+                "name": "Rosso's House Crack",
+                "access_rules": ["rosso", "{cracksanity, merge, quake_on, !$has_crack_map}"],
                 "visibility_rules": ["cracksanity"]
               }
             ]
@@ -256,9 +256,9 @@
             "sections": [
               {
                 "hosted_item": "crack_graveyard",
-                "name": "Ledge Crack",
+                "name": "Hyrule Graveyard Ledge Crack",
                 "access_rules": [
-                  "{cracksanity, merge, quake_on}",
+                  "{cracksanity, merge, quake_on, !$has_crack_map}",
                   "crack_graveyard"
                 ],
                 "visibility_rules": ["cracksanity"]
@@ -439,9 +439,9 @@
                 ]
               },
               {
-                "name": "Crack",
+                "name": "Stylish Woman's House Crack",
                 "hosted_item": "crack_stylish_woman",
-                "access_rules": ["{merge, quake_on}", "crack_stylish_woman"],
+                "access_rules": ["{merge, quake_on, !$has_crack_map}", "crack_stylish_woman"],
                 "visibility_rules": ["cracksanity"]
               }
             ]
