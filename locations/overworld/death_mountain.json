@@ -637,7 +637,7 @@
               "[hell], $hell_access_ldm_east_base, merge"
             ],
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on", "$forceshowmaiamais"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
           }
         ]
       },
@@ -665,7 +665,7 @@
               "[hell], trod, $break_skull, $hell_access_ldm_east_top"
             ],
             "item_count": 1,
-            "visibility_rules": ["maiamai_mayhem_on", "$forceshowmaiamais"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
           }
         ]
       },
@@ -691,7 +691,7 @@
               "[glitched], merge, $glitched_access_ldm_east_top",
               "[hell], merge, $hell_access_ldm_east_top"
             ],
-            "visibility_rules": ["maiamai_mayhem_on", "$forceshowmaiamais"]
+            "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
           }
         ]
       }
