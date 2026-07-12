@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.5.6",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.6/albw-ap-poptracker-v1.5.6.zip",
+      "sha256": "27C40906BE7641BDA6A17D9AF69E7658AFD7D6C9C0300B67F698B1465A1E2DAA",
+      "changelog": [
+        "Fix milk",
+        "Disable debug logging in prod"
+      ]
+    },
+    {
       "package_version": "1.5.5",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.5/albw-ap-poptracker-v1.5.5.zip",
       "sha256": "64E74FC746C473D61894ACCAA40D388221483BDC5F2C1D40F0AB693252C1EF5E",
