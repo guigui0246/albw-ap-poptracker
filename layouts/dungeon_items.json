@@ -82,9 +82,9 @@
   // Used for vertical full map
   "dungeon_items_vertical": {
     "type": "itemgrid",
-    "margin": "17,10,0,10",
+    "margin": "0, 0, 0, 0",
     "item_margin": "3,0",
-    "item_size": 32,
+    "item_size": 24,
     "rows": [
       ["", "hs_label", "hs_small_key", "ls_label", "ls_small_key", ""],
       ["ep_label", "", "eastern", "ep_compass", "ep_small_keys", "ep_big_key"],

@@ -28,6 +28,14 @@
                 "type": "layout",
                 "key": "weather_vanes_vertical"
               }
+            },
+            {
+              "type": "group",
+              "header": "Maiamai Rewards",
+              "content": {
+                "type": "layout",
+                "key": "rewards_panel_vertical"
+              }
             }
           ]
         },

@@ -45,7 +45,14 @@
                     "type": "layout",
                     "key": "weather_vanes_vertical_compact"
                   }
+                },
+              {
+                "title": "Maiamai Rewards",
+                "content": {
+                  "type": "layout",
+                  "key": "rewards_panel_vertical"
                 }
+              }
               ]
             }
           ]

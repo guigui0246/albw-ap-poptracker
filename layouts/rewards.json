@@ -26,5 +26,47 @@
         "requirement_maiamai_100_reward"
       ]
     ]
+  },
+  "rewards_panel_vertical": {
+    "type": "itemgrid",
+    "item_margin": "1,0",
+    "item_size": 40,
+    "margin": "0, 0, 0, 0",
+    "rows": [
+      [
+        "requirement_maiamai_bow",
+        "requirement_maiamai_boomerang",
+        "requirement_maiamai_hookshot",
+        "requirement_maiamai_hammer",
+        "requirement_maiamai_bombs"
+      ],
+      [
+        "requirement_maiamai_fire_rod",
+        "requirement_maiamai_ice_rod",
+        "requirement_maiamai_tornado_rod",
+        "requirement_maiamai_sand_rod",
+        "requirement_maiamai_100_reward"
+      ]
+    ]
+  },
+  "rewards_panel_vertical_fullhd": {
+    "type": "itemgrid",
+    "item_margin": "1,0",
+    "item_size": 24,
+    "margin": "0, 0, 0, 0",
+    "rows": [
+      [
+        "requirement_maiamai_bow",
+        "requirement_maiamai_boomerang",
+        "requirement_maiamai_hookshot",
+        "requirement_maiamai_hammer",
+        "requirement_maiamai_bombs",
+        "requirement_maiamai_fire_rod",
+        "requirement_maiamai_ice_rod",
+        "requirement_maiamai_tornado_rod",
+        "requirement_maiamai_sand_rod",
+        "requirement_maiamai_100_reward"
+      ]
+    ]
   }
 }

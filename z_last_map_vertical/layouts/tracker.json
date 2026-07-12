@@ -7,7 +7,7 @@
       "dropshadow": true,
       "content": [
         {
-          "type": "dock",
+          "type": "array",
           "dock": "left",
           "v_alignment": "stretch",
           "content": [
@@ -36,11 +36,19 @@
                 "type": "layout",
                 "key": "weather_vanes_horizontal_small"
               }
+            },
+            {
+              "type": "group",
+              "header": "Maiamai Rewards",
+              "content": {
+                "type": "layout",
+                "key": "rewards_panel_vertical_fullhd"
+              }
             }
           ]
         },
         {
-          "type": "dock",
+          "type": "array",
           "content": [
             {
               "type": "layout",
