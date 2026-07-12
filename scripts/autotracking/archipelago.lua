@@ -2,6 +2,7 @@ ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/crack_map.lua")
+ScriptHost:LoadScript("scripts/autotracking/vane_map.lua")
 
 CUR_INDEX = -1
 PLAYER_ID = -1
@@ -11,6 +12,7 @@ LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
 HOSTED = {}
 CRACK_MAPPING = {}
+VANE_MAPPING = {}
 
 DEBUG_ON_CLEAR = true
 DEBUG_ON_ITEM = true
@@ -137,6 +139,46 @@ function updateCracks(important)
     end
 end
 
+function updateVanes(important)
+    if VANE_MAPPING then
+        for entrance, destination in pairs(VANE_MAPPING) do
+            local location_code = VANE_MAP[entrance]
+            local dest_code = VANE_MAP[destination]
+            if location_code and dest_code then
+                if dest_code ~= important then
+                    local dest = Tracker:FindObjectForCode(dest_code)
+                    if dest then
+                        if has(location_code) then
+                            dest.Active = true
+                        else
+                            if location_code == important then
+                                dest.Active = false
+                            end
+                        end
+                    else
+                        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+                            print(string.format("syncDisplay: could not find destination for code %s", dest_code))
+                        end
+                    end
+                end
+            else
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+                    if not location_code then
+                        print(string.format("syncDisplay: could not find location code for name %s", entrance))
+                    end
+                    if not dest_code then
+                        print(string.format("syncDisplay: could not find destination code for name %s", destination))
+                    end
+                end
+            end
+        end
+    else
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+            print("syncDisplay: VANE_MAPPING table is nil:")
+        end
+    end
+end
+
 function syncDisplay()
     local bracelet = Tracker:FindObjectForCode("p_bracelet")
     local quake = Tracker:FindObjectForCode("quake")
@@ -242,6 +284,7 @@ end
 function syncDisplayCallback(code)
     syncDisplay()
     updateCracks(code)
+    updateVanes(code)
 end
 
 ScriptHost:AddWatchForCode("syncDisplay", "*", syncDisplayCallback)
@@ -329,12 +372,17 @@ function onClear(slot_data)
     resetItems(ITEM_MAPPING)
     resetLocations()
     CRACK_MAPPING = {}
+    VANE_MAPPING = {}
     if slot_data["crack_map"] then
         CRACK_MAPPING = Jsondecode(slot_data["crack_map"])
+    end
+    if slot_data["vane_map"] then
+        VANE_MAPPING = Jsondecode(slot_data["vane_map"])
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
         print(string.format("crack mapping:\n%s", dump_table(CRACK_MAPPING)))
+        print(string.format("vane mapping:\n%s", dump_table(VANE_MAPPING)))
     end
 
     for key, value in pairs(slot_data) do
