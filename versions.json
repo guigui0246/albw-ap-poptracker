@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.6.0",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.6.0/albw-ap-poptracker-v1.6.0.zip",
+      "sha256": "378513FDE92F7472F751883F7D1E6B71FF2E786FDC75549B707846FBFF4209F1",
+      "changelog": [
+        "Weathervanes link",
+        "Mother maiamai reward count"
+      ]
+    },
+    {
       "package_version": "1.5.6",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.5.6/albw-ap-poptracker-v1.5.6.zip",
       "sha256": "27C40906BE7641BDA6A17D9AF69E7658AFD7D6C9C0300B67F698B1465A1E2DAA",
