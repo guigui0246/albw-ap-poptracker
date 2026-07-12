@@ -1,4 +1,5 @@
 Tracker:AddItems("items/items.json")
+Tracker:AddItems("items/items_mother_maiamai.json")
 -- Tracker:AddItems("items/items_tfh.json")
 Tracker:AddItems("items/items_chests.json")
 Tracker:AddItems("items/items_keys.json")

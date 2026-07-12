@@ -781,12 +781,47 @@ function motherMaiamai()
     return forceShowMaiamais()
 end
 
-function canUpgradeItem()
-    return maiamaiUpgradeAvailable() > motherMaiamaiItemsReceived()
+function canGetLastUpgradeItem()
+    if Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("maiamai_limit").CurrentStage then
+        return true
+    end
+    return false
 end
 
-function motherMaiamaiItemsReceived()
-    return count("maiamai_bow") + count("maiamai_boomerang") + count("maiamai_hookshot") + count("maiamai_hammer") + count("maiamai_bombs") + count("maiamai_fire_rod") + count("maiamai_ice_rod") + count("maiamai_tornado_rod") + count("maiamai_sand_rod")
+function canUpgradeItemBow()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_bow").CurrentStage
+end
+
+function canUpgradeItemBoomerang()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_boomerang").CurrentStage
+end
+
+function canUpgradeItemHookshot()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_hookshot").CurrentStage
+end
+
+function canUpgradeItemHammer()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_hammer").CurrentStage
+end
+
+function canUpgradeItemBombs()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_bombs").CurrentStage
+end
+
+function canUpgradeItemFireRod()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_fire_rod").CurrentStage
+end
+
+function canUpgradeItemIceRod()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_ice_rod").CurrentStage
+end
+
+function canUpgradeItemTornadoRod()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_tornado_rod").CurrentStage
+end
+
+function canUpgradeItemSandRod()
+    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_sand_rod").CurrentStage
 end
 
 function inspect_crack_lorule()

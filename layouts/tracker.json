@@ -48,6 +48,16 @@
                 "type": "layout",
                 "key": "weather_vanes_horizontal"
               }
+            },
+            {
+              "type": "group",
+              "header": "Maiamai Rewards",
+              "dock": "left",
+              "margin": "0,0,3,0",
+              "content": {
+                "type": "layout",
+                "key": "rewards_panel"
+              }
             }
           ]
         }

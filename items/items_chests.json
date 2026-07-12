@@ -65,6 +65,13 @@
     "loop": true,
     "codes": "maiamai_sand_rod"
   },
+  {
+    "name": "Great Spin Upgrade",
+    "type": "toggle",
+    "img": "images/items/maiamai.png",
+    "loop": true,
+    "codes": "maiamai_100_reward"
+  },
   // Eastern Palace
   {
     "name": "(1F) Merge Chest",
