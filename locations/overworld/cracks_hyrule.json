@@ -289,8 +289,7 @@
           {
             "hosted_item": "crack_left_hyrule_paradox",
             "name": "Crack",
-            "visibility_rules": ["cracksanity"],
-            "access_rules": ["{cracksanity, !$has_crack_map}"]
+            "visibility_rules": ["cracksanity"]
           }
         ],
         "map_locations": [
