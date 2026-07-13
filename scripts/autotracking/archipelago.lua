@@ -293,15 +293,17 @@ function onSetReply(key, value, old)
 end
 
 function toggleWeatherVanes(value)
-    if value == 2 then -- Convinient
+    if value == 2 then -- Convenient
         Tracker:FindObjectForCode("wv_your_house").Active = true
         Tracker:FindObjectForCode("wv_kakariko").Active = true
         Tracker:FindObjectForCode("wv_witch").Active = true
         Tracker:FindObjectForCode("wv_sanctuary").Active = true
-        Tracker:FindObjectForCode("wv_lorule_castle").Active = true
-        Tracker:FindObjectForCode("wv_thieves").Active = true
-        Tracker:FindObjectForCode("wv_blacksmith").Active = true
-        Tracker:FindObjectForCode("wv_vacant_house").Active = true
+        if not has("cracksanity") then
+            Tracker:FindObjectForCode("wv_lorule_castle").Active = true
+            Tracker:FindObjectForCode("wv_thieves").Active = true
+            Tracker:FindObjectForCode("wv_blacksmith").Active = true
+            Tracker:FindObjectForCode("wv_vacant_house").Active = true
+        end
     elseif value == 3 then -- Hyrule
         Tracker:FindObjectForCode("wv_your_house").Active = true
         Tracker:FindObjectForCode("wv_kakariko").Active = true
