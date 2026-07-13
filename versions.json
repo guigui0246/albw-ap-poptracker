@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.6.1",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.6.1/albw-ap-poptracker-v1.6.1.zip",
+      "sha256": "3AACDB03D51FB25D29AB7183848B0230B67D4080D34D0B77BBE07AC3128B39BF",
+      "changelog": [
+        "Fix convenient weather vane with crack shuffle",
+        "Fix paradox upper cracks logics"
+      ]
+    },
+    {
       "package_version": "1.6.0",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.6.0/albw-ap-poptracker-v1.6.0.zip",
       "sha256": "378513FDE92F7472F751883F7D1E6B71FF2E786FDC75549B707846FBFF4209F1",
