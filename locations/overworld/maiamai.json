@@ -1703,7 +1703,10 @@
               {
                 "name": "Maiamai",
                 "item_count": 1,
-                "access_rules": ["quake_on, merge, crack_right_lorule_paradox"],
+                "access_rules": [
+                  "not_cracksanity, quake_on, merge",
+                  "quake_on, merge, crack_right_lorule_paradox"
+                ],
                 "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
               }
             ]
