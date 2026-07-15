@@ -330,10 +330,10 @@ function syncDisplay()
         end
     end
 
-    for name in ["power_flag", "wisdom_flag", "courage_flag", "gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "rosso_flag", "irene_flag", "impa_flag"] do
+    for _, name in ipairs({"power_flag", "wisdom_flag", "courage_flag", "gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "rosso_flag", "irene_flag", "impa_flag"}) do
         local flag = Tracker:FindObjectForCode(name)
         if flag.Active then
-            for dungeon_index in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] do
+            for _, dungeon_index in ipairs({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) do
                 local pendant = Tracker:FindObjectForCode(name:gsub("_flag", "_" .. dungeon_index))
                 if pendant then
                     pendant.Active = true
