@@ -87,5 +87,5 @@ FLAGS_MAP = {
     ["vane_turtle_rock"] = "wv_turtle",
     ["vane_death_mtn_lorule"] = "wv_death_lorule",
     ["scoot_fruit"] = "scootfruit",
-    ["golden_bee"] = "golden_bee"
+    ["golden_bee"] = "goldenbee"
 }

@@ -204,6 +204,16 @@ function onRetrieved(key, value)
                 local obj = Tracker:FindObjectForCode(name)
                 if obj then
                     obj.Active = val
+                    if name == "goldenbee" and val then
+                        local bottles = Tracker:FindObjectForCode("p_bottle")
+                        if bottles then
+                            bottles.CurrentStage = 2
+                        else
+                            if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+                                print("onRetrieved: could not find object for code p_bottle")
+                            end
+                        end
+                    end
                 else
                     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
                         print(string.format("onRetrieved: could not find object for flag %s with code %s", flag, name))
