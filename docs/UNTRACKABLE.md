@@ -3,8 +3,8 @@
 ## Items
 
 - Golden Bee (available in tracker purely for location logic, Bee House Bee Badge reward)
-- Scoot and Foul fruit (Scoot available in tracker for logic, Runaway Item Seller)
-- All dungeon prizes (Pendant/Sages)
+- Foul fruit
+- Which dungeon price goes in which dungeon
 - Zelda (Sage)
 - Triforce (Game Ending)
 
@@ -12,7 +12,7 @@
 
 These items are available to be auto-tracked, but not very useful otherwise, so currently they will not be on the tracker
 
-- All types of rupees (This could possibly be tracked for the item purchase/Great Rupee Fairy, but it would be very hard to keep track of)
+- All types of rupees
 - Heart pieces and heart containers
 - Monster parts
 
@@ -22,17 +22,12 @@ These items are available to be auto-tracked, but not very useful otherwise, so 
 
 All hint ghosts are untrackable.
 
-#### Weather Vanes
-
-All weather vanes are untrackable
-
 #### Events
 
  - Woman Roof Maiamai
  - Ravio's Signs
  - Access Potion Shop
  - Give Oren Smooth Gem
- - Shady Guy Trigger
  - Reach House of Gales Island
  - Access Hyrule Blacksmith
  - Open Stylish Woman's House
