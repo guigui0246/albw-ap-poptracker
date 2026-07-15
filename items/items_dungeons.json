@@ -704,21 +704,21 @@
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/pendant_power.png",
-    "codes": "pendant, power"
+    "codes": "pendant, power, power_flag"
   },
   {
     "name": "Pendant of Wisdom",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/pendant_wisdom.png",
-    "codes": "pendant, wisdom"
+    "codes": "pendant, wisdom, wisdom_flag"
   },
   {
     "name": "Pendant of Courage",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/pendant_courage.png",
-    "codes": "pendant, courage"
+    "codes": "pendant, courage, courage_flag"
   },
 
   // Sages
@@ -727,48 +727,48 @@
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_gulley.png",
-    "codes": "sage, gulley"
+    "codes": "sage, gulley, gulley_flag"
   },
   {
     "name": "Sage Oren",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_oren.png",
-    "codes": "sage, oren"
+    "codes": "sage, oren, oren_flag"
   },
   {
     "name": "Sage Seres",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_seres.png",
-    "codes": "sage, seres"
+    "codes": "sage, seres, seres_flag"
   },
   {
     "name": "Sage Osfala",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_osfala.png",
-    "codes": "sage, osfala"
+    "codes": "sage, osfala, osfala_flag"
   },
   {
     "name": "Sage Impa",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_impa.png",
-    "codes": "sage, impa"
+    "codes": "sage, impa, impa_flag"
   },
   {
     "name": "Sage Irene",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_irene.png",
-    "codes": "sage, irene"
+    "codes": "sage, irene, irene_flag"
   },
   {
     "name": "Sage Rosso",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_rosso.png",
-    "codes": "sage, rosso"
+    "codes": "sage, rosso, rosso_flag"
   }
 ]
