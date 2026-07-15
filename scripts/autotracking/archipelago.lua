@@ -190,18 +190,28 @@ function onRetrieved(key, value)
         local obj = Tracker:FindObjectForCode("maiamai")
         if obj then
             obj.CurrentStage = value
+        else
+            if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+                print("onRetrieved: could not find object for code maiamai")
+            end
         end
     end
 
     if key == "albw_flags_" .. tostring(PLAYER_NUMBER) then
         for flag, val in pairs(value) do
             local name = FLAGS_MAP[flag]
-            local obj = Tracker:FindObjectForCode(name)
-            if obj then
-                obj.Active = val
+            if name then
+                local obj = Tracker:FindObjectForCode(name)
+                if obj then
+                    obj.Active = val
+                else
+                    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+                        print(string.format("onRetrieved: could not find object for flag %s with code %s", flag, name))
+                    end
+                end
             else
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
-                    print(string.format("onRetrieved: could not find object for flag %s with code %s", flag, name))
+                    print(string.format("onRetrieved: could not find code for flag %s", flag))
                 end
             end
         end
