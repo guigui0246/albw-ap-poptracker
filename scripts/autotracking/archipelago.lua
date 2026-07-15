@@ -3,6 +3,7 @@ ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/crack_map.lua")
 ScriptHost:LoadScript("scripts/autotracking/vane_map.lua")
+ScriptHost:LoadScript("scripts/autotracking/flags_map.lua")
 
 CUR_INDEX = -1
 PLAYER_ID = -1
@@ -17,6 +18,7 @@ VANE_MAPPING = {}
 DEBUG_ON_CLEAR = true
 DEBUG_ON_ITEM = true
 DEBUG_ON_LOCATION = true
+DEBUG_ON_STORAGE = true
 DEBUG_ON_SCOUT = true
 DEBUG_ON_BOUNCE = true
 
@@ -179,6 +181,34 @@ function updateVanes(important)
     end
 end
 
+function onRetrieved(key, value)
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+        print(string.format("Retrieved %s = %s", key, dump_table(value)))
+    end
+
+    if key == "albw_maiamai_" .. tostring(PLAYER_NUMBER) then
+        local obj = Tracker:FindObjectForCode("maiamai")
+        if obj then
+            obj.CurrentStage = value
+        end
+    end
+
+    if key == "albw_flags_" .. tostring(PLAYER_NUMBER) then
+        for flag, val in pairs(value) do
+            local name = FLAGS_MAP[flag]
+            local obj = Tracker:FindObjectForCode(name)
+            if obj then
+                obj.Active = val
+            else
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+                    print(string.format("onRetrieved: could not find object for flag %s with code %s", flag, name))
+                end
+            end
+        end
+    end
+    syncDisplay()
+end
+
 function syncDisplay()
     local bracelet = Tracker:FindObjectForCode("p_bracelet")
     local quake = Tracker:FindObjectForCode("quake")
@@ -298,7 +328,7 @@ function toggleWeatherVanes(value)
         Tracker:FindObjectForCode("wv_kakariko").Active = true
         Tracker:FindObjectForCode("wv_witch").Active = true
         Tracker:FindObjectForCode("wv_sanctuary").Active = true
-        if not has("cracksanity") then
+        if notCracksanity() then
             Tracker:FindObjectForCode("wv_lorule_castle").Active = true
             Tracker:FindObjectForCode("wv_thieves").Active = true
             Tracker:FindObjectForCode("wv_blacksmith").Active = true
@@ -368,6 +398,14 @@ function onClear(slot_data)
     CUR_INDEX = -1
     PLAYER_NUMBER = Archipelago.PlayerNumber or -1
     TEAM_NUMBER = Archipelago.TeamNumber or 0
+    if PLAYER_NUMBER ~= -1 then
+        Archipelago:AddRetrievedHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddRetrievedHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:SetNotify({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:SetNotify({"albw_flags_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:Get({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:Get({"albw_flags_" .. tostring(PLAYER_NUMBER)})
+    end
     Tracker.BulkUpdate = true
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}
@@ -375,10 +413,10 @@ function onClear(slot_data)
     resetLocations()
     CRACK_MAPPING = {}
     VANE_MAPPING = {}
-    if slot_data["crack_map"] then
+    if slotdata and slot_data["crack_map"] then
         CRACK_MAPPING = Jsondecode(slot_data["crack_map"])
     end
-    if slot_data["vane_map"] then
+    if slotdata and slot_data["vane_map"] then
         VANE_MAPPING = Jsondecode(slot_data["vane_map"])
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
@@ -387,6 +425,7 @@ function onClear(slot_data)
         print(string.format("vane mapping:\n%s", dump_table(VANE_MAPPING)))
     end
 
+    local wv_value = 0
     for key, value in pairs(slot_data) do
         if key == "swordless_mode" then
             if value == 1 then
@@ -394,7 +433,7 @@ function onClear(slot_data)
                 object.CurrentStage = 0
             end
         elseif key == "weather_vanes" then
-            toggleWeatherVanes(value)
+            wv_value = value
         elseif (key == "trials_required" and value == 0) or (key == "open_trials_door" and value == 1) then
             Tracker:FindObjectForCode("lc_trials_door").CurrentStage = 1
         end
@@ -409,6 +448,7 @@ function onClear(slot_data)
             print(string.format("onClear: could not find setting for id %s", key))
         end
     end
+    toggleWeatherVanes(wv_value)
     Tracker.BulkUpdate = false
     syncDisplay()
 end
