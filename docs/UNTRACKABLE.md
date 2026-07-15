@@ -2,11 +2,16 @@
 
 ## Items
 
-- Golden Bee (available in tracker purely for location logic, Bee House Bee Badge reward)
 - Foul fruit
 - Which dungeon price goes in which dungeon
 - Zelda (Sage)
 - Triforce (Game Ending)
+
+## Cracks
+
+- Hyrule Castle Crack
+- Lorule Castle Crack
+- Misery Mire Entrance Crack (Hyrule)
 
 #### Junk items
 
