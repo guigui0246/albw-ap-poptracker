@@ -565,15 +565,17 @@ function onLocation(location_id, location_name)
         return
     end
     for _, value in pairs(locations) do
-        local location_object = Tracker:FindObjectForCode(value)
-        if location_object then
-            if value:sub(1, 1) == "@" then
-                location_object.AvailableChestCount = location_object.AvailableChestCount - 1
-            else
-                location_object.Active = true
+        if value ~= "toggle" then
+            local location_object = Tracker:FindObjectForCode(value)
+            if location_object then
+                if value:sub(1, 1) == "@" then
+                    location_object.AvailableChestCount = location_object.AvailableChestCount - 1
+                else
+                    location_object.Active = true
+                end
+            elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_LOCATION then
+                print(string.format("onLocation: could not find object for code %s", value))
             end
-        elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_LOCATION then
-            print(string.format("onLocation: could not find object for code %s", value))
         end
     end
     can_finish()
