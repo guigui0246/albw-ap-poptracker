@@ -401,6 +401,8 @@ function onClear(slot_data)
     if PLAYER_NUMBER ~= -1 then
         Archipelago:AddRetrievedHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
         Archipelago:AddRetrievedHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddSetReplyHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddSetReplyHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
         Archipelago:SetNotify({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
         Archipelago:SetNotify({"albw_flags_" .. tostring(PLAYER_NUMBER)})
         Archipelago:Get({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
