@@ -4,67 +4,69 @@
     "name": "Eastern Palace Reward",
     "type": "progressive_toggle",
     "capturable": false,
+    "codes": "eastern_",
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "eastern_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, gulley, gulley_1"
+        "codes": "ep, eastern, sage, gulley, eastern_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, oren, oren_1"
+        "codes": "ep, eastern, sage, oren, eastern_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, seres, seres_1"
+        "codes": "ep, eastern, sage, seres, eastern_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, osfala, osfala_1"
+        "codes": "ep, eastern, sage, osfala, eastern_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, impa, impa_1"
+        "codes": "ep, eastern, sage, impa, eastern_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, irene, irene_1"
+        "codes": "ep, eastern, sage, irene, eastern_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, sage, rosso, rosso_1"
+        "codes": "ep, eastern, sage, rosso, eastern_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, pendant, power, power_1"
+        "codes": "ep, eastern, pendant, power, eastern_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, pendant, wisdom, wisdom_1"
+        "codes": "ep, eastern, pendant, wisdom, eastern_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "ep, eastern, pendant, courage, courage_1"
+        "codes": "ep, eastern, pendant, courage, eastern_"
       }
     ]
   },
@@ -76,64 +78,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "gales_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, gulley, gulley_2"
+        "codes": "hg, gales, sage, gulley, gales_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, oren, oren_2"
+        "codes": "hg, gales, sage, oren, gales_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, seres, seres_2"
+        "codes": "hg, gales, sage, seres, gales_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, osfala, osfala_2"
+        "codes": "hg, gales, sage, osfala, gales_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, impa, impa_2"
+        "codes": "hg, gales, sage, impa, gales_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, irene, irene_2"
+        "codes": "hg, gales, sage, irene, gales_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "hg, gales, sage, rosso, rosso_2"
+        "codes": "hg, gales, sage, rosso, gales_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "hg, gales, pendant, power, power_2"
+        "codes": "hg, gales, pendant, power, gales_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "hg, gales, pendant, wisdom, wisdom_2"
+        "codes": "hg, gales, pendant, wisdom, gales_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "hg, gales, pendant, courage, courage_2"
+        "codes": "hg, gales, pendant, courage, gales_"
       }
     ]
   },
@@ -146,64 +149,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "hera_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, gulley, gulley_3"
+        "codes": "th, hera, sage, gulley, hera_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, oren, oren_3"
+        "codes": "th, hera, sage, oren, hera_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, seres, seres_3"
+        "codes": "th, hera, sage, seres, hera_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, osfala, osfala_3"
+        "codes": "th, hera, sage, osfala, hera_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, impa, impa_3"
+        "codes": "th, hera, sage, impa, hera_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, irene, irene_3"
+        "codes": "th, hera, sage, irene, hera_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "th, hera, sage, rosso, rosso_3"
+        "codes": "th, hera, sage, rosso, hera_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "th, hera, pendant, power, power_3"
+        "codes": "th, hera, pendant, power, hera_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "th, hera, pendant, wisdom, wisdom_3"
+        "codes": "th, hera, pendant, wisdom, hera_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "th, hera, pendant, courage, courage_3"
+        "codes": "th, hera, pendant, courage, hera_"
       }
     ]
   },
@@ -216,64 +220,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "dark_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, gulley, gulley_4"
+        "codes": "pd, dark, sage, gulley, dark_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, oren, oren_4"
+        "codes": "pd, dark, sage, oren, dark_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, seres, seres_4"
+        "codes": "pd, dark, sage, seres, dark_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, osfala, osfala_4"
+        "codes": "pd, dark, sage, osfala, dark_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, impa, impa_4"
+        "codes": "pd, dark, sage, impa, dark_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, irene, irene_4"
+        "codes": "pd, dark, sage, irene, dark_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "pd, dark, sage, rosso, rosso_4"
+        "codes": "pd, dark, sage, rosso, dark_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "pd, dark, pendant, power, power_4"
+        "codes": "pd, dark, pendant, power, dark_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "pd, dark, pendant, wisdom, wisdom_4"
+        "codes": "pd, dark, pendant, wisdom, dark_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "pd, dark, pendant, courage, courage_4"
+        "codes": "pd, dark, pendant, courage, dark_"
       }
     ]
   },
@@ -286,64 +291,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "swamp_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, gulley, gulley_5"
+        "codes": "sp, swamp, sage, gulley, swamp_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, oren, oren_5"
+        "codes": "sp, swamp, sage, oren, swamp_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, seres, seres_5"
+        "codes": "sp, swamp, sage, seres, swamp_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, osfala, osfala_5"
+        "codes": "sp, swamp, sage, osfala, swamp_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, impa, impa_5"
+        "codes": "sp, swamp, sage, impa, swamp_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, irene, irene_5"
+        "codes": "sp, swamp, sage, irene, swamp_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, sage, rosso, rosso_5"
+        "codes": "sp, swamp, sage, rosso, swamp_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, pendant, power, power_5"
+        "codes": "sp, swamp, pendant, power, swamp_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, pendant, wisdom, wisdom_5"
+        "codes": "sp, swamp, pendant, wisdom, swamp_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "sp, swamp, pendant, courage, courage_5"
+        "codes": "sp, swamp, pendant, courage, swamp_"
       }
     ]
   },
@@ -356,64 +362,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "skull_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, gulley, gulley_6"
+        "codes": "sw, skull, sage, gulley, skull_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, oren, oren_6"
+        "codes": "sw, skull, sage, oren, skull_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, seres, seres_6"
+        "codes": "sw, skull, sage, seres, skull_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, osfala, osfala_6"
+        "codes": "sw, skull, sage, osfala, skull_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, impa, impa_6"
+        "codes": "sw, skull, sage, impa, skull_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, irene, irene_6"
+        "codes": "sw, skull, sage, irene, skull_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "sw, skull, sage, rosso, rosso_6"
+        "codes": "sw, skull, sage, rosso, skull_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "sw, skull, pendant, power, power_6"
+        "codes": "sw, skull, pendant, power, skull_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "sw, skull, pendant, wisdom, wisdom_6"
+        "codes": "sw, skull, pendant, wisdom, skull_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "sw, skull, pendant, courage, courage_6"
+        "codes": "sw, skull, pendant, courage, skull_"
       }
     ]
   },
@@ -426,64 +433,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "thieves_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, gulley, gulley_7"
+        "codes": "tt, thieves, sage, gulley, thieves_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, oren, oren_7"
+        "codes": "tt, thieves, sage, oren, thieves_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, seres, seres_7"
+        "codes": "tt, thieves, sage, seres, thieves_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, osfala, osfala_7"
+        "codes": "tt, thieves, sage, osfala, thieves_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, impa, impa_7"
+        "codes": "tt, thieves, sage, impa, thieves_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, irene, irene_7"
+        "codes": "tt, thieves, sage, irene, thieves_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, sage, rosso, rosso_7"
+        "codes": "tt, thieves, sage, rosso, thieves_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, pendant, power, power_7"
+        "codes": "tt, thieves, pendant, power, thieves_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, pendant, wisdom, wisdom_7"
+        "codes": "tt, thieves, pendant, wisdom, thieves_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "tt, thieves, pendant, courage, courage_7"
+        "codes": "tt, thieves, pendant, courage, thieves_"
       }
     ]
   },
@@ -496,64 +504,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "turtle_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, gulley, gulley_8"
+        "codes": "tr, turtle, sage, gulley, turtle_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, oren, oren_8"
+        "codes": "tr, turtle, sage, oren, turtle_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, seres, seres_8"
+        "codes": "tr, turtle, sage, seres, turtle_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, osfala, osfala_8"
+        "codes": "tr, turtle, sage, osfala, turtle_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, impa, impa_8"
+        "codes": "tr, turtle, sage, impa, turtle_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, irene, irene_8"
+        "codes": "tr, turtle, sage, irene, turtle_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, sage, rosso, rosso_8"
+        "codes": "tr, turtle, sage, rosso, turtle_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, pendant, power, power_8"
+        "codes": "tr, turtle, pendant, power, turtle_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, pendant, wisdom, wisdom_8"
+        "codes": "tr, turtle, pendant, wisdom, turtle_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "tr, turtle, pendant, courage, courage_8"
+        "codes": "tr, turtle, pendant, courage, turtle_"
       }
     ]
   },
@@ -566,64 +575,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "desert_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, gulley, gulley_9"
+        "codes": "dp, desert, sage, gulley, desert_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, oren, oren_9"
+        "codes": "dp, desert, sage, oren, desert_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, seres, seres_9"
+        "codes": "dp, desert, sage, seres, desert_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, osfala, osfala_9"
+        "codes": "dp, desert, sage, osfala, desert_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, impa, impa_9"
+        "codes": "dp, desert, sage, impa, desert_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, irene, irene_9"
+        "codes": "dp, desert, sage, irene, desert_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "dp, desert, sage, rosso, rosso_9"
+        "codes": "dp, desert, sage, rosso, desert_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "dp, desert, pendant, power, power_9"
+        "codes": "dp, desert, pendant, power, desert_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "dp, desert, pendant, wisdom, wisdom_9"
+        "codes": "dp, desert, pendant, wisdom, desert_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "dp, desert, pendant, courage, courage_9"
+        "codes": "dp, desert, pendant, courage, desert_"
       }
     ]
   },
@@ -636,64 +646,65 @@
     "stages": [
       {
         "img": "images/prizes/unknown.png",
-        "inherit_codes": false
+        "inherit_codes": false,
+        "codes": "ice_"
       },
       {
         "img": "images/prizes/sage_gulley.png",
         "img_mods": "overlay|images/numbers/purple_1.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, gulley, gulley_10"
+        "codes": "ir, ice, sage, gulley, ice_"
       },
       {
         "img": "images/prizes/sage_oren.png",
         "img_mods": "overlay|images/numbers/purple_2.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, oren, oren_10"
+        "codes": "ir, ice, sage, oren, ice_"
       },
       {
         "img": "images/prizes/sage_seres.png",
         "img_mods": "overlay|images/numbers/purple_3.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, seres, seres_10"
+        "codes": "ir, ice, sage, seres, ice_"
       },
       {
         "img": "images/prizes/sage_osfala.png",
         "img_mods": "overlay|images/numbers/purple_4.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, osfala, osfala_10"
+        "codes": "ir, ice, sage, osfala, ice_"
       },
       {
         "img": "images/prizes/sage_impa.png",
         "img_mods": "overlay|images/numbers/purple_5.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, impa, impa_10"
+        "codes": "ir, ice, sage, impa, ice_"
       },
       {
         "img": "images/prizes/sage_irene.png",
         "img_mods": "overlay|images/numbers/purple_6.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, irene, irene_10"
+        "codes": "ir, ice, sage, irene, ice_"
       },
       {
         "img": "images/prizes/sage_rosso.png",
         "img_mods": "overlay|images/numbers/purple_7.png",
         "inherit_codes": false,
-        "codes": "ir, ice, sage, rosso, rosso_10"
+        "codes": "ir, ice, sage, rosso, ice_"
       },
       {
         "img": "images/prizes/pendant_power.png",
         "inherit_codes": false,
-        "codes": "ir, ice, pendant, power, power_10"
+        "codes": "ir, ice, pendant, power, ice_"
       },
       {
         "img": "images/prizes/pendant_wisdom.png",
         "inherit_codes": false,
-        "codes": "ir, ice, pendant, wisdom, wisdom_10"
+        "codes": "ir, ice, pendant, wisdom, ice_"
       },
       {
         "img": "images/prizes/pendant_courage.png",
         "inherit_codes": false,
-        "codes": "ir, ice, pendant, courage, courage_10"
+        "codes": "ir, ice, pendant, courage, ice_"
       }
     ]
   },

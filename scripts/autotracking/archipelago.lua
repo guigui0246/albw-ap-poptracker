@@ -15,9 +15,9 @@ HOSTED = {}
 CRACK_MAPPING = {}
 VANE_MAPPING = {}
 
-DEBUG_ON_CLEAR = true
+DEBUG_ON_CLEAR = false
 DEBUG_ON_ITEM = true
-DEBUG_ON_LOCATION = true
+DEBUG_ON_LOCATION = false
 DEBUG_ON_STORAGE = true
 DEBUG_ON_SCOUT = true
 DEBUG_ON_BOUNCE = true
@@ -330,13 +330,19 @@ function syncDisplay()
         end
     end
 
-    for _, name in ipairs({"power_flag", "wisdom_flag", "courage_flag", "gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "rosso_flag", "irene_flag", "impa_flag"}) do
+    for i, name in ipairs({"gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "impa_flag", "irene_flag", "rosso_flag", "power_flag", "wisdom_flag", "courage_flag"}) do
         local flag = Tracker:FindObjectForCode(name)
         if flag.Active then
-            for _, dungeon_index in ipairs({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) do
-                local pendant = Tracker:FindObjectForCode(name:gsub("_flag", "_" .. dungeon_index))
+            for _, dungeon in ipairs({"eastern_", "gales_", "hera_", "dark_", "swamp_", "skull_", "thieves_", "turtle_", "desert_", "ice_"}) do
+                local pendant = Tracker:FindObjectForCode(dungeon)
                 if pendant then
-                    pendant.Active = true
+                    if pendant.CurrentStage == i then
+                        pendant.Active = true
+                    end
+                else
+                    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+                        print(string.format("syncDisplay: could not find object for code %s", dungeon))
+                    end
                 end
             end
         end
