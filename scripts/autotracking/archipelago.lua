@@ -15,9 +15,9 @@ HOSTED = {}
 CRACK_MAPPING = {}
 VANE_MAPPING = {}
 
-DEBUG_ON_CLEAR = false
+DEBUG_ON_CLEAR = true
 DEBUG_ON_ITEM = true
-DEBUG_ON_LOCATION = false
+DEBUG_ON_LOCATION = true
 DEBUG_ON_STORAGE = true
 DEBUG_ON_SCOUT = true
 DEBUG_ON_BOUNCE = true
@@ -44,6 +44,22 @@ function resetItems(mapping_table)
             elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
                 print(string.format("onClear: could not find object for code %s", value[1]))
             end
+        end
+    end
+    for _, value in pairs(FLAGS_MAP) do
+        if value then
+            local object = Tracker:FindObjectForCode(value)
+            if object then
+                object.Active = false
+            elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
+                print(string.format("onClear: could not find object for flag code %s", value))
+            end
+        end
+    end
+    for _, value in ipairs({"eastern_", "gales_", "hera_", "dark_", "swamp_", "skull_", "thieves_", "turtle_", "desert_", "ice_"}) do
+        local object = Tracker:FindObjectForCode(value)
+        if object then
+            object.Active = false
         end
     end
 end
@@ -436,16 +452,6 @@ function onClear(slot_data)
     CUR_INDEX = -1
     PLAYER_NUMBER = Archipelago.PlayerNumber or -1
     TEAM_NUMBER = Archipelago.TeamNumber or 0
-    if PLAYER_NUMBER ~= -1 then
-        Archipelago:AddRetrievedHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:AddRetrievedHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:AddSetReplyHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:AddSetReplyHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:SetNotify({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
-        Archipelago:SetNotify({"albw_flags_" .. tostring(PLAYER_NUMBER)})
-        Archipelago:Get({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
-        Archipelago:Get({"albw_flags_" .. tostring(PLAYER_NUMBER)})
-    end
     Tracker.BulkUpdate = true
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}
@@ -489,6 +495,16 @@ function onClear(slot_data)
         end
     end
     toggleWeatherVanes(wv_value)
+    if PLAYER_NUMBER ~= -1 then
+        Archipelago:AddRetrievedHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddRetrievedHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddSetReplyHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddSetReplyHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:SetNotify({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:SetNotify({"albw_flags_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:Get({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:Get({"albw_flags_" .. tostring(PLAYER_NUMBER)})
+    end
     Tracker.BulkUpdate = false
     syncDisplay()
 end
