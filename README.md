@@ -8,6 +8,46 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+### 1.7.0
+
+- Add autotracking to collected vanes
+- Add autotracking to collected cracks
+- Add autotracking to bumping into shady guy
+- Add autotracking to golden bee
+- Add autotracking to the scout fruit
+- Add autotracking to pendants and dungeon rewards
+- Fix a convenient vanes problem due to random key order
+
+### 1.6.1
+
+- Fix convenient weather vane with crack shuffle
+- Fix paradox upper cracks logics
+
+### 1.6.0
+
+- Add a new menu to set how many maiamai are required for the rewards given by mother maiamai
+- Also auto-track weather vanes
+
+### 1.5.6
+
+- Fix milk
+- Remove debug log spam
+
+### 1.5.5
+
+- Fix a few logic errors
+- Fix an error where some maiamais wouldn't appear
+- Add automatic crack linking when connected to ap
+
+### 1.5.4
+
+- Add support for upgrade items (Box Upgrade, Lamp Upgrade, ...)
+- Add support for auto-tracking keysy config (once it's added in the apworld release)
+
+### 1.5.3
+
+- A few bug fixes, including a crash with the new nice item upgrades settings
+
 ### 1.5.2
 
 - Added Hint ghosts
