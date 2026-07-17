@@ -148,6 +148,7 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "chest_unopened_img": "images/checks/chest_big_unopened.png",
             "chest_opened_img": "images/checks/chest_big_opened.png",
             "access_rules": [
@@ -159,6 +160,19 @@
             ],
             "capture_item": true,
             "item_count": 1
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, philosophers_cave_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$access_lorule_graveyard}",
+              "{$lampless_access_lorule_graveyard}",
+              "$access_lorule_graveyard, titansmitt, [lamp], $attack, $ls_small_key",
+              "$access_lorule_graveyard, titansmitt, [lampless], $attack, $ls_small_key",
+              "$lampless_access_lorule_graveyard, titansmitt, [lampless], $attack, $ls_small_key"
+            ]
           }
         ]
       },
@@ -174,12 +188,24 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, $access_dark_ruins}",
               "$access_lorule_graveyard",
               "[lampless], $lampless_access_lorule_graveyard"
             ],
             "item_count": 1
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, graveyard_peninsula_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$access_dark_ruins}",
+              "$access_lorule_graveyard",
+              "[lampless], $lampless_access_lorule_graveyard"
+            ]
           }
         ]
       },
@@ -333,6 +359,7 @@
                 "name": "Chest",
                 "chest_unopened_img": "images/checks/chest_big_unopened.png",
                 "chest_opened_img": "images/checks/chest_big_opened.png",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on}",
                   "boots",
@@ -344,6 +371,21 @@
                 ],
                 "capture_item": true,
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, pegasus_boots_pyramid_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}",
+                  "boots",
+                  "[hard], bombs",
+                  "[hard], boomerang",
+                  "[hard], msword",
+                  "[], nicebow",
+                  "[], niceirod"
+                ]
               }
             ]
           },
@@ -359,8 +401,18 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on}", "bombs", "[hard]"],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, vacant_house_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "bombs", "[hard]"
+                ]
               }
             ]
           },
@@ -416,12 +468,24 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on}",
                   "not_cracksanity, quake_on, merge, hookshot",
                   "cracksanity, crack_right_lorule_paradox, merge, hookshot"
                 ],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lorule_field_hookshot_chest_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}",
+                  "not_cracksanity, quake_on, merge, hookshot",
+                  "cracksanity, crack_right_lorule_paradox, merge, hookshot"
+                ]
               }
             ]
           },
@@ -524,6 +588,7 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on}",
                   "merge, srod, trod",
@@ -531,6 +596,17 @@
                 ],
                 "capture_item": true,
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, misery_mire_sand_mini_dungeon_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}",
+                  "merge, srod, trod",
+                  "[glitched], srod"
+                ]
               }
             ]
           }

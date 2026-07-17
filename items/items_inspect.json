@@ -493,5 +493,95 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "philosophers_cave_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "philosophers_cave_got_item, philosophers_cave_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "philosophers_cave_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "graveyard_peninsula_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "graveyard_peninsula_got_item, graveyard_peninsula_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "graveyard_peninsula_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "pegasus_boots_pyramid_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "pegasus_boots_pyramid_got_item, pegasus_boots_pyramid_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "pegasus_boots_pyramid_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "vacant_house_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "vacant_house_got_item, vacant_house_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "vacant_house_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "lorule_field_hookshot_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lorule_field_hookshot_chest_got_item, lorule_field_hookshot_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lorule_field_hookshot_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "misery_mire_sand_mini_dungeon_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "misery_mire_sand_mini_dungeon_got_item, misery_mire_sand_mini_dungeon_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "misery_mire_sand_mini_dungeon_got_item",
+                "inherit_codes": false
+            }
+        ]
     }
 ]

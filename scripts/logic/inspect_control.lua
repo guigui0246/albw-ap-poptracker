@@ -32,6 +32,12 @@ local MAP_TO_CHECK = {
     ["@Hyrule Overworld/Southern Ruins/Flippers Mini-Dungeon/Chest"] = "southern_ruins_flippers_mini_dungeon_got_item",
     ["@Hyrule Overworld/Lake Hylia/Lake Hylia Ledge/Chest"] = "lake_hylia_ledge_got_item",
     ["@Hyrule Overworld/Lake Hylia/Ice Rod Cave/Chest"] = "lake_hylia_ice_rod_cave_got_item",
+    ["@Lorule Overworld/Philosopher's Cave/Chest"] = "philosophers_cave_got_item",
+    ["@Lorule Overworld/Graveyard Peninsula/Chest"] = "graveyard_peninsula_got_item",
+    ["@Lorule Overworld/Lorule Castle Area/Pegasus Boots Pyramid/Chest"] = "pegasus_boots_pyramid_got_item",
+    ["@Lorule Overworld/Lorule Castle Area/Vacant House/Chest"] = "vacant_house_got_item",
+    ["@Lorule Overworld/Lorule Castle Area/Lorule Field Hookshot Chest/Chest"] = "lorule_field_hookshot_chest_got_item",
+    ["@Lorule Overworld/Misery Mire/Sand Mini-Dungeon/Chest"] = "misery_mire_sand_mini_dungeon_got_item",
 }
 
 function check_inspectable_states()
