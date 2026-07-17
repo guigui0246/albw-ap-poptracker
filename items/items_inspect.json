@@ -193,5 +193,80 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "tt_b1_jail_cell_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "tt_b1_jail_cell_got_item, tt_b1_jail_cell_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "tt_b1_jail_cell_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "tt_b2_eyegores_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "tt_b2_eyegores_got_item, tt_b2_eyegores_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "tt_b2_eyegores_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "tt_b3_underwater_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "tt_b3_underwater_got_item, tt_b3_underwater_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "tt_b3_underwater_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "tt_b1_behind_wall_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "tt_b1_behind_wall_got_item, tt_b1_behind_wall_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "tt_b1_behind_wall_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "tt_b1_big_chest_entrance_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "tt_b1_big_chest_entrance_got_item, tt_b1_big_chest_entrance_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "tt_b1_big_chest_entrance_got_item",
+                "inherit_codes": false
+            }
+        ]
     }
 ]

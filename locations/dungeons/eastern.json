@@ -142,7 +142,7 @@
             "chest_opened_img": "images/display/transparent.png",
             "chest_unopened_img": "images/display/transparent.png",
             "access_rules": [
-              "{}",,
+              "{}",
               "bow",
               "boomerang",
               "hookshot",

@@ -12,6 +12,11 @@ local MAP_TO_CHECK = {
     ["@Lorule Castle/(1F) Center/Chest"] = "lc_1f_center_got_item",
     ["@Lorule Castle/(3F) Bomb Trial (1)/Chest"] = "lc_3f_bomb_trial_1_got_item",
     ["@Lorule Castle/(3F) Bomb Trial (2)/Chest"] = "lc_3f_bomb_trial_2_got_item",
+    ["@Thieves' Hideout/(B1) Jail Cell/Chest"] = "tt_b1_jail_cell_got_item",
+    ["@Thieves' Hideout/(B2) Eyegores/Chest"] = "tt_b2_eyegores_got_item",
+    ["@Thieves' Hideout/(B3) Underwater/Chest"] = "tt_b3_underwater_got_item",
+    ["@Thieves' Hideout/(B1) Behind Wall/Chest"] = "tt_b1_behind_wall_got_item",
+    ["@Thieves' Hideout/(B1) Big Chest (Entrance)/Chest"] = "tt_b1_big_chest_entrance_got_item",
 }
 
 function check_inspectable_states()
