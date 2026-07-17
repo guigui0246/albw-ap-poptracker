@@ -100,6 +100,16 @@
               "{csmc_on, $hg_small_keys|1}",
               "$hg_small_keys|1, merge"
             ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, hg_1f_west_room_secret_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$hg_small_keys|1}",
+              "$hg_small_keys|1, merge"
+            ]
           }
         ]
       },
@@ -185,6 +195,17 @@
               "{glitched, csmc_on, ^$hog3F, $hg_small_keys|2}",
               "^$hog3F, $fire"
             ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, hg_3f_fire_bubbles_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{^$hog3F, $hg_small_keys|4}",
+              "{glitched, ^$hog3F, $hg_small_keys|2}",
+              "^$hog3F, $fire"
+            ]
           }
         ]
       },
@@ -203,6 +224,20 @@
             "hosted_item": "hg_3f_rat_room",
             "access_rules": [
               "{csmc_on, glitched, ^$hog2F}",
+              "^$hog3F, $hg_small_keys|4",
+              "^$hog3F, $hg_small_keys|3, $fire",
+              "[glitched], ^$hog3F, $fire",
+              "[], ^$hog3F, merge, $hg_small_keys|2",
+              "[], ^$hog3F, merge, $fire"
+            ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, hg_3f_rat_room_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{glitched, ^$hog2F}",
               "^$hog3F, $hg_small_keys|4",
               "^$hog3F, $hg_small_keys|3, $fire",
               "[glitched], ^$hog3F, $fire",

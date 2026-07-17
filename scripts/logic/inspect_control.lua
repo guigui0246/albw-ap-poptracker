@@ -3,6 +3,12 @@ local MAP_TO_CHECK = {
     ["@Eastern Palace/(1F) Switch Room/Chest"] = "ep_1f_switch_room_got_item",
     ["@Desert Palace/(1F) Behind Rocks/Chest"] = "dp_1f_behind_rocks_got_item",
     ["@Desert Palace/(1F) Big Chest (Behind Wall)/Chest"] = "dp_1f_big_chest_behind_wall_got_item",
+    ["@House of Gales/(1F) West Room Secret/Chest"] = "hg_1f_west_room_secret_got_item",
+    ["@House of Gales/(3F) Fire Bubbles/Chest"] = "hg_3f_fire_bubbles_got_item",
+    ["@House of Gales/(3F) Rat Room/Chest"] = "hg_3f_rat_room_got_item",
+    ["@Hyrule Castle/Battlement/Chest"] = "battlement_got_item",
+    ["@Ice Ruins/(B2) Long Merge Chest/Chest"] = "ir_b2_long_merge_chest_got_item",
+    ["@Skull Woods/Outdoor Chest/Chest"] = "sw_outdoor_chest_got_item",
 }
 
 function check_inspectable_states()

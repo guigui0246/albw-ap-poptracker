@@ -114,6 +114,17 @@
               "$ir_small_keys|2, $switch, scroll",
               "[advanced], boots"
             ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, ir_b2_long_merge_chest_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$ir_small_keys|1}",
+              "$ir_small_keys|2, $switch, scroll",
+              "[advanced], boots"
+            ]
           }
         ]
       },

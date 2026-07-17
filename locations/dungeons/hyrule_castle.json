@@ -40,6 +40,18 @@
               "swordless",
               "[], $barrier_skip"
             ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, battlement_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}",
+              "msword",
+              "swordless",
+              "[], $barrier_skip"
+            ]
           }
         ]
       },

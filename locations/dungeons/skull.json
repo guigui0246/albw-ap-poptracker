@@ -170,6 +170,17 @@
               "$sw_small_keys|3, ^$lampless, merge, $attack, $fire, $progression_enemies_floor",
               "[hell], $sw_small_keys|3, ^$lampless, merge, $fire, $progression_enemies_floor"
             ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, sw_outdoor_chest_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}",
+              "$sw_small_keys|3, ^$lampless, merge, $attack, $fire, $progression_enemies_floor",
+              "[hell], $sw_small_keys|3, ^$lampless, merge, $fire, $progression_enemies_floor"
+            ]
           }
         ]
       },

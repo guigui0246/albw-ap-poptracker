@@ -58,5 +58,95 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "hg_1f_west_room_secret_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "hg_1f_west_room_secret_got_item, hg_1f_west_room_secret_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "hg_1f_west_room_secret_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "hg_3f_fire_bubbles_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "hg_3f_fire_bubbles_got_item, hg_3f_fire_bubbles_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "hg_3f_fire_bubbles_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "hg_3f_rat_room_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "hg_3f_rat_room_got_item, hg_3f_rat_room_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "hg_3f_rat_room_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "battlement_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "battlement_got_item, battlement_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "battlement_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "ir_b2_long_merge_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "ir_b2_long_merge_chest_got_item, ir_b2_long_merge_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "ir_b2_long_merge_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "sw_outdoor_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "sw_outdoor_chest_got_item, sw_outdoor_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "sw_outdoor_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
     }
 ]
