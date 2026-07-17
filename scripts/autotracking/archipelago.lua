@@ -245,7 +245,7 @@ function onRetrieved(key, value)
     syncDisplay()
 end
 
-function syncDisplay()
+function syncDisplay(code)
     local bracelet = Tracker:FindObjectForCode("p_bracelet")
     local quake = Tracker:FindObjectForCode("quake")
     local merge = Tracker:FindObjectForCode("p_merge")
@@ -364,14 +364,6 @@ function syncDisplay()
         end
     end
 end
-
-function syncDisplayCallback(code)
-    syncDisplay()
-    updateCracks(code)
-    updateVanes(code)
-end
-
-ScriptHost:AddWatchForCode("syncDisplay", "*", syncDisplayCallback)
 
 function onSetReply(key, value, old)
 end
@@ -659,3 +651,23 @@ end
 Archipelago:AddSetReplyHandler("set reply handler", onSetReply)
 Archipelago:AddScoutHandler("scout handler", onScout)
 Archipelago:AddBouncedHandler("bounce handler", onBounce)
+
+ON_SYNC = {
+    syncDisplay,
+    updateCracks,
+    updateVanes
+}
+
+function syncDisplayCallback(code)
+    for _, callback in ipairs(ON_SYNC) do
+        callback(code)
+    end
+end
+
+ScriptHost:AddWatchForCode("syncDisplay", "*", syncDisplayCallback)
+
+function addToSync(callback_list)
+    for _, callback in ipairs(callback_list) do
+        table.insert(ON_SYNC, callback)
+    end
+end

@@ -1,0 +1,62 @@
+[
+    {
+        "name": "ep_1f_left_door_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "ep_1f_left_door_chest_got_item, ep_1f_left_door_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "ep_1f_left_door_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "ep_1f_switch_room_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "ep_1f_switch_room_got_item, ep_1f_switch_room_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "ep_1f_switch_room_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "dp_1f_behind_rocks_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "dp_1f_behind_rocks_got_item, dp_1f_behind_rocks_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "dp_1f_behind_rocks_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "dp_1f_big_chest_behind_wall_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "dp_1f_big_chest_behind_wall_got_item, dp_1f_big_chest_behind_wall_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "dp_1f_big_chest_behind_wall_got_item",
+                "inherit_codes": false
+            }
+        ]
+    }
+]

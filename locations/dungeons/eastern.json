@@ -47,8 +47,25 @@
           {
             "name": "Chest",
             "hosted_item": "ep_1f_left_door_chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on}",
+              "bow",
+              "hookshot",
+              "boomerang",
+              "bombs",
+              "great_spin, fsword",
+              "niceirod",
+              "[hard]"
+            ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, ep_1f_left_door_chest_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}",
               "bow",
               "hookshot",
               "boomerang",
@@ -107,8 +124,25 @@
           {
             "name": "Chest",
             "hosted_item": "ep_1f_switch_room",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on}",
+              "bow",
+              "boomerang",
+              "hookshot",
+              "bombs",
+              "great_spin, fsword",
+              "[hard], irod",
+              "[hard], msword"
+            ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, ep_1f_switch_room_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}",,
               "bow",
               "boomerang",
               "hookshot",

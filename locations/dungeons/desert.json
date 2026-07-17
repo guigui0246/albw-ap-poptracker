@@ -90,9 +90,22 @@
           {
             "name": "Chest",
             "hosted_item": "dp_1f_behind_rocks",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, srod, $switch}",
               "{csmc_on, advanced, $reverseDP}",
+              "srod, $switch, $attack, titansmitt",
+              "[advanced], $reverseDP, titansmitt"
+            ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, dp_1f_behind_rocks_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{srod, $switch}",
+              "{advanced, $reverseDP}",
               "srod, $switch, $attack, titansmitt",
               "[advanced], $reverseDP, titansmitt"
             ]
@@ -117,6 +130,15 @@
               "$dp_small_keys|5, srod, $switch, $attack",
               "[], $dp_small_keys|1, srod, $switch, $attack",
               "[advanced], $dp_small_keys|5, $reverseDP"
+            ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, dp_1f_big_chest_behind_wall_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}"
             ]
           }
         ]

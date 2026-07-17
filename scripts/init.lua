@@ -18,3 +18,6 @@ require("scripts/layouts_import")
 require("scripts/locations_import")
 
 ScriptHost:LoadScript("scripts/autotracking.lua")
+
+--- Display only
+require("scripts/logic/inspect_control")
