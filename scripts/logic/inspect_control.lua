@@ -17,6 +17,10 @@ local MAP_TO_CHECK = {
     ["@Thieves' Hideout/(B3) Underwater/Chest"] = "tt_b3_underwater_got_item",
     ["@Thieves' Hideout/(B1) Behind Wall/Chest"] = "tt_b1_behind_wall_got_item",
     ["@Thieves' Hideout/(B1) Big Chest (Entrance)/Chest"] = "tt_b1_big_chest_entrance_got_item",
+    ["@Death Mountain/Death Mountain Blocked Cave/Chest"] = "dm_blocked_cave_got_item",
+    ["@Death Mountain/Death Mountain Fairy Cave/Chest"] = "dm_fairy_cave_got_item",
+    ["@Death Mountain/Donkey Cave/Chest"] = "dm_donkey_cave_got_item",
+    ["@Death Mountain/Ice Cave Ledge Chest/Chest"] = "dm_ice_cave_ledge_chest_got_item",
 }
 
 function check_inspectable_states()

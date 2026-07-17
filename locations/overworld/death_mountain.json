@@ -16,6 +16,7 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, $access_dm_west_base}",
               "$access_dm_west_base, merge, bombs",
@@ -25,6 +26,20 @@
               "[hell], $hell_access_dm_west_top, $stun, bombs"
             ],
             "item_count": 1
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, dm_blocked_cave_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$access_dm_west_base}",
+              "$access_dm_west_base, merge, bombs",
+              "[glitched], merge, bombs",
+              "[glitched], $access_dm_west_top, $stun, bombs",
+              "[advanced], $adv_glitched_access_dm_west_top, $stun, bombs",
+              "[hell], $hell_access_dm_west_top, $stun, bombs"
+            ]
           }
         ]
       },
@@ -40,6 +55,7 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, $access_dm_west_base, merge}",
               "{csmc_on, glitched, merge}",
@@ -60,6 +76,31 @@
               "[hell], $hell_access_dm_west_top, $stun, $boulder"
             ],
             "item_count": 1
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, dm_fairy_cave_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$access_dm_west_base, merge}",
+              "{glitched, merge}",
+              "{glitched, $access_dm_west_top, $boom_hook_fire}",
+              "{advanced, $adv_glitched_access_dm_west_top, $boom_hook_fire}",
+              "{hell, $hell_access_dm_west_top, $boom_hook_fire}",
+
+              "$access_dm_west_base, merge, $boulder",
+              "[glitched], merge, $boulder",
+              "[glitched], $access_dm_west_top, nicebombs",
+              "[glitched], $access_dm_west_top, frod, hammer",
+              "[glitched], $access_dm_west_top, $stun, $boulder",
+              "[advanced], $adv_glitched_access_dm_west_top, nicebombs",
+              "[advanced], $adv_glitched_access_dm_west_top, frod, hammer",
+              "[advanced], $adv_glitched_access_dm_west_top, $stun, $boulder",
+              "[hell], $hell_access_dm_west_top, bombs",
+              "[hell], $hell_access_dm_west_top, frod, hammer",
+              "[hell], $hell_access_dm_west_top, $stun, $boulder"
+            ]
           }
         ]
       },
@@ -75,6 +116,7 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, power_glove}",
               "{csmc_on, glitched, merge}",
@@ -89,6 +131,24 @@
             ],
             "capture_item": true,
             "item_count": 1
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, dm_donkey_cave_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{power_glove}",
+              "{glitched, merge}",
+              "{$access_dm_west_top}",
+              "{advanced, $adv_glitched_access_dm_west_top}",
+              "{hell, $hell_access_dm_west_top}",
+
+              "$access_dm_west_top, hammer",
+              "[glitched], merge, hammer",
+              "[advanced], $adv_glitched_access_dm_west_top, hammer",
+              "[hell], $hell_access_dm_west_top, hammer"
+            ]
           }
         ]
       },
@@ -392,6 +452,7 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, $access_ldm_east_top}",
               "trod, merge, $access_ldm_east_top",
@@ -399,6 +460,18 @@
               "[hell], trod, merge, $hell_access_ldm_east_top"
             ],
             "item_count": 1
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, dm_ice_cave_ledge_chest_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$access_ldm_east_top}",
+              "trod, merge, $access_ldm_east_top",
+              "[glitched], trod, merge, $glitched_access_ldm_east_top",
+              "[hell], trod, merge, $hell_access_ldm_east_top"
+            ]
           }
         ]
       }

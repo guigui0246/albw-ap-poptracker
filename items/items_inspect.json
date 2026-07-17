@@ -268,5 +268,65 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "dm_blocked_cave_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "dm_blocked_cave_got_item, dm_blocked_cave_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "dm_blocked_cave_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "dm_fairy_cave_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "dm_fairy_cave_got_item, dm_fairy_cave_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "dm_fairy_cave_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "dm_donkey_cave_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "dm_donkey_cave_got_item, dm_donkey_cave_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "dm_donkey_cave_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "dm_ice_cave_ledge_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "dm_ice_cave_ledge_chest_got_item, dm_ice_cave_ledge_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "dm_ice_cave_ledge_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
     }
 ]
