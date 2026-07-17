@@ -108,6 +108,7 @@
           {
             "name": "Chest",
             "capture_item": true,
+            "inspectable_sequence_break": true,
             "hosted_item": "ir_b2_long_merge_chest",
             "access_rules": [
               "{csmc_on, $ir_small_keys|1}",

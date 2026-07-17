@@ -148,5 +148,50 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "lc_1f_center_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lc_1f_center_got_item, lc_1f_center_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lc_1f_center_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "lc_3f_bomb_trial_1_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lc_3f_bomb_trial_1_got_item, lc_3f_bomb_trial_1_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lc_3f_bomb_trial_1_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "lc_3f_bomb_trial_2_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lc_3f_bomb_trial_2_got_item, lc_3f_bomb_trial_2_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lc_3f_bomb_trial_2_got_item",
+                "inherit_codes": false
+            }
+        ]
     }
 ]

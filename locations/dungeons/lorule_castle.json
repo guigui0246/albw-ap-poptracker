@@ -23,7 +23,18 @@
           {
             "name": "Chest",
             "hosted_item": "lc_1f_center",
+            "inspectable_sequence_break": true,
             "access_rules": ["{csmc_on}", "^$lc2F"]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, lc_1f_center_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}",
+              "^$lc2F"
+            ]
           }
         ]
       },
@@ -154,8 +165,18 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": ["{csmc_on}", "bombs", "[glitched], irod"],
             "hosted_item": "lc_3f_bomb_trial_1"
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, lc_3f_bomb_trial_1_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}", "bombs", "[glitched], irod"
+            ]
           }
         ]
       },
@@ -171,6 +192,7 @@
         "sections": [
           {
             "name": "Chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on}",
               "bombs, merge",
@@ -179,6 +201,18 @@
             ],
             "capture_item": true,
             "hosted_item": "lc_3f_bomb_trial_2"
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": ["csmc_on, lc_3f_bomb_trial_2_ungot_state"],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{}",
+              "bombs, merge",
+              "[hard], bombs, bow",
+              "[], niceirod"
+            ]
           }
         ]
       },

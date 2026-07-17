@@ -125,6 +125,7 @@
           {
             "name": "Chest",
             "hosted_item": "dp_1f_big_chest_behind_wall",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, srod}",
               "$dp_small_keys|5, srod, $switch, $attack",

@@ -165,6 +165,7 @@
           {
             "name": "Chest",
             "hosted_item": "sw_outdoor_chest",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on}",
               "$sw_small_keys|3, ^$lampless, merge, $attack, $fire, $progression_enemies_floor",

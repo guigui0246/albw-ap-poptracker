@@ -96,6 +96,7 @@
           {
             "name": "Chest",
             "hosted_item": "hg_1f_west_room_secret",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, $hg_small_keys|1}",
               "$hg_small_keys|1, merge"
@@ -190,6 +191,7 @@
             "name": "Chest",
             "capture_item": true,
             "hosted_item": "hg_3f_fire_bubbles",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, ^$hog3F, $hg_small_keys|4}",
               "{glitched, csmc_on, ^$hog3F, $hg_small_keys|2}",
@@ -222,6 +224,7 @@
           {
             "name": "Chest",
             "hosted_item": "hg_3f_rat_room",
+            "inspectable_sequence_break": true,
             "access_rules": [
               "{csmc_on, glitched, ^$hog2F}",
               "^$hog3F, $hg_small_keys|4",

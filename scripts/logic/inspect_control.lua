@@ -9,6 +9,9 @@ local MAP_TO_CHECK = {
     ["@Hyrule Castle/Battlement/Chest"] = "battlement_got_item",
     ["@Ice Ruins/(B2) Long Merge Chest/Chest"] = "ir_b2_long_merge_chest_got_item",
     ["@Skull Woods/Outdoor Chest/Chest"] = "sw_outdoor_chest_got_item",
+    ["@Lorule Castle/(1F) Center/Chest"] = "lc_1f_center_got_item",
+    ["@Lorule Castle/(3F) Bomb Trial (1)/Chest"] = "lc_3f_bomb_trial_1_got_item",
+    ["@Lorule Castle/(3F) Bomb Trial (2)/Chest"] = "lc_3f_bomb_trial_2_got_item",
 }
 
 function check_inspectable_states()
