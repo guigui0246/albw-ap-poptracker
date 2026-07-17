@@ -328,5 +328,170 @@
                 "inherit_codes": false
             }
         ]
+    },
+    {
+        "name": "lost_woods_behind_large_rock_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lost_woods_behind_large_rock_got_item, lost_woods_behind_large_rock_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lost_woods_behind_large_rock_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "river_mini_dungeon_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "river_mini_dungeon_got_item, river_mini_dungeon_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "river_mini_dungeon_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "sanctuary_pegs_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "sanctuary_pegs_got_item, sanctuary_pegs_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "sanctuary_pegs_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "zoras_domain_ledge_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "zoras_domain_ledge_got_item, zoras_domain_ledge_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "zoras_domain_ledge_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "kakariko_jail_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "kakariko_jail_got_item, kakariko_jail_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "kakariko_jail_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "eastern_ruins_hookshot_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "eastern_ruins_hookshot_chest_got_item, eastern_ruins_hookshot_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "eastern_ruins_hookshot_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "eastern_ruins_merge_chest_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "eastern_ruins_merge_chest_got_item, eastern_ruins_merge_chest_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "eastern_ruins_merge_chest_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "southern_ruins_ledge_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "southern_ruins_ledge_got_item, southern_ruins_ledge_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "southern_ruins_ledge_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "southern_ruins_flippers_mini_dungeon_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "southern_ruins_flippers_mini_dungeon_got_item, southern_ruins_flippers_mini_dungeon_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "southern_ruins_flippers_mini_dungeon_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "lake_hylia_ledge_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lake_hylia_ledge_got_item, lake_hylia_ledge_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lake_hylia_ledge_got_item",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "lake_hylia_ice_rod_cave_got_item",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "codes": "lake_hylia_ice_rod_cave_got_item, lake_hylia_ice_rod_cave_ungot_state",
+                "inherit_codes": false
+            },
+            {
+                "codes": "lake_hylia_ice_rod_cave_got_item",
+                "inherit_codes": false
+            }
+        ]
     }
 ]

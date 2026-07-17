@@ -19,6 +19,7 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on}",
                   "{hell, boomerang}",
@@ -28,6 +29,20 @@
                   "[hell], nice_items_off, hookshot"
                 ],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lost_woods_behind_large_rock_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}",
+                  "{hell, boomerang}",
+                  "{hell, nice_items_off, hookshot}",
+                  "titansmitt",
+                  "[hell], boomerang",
+                  "[hell], nice_items_off, hookshot"
+                ]
               }
             ]
           },
@@ -288,9 +303,19 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on, bombs}", "bombs, merge"],
                 "capture_item": true,
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, river_mini_dungeon_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{bombs}", "bombs, merge"
+                ]
               }
             ]
           },
@@ -306,8 +331,18 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on}", "hammer"],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, sanctuary_pegs_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "hammer"
+                ]
               }
             ]
           },
@@ -323,12 +358,22 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on, flippers}",
                   "{csmc_on, hell, $beeBoost}",
                   "merge"
                 ],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, zoras_domain_ledge_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{flippers}", "{hell, $beeBoost}", "merge"
+                ]
               }
             ]
           },
@@ -541,8 +586,18 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on}", "merge"],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, kakariko_jail_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "merge"
+                ]
               }
             ]
           },
@@ -928,8 +983,18 @@
                 "sections": [
                   {
                     "name": "Chest",
+                    "inspectable_sequence_break": true,
                     "access_rules": ["{csmc_on}", "hookshot"],
                     "item_count": 1
+                  },
+                  {
+                    "name": "Inspect color",
+                    "visibility_rules": ["csmc_on, eastern_ruins_hookshot_chest_ungot_state"],
+                    "chest_opened_img": "images/display/transparent.png",
+                    "chest_unopened_img": "images/display/transparent.png",
+                    "access_rules": [
+                      "{}", "hookshot"
+                    ]
                   }
                 ]
               },
@@ -945,6 +1010,7 @@
                 "sections": [
                   {
                     "name": "Chest",
+                    "inspectable_sequence_break": true,
                     "access_rules": [
                       "{csmc_on}",
                       "merge",
@@ -954,6 +1020,20 @@
                       "[hell], bombs"
                     ],
                     "item_count": 1
+                  },
+                  {
+                    "name": "Inspect color",
+                    "visibility_rules": ["csmc_on, eastern_ruins_merge_chest_ungot_state"],
+                    "chest_opened_img": "images/display/transparent.png",
+                    "chest_unopened_img": "images/display/transparent.png",
+                    "access_rules": [
+                      "{}",
+                      "merge",
+                      "[glitched], trod",
+                      "[glitched], frod",
+                      "[glitched], nicebombs",
+                      "[hell], bombs"
+                    ]
                   }
                 ]
               },
@@ -994,8 +1074,18 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on}", "merge"],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, southern_ruins_ledge_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "merge"
+                ]
               }
             ]
           },
@@ -1047,6 +1137,7 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on, titansmitt}",
                   "{csmc_on, glitched, fsword, irod}",
@@ -1074,6 +1165,37 @@
                 ],
                 "capture_item": true,
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, southern_ruins_flippers_mini_dungeon_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{titansmitt}",
+                  "{glitched, fsword, irod}",
+                  "{advanced, irod}",
+                  "titansmitt, flippers, hookshot, boomerang",
+                  "[hard], titansmitt, hookshot, flippers, msword",
+                  "[hard], titansmitt, hookshot, flippers, bombs",
+                  "[glitched], fsword, irod, flippers, hookshot",
+                  "[glitched], fsword, irod, nicebombs",
+                  "[glitched], titansmitt, nicebombs",
+                  "[glitched], great_spin, fsword, irod",
+                  "[glitched], great_spin, fsword, titansmitt",
+                  "[glitched], fsword, niceirod, boomerang",
+                  "[glitched], fsword, niceirod, hookshot",
+                  "[glitched], fsword, niceirod, flippers",
+                  "[advanced], irod, flippers, hookshot",
+                  "[advanced], irod, nicebombs",
+                  "[advanced], niceirod, boomerang",
+                  "[advanced], niceirod, hookshot",
+                  "[advanced], niceirod, flippers, fsword",
+                  "[advanced], niceirod, flippers, bow",
+                  "[advanced], niceirod, flippers, boots",
+                  "[advanced], niceirod, flippers, hammer",
+                  "[hell], niceirod"
+                ]
               }
             ]
           }
@@ -1094,12 +1216,24 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": [
                   "{csmc_on, flippers}",
                   "{csmc_on, wv_gales, bell}",
                   "merge"
                 ],
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lake_hylia_ledge_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{flippers}",
+                  "{wv_gales, bell}",
+                  "merge"
+                ]
               }
             ]
           },
@@ -1115,9 +1249,19 @@
             "sections": [
               {
                 "name": "Chest",
+                "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on, trod}", "{csmc_on, irod}", "bombs"],
                 "capture_item": true,
                 "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lake_hylia_ice_rod_cave_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{trod}", "{irod}", "bombs"
+                ]
               }
             ]
           },
