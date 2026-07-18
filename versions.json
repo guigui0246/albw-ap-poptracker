@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "package_version": "1.7.0",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.0/albw-ap-poptracker-v1.7.0.zip",
+      "sha256": "53328B9EF8BAB8F00478430DCE1F429F5A7383C6761FB10BD5D2DACE5CA4FC77",
+      "changelog": [
+        "Add autotracking to collected vanes",
+        "Add autotracking to collected cracks",
+        "Add autotracking to bumping into shady guy",
+        "Add autotracking to golden bee",
+        "Add autotracking to the scout fruit",
+        "Add autotracking to pendants and dungeon rewards",
+        "Add a display for yellow-blue (inspect and out of logic) checks",
+        "Fix graveyard not-cracksanity logic",
+        "Fix a convenient vanes problem due to random key order"
+      ]
+    },
+    {
       "package_version": "1.6.1",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.6.1/albw-ap-poptracker-v1.6.1.zip",
       "sha256": "3AACDB03D51FB25D29AB7183848B0230B67D4080D34D0B77BBE07AC3128B39BF",
