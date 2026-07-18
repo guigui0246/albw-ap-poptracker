@@ -16,6 +16,8 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 - Add autotracking to golden bee
 - Add autotracking to the scout fruit
 - Add autotracking to pendants and dungeon rewards
+- Add a display for yellow-blue (inspect and out of logic) checks
+- Fix graveyard not-cracksanity logic
 - Fix a convenient vanes problem due to random key order
 
 ### 1.6.1
