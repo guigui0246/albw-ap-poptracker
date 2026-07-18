@@ -124,7 +124,7 @@ end
 
 -- Lorule Graveyard
 function access_lorule_graveyard()
-    if notCracksanity() and hasAll({ "merge", "quake_on" }) and hs_small_key() and attack() then
+    if notCracksanity() and hasAll({ "merge", "quake_on" }) and hasAny({ "frod", "lamp" }) and hs_small_key() and attack() then
         return lampless()
     end
 
