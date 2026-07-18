@@ -3,7 +3,7 @@
     {
       "package_version": "1.7.0",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.0/albw-ap-poptracker-v1.7.0.zip",
-      "sha256": "53328B9EF8BAB8F00478430DCE1F429F5A7383C6761FB10BD5D2DACE5CA4FC77",
+      "sha256": "1EBB013D0D9AAB46BA130876F4F9214490A7C8FBB75744BA5A670B6134EC52CD",
       "changelog": [
         "Add autotracking to collected vanes",
         "Add autotracking to collected cracks",
