@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "package_version": "1.7.1",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.1/albw-ap-poptracker-v1.7.1.zip",
+      "sha256": "1D9F7F4AEBA482527766A166E7303093A0663C68E4DFA6364D0318A77CF44775",
+      "changelog": [
+        "Fix portraits counting as double for lorule castle requirements when autotracked"
+      ]
+    },
+    {
       "package_version": "1.7.0",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.0/albw-ap-poptracker-v1.7.0.zip",
       "sha256": "1EBB013D0D9AAB46BA130876F4F9214490A7C8FBB75744BA5A670B6134EC52CD",
