@@ -64,7 +64,7 @@ body:
       description: Is it an issue with logic (e.g. what the tracker says is not accurate to what randomizer logic should be) or is it a display issue (e.g. the tracker says you already cleared a check or item that you didn't, yet)
       options:
         - Logic issue
-        - Auto-track issue (portraits, events and non-randomized items cannot be tracked)
+        - Auto-track issue (some things cannot be tracked, see UNTRACKABLE.md)
         - Display issue
         - Other...
     validations:
