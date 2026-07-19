@@ -738,48 +738,48 @@
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_gulley.png",
-    "codes": "sage, gulley, gulley_flag"
+    "codes": "gulley, gulley_flag"
   },
   {
     "name": "Sage Oren",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_oren.png",
-    "codes": "sage, oren, oren_flag"
+    "codes": "oren, oren_flag"
   },
   {
     "name": "Sage Seres",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_seres.png",
-    "codes": "sage, seres, seres_flag"
+    "codes": "seres, seres_flag"
   },
   {
     "name": "Sage Osfala",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_osfala.png",
-    "codes": "sage, osfala, osfala_flag"
+    "codes": "osfala, osfala_flag"
   },
   {
     "name": "Sage Impa",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_impa.png",
-    "codes": "sage, impa, impa_flag"
+    "codes": "impa, impa_flag"
   },
   {
     "name": "Sage Irene",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_irene.png",
-    "codes": "sage, irene, irene_flag"
+    "codes": "irene, irene_flag"
   },
   {
     "name": "Sage Rosso",
     "type": "toggle",
     "loop": true,
     "img": "images/prizes/sage_rosso.png",
-    "codes": "sage, rosso, rosso_flag"
+    "codes": "rosso, rosso_flag"
   }
 ]
