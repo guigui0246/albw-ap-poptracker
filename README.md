@@ -8,6 +8,10 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+### 1.7.1
+
+- Fix portraits counting as double for lorule castle requirements when autotracked
+
 ### 1.7.0
 
 - Add autotracking to collected vanes
