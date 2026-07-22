@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.7.2",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.2/albw-ap-poptracker-v1.7.2.zip",
+      "sha256": "A72EF77B71334F6B23A526FFB83686E766EA8E72E03211E62D61DD58EA67C796",
+      "changelog": [
+        "Fix mother maiamai autotracking and display",
+        "Fix display only updating on item update and not on location update"
+      ]
+    },
+    {
       "package_version": "1.7.1",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.1/albw-ap-poptracker-v1.7.1.zip",
       "sha256": "1D9F7F4AEBA482527766A166E7303093A0663C68E4DFA6364D0318A77CF44775",
