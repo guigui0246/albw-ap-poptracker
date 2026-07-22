@@ -665,6 +665,7 @@ function syncDisplayCallback(code)
 end
 
 ScriptHost:AddWatchForCode("syncDisplay", "*", syncDisplayCallback)
+ScriptHost:AddOnLocationSectionChangedHandler("syncDisplayLocation", syncDisplayCallback)
 
 function addToSync(callback_list)
     for _, callback in ipairs(callback_list) do
