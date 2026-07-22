@@ -778,7 +778,7 @@ function motherMaiamai()
     if Tracker:FindObjectForCode("nice_items").CurrentStage == 0 then
         return false
     end
-    return forceShowMaiamais()
+    return Tracker:FindObjectForCode("shuffle_maiamai_rewards").CurrentStage ~= 0
 end
 
 function canGetLastUpgradeItem()
