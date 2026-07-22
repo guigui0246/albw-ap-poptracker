@@ -395,16 +395,16 @@ LOCATION_MAPPING = {
     [BASE + 221] = {"@_Mountain Maiamai/Ice Cave Ledge Maiamai/Maiamai"},
     [BASE + 223] = {"@_Mountain Maiamai/Outside Ice Ruins/Maiamai"},
 
-    [BASE + 59] = {"@Mother Maiamai's Item Upgrades/Bow"},
-    [BASE + 60] = {"@Mother Maiamai's Item Upgrades/Boomerang"},
-    [BASE + 61] = {"@Mother Maiamai's Item Upgrades/Hookshot"},
-    [BASE + 62] = {"@Mother Maiamai's Item Upgrades/Hammer"},
-    [BASE + 63] = {"@Mother Maiamai's Item Upgrades/Bombs"},
-    [BASE + 64] = {"@Mother Maiamai's Item Upgrades/Fire Rod"},
-    [BASE + 65] = {"@Mother Maiamai's Item Upgrades/Ice Rod"},
-    [BASE + 66] = {"@Mother Maiamai's Item Upgrades/Tornado Rod"},
-    [BASE + 67] = {"@Mother Maiamai's Item Upgrades/Sand Rod"},
-    [BASE + 68] = {"@Mother Maiamai's Item Upgrades/100 Maiamai"},
+    [BASE + 59] = {"maiamai_bow", "toggle"},
+    [BASE + 60] = {"maiamai_boomerang", "toggle"},
+    [BASE + 61] = {"maiamai_hookshot", "toggle"},
+    [BASE + 62] = {"maiamai_hammer", "toggle"},
+    [BASE + 63] = {"maiamai_bombs", "toggle"},
+    [BASE + 64] = {"maiamai_fire_rod", "toggle"},
+    [BASE + 65] = {"maiamai_ice_rod", "toggle"},
+    [BASE + 66] = {"maiamai_tornado_rod", "toggle"},
+    [BASE + 67] = {"maiamai_sand_rod", "toggle"},
+    [BASE + 68] = {"maiamai_100_reward", "toggle"},
 
 
 
