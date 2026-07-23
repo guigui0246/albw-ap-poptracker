@@ -572,7 +572,6 @@ function onItem(index, item_id, item_name, player_number)
         print(string.format("local items: %s", dump_table(LOCAL_ITEMS)))
         print(string.format("global items: %s", dump_table(GLOBAL_ITEMS)))
     end
-    can_finish()
 end
 
 -- called when a location gets cleared
@@ -604,7 +603,6 @@ function onLocation(location_id, location_name)
             end
         end
     end
-    can_finish()
 end
 
 -- called when a locations is scouted
@@ -655,7 +653,8 @@ Archipelago:AddBouncedHandler("bounce handler", onBounce)
 ON_SYNC = {
     syncDisplay,
     updateCracks,
-    updateVanes
+    updateVanes,
+    can_finish
 }
 
 function syncDisplayCallback(code)

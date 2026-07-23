@@ -713,7 +713,7 @@ function can_reach_final_boss()
     return AccessibilityLevel.None
 end
 
-function can_finish()
+function can_finish(_)
     local obj = Tracker:FindObjectForCode("gomode")
     if has("bow_of_light") and (can_reach_final_boss() == AccessibilityLevel.Normal) and (has("fsword") or (has("net") and has("hard"))) then
         obj.Active = true
