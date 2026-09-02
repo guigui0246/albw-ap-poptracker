@@ -2,9 +2,172 @@ ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/crack_map.lua")
-ScriptHost:LoadScript("scripts/autotracking/vane_map.lua")
-ScriptHost:LoadScript("scripts/autotracking/prize_map.lua")
-ScriptHost:LoadScript("scripts/autotracking/flags_map.lua")
+
+-- ScriptHost:LoadScript("scripts/autotracking/vane_map.lua")
+VANE_MAP = {
+    ["Death Mountain (Hyrule) Weather Vane"] = "wv_death_hyrule",
+    ["Tower of Hera Weather Vane"] = "wv_hera",
+    ["Skull Woods Weather Vane"] = "wv_skull",
+    ["Treacherous Tower Weather Vane"] = "wv_treacherous_tower",
+    ["Death Mountain (Lorule) Weather Vane"] = "wv_death_lorule",
+    ["Ice Ruins Weather Vane"] = "wv_ice",
+    ["Kakariko Village Weather Vane"] = "wv_kakariko",
+    ["Sanctuary Weather Vane"] = "wv_sanctuary",
+    ["Witch's House Weather Vane"] = "wv_witch",
+    ["Eastern Palace Weather Vane"] = "wv_eastern",
+    ["Lorule Castle Weather Vane"] = "wv_lorule_castle",
+    ["Graveyard Weather Vane"] = "wv_graveyard",
+    ["Dark Palace Weather Vane"] = "wv_dark",
+    ["Your House Weather Vane"] = "wv_your_house",
+    ["Thieves' Town Weather Vane"] = "wv_thieves",
+    ["Blacksmith Weather Vane"] = "wv_blacksmith",
+    ["Vacant House Weather Vane"] = "wv_vacant_house",
+    ["Desert Palace Weather Vane"] = "wv_desert",
+    ["House of Gales Weather Vane"] = "wv_gales",
+    ["Misery Mire Weather Vane"] = "wv_mire",
+    ["Swamp Palace Weather Vane"] = "wv_swamp",
+    ["Turtle Rock Weather Vane"] = "wv_turtle"
+}
+
+
+-- ScriptHost:LoadScript("scripts/autotracking/flags_map.lua")
+FLAGS_MAP = {
+    ["shady_guy"] = "shadyguy",
+    ["pendant_courage"] = "courage_flag",
+    ["pendant_wisdom"] = "wisdom_flag",
+    ["pendant_power"] = "power_flag",
+    ["portrait_gulley"] = "gulley_flag",
+    ["portrait_oren"] = "oren_flag",
+    ["portrait_seres"] = "seres_flag",
+    ["portrait_osfala"] = "osfala_flag",
+    ["portrait_rosso"] = "rosso_flag",
+    ["portrait_irene"] = "irene_flag",
+    ["portrait_impa"] = "impa_flag",
+    ["crack_stylish_woman"] = "crack_stylish_woman",
+    ["crack_your_house"] = "crack_your_house",
+    ["crack_paradox_lower_hyrule"] = "crack_right_hyrule_paradox",
+    ["crack_paradox_upper_hyrule"] = "crack_left_hyrule_paradox",
+    ["crack_waterfall_hyrule"] = "crack_waterfall",
+    ["crack_eastern_ruins_pillar"] = "crack_eastern_ruins_pillar",
+    ["crack_eastern_ruins_se"] = "crack_eastern_ruins_se",
+    ["crack_lost_woods"] = "crack_lost_woods_pillar",
+    ["crack_sahasrahlas_house"] = "crack_sahasrahlas_house",
+    ["crack_rossos_house"] = "crack_rossos_house",
+    ["crack_to_misery_mire"] = "crack_mire_entrance",
+    ["crack_desert_pillar_right"] = "crack_desert_pillar_right",
+    ["crack_desert_pillar_left"] = "crack_desert_pillar_left",
+    ["crack_desert_middle"] = "crack_desert_middle",
+    ["crack_desert_sw"] = "crack_desert_sw",
+    ["crack_to_zaganaga"] = "crack_desert_palace",
+    ["crack_desert_north"] = "crack_desert_north",
+    ["crack_dm_west_hyrule"] = "crack_dm_west",
+    ["crack_rossos_ore_mine_hyrule"] = "crack_rom",
+    ["crack_river_hyrule"] = "crack_river",
+    ["crack_lake_hylia"] = "crack_lake_hylia",
+    ["crack_hyrule_hotfoot"] = "crack_hyrule_hotfoot",
+    ["crack_sanctuary"] = "crack_sanctuary",
+    ["crack_graveyard_ledge_hyrule"] = "crack_graveyard",
+    ["crack_floating_island_hyrule"] = "crack_hyfi",
+    ["crack_swamp_pillar_hyrule"] = "crack_swamp_pillar",
+    ["crack_zoras_domain"] = "crack_zoras_domain",
+    ["crack_thieves_town"] = "crack_thieves_town",
+    ["crack_vacant_house"] = "crack_vacant_house",
+    ["crack_paradox_upper_lorule"] = "crack_right_lorule_paradox",
+    ["crack_paradox_lower_lorule"] = "crack_left_lorule_paradox",
+    ["crack_waterfall_lorule"] = "crack_waterfall_lorule",
+    ["crack_dark_ruins_pillar"] = "crack_dark_ruins_pillar",
+    ["crack_dark_maze_se"] = "crack_dark_ruins_se",
+    ["crack_skull_woods_pillar"] = "crack_skull_woods_pillar",
+    ["crack_n_shaped_house"] = "crack_n-shaped_house",
+    ["crack_destroyed_house"] = "crack_destroyed_house",
+    ["crack_misery_mire_exit"] = "crack_mire_exit",
+    ["crack_mire_pillar_right"] = "crack_mire_pillar_right",
+    ["crack_mire_pillar_left"] = "crack_mire_pillar_left",
+    ["crack_mire_middle"] = "crack_mire_middle",
+    ["crack_mire_sw"] = "crack_mire_sw",
+    ["crack_zaganaga_exit"] = "crack_zaganaga",
+    ["crack_mire_north"] = "crack_mire_north",
+    ["crack_dm_west_lorule"] = "crack_lorule_dm_west",
+    ["crack_rossos_ore_mine_lorule"] = "crack_rom_lorule",
+    ["crack_river_lorule"] = "crack_river_lorule",
+    ["crack_lorule_lake_west"] = "crack_lake_lorule",
+    ["crack_lorule_coldfoot"] = "crack_lorule_hotfoot",
+    ["crack_philosophers_cave"] = "crack_philosopher",
+    ["crack_graveyard_ledge_lorule"] = "crack_graveyard_lorule",
+    ["crack_floating_island_lorule"] = "crack_lofi",
+    ["crack_swamp_pillar_lorule"] = "crack_swamp_pillar_lorule",
+    ["crack_kus_domain"] = "crack_kus_domain",
+    ["vane_your_house"] = "wv_your_house",
+    ["vane_kakariko_village"] = "wv_kakariko",
+    ["vane_eastern_palace"] = "wv_eastern",
+    ["vane_house_of_gales"] = "wv_gales",
+    ["vane_tower_of_hera"] = "wv_hera",
+    ["vane_witchs_house"] = "wv_witch",
+    ["vane_death_mtn_hyrule"] = "wv_death_hyrule",
+    ["vane_desert_palace"] = "wv_desert",
+    ["vane_sanctuary"] = "wv_sanctuary",
+    ["vane_skull_woods"] = "wv_skull",
+    ["vane_treacherous_tower"] = "wv_treacherous_tower",
+    ["vane_ice_ruins"] = "wv_ice",
+    ["vane_lorule_castle"] = "wv_lorule_castle",
+    ["vane_graveyard"] = "wv_graveyard",
+    ["vane_thieves_town"] = "wv_thieves",
+    ["vane_dark_palace"] = "wv_dark",
+    ["vane_blacksmith"] = "wv_blacksmith",
+    ["vane_vacant_house"] = "wv_vacant_house",
+    ["vane_misery_mire"] = "wv_mire",
+    ["vane_swamp_palace"] = "wv_swamp",
+    ["vane_turtle_rock"] = "wv_turtle",
+    ["vane_death_mtn_lorule"] = "wv_death_lorule",
+    ["scoot_fruit"] = "scootfruit",
+    ["golden_bee"] = "goldenbee"
+}
+
+-- ScriptHost:LoadScript("scripts/autotracking/prize_map.lua")
+PRIZE_MAP = {
+    ["[EP] Prize"] = "eastern_",
+    ["eastern_"] = "[EP] Prize",
+    ["[HG] Prize"] = "gales_",
+    ["gales_"] = "[HG] Prize",
+    ["[TH] Prize"] = "hera_",
+    ["hera_"] = "[TH] Prize",
+    ["[PD] Prize"] = "dark_",
+    ["dark_"] = "[PD] Prize",
+    ["[SP] Prize"] = "swamp_",
+    ["swamp_"] = "[SP] Prize",
+    ["[SW] Prize"] = "skull_",
+    ["skull_"] = "[SW] Prize",
+    ["[TT] Prize"] = "thieves_",
+    ["thieves_"] = "[TT] Prize",
+    ["[TR] Prize"] = "turtle_",
+    ["turtle_"] = "[TR] Prize",
+    ["[DP] Prize"] = "desert_",
+    ["desert_"] = "[DP] Prize",
+    ["[IR] Prize"] = "ice_",
+    ["ice_"] = "[IR] Prize",
+
+    ["Rescue Gulley"] = "gulley_flag",
+    ["gulley_flag"] = "Rescue Gulley",
+    ["Rescue Oren"] = "oren_flag",
+    ["oren_flag"] = "Rescue Oren",
+    ["Rescue Seres"] = "seres_flag",
+    ["seres_flag"] = "Rescue Seres",
+    ["Rescue Osfala"] = "osfala_flag",
+    ["osfala_flag"] = "Rescue Osfala",
+    ["Rescue Impa"] = "impa_flag",
+    ["impa_flag"] = "Rescue Impa",
+    ["Rescue Irene"] = "irene_flag",
+    ["irene_flag"] = "Rescue Irene",
+    ["Rescue Rosso"] = "rosso_flag",
+    ["rosso_flag"] = "Rescue Rosso",
+
+    ["Pendant of Power"] = "power_flag",
+    ["power_flag"] = "Pendant of Power",
+    ["Pendant of Wisdom"] = "wisdom_flag",
+    ["wisdom_flag"] = "Pendant of Wisdom",
+    ["Pendant of Courage"] = "courage_flag",
+    ["courage_flag"] = "Pendant of Courage"
+}
 
 CUR_INDEX = -1
 PLAYER_ID = -1
@@ -518,6 +681,10 @@ end
 function Jsondecode(jsonString)
     local result = {}
 
+    if type(jsonString) ~= "string" then
+        return jsonString
+    end
+
     for key, value in string.gmatch(jsonString, '"([^"]+)":"([^"]+)"') do
         result[key] = value
     end
@@ -537,13 +704,13 @@ function onClear(slot_data)
     CRACK_MAPPING = {}
     VANE_MAPPING = {}
     PRIZE_MAPPING = {}
-    if slotdata and slot_data["crack_map"] then
+    if slot_data and slot_data["crack_map"] then
         CRACK_MAPPING = Jsondecode(slot_data["crack_map"])
     end
-    if slotdata and slot_data["vane_map"] then
+    if slot_data and slot_data["vane_map"] then
         VANE_MAPPING = Jsondecode(slot_data["vane_map"])
     end
-    if slotdata and slot_data["prize_map"] then
+    if slot_data and slot_data["prize_map"] then
         PRIZE_MAPPING = Jsondecode(slot_data["prize_map"])
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
