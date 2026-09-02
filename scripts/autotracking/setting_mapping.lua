@@ -325,5 +325,25 @@ SLOT_CODES =
             [2] = 2, -- Keysy Big Keys Only
             [3] = 3  -- Keysy All Keys
         }
+    },
+    small_keys =
+    {
+        code = "keysy_small",
+        mapping =
+        {
+            [0] = 0, -- Small Keys In Own Dungeon
+            [1] = 0, -- Small Keys Shuffled
+            [2] = 1  -- Small Keys Off
+        }
+    },
+    big_keys =
+    {
+        code = "keysy_big",
+        mapping =
+        {
+            [0] = 0, -- Big Keys In Own Dungeon
+            [1] = 0, -- Big Keys Shuffled
+            [2] = 1  -- Big Keys Off
+        }
     }
 }
