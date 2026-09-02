@@ -1,7 +1,7 @@
 {
   "name": "ALBW Auto PopTracker",
   "game_name": "The Legend of Zelda: A Link Between Worlds",
-  "package_version": "1.7.2",
+  "package_version": "1.7.3-prerelease-1",
   "package_uid": "albw-ap-poptracker",
   "author": "Legend, maintained by guigui0246",
   "versions_url": "https://raw.githubusercontent.com/guigui0246/albw-ap-poptracker/refs/heads/versions/versions.json",
