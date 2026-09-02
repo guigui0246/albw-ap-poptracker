@@ -388,31 +388,31 @@ function syncDisplay(code)
         end
     end
     if has("keyring_hg") then
-        local keys = Tracker:FindObjectForCode("hg_small_key")
+        local keys = Tracker:FindObjectForCode("hg_small_keys")
         if keys then
             keys.AcquiredCount = 4
         end
     end
     if has("keyring_th") then
-        local keys = Tracker:FindObjectForCode("th_small_key")
+        local keys = Tracker:FindObjectForCode("th_small_keys")
         if keys then
             keys.AcquiredCount = 2
         end
     end
     if has("keyring_pd") then
-        local keys = Tracker:FindObjectForCode("pd_small_key")
+        local keys = Tracker:FindObjectForCode("pd_small_keys")
         if keys then
             keys.AcquiredCount = 4
         end
     end
     if has("keyring_sp") then
-        local keys = Tracker:FindObjectForCode("sp_small_key")
+        local keys = Tracker:FindObjectForCode("sp_small_keys")
         if keys then
             keys.AcquiredCount = 4
         end
     end
     if has("keyring_sw") then
-        local keys = Tracker:FindObjectForCode("sw_small_key")
+        local keys = Tracker:FindObjectForCode("sw_small_keys")
         if keys then
             keys.AcquiredCount = 3
         end
@@ -424,25 +424,25 @@ function syncDisplay(code)
         end
     end
     if has("keyring_tr") then
-        local keys = Tracker:FindObjectForCode("tr_small_key")
+        local keys = Tracker:FindObjectForCode("tr_small_keys")
         if keys then
             keys.AcquiredCount = 3
         end
     end
     if has("keyring_dp") then
-        local keys = Tracker:FindObjectForCode("dp_small_key")
+        local keys = Tracker:FindObjectForCode("dp_small_keys")
         if keys then
             keys.AcquiredCount = 5
         end
     end
     if has("keyring_ir") then
-        local keys = Tracker:FindObjectForCode("ir_small_key")
+        local keys = Tracker:FindObjectForCode("ir_small_keys")
         if keys then
             keys.AcquiredCount = 3
         end
     end
     if has("keyring_lc") then
-        local keys = Tracker:FindObjectForCode("lc_small_key")
+        local keys = Tracker:FindObjectForCode("lc_small_keys")
         if keys then
             keys.AcquiredCount = 5
         end
