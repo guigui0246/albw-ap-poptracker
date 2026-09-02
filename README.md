@@ -8,6 +8,11 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+### 1.7.3-prerelease-2
+
+- Fix portraits autotracking
+- Fix keyrings for all dungeons (ep, hs, ls and tt were the only ones already working)
+
 ### 1.7.3-prerelease-1
 
 - Add autotracking to dungeon prizes (sages and pendants)
