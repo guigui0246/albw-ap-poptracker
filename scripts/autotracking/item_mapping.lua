@@ -93,4 +93,18 @@ ITEM_MAPPING = {
     [BASE + 87] = {"u_bow", "toggle"},
     [BASE + 88] = {"u_lamp", "toggle"},
     [BASE + 89] = {"u_net", "toggle"},
+
+    [BASE + 90] = {"keyring_hs", "toggle"},
+    [BASE + 91] = {"keyring_ls", "toggle"},
+    [BASE + 92] = {"keyring_ep", "toggle"},
+    [BASE + 93] = {"keyring_hg", "toggle"},
+    [BASE + 94] = {"keyring_th", "toggle"},
+    [BASE + 95] = {"keyring_pd", "toggle"},
+    [BASE + 96] = {"keyring_sp", "toggle"},
+    [BASE + 97] = {"keyring_sw", "toggle"},
+    [BASE + 98] = {"keyring_tt", "toggle"},
+    [BASE + 99] = {"keyring_tr", "toggle"},
+    [BASE + 100] = {"keyring_dp", "toggle"},
+    [BASE + 101] = {"keyring_ir", "toggle"},
+    [BASE + 102] = {"keyring_lc", "toggle"}
 }

@@ -1328,5 +1328,70 @@
    "name": "Net Upgrade",
     "type": "toggle",
     "codes": "u_net"
+  },
+  {
+    "name": "KeyRingHS",
+    "type": "toggle",
+    "codes": "keyring_hs"
+  },
+  {
+    "name": "KeyRingLS",
+    "type": "toggle",
+    "codes": "keyring_ls"
+  },
+  {
+    "name": "KeyRingEP",
+    "type": "toggle",
+    "codes": "keyring_ep"
+  },
+  {
+    "name": "KeyRingHG",
+    "type": "toggle",
+    "codes": "keyring_hg"
+  },
+  {
+    "name": "KeyRingTH",
+    "type": "toggle",
+    "codes": "keyring_th"
+  },
+  {
+    "name": "KeyRingPD",
+    "type": "toggle",
+    "codes": "keyring_pd"
+  },
+  {
+    "name": "KeyRingSP",
+    "type": "toggle",
+    "codes": "keyring_sp"
+  },
+  {
+    "name": "KeyRingSW",
+    "type": "toggle",
+    "codes": "keyring_sw"
+  },
+  {
+    "name": "KeyRingTT",
+    "type": "toggle",
+    "codes": "keyring_tt"
+  },
+  {
+    "name": "KeyRingTR",
+    "type": "toggle",
+    "codes": "keyring_tr"
+  },
+  {
+    "name": "KeyRingDP",
+    "type": "toggle",
+    "codes": "keyring_dp"
+  },
+  {
+    "name": "KeyRingIR",
+    "type": "toggle",
+    "codes": "keyring_ir"
+  },
+  {
+    "name": "KeyRingLC",
+    "type": "toggle",
+    "codes": "keyring_lc"
   }
 ]
