@@ -3,6 +3,7 @@ ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/crack_map.lua")
 ScriptHost:LoadScript("scripts/autotracking/vane_map.lua")
+ScriptHost:LoadScript("scripts/autotracking/prize_map.lua")
 ScriptHost:LoadScript("scripts/autotracking/flags_map.lua")
 
 CUR_INDEX = -1
@@ -14,6 +15,7 @@ GLOBAL_ITEMS = {}
 HOSTED = {}
 CRACK_MAPPING = {}
 VANE_MAPPING = {}
+PRIZE_MAPPING = {}
 
 DEBUG_ON_CLEAR = true
 DEBUG_ON_ITEM = true
@@ -352,6 +354,9 @@ function syncDisplay(code)
             for _, dungeon in ipairs({"eastern_", "gales_", "hera_", "dark_", "swamp_", "skull_", "thieves_", "turtle_", "desert_", "ice_"}) do
                 local pendant = Tracker:FindObjectForCode(dungeon)
                 if pendant then
+                    if PRIZE_MAPPING and PRIZE_MAP and PRIZE_MAP[dungeon] and PRIZE_MAPPING[PRIZE_MAP[dungeon]] == PRIZE_MAP[name] then
+                        pendant.CurrentStage = i
+                    end
                     if pendant.CurrentStage == i then
                         pendant.Active = true
                     end
@@ -531,16 +536,21 @@ function onClear(slot_data)
     resetLocations()
     CRACK_MAPPING = {}
     VANE_MAPPING = {}
+    PRIZE_MAPPING = {}
     if slotdata and slot_data["crack_map"] then
         CRACK_MAPPING = Jsondecode(slot_data["crack_map"])
     end
     if slotdata and slot_data["vane_map"] then
         VANE_MAPPING = Jsondecode(slot_data["vane_map"])
     end
+    if slotdata and slot_data["prize_map"] then
+        PRIZE_MAPPING = Jsondecode(slot_data["prize_map"])
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
         print(string.format("crack mapping:\n%s", dump_table(CRACK_MAPPING)))
         print(string.format("vane mapping:\n%s", dump_table(VANE_MAPPING)))
+        print(string.format("prize mapping:\n%s", dump_table(PRIZE_MAPPING)))
     end
 
     local wv_value = 0
