@@ -81,18 +81,19 @@
         "access_rules": ["maiamai_sand_rod", "{srod}", "$canUpgradeItemSandRod, srod"],
         "capture_item": true,
         "hosted_item": "maiamai_sand_rod"
-      },
-      {
-        "name": "100 Maiamai",
-        "chest_unopened_img": "images/checks/chest_small_unopened.png",
-        "chest_opened_img": "images/checks/chest_small_opened.png",
-        "access_rules": [
-          "$canGetLastUpgradeItem"
-        ],
-        "item_count": 1,
-        "capture_item": true,
-        "hosted_item": "maiamai_100_reward"
       }
+      // ,
+      // {
+      //   "name": "100 Maiamai",
+      //   "chest_unopened_img": "images/checks/chest_small_unopened.png",
+      //   "chest_opened_img": "images/checks/chest_small_opened.png",
+      //   "access_rules": [
+      //     "$canGetLastUpgradeItem"
+      //   ],
+      //   "item_count": 1,
+      //   "capture_item": true,
+      //   "hosted_item": "maiamai_100_reward"
+      // }
     ]
   },
   {

@@ -4615,518 +4615,519 @@
         "img": "images/items/_framed_srod.png"
       }
     ]
-  },
-  {
-    "name": "Great Spin Upgrade",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 100,
-    "stages": [
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__0.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__1.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__2.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__3.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__4.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__5.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__6.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__7.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__8.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__9.png",
-        "img": "images/items/maiamai.png"
-      },
-      {
-        "codes": "requirement_maiamai_100_reward",
-        "img_mods": "overlay|images/numbers/ALL.png",
-        "img": "images/items/maiamai.png"
-      }
-    ]
   }
+  // ,
+  // {
+  //   "name": "Great Spin Upgrade",
+  //   "type": "progressive",
+  //   "allow_disabled": false,
+  //   "initial_stage_idx": 100,
+  //   "stages": [
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_1_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_2_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_3_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_4_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_5_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_6_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_7_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_8_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__0.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__1.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__2.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__3.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__4.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__5.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__6.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__7.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__8.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/maiamai_9_.png,overlay|images/numbers/nb__9.png",
+  //       "img": "images/items/maiamai.png"
+  //     },
+  //     {
+  //       "codes": "requirement_maiamai_100_reward",
+  //       "img_mods": "overlay|images/numbers/ALL.png",
+  //       "img": "images/items/maiamai.png"
+  //     }
+  //   ]
+  // }
 ]
