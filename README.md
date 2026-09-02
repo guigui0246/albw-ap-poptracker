@@ -8,6 +8,13 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+### 1.7.3-prerelease-1
+
+- Add autotracking to dungeon prizes (sages and pendants)
+- Remove mother maiamai's last reward
+- Add keysy settings autotracking
+- Add keyring autotracking
+
 ### 1.7.2
 
 - Fix mother maiamai autotracking and display
