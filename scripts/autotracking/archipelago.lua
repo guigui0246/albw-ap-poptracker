@@ -513,14 +513,14 @@ function syncDisplay(code)
 
     for i, name in ipairs({"gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "impa_flag", "irene_flag", "rosso_flag", "power_flag", "wisdom_flag", "courage_flag"}) do
         local flag = Tracker:FindObjectForCode(name)
-        if flag.Active then
+        if flag.Active or fill_paintings then
             for _, dungeon in ipairs({"eastern_", "gales_", "hera_", "dark_", "swamp_", "skull_", "thieves_", "turtle_", "desert_", "ice_"}) do
                 local pendant = Tracker:FindObjectForCode(dungeon)
                 if pendant then
                     if PRIZE_MAPPING and PRIZE_MAP and PRIZE_MAP[dungeon] and PRIZE_MAPPING[PRIZE_MAP[dungeon]] == PRIZE_MAP[name] then
                         pendant.CurrentStage = i
                     end
-                    if pendant.CurrentStage == i then
+                    if pendant.CurrentStage == i and flag.Active then
                         pendant.Active = true
                     end
                 else

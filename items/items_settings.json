@@ -1338,5 +1338,23 @@
         "name": "Hint Ghosts (need Hint Glasses)"
       }
     ]
+  },
+  {
+    "name": "Fill Unobtained Dungeon\nPrizes (Paintings/Pendants)",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/prizes/unknown.png",
+        "img_mods": "@disabled,overlay|images/settings/OFF.png",
+        "codes": "fill_paintings_setting"
+      },
+      {
+        "img": "images/prizes/unknown_sage.png",
+        "img_mods": "overlay|images/settings/ON.png",
+        "codes": "fill_paintings_setting, fill_paintings"
+      }
+    ]
   }
 ]

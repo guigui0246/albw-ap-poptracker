@@ -8,6 +8,10 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+### 1.7.3-prerelease-3
+
+- Add setting to auto-fill paintings when autotracking dungeon prizes (sages and pendants) even unobtained.
+
 ### 1.7.3-prerelease-2
 
 - Fix portraits autotracking
