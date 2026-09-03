@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "package_version": "1.7.3",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.3/albw-ap-poptracker-v1.7.3.zip",
+      "sha256": "C7083F83F21D4B1AC2AB4F6302D5C15CA5D1F64E69C0A1523A8393AA98C004AB",
+      "changelog": [
+        "Add setting to auto-fill paintings when autotracking dungeon prizes (sages and pendants) even unobtained.",
+        "Changed the display of a few locations.",
+        "Add autotracking to dungeon prizes (sages and pendants)",
+        "Remove mother maiamai's last reward",
+        "Add keysy settings autotracking",
+        "Add keyring autotracking",
+      ]
+    },
+    {
       "package_version": "1.7.2",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.2/albw-ap-poptracker-v1.7.2.zip",
       "sha256": "A72EF77B71334F6B23A526FFB83686E766EA8E72E03211E62D61DD58EA67C796",
