@@ -363,6 +363,12 @@ function updateVanes(important)
 end
 
 function onRetrieved(key, value)
+    if value == nil then
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+            print(string.format("Retrieved %s = nil", key))
+        end
+        return
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
         print(string.format("Retrieved %s = %s", key, dump_table(value)))
     end
@@ -513,12 +519,16 @@ function syncDisplay(code)
 
     for i, name in ipairs({"gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "impa_flag", "irene_flag", "rosso_flag", "power_flag", "wisdom_flag", "courage_flag"}) do
         local flag = Tracker:FindObjectForCode(name)
-        if flag.Active or fill_paintings then
+        if flag.Active or code == "fill_paintings_setting, fill_paintings_setting, fill_paintings" then
             for _, dungeon in ipairs({"eastern_", "gales_", "hera_", "dark_", "swamp_", "skull_", "thieves_", "turtle_", "desert_", "ice_"}) do
                 local pendant = Tracker:FindObjectForCode(dungeon)
                 if pendant then
                     if PRIZE_MAPPING and PRIZE_MAP and PRIZE_MAP[dungeon] and PRIZE_MAPPING[PRIZE_MAP[dungeon]] == PRIZE_MAP[name] then
-                        pendant.CurrentStage = i
+                        if flag.Active or has("fill_paintings") then
+                            pendant.CurrentStage = i
+                        else
+                            pendant.CurrentStage = 0
+                        end
                     end
                     if pendant.CurrentStage == i and flag.Active then
                         pendant.Active = true
