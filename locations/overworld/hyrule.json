@@ -85,6 +85,7 @@
             "sections": [
               {
                 "name": "Master Sword",
+                "chest_opened_img": "images/prizes/pendant.png",
                 "access_rules": [
                   "ped_requirement_3, power, wisdom, courage",
                   "ped_requirement_2, power, wisdom"

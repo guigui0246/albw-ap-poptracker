@@ -1346,12 +1346,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/prizes/unknown.png",
+        "img": "images/prizes/unknown_sage.png",
         "img_mods": "@disabled,overlay|images/settings/OFF.png",
         "codes": "fill_paintings_setting"
       },
       {
-        "img": "images/prizes/unknown_sage.png",
+        "img": "images/prizes/sage_rainbow.png",
         "img_mods": "overlay|images/settings/ON.png",
         "codes": "fill_paintings_setting, fill_paintings"
       }
