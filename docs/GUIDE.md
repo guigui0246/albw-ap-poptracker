@@ -147,6 +147,8 @@ Left clicking on these will mark them as if you cleared the check on the map, an
 
 Alternatively, you can right click on them to mark them as "visited". This won't do anything logically, but it's handy to keep track of which ones you've checked if you are doing a shuffled Weather Vanes run.
 
+### Keysy
+
 ![Keysy Settings](/images/settings/Keysy_off.png)
 
 By left clicking on this, you can enable small keysy. Right click will enable big keysy. Left- _and_ right click will enable both.

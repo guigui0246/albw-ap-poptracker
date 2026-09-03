@@ -3,7 +3,6 @@
 ## Items
 
 - Foul fruit
-- Which dungeon price goes in which dungeon
 - Zelda (Sage)
 - Triforce (Game Ending)
 
@@ -11,7 +10,7 @@
 
 - Hyrule Castle Crack
 - Lorule Castle Crack
-- Misery Mire Entrance Crack (Hyrule)
+- Misery Mire Entrance Crack (Hyrule) (broken)
 
 #### Junk items
 
@@ -44,9 +43,8 @@ All hint ghosts are untrackable.
  - Turtle (wall)
  - Turtle (flipped)
  - Turtle (bullied)
- - Mysterious Man (Golden Bee)
  - Clear Treacherous Tower
- - All boss defeat and dungeon clear events
+ - All boss defeat events
  - All dungeon related events
  - Saving Zelda (Sage)
  - Sacred Realm (Triforce)
