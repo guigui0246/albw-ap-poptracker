@@ -8,6 +8,10 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 [](https://github.com/guigui0246/albw-ap-poptracker/tree/main#version_history)
 
+<details>
+
+<summary>1.7.x</summary>
+
 ### 1.7.3
 
 - Add setting to auto-fill paintings when autotracking dungeon prizes (sages and pendants) even unobtained.
@@ -46,6 +50,12 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 - Fix graveyard not-cracksanity logic
 - Fix a convenient vanes problem due to random key order
 
+</details>
+
+<details>
+
+<summary>1.6.x</summary>
+
 ### 1.6.1
 
 - Fix convenient weather vane with crack shuffle
@@ -55,6 +65,12 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 - Add a new menu to set how many maiamai are required for the rewards given by mother maiamai
 - Also auto-track weather vanes
+
+</details>
+
+<details>
+
+<summary>1.5.x</summary>
 
 ### 1.5.6
 
@@ -94,6 +110,12 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 - Fix golden bee issue
 - Fix Great Rupee Fairy farming logic
 
+</details>
+
+<details>
+
+<summary>1.4.x</summary>
+
 ### 1.4.2
 
 #### Bug Fixes
@@ -103,10 +125,6 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 - Fixed a display issue with Rosso's House Crack showing as red in Cracksanity.
 - Graveyard crack in Lorule now matches the shape of other cracks.
 - Fixed issue with bottle auto-tracking.
-
-<details>
-
-<summary>1.4.1</summary>
 
 ### 1.4.1b
 
@@ -122,12 +140,6 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 #### Bug Fixes
 
 - Trial door settings logic is fixed, and should now actually be tracked properly.
-
-</details>
-
-<details>
-
-<summary>1.4.0</summary>
 
 ### 1.4.0
 
