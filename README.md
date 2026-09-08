@@ -2,6 +2,11 @@
 
 This is a [PopTracker](https://poptracker.github.io/) pack meant for tracking items and checks in The Legend of Zelda: A Link Between Worlds Randomizer runs.
 
+To use please follow the poptracker installation guide and add the zip in the packs folder.
+This pack will auto-update for releases, for prereleases you need to download them yourself.
+Most things will auto-track after pressing the AP button and filling the informations but some things are untrackable for various reasons.
+Please remember to read the [docs](https://github.com/guigui0246/albw-ap-poptracker/tree/main/docs).
+
 Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap-poptracker)
 
 ## Version History
