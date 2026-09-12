@@ -103,8 +103,8 @@ ITEM_MAPPING = {
     [BASE + 96] = {"keyring_sp", "toggle"},
     [BASE + 97] = {"keyring_sw", "toggle"},
     [BASE + 98] = {"keyring_tt", "toggle"},
-    [BASE + 99] = {"keyring_tr", "toggle"},
+    [BASE + 99] = {"keyring_ir", "toggle"},
     [BASE + 100] = {"keyring_dp", "toggle"},
-    [BASE + 101] = {"keyring_ir", "toggle"},
+    [BASE + 101] = {"keyring_tr", "toggle"},
     [BASE + 102] = {"keyring_lc", "toggle"}
 }
