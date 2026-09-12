@@ -17,6 +17,10 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 <summary>1.7.x</summary>
 
+### 1.7.4
+
+- Fix swapped IR and TR keyrings
+
 ### 1.7.3
 
 - Add setting to auto-fill paintings when autotracking dungeon prizes (sages and pendants) even unobtained.
