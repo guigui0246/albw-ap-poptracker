@@ -14,7 +14,7 @@
     "sections": [
       {
         "name": "Bow",
-        "access_rules": ["maiamai_bow", "{bow}", "$canUpgradeItemBow, bow"],
+        "access_rules": ["maiamai_bow", "^$canUpgradeItemBow, bow"],
         "capture_item": true,
         "hosted_item": "maiamai_bow"
       },
@@ -22,8 +22,7 @@
         "name": "Boomerang",
         "access_rules": [
           "maiamai_boomerang",
-          "{boomerang}",
-          "$canUpgradeItemBoomerang, boomerang"
+          "^$canUpgradeItemBoomerang, boomerang"
         ],
         "capture_item": true,
         "hosted_item": "maiamai_boomerang"
@@ -32,8 +31,7 @@
         "name": "Hookshot",
         "access_rules": [
           "maiamai_hookshot",
-          "{hookshot}",
-          "$canUpgradeItemHookshot, hookshot"
+          "^$canUpgradeItemHookshot, hookshot"
         ],
         "capture_item": true,
         "hosted_item": "maiamai_hookshot"
@@ -42,27 +40,26 @@
         "name": "Hammer",
         "access_rules": [
           "maiamai_hammer",
-          "{hammer}",
-          "$canUpgradeItemHammer, hammer"
+          "^$canUpgradeItemHammer, hammer"
         ],
         "capture_item": true,
         "hosted_item": "maiamai_hammer"
       },
       {
         "name": "Bombs",
-        "access_rules": ["maiamai_bombs", "{bombs}", "$canUpgradeItemBombs, bombs"],
+        "access_rules": ["maiamai_bombs", "^$canUpgradeItemBombs, bombs"],
         "capture_item": true,
         "hosted_item": "maiamai_bombs"
       },
       {
         "name": "Fire Rod",
-        "access_rules": ["maiamai_fire_rod", "{frod}", "$canUpgradeItemFireRod, frod"],
+        "access_rules": ["maiamai_fire_rod", "^$canUpgradeItemFireRod, frod"],
         "capture_item": true,
         "hosted_item": "maiamai_fire_rod"
       },
       {
         "name": "Ice Rod",
-        "access_rules": ["maiamai_ice_rod", "{irod}", "$canUpgradeItemIceRod, irod"],
+        "access_rules": ["maiamai_ice_rod", "^$canUpgradeItemIceRod, irod"],
         "capture_item": true,
         "hosted_item": "maiamai_ice_rod"
       },
@@ -70,15 +67,14 @@
         "name": "Tornado Rod",
         "access_rules": [
           "maiamai_tornado_rod",
-          "{trod}",
-          "$canUpgradeItemTornadoRod, trod"
+          "^$canUpgradeItemTornadoRod, trod"
         ],
         "capture_item": true,
         "hosted_item": "maiamai_tornado_rod"
       },
       {
         "name": "Sand Rod",
-        "access_rules": ["maiamai_sand_rod", "{srod}", "$canUpgradeItemSandRod, srod"],
+        "access_rules": ["maiamai_sand_rod", "^$canUpgradeItemSandRod, srod"],
         "capture_item": true,
         "hosted_item": "maiamai_sand_rod"
       }

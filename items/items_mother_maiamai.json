@@ -3,11 +3,11 @@
     "name": "Maiamai Bow Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 10,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_bow",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_bow.png"
       },
       {
@@ -516,11 +516,11 @@
     "name": "Maiamai Boomerang Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 20,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_boomerang",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_boomerang.png"
       },
       {
@@ -1029,11 +1029,11 @@
     "name": "Maiamai Hookshot Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 30,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_hookshot",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_hookshot.png"
       },
       {
@@ -1542,11 +1542,11 @@
     "name": "Maiamai Hammer Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 40,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_hammer",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_hammer.png"
       },
       {
@@ -2055,11 +2055,11 @@
     "name": "Maiamai Bombs Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 50,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_bombs",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_bombs.png"
       },
       {
@@ -2568,11 +2568,11 @@
     "name": "Maiamai Fire Rod Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 60,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_fire_rod",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_frod.png"
       },
       {
@@ -3081,11 +3081,11 @@
     "name": "Maiamai Ice Rod Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 70,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_ice_rod",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_irod.png"
       },
       {
@@ -3594,11 +3594,11 @@
     "name": "Maiamai Tornado Rod Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 80,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_tornado_rod",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_trod.png"
       },
       {
@@ -4107,11 +4107,11 @@
     "name": "Maiamai Sand Rod Upgrade",
     "type": "progressive",
     "allow_disabled": false,
-    "initial_stage_idx": 90,
+    "initial_stage_idx": 0,
     "stages": [
       {
         "codes": "requirement_maiamai_sand_rod",
-        "img_mods": "overlay|images/numbers/nb__0.png",
+        "img_mods": "overlay|images/numbers/unknown.png",
         "img": "images/items/_framed_srod.png"
       },
       {
@@ -4621,11 +4621,11 @@
   //   "name": "Great Spin Upgrade",
   //   "type": "progressive",
   //   "allow_disabled": false,
-  //   "initial_stage_idx": 100,
+  //   "initial_stage_idx": 0,
   //   "stages": [
   //     {
   //       "codes": "requirement_maiamai_100_reward",
-  //       "img_mods": "overlay|images/numbers/nb__0.png",
+  //       "img_mods": "overlay|images/numbers/unknown.png",
   //       "img": "images/items/maiamai.png"
   //     },
   //     {

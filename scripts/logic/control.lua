@@ -789,39 +789,93 @@ function canGetLastUpgradeItem()
 end
 
 function canUpgradeItemBow()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_bow").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_bow").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_bow").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemBoomerang()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_boomerang").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_boomerang").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_boomerang").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemHookshot()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_hookshot").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_hookshot").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_hookshot").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemHammer()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_hammer").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_hammer").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_hammer").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemBombs()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_bombs").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_bombs").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_bombs").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemFireRod()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_fire_rod").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_fire_rod").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_fire_rod").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemIceRod()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_ice_rod").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_ice_rod").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_ice_rod").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemTornadoRod()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_tornado_rod").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_tornado_rod").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_tornado_rod").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function canUpgradeItemSandRod()
-    return Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_sand_rod").CurrentStage
+    if (Tracker:FindObjectForCode("requirement_maiamai_sand_rod").CurrentStage == 0) then
+        return AccessibilityLevel.Inspect
+    end
+    if (Tracker:FindObjectForCode("maiamai").CurrentStage >= Tracker:FindObjectForCode("requirement_maiamai_sand_rod").CurrentStage) then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
 
 function inspect_crack_lorule()
