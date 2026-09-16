@@ -1,0 +1,29 @@
+{
+  "important_hints_panel": {
+    "type": "array",
+    "orientation": "vertical",
+    "dropshadow": true,
+    "margin": "8, 8, 8, 8",
+    "content": [
+      {
+        "type": "itemgrid",
+        "item_size": "10,10",
+        "item_h_alignment": "left",
+        "item_v_alignment": "top",
+        "h_alignment": "left",
+        "v_alignment": "top",
+        "rows": [
+          ["important_hint_panel_line_1"],
+          ["important_hint_panel_line_2"],
+          ["important_hint_panel_line_3"],
+          ["important_hint_panel_line_4"],
+          ["important_hint_panel_line_5"],
+          ["important_hint_panel_line_6"],
+          ["important_hint_panel_line_7"],
+          ["important_hint_panel_line_8"],
+          ["important_hint_panel_line_9"]
+        ]
+      }
+    ]
+  }
+}

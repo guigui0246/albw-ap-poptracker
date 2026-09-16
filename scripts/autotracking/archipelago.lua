@@ -1,6 +1,7 @@
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/hints.lua")
 ScriptHost:LoadScript("scripts/autotracking/crack_map.lua")
 
 -- ScriptHost:LoadScript("scripts/autotracking/vane_map.lua")
@@ -620,10 +621,22 @@ function syncDisplay(code)
             keys.AcquiredCount = 5
         end
     end
-
 end
 
+
 function onSetReply(key, value, old)
+end
+
+function onNotify(key, value, old)
+    for _, hint in ipairs(value) do
+        AddHint(hint.item, hint.location)
+    end
+end
+
+function onNotifyLaunch(key, value, old)
+    for _, hint in ipairs(value) do
+        AddHint(hint.item, hint.location)
+    end
 end
 
 function toggleWeatherVanes(value)
@@ -723,6 +736,10 @@ function onClear(slot_data)
     if slot_data and slot_data["prize_map"] then
         PRIZE_MAPPING = Jsondecode(slot_data["prize_map"])
     end
+    if ResetHintState then
+        ResetHintState()
+    end
+    print(dump_table(slot_data))
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
         print(string.format("crack mapping:\n%s", dump_table(CRACK_MAPPING)))
@@ -764,6 +781,7 @@ function onClear(slot_data)
         Archipelago:Get({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
         Archipelago:Get({"albw_flags_" .. tostring(PLAYER_NUMBER)})
     end
+
     Tracker.BulkUpdate = false
     syncDisplay()
 end
@@ -878,6 +896,7 @@ function onScout(location_id, location_name, item_id, item_name, item_player)
         print(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name,
             item_player))
     end
+    AddHint(item_name, location_name)
 end
 
 -- called when a bounce message is received
@@ -916,12 +935,15 @@ end
 Archipelago:AddSetReplyHandler("set reply handler", onSetReply)
 Archipelago:AddScoutHandler("scout handler", onScout)
 Archipelago:AddBouncedHandler("bounce handler", onBounce)
+Archipelago:AddSetReplyHandler("notify handler", OnNotify)
+Archipelago:AddRetrievedHandler("notify launch handler", OnNotifyLaunch)
 
 ON_SYNC = {
     syncDisplay,
     updateCracks,
     updateVanes,
-    can_finish
+    can_finish,
+    RefreshHintSystem
 }
 
 function syncDisplayCallback(code)

@@ -58,6 +58,15 @@
                 "type": "layout",
                 "key": "rewards_panel"
               }
+            },
+            {
+              "type": "group",
+              "header": "Information",
+              "margin": "0,0",
+              "content": {
+                "type": "layout",
+                "key": "important_hints_panel"
+              }
             }
           ]
         }

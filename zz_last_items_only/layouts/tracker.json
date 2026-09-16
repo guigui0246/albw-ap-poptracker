@@ -51,6 +51,15 @@
                 "type": "layout",
                 "key": "dungeon_items_vertical_tall"
               }
+            },
+            {
+              "type": "group",
+              "header": "Information",
+              "margin": "0,0",
+              "content": {
+                "type": "layout",
+                "key": "important_hints_panel"
+              }
             }
           ]
         }

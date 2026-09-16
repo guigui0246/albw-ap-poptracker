@@ -50,6 +50,13 @@
                     "type": "layout",
                     "key": "rewards_panel"
                   }
+                },
+                {
+                  "title": "Information",
+                  "content": {
+                    "type": "layout",
+                    "key": "important_hints_panel"
+                  }
                 }
               ]
             }

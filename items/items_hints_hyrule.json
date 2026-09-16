@@ -1,0 +1,482 @@
+[
+  {
+    "name": "Lost Woods Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_item" }
+    ]
+  },
+  {
+    "name": "Lost Woods Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "lost_woods_region" }
+    ]
+  },
+  {
+    "name": "Death Mountain Access Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_item" }
+    ]
+  },
+  {
+    "name": "Death Mountain Access Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "death_mountain_access_region" }
+    ]
+  },
+  {
+    "name": "Above Sanctuary Wall Posts Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_item" }
+    ]
+  },
+  {
+    "name": "Above Sanctuary Wall Posts Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "above_sanctuary_wall_posts_region" }
+    ]
+  },
+  {
+    "name": "Witch's House Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_item" }
+    ]
+  },
+  {
+    "name": "Witch's House Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "witchs_house_region" }
+    ]
+  },
+  {
+    "name": "Zora's Domain Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_item" }
+    ]
+  },
+  {
+    "name": "Zora's Domain Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "zora_domain_region" }
+    ]
+  },
+  {
+    "name": "Waterfall Cave Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_item" }
+    ]
+  },
+  {
+    "name": "Waterfall Cave Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "waterfall_cave_region" }
+    ]
+  },
+  {
+    "name": "Hyrule Graveyard Wall Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_item" }
+    ]
+  },
+  {
+    "name": "Hyrule Graveyard Wall Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_graveyard_wall_region" }
+    ]
+  },
+  {
+    "name": "Hyrule Grave Entrance Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_item" }
+    ]
+  },
+  {
+    "name": "Hyrule Grave Entrance Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_grave_entrance_region" }
+    ]
+  },
+  {
+    "name": "Kakariko Shady Guy Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_item" }
+    ]
+  },
+  {
+    "name": "Kakariko Shady Guy Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "kakariko_shady_guy_region" }
+    ]
+  },
+  {
+    "name": "Cucco Ranch Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_item" }
+    ]
+  },
+  {
+    "name": "Cucco Ranch Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "cucco_ranch_region" }
+    ]
+  },
+  {
+    "name": "Rupee Rush Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_item" }
+    ]
+  },
+  {
+    "name": "Rupee Rush Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "rupee_rush_hyrule_region" }
+    ]
+  },
+  {
+    "name": "Stylish Woman Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_item" }
+    ]
+  },
+  {
+    "name": "Stylish Woman Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "stylish_woman_region" }
+    ]
+  },
+  {
+    "name": "Hyrule Castle Rocks Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_item" }
+    ]
+  },
+  {
+    "name": "Hyrule Castle Rocks Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "hyrule_castle_rocks_region" }
+    ]
+  },
+  {
+    "name": "Behind Blacksmith Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_item" }
+    ]
+  },
+  {
+    "name": "Behind Blacksmith Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "behind_blacksmith_region" }
+    ]
+  },
+  {
+    "name": "Blacksmith Cave Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_item" }
+    ]
+  },
+  {
+    "name": "Blacksmith Cave Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "blacksmith_cave_region" }
+    ]
+  },
+  {
+    "name": "StreetPass Tree Hint Item",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_item" }
+    ]
+  },
+  {
+    "name": "StreetPass Tree Hint Region",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" },
+      { "img": "images/items/unknown_compass.png", "codes": "streetpass_tree_region" }
+    ]
+  }
+]
