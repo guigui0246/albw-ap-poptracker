@@ -661,6 +661,7 @@
                   "cracksanity, crack_lake_lorule, merge",
                   "cracksanity, crack_river_lorule, flippers",
                   "cracksanity, crack_lorule_hotfoot, flippers",
+                  "$warpLorule, bell, wv_turtle, flippers",
                   "[glitched], $glitched_access_dark_ruins, $boost, flippers",
                   "[advanced], $advanced_access_dark_ruins, $boost, flippers",
                   "[hell], $hell_access_dark_ruins, $beeFakeFlippers",

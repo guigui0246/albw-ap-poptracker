@@ -1,5 +1,5 @@
 --- ALBW Randomizer Tracker Init
--- ENABLE_DEBUG_LOG = true
+ENABLE_DEBUG_LOG = true
 
 --- Logic
 require("scripts/logic_import")

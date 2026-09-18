@@ -4,7 +4,7 @@
     "name": "_Hyrule Ghosts",
     "chest_unopened_img": "images/items/unknown_compass.png",
     "chest_opened_img": "images/items/compass.png",
-    "access_rules": ["$access_ghosts"],
+    "access_rules": ["{$access_ghosts}"],
     "children": [
       {
         "name": "Lost Woods Area",
@@ -623,7 +623,7 @@
     "name": "_Lorule Ghost",
     "chest_unopened_img": "images/items/unknown_compass.png",
     "chest_opened_img": "images/items/compass.png",
-    "access_rules": ["$access_ghosts"],
+    "access_rules": ["{$access_ghosts}"],
     "children": [
       {
         "name": "Skull Woods Area",
@@ -995,7 +995,20 @@
               {
                 "name": "Ghost_TurtleStuckToWall",
                 "item_count": 1,
-                "visibility_rules": ["hint_ghosts"]
+                "visibility_rules": ["hint_ghosts"],
+                "access_rules": [
+                  "not_cracksanity, quake_on",
+                  "cracksanity, crack_lake_lorule",
+                  "cracksanity, crack_river_lorule, flippers",
+                  "cracksanity, crack_lorule_hotfoot, flippers",
+                  "$warpLorule, bell, wv_turtle, flippers",
+                  "[glitched], $glitched_access_dark_ruins, $boost, flippers",
+                  "[advanced], $advanced_access_dark_ruins, $fakeFlippers",
+                  "[hell], $hell_access_dark_ruins, $beeFakeFlippers",
+                  "[advanced], cracksanity, crack_lorule_hotfoot, $fakeFlippers",
+                  "[hell], $hell_access_dark_ruins, $beeBoost, scroll",
+                  "[hell], cracksanity, crack_lorule_hotfoot"
+                ]
               }
             ]
           },

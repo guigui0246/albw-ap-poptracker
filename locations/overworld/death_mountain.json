@@ -774,7 +774,7 @@
   },
   {
     "name": "_Mountain Ghosts",
-    "access_rules": ["$access_ghosts"],
+    "access_rules": ["{$access_ghosts}"],
     "chest_unopened_img": "images/items/unknown_compass.png",
     "chest_opened_img": "images/items/compass.png",
     "visibility_rules": ["hint_ghosts"],
