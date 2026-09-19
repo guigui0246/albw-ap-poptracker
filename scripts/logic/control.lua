@@ -735,32 +735,6 @@ function can_skip_trials()
     return AccessibilityLevel.None
 end
 
-function maiamaiUpgradeAvailable()
-    if has("maiamai_100") then
-        return 10
-    elseif has("maiamai_90") then
-        return 9
-    elseif has("maiamai_80") then
-        return 8
-    elseif has("maiamai_70") then
-        return 7
-    elseif has("maiamai_60") then
-        return 6
-    elseif has("maiamai_50") then
-        return 5
-    elseif has("maiamai_40") then
-        return 4
-    elseif has("maiamai_30") then
-        return 3
-    elseif has("maiamai_20") then
-        return 2
-    elseif has("maiamai_10") then
-        return 1
-    else
-        return 0
-    end
-end
-
 function forceShowMaiamais()
     if Tracker:FindObjectForCode("shuffle_maiamai_rewards").CurrentStage == 0 then
         return false

@@ -1,4 +1,5 @@
 --- ALBW Randomizer Tracker Init
+ENABLE_DEBUG_LOG = false
 -- ENABLE_DEBUG_LOG = true
 
 --- Logic

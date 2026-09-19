@@ -283,14 +283,25 @@ function has_crack_map()
     return false
 end
 
+local old_cracks = {}
 function updateCracks(important)
     if CRACK_MAPPING then
+        local lines = {}
+        local seen = {}
         for entrance, destination in pairs(CRACK_MAPPING) do
             local location_code = CRACK_MAP[entrance]
             local dest_code = CRACK_MAP[destination]
             if location_code and dest_code then
+                if entrance > destination then
+                    entrance, destination = destination, entrance
+                end
+                local key = entrance .. "\n" .. destination
+                local dest = Tracker:FindObjectForCode(dest_code)
+                if not seen[key] and dest and dest.Active then
+                    seen[key] = true
+                    table.insert(lines, entrance .. " <-> " .. destination)
+                end
                 if dest_code ~= important then
-                    local dest = Tracker:FindObjectForCode(dest_code)
                     if dest then
                         if has(location_code) then
                             dest.Active = true
@@ -316,6 +327,34 @@ function updateCracks(important)
                 end
             end
         end
+
+        table.sort(lines)
+        if #old_cracks == #lines then
+            local allEqual = true
+            for i = 1, #lines do
+                if old_cracks[i] ~= lines[i] then
+                    allEqual = false
+                    break
+                end
+            end
+            if allEqual then
+                return
+            end
+        end
+        old_cracks = lines
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
+            print("syncDisplay: updating crack links:")
+            print(dump_table(lines))
+        end
+        Tracker.BulkUpdate = true
+        for i = 1, 30 do
+            local panel = Tracker:FindObjectForCode("crack_link_" .. i)
+            if panel then
+---@diagnostic disable-next-line: param-type-mismatch
+                panel:SetOverlay(lines[i] or "")
+            end
+        end
+        Tracker.BulkUpdate = false
     else
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
             print("syncDisplay: CRACK_MAPPING table is nil:")
@@ -471,7 +510,6 @@ function onRetrieved(key, value)
             end
         end
     end
-    syncDisplayCallback(-1)
 end
 
 function syncDisplay(code)
@@ -577,18 +615,18 @@ function syncDisplay(code)
 
     for i, name in ipairs({"gulley_flag", "oren_flag", "seres_flag", "osfala_flag", "impa_flag", "irene_flag", "rosso_flag", "power_flag", "wisdom_flag", "courage_flag"}) do
         local flag = Tracker:FindObjectForCode(name)
-        if flag.Active or code == "fill_paintings_setting, fill_paintings_setting, fill_paintings" then
+        if (flag and flag.Active) or code == "fill_paintings_setting, fill_paintings_setting, fill_paintings" then
             for _, dungeon in ipairs({"eastern_", "gales_", "hera_", "dark_", "swamp_", "skull_", "thieves_", "turtle_", "desert_", "ice_"}) do
                 local pendant = Tracker:FindObjectForCode(dungeon)
                 if pendant then
                     if PRIZE_MAPPING and PRIZE_MAP and PRIZE_MAP[dungeon] and PRIZE_MAPPING[PRIZE_MAP[dungeon]] == PRIZE_MAP[name] then
-                        if flag.Active or has("fill_paintings") then
+                        if (flag and flag.Active) or has("fill_paintings") then
                             pendant.CurrentStage = i
                         else
                             pendant.CurrentStage = 0
                         end
                     end
-                    if pendant.CurrentStage == i and flag.Active then
+                    if pendant.CurrentStage == i and flag and flag.Active then
                         pendant.Active = true
                     end
                 else
@@ -826,7 +864,6 @@ function onClear(slot_data)
     end
 
     Tracker.BulkUpdate = false
-    syncDisplay()
 end
 
 -- called when an item gets collected
@@ -989,6 +1026,17 @@ ON_SYNC = {
 }
 
 function syncDisplayCallback(code)
+    if type(code) == "string" then
+        local obj = Tracker:FindObjectForCode(code)
+        if obj then
+            if obj.Name == "Information" then
+                return
+            end
+            if obj.Name == "Crack Link" then
+                return
+            end
+        end
+    end
     for _, callback in ipairs(ON_SYNC) do
         callback(code)
     end

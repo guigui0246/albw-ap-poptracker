@@ -112,6 +112,7 @@ function BuildImportantHintList()
         end
         local panel = Tracker:FindObjectForCode("important_hint_panel_line_" .. i)
         if panel then
+---@diagnostic disable-next-line: param-type-mismatch
             panel:SetOverlay(text)
         end
     end
@@ -119,8 +120,6 @@ function BuildImportantHintList()
 end
 
 function RefreshHintSystem()
-    -- If we don't try to access the content of the table, poptracker optimizes it away.
-    dump_table(HINT_SOURCES)
     BuildImportantHintList()
 end
 

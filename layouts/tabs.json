@@ -21,6 +21,13 @@
         }
       },
       {
+        "title": "Crack Links",
+        "content": {
+          "type": "layout",
+          "key": "crack_links_panel"
+        }
+      },
+      {
         "title": "Hyrule Dungeons",
         "content": {
           "type": "layout",
@@ -51,6 +58,13 @@
         "content": {
           "type": "map",
           "maps": ["lorule"]
+        }
+      },
+      {
+        "title": "Crack Links",
+        "content": {
+          "type": "layout",
+          "key": "crack_links_panel"
         }
       },
       {

@@ -1,0 +1,35 @@
+{
+  "crack_links_panel": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,50,0,50",
+    "dropshadow": true,
+    "content": [
+      {
+        "type": "itemgrid",
+        "item_size": "150,10",
+        "item_h_alignment": "left",
+        "item_v_alignment": "top",
+        "h_alignment": "left",
+        "v_alignment": "top",
+        "rows": [
+          ["crack_link_1", "crack_link_2"],
+          ["crack_link_3", "crack_link_4"],
+          ["crack_link_5", "crack_link_6"],
+          ["crack_link_7", "crack_link_8"],
+          ["crack_link_9", "crack_link_10"],
+          ["crack_link_11", "crack_link_12"],
+          ["crack_link_13", "crack_link_14"],
+          ["crack_link_15", "crack_link_16"],
+          ["crack_link_17", "crack_link_18"],
+          ["crack_link_19", "crack_link_20"],
+          ["crack_link_21", "crack_link_22"],
+          ["crack_link_23", "crack_link_24"],
+          ["crack_link_25", "crack_link_26"],
+          ["crack_link_27", "crack_link_28"],
+          ["crack_link_29", "crack_link_30"]
+        ]
+      }
+    ]
+  }
+}

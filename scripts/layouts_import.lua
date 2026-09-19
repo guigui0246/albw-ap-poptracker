@@ -6,6 +6,7 @@ Tracker:AddLayouts("layouts/rewards.json")
 Tracker:AddLayouts("layouts/hints.json")
 
 Tracker:AddLayouts("layouts/tabs.json")
+Tracker:AddLayouts("layouts/crack_links.json")
 Tracker:AddLayouts("layouts/dungeons.json")
 
 Tracker:AddLayouts("layouts/broadcast.json")
