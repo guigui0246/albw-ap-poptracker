@@ -125,7 +125,6 @@ function RefreshHintSystem()
 end
 
 function RemoveHint(region_name)
-    print("Removing hint for region: " .. region_name)
     for i, source in ipairs(HINT_SOURCES) do
         if source.region == region_name then
             table.remove(HINT_SOURCES, i)
@@ -144,4 +143,4 @@ function AddHint(item_name, region_name)
     RefreshHintSystem()
 end
 
-RefreshHintSystem()
+BuildImportantHintList()
