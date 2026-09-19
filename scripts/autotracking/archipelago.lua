@@ -414,7 +414,64 @@ function onRetrieved(key, value)
             end
         end
     end
-    syncDisplay()
+
+    if key == "_read_hints_" .. tostring(TEAM_NUMBER) .. "_" .. tostring(PLAYER_NUMBER) then
+        for i, hint in pairs(value) do
+            if hint and hint.finding_player == PLAYER_NUMBER and hint.found == false then
+                local flag = hint.item_flags
+                -- class ItemClassification(IntFlag):
+                -- 0 = filler, 1 = prog, 2 = usefull, 4 = trap, 8 = skip_bal, 16 = deprio
+                -- See BaseClasses.py#L1549
+                if flag ~= 0 and flag ~= 4 then
+                    local status = hint.status
+                    -- class HintStatus(enum.IntEnum):
+                    -- 0 = unknown, 10 = useless, 20 = avoid, 30 = important, 40 = found
+                    -- see docs/network%20protocol.md#HintStatus
+                    if status == 0 or status == 30 then
+                        local item = Archipelago:GetItemName(hint.item, Archipelago:GetPlayerGame(hint.receiving_player))
+                        if item == "Unknown" and hint.receiving_player == PLAYER_NUMBER then
+                            item = ITEM_MAPPING[hint.item] or "Unknown"
+                            if item ~= "Unknown" then
+                                item = item[1]
+                                item = item:gsub("p_", "")
+                            end
+                        end
+                        local player = Archipelago:GetPlayerAlias(hint.receiving_player)
+                        if player == "Unknown" then
+                            player = ""
+                        else
+                            player = player .. "'s "
+                        end
+
+                        local location = Archipelago:GetLocationName(hint.location, Archipelago:GetPlayerGame(hint.finding_player))
+                        if location == "Unknown" and hint.finding_player == PLAYER_NUMBER then
+                            location = LOCATION_MAPPING[hint.location] or "Unknown"
+                            if location ~= "Unknown" then
+                                location = location[1]
+                                location = location:gsub("@", "")
+                            end
+                        end
+                        local entrance = hint.entrance
+                        if entrance == nil then
+                            entrance = ""
+                        end
+                        if entrance ~= "" then
+                            entrance = " (" .. entrance .. ")"
+                        end
+                        while location:sub(1, 1) == "_" do
+                            location = location:gsub("^[^/]*/", "", 1)
+                        end
+
+                        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_STORAGE then
+                            print(string.format("onRetrieved: hint %d: item=%s AKA %s, location=%s AKA %s, flag=%s, status=%s, entrance=%s", i, hint.item, item, hint.location, location, flag, status, entrance))
+                        end
+                        AddHint(player .. item, location .. entrance)
+                    end
+                end
+            end
+        end
+    end
+    syncDisplayCallback(-1)
 end
 
 function syncDisplay(code)
@@ -627,18 +684,6 @@ end
 function onSetReply(key, value, old)
 end
 
-function onNotify(key, value, old)
-    for _, hint in ipairs(value) do
-        AddHint(hint.item, hint.location)
-    end
-end
-
-function onNotifyLaunch(key, value, old)
-    for _, hint in ipairs(value) do
-        AddHint(hint.item, hint.location)
-    end
-end
-
 function toggleWeatherVanes(value)
     if value == 2 then -- Convenient
         Tracker:FindObjectForCode("wv_your_house").Active = true
@@ -736,9 +781,7 @@ function onClear(slot_data)
     if slot_data and slot_data["prize_map"] then
         PRIZE_MAPPING = Jsondecode(slot_data["prize_map"])
     end
-    if ResetHintState then
-        ResetHintState()
-    end
+    ResetHintState()
     print(dump_table(slot_data))
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_CLEAR then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
@@ -772,14 +815,14 @@ function onClear(slot_data)
     end
     toggleWeatherVanes(wv_value)
     if PLAYER_NUMBER ~= -1 then
-        Archipelago:AddRetrievedHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:AddRetrievedHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:AddSetReplyHandler("albw_maiamai_" .. tostring(PLAYER_NUMBER), onRetrieved)
-        Archipelago:AddSetReplyHandler("albw_flags_" .. tostring(PLAYER_NUMBER), onRetrieved)
+        Archipelago:AddRetrievedHandler("onRetrieved", onRetrieved)
+        Archipelago:AddSetReplyHandler("onSetReply", onRetrieved)
         Archipelago:SetNotify({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
         Archipelago:SetNotify({"albw_flags_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:SetNotify({"_read_hints_" .. tostring(TEAM_NUMBER) .. "_" .. tostring(PLAYER_NUMBER)})
         Archipelago:Get({"albw_maiamai_" .. tostring(PLAYER_NUMBER)})
         Archipelago:Get({"albw_flags_" .. tostring(PLAYER_NUMBER)})
+        Archipelago:Get({"_read_hints_" .. tostring(TEAM_NUMBER) .. "_" .. tostring(PLAYER_NUMBER)})
     end
 
     Tracker.BulkUpdate = false
@@ -874,6 +917,7 @@ function onLocation(location_id, location_name)
     if not locations[1] then
         return
     end
+    RemoveHint(locations[1]:gsub("@", ""))
     for _, value in pairs(locations) do
         if value ~= "toggle" then
             local location_object = Tracker:FindObjectForCode(value)
@@ -896,7 +940,7 @@ function onScout(location_id, location_name, item_id, item_name, item_player)
         print(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name,
             item_player))
     end
-    AddHint(item_name, location_name)
+    Archipelago:Get({"_read_hints_" .. tostring(TEAM_NUMBER) .. "_" .. tostring(PLAYER_NUMBER)})
 end
 
 -- called when a bounce message is received
@@ -935,8 +979,6 @@ end
 Archipelago:AddSetReplyHandler("set reply handler", onSetReply)
 Archipelago:AddScoutHandler("scout handler", onScout)
 Archipelago:AddBouncedHandler("bounce handler", onBounce)
-Archipelago:AddSetReplyHandler("notify handler", OnNotify)
-Archipelago:AddRetrievedHandler("notify launch handler", OnNotifyLaunch)
 
 ON_SYNC = {
     syncDisplay,

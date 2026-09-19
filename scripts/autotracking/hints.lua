@@ -56,28 +56,23 @@ REGION_NAMES = {
 }
 
 local customHintText = nil
+local changed = true
+local old = nil
 
 -- nil restores automatic hints; an empty string clears the text panel.
 -- Keep the override separate so auto-tracking refreshes cannot overwrite it.
 function SetHintText(text)
     assert(text == nil or type(text) == "string", "SetHintText expects a string or nil")
     customHintText = text
-    BuildImportantHintList()
+    changed = true
+    RefreshHintSystem()
 end
 
 function ResetHintState()
-    for _, source in ipairs(HINT_SOURCES) do
-        local itemObject = Tracker:FindObjectForCode(source.item_code)
-        local regionObject = Tracker:FindObjectForCode(source.region_code)
-
-        if itemObject then
-            itemObject.CurrentStage = 0
-        end
-
-        if regionObject then
-            regionObject.CurrentStage = 0
-        end
-    end
+    HINT_SOURCES = {}
+    customHintText = nil
+    changed = true
+    RefreshHintSystem()
 end
 
 function BuildImportantHintList()
@@ -88,7 +83,7 @@ function BuildImportantHintList()
         local region = source.region
 
         if item and region then
-            output = output .. item .. " -> " .. region .. "\n"
+            output = output .. region .. " -> " .. item .. "\n"
         end
     end
 
@@ -96,6 +91,11 @@ function BuildImportantHintList()
     if text == nil then
         text = output ~= "" and output or TUTORIAL_TEXT
     end
+    if text == old and not changed then
+        return
+    end
+    changed = false
+    old = text
 
     local lines = {}
     for line in (text .. "\n"):gmatch("(.-)\n") do
@@ -104,43 +104,44 @@ function BuildImportantHintList()
     for _, _ in ipairs({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) do
         table.insert(lines, "")
     end
-    print(dump_table(lines))
 
+    Tracker.BulkUpdate = true
     for i, text in ipairs(lines) do
+        if i >= 10 then
+            break
+        end
         local panel = Tracker:FindObjectForCode("important_hint_panel_line_" .. i)
-        print(i, panel, text)
         if panel then
             panel:SetOverlay(text)
         end
     end
+    Tracker.BulkUpdate = false
 end
 
 function RefreshHintSystem()
+    -- print("Refreshing hint system...")
+    -- print(dump_table(HINT_SOURCES))
     BuildImportantHintList()
 end
 
-function RegisterHintWatches()
-    for _, source in ipairs(HINT_SOURCES) do
-        ScriptHost:AddWatchForCode(
-            source.name .. "_item_watch",
-            source.item_code,
-            RefreshHintSystem
-        )
-
-        ScriptHost:AddWatchForCode(
-            source.name .. "_region_watch",
-            source.region_code,
-            RefreshHintSystem
-        )
+function RemoveHint(region_name)
+    print("Removing hint for region: " .. region_name)
+    for i, source in ipairs(HINT_SOURCES) do
+        if source.region == region_name then
+            table.remove(HINT_SOURCES, i)
+            RefreshHintSystem()
+            return
+        end
     end
 end
 
-RegisterHintWatches()
-
 function AddHint(item_name, region_name)
+    RemoveHint(region_name)
     table.insert(HINT_SOURCES, {
         item = item_name,
         region = region_name
     })
     RefreshHintSystem()
 end
+
+RefreshHintSystem()

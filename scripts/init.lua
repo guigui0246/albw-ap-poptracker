@@ -1,5 +1,5 @@
 --- ALBW Randomizer Tracker Init
-ENABLE_DEBUG_LOG = true
+-- ENABLE_DEBUG_LOG = true
 
 --- Logic
 require("scripts/logic_import")
@@ -18,7 +18,6 @@ require("scripts/layouts_import")
 require("scripts/locations_import")
 
 ScriptHost:LoadScript("scripts/autotracking.lua")
-ScriptHost:LoadScript("scripts/hint_text.lua")
 
 --- Display only
 require("scripts/logic/inspect_control")
