@@ -17,6 +17,14 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 <summary>1.7.x</summary>
 
+### 1.7.5-prerelease-1
+
+- Better manual tracking of mother maiamai's rewards
+- Add the auto-fill pendants and sages setting to the dungeon layout so you don't need to search for it in the settings menu
+- Display hints in the tracker when autotracking is enabled
+- Display crack links in the tracker when autotracking is enabled for cracks already visited
+- **Changed required poptracker version from 0.31.0 to 0.35.4**
+
 ### 1.7.4
 
 - Fix swapped IR and TR keyrings
