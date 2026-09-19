@@ -119,8 +119,8 @@ function BuildImportantHintList()
 end
 
 function RefreshHintSystem()
-    -- print("Refreshing hint system...")
-    -- print(dump_table(HINT_SOURCES))
+    -- If we don't try to access the content of the table, poptracker optimizes it away.
+    dump_table(HINT_SOURCES)
     BuildImportantHintList()
 end
 
