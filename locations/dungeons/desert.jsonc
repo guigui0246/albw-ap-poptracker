@@ -173,7 +173,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "dp_2f_under_rock_left",
             "access_rules": ["$dp2F", "[advanced], $reverseDP, titansmitt"]
           }
@@ -191,7 +190,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "dp_2f_under_rock_right",
             "access_rules": ["$dp2F", "[advanced], $reverseDP, titansmitt"]
           }
@@ -243,7 +241,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "dp_2f_under_rock_ball_room",
             "access_rules": ["$dp2F", "[advanced], $reverseDP, titansmitt"]
           }
@@ -369,13 +366,11 @@
           },
           {
             "name": "(2F) Under Rock (Left)",
-            "capture_item": true,
             "hosted_item": "dp_2f_under_rock_left",
             "access_rules": ["$dp2F", "[advanced], $reverseDP, titansmitt"]
           },
           {
             "name": "(2F) Under Rock (Right)",
-            "capture_item": true,
             "hosted_item": "dp_2f_under_rock_right",
             "access_rules": ["$dp2F", "[advanced], $reverseDP, titansmitt"]
           },
@@ -391,7 +386,6 @@
           },
           {
             "name": "(2F) Under Rock (Ball Room)",
-            "capture_item": true,
             "hosted_item": "dp_2f_under_rock_ball_room",
             "access_rules": ["$dp2F", "[advanced], $reverseDP, titansmitt"]
           },

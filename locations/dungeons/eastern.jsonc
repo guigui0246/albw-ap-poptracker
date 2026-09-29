@@ -280,7 +280,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "ep_1f_escape_chest",
             "access_rules": ["^$yuga_eastern, merge"]
           }
@@ -394,7 +393,6 @@
           },
           {
             "name": "(1F) Escape Chest",
-            "capture_item": true,
             "hosted_item": "ep_1f_escape_chest",
             "access_rules": ["^$yuga_eastern, merge"]
           },

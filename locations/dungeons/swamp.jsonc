@@ -130,7 +130,6 @@
               "[], $sp_small_keys|1, boots",
               "[], $sp_small_keys|1, [nice_items_off], irod, $progression_enemies_floor"
             ],
-            "capture_item": true,
             "hosted_item": "sp_b1_big_chest_secret"
           }
         ]
@@ -328,7 +327,6 @@
               "[], $sp_small_keys|1, boots",
               "[], $sp_small_keys|1, [nice_items_off], irod, $progression_enemies_floor"
             ],
-            "capture_item": true,
             "hosted_item": "sp_b1_big_chest_secret"
           },
           {

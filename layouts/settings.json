@@ -20,7 +20,8 @@
             "no_progression_enemies",
             "dark_rooms_lampless",
             "lamp_and_net_as_weapons",
-            "crack_shuffle"
+            "crack_shuffle",
+            "trials_auto_open"
           ],
           [
             "beeBoost_hide",

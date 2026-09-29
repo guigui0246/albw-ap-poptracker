@@ -90,7 +90,6 @@
                   "ped_requirement_3, power, wisdom, courage",
                   "ped_requirement_2, power, wisdom"
                 ],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -108,13 +107,11 @@
               {
                 "name": "Power Glove",
                 "access_rules": ["rosso"],
-                "capture_item": true,
                 "item_count": 1
               },
               {
                 "name": "Smash Rocks",
                 "access_rules": ["rosso, power_glove"],
-                "capture_item": true,
                 "item_count": 1
               },
               {
@@ -283,7 +280,6 @@
                 "name": "Ledge Cave Heart Piece",
                 "chest_unopened_img": "images/junk/heart_piece.png",
                 "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "capture_item": true,
                 "access_rules": [
                   "merge, crack_graveyard",
                   "not_cracksanity, merge, quake_on, crack_graveyard_lorule"
@@ -306,7 +302,6 @@
                 "name": "Chest",
                 "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on, bombs}", "bombs, merge"],
-                "capture_item": true,
                 "item_count": 1
               },
               {
@@ -410,7 +405,6 @@
                 "name": "Heart Piece",
                 "chest_unopened_img": "images/junk/heart_piece.png",
                 "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "capture_item": true,
                 "access_rules": [
                   "flippers",
                   "[glitched], merge",
@@ -437,7 +431,6 @@
                   "merge, oren, smooth_gem",
                   "[hell], oren, smooth_gem, $beeBoost"
                 ],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -512,7 +505,6 @@
               {
                 "name": "Rupee reward",
                 "access_rules": ["power_glove"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -535,7 +527,6 @@
               {
                 "name": "Bee Badge reward (Need golden bee)",
                 "access_rules": ["golden_bee", "[hell], bottle, net"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -615,13 +606,11 @@
               {
                 "name": "Left",
                 "chest_opened_img": "images/checks/soldout.png",
-                "capture_item": true,
                 "item_count": 1
               },
               {
                 "name": "Right",
                 "chest_opened_img": "images/checks/soldout.png",
-                "capture_item": true,
                 "access_rules": ["shadyguy"],
                 "item_count": 1
               }
@@ -705,13 +694,11 @@
           },
           {
             "name": "For Sale",
-            "capture_item": true,
             "clear_as_group": false,
             "item_count": 8
           },
           {
             "name": "Rented by Osfala",
-            "capture_item": true,
             "item_count": 1,
             "access_rules": ["{}", "osfala"]
           }
@@ -784,7 +771,6 @@
                   "[glitched], $boost",
                   "[hell], $beeBoost"
                 ],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -822,7 +808,6 @@
               {
                 "name": "Pouch reward",
                 "access_rules": ["courage"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -840,7 +825,6 @@
               {
                 "name": "Silver Rupee",
                 "access_rules": ["merge"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -863,7 +847,6 @@
               {
                 "name": "Bottle reward",
                 "access_rules": ["flippers"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -890,7 +873,6 @@
             "sections": [
               {
                 "name": "Bell reward",
-                "capture_item": true,
                 "access_rules": ["irene"],
                 "item_count": 1
               }
@@ -937,7 +919,6 @@
                   "[advanced], trod",
                   "[hell], srod"
                 ],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -1051,7 +1032,6 @@
                   {
                     "name": "Rupee reward",
                     "access_rules": ["merge"],
-                    "capture_item": true,
                     "item_count": 1
                   }
                 ]
@@ -1164,7 +1144,6 @@
                   "[advanced], niceirod, flippers, hammer",
                   "[hell], niceirod"
                 ],
-                "capture_item": true,
                 "item_count": 1
               },
               {
@@ -1252,7 +1231,6 @@
                 "name": "Chest",
                 "inspectable_sequence_break": true,
                 "access_rules": ["{csmc_on, trod}", "{csmc_on, irod}", "bombs"],
-                "capture_item": true,
                 "item_count": 1
               },
               {

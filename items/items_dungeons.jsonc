@@ -4,7 +4,6 @@
     "name": "Eastern Palace Reward",
     "type": "progressive_toggle",
     "capturable": false,
-    "codes": "eastern_",
     "stages": [
       {
         "img": "images/prizes/unknown.png",
@@ -713,21 +712,18 @@
   {
     "name": "Pendant of Power",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/pendant_power.png",
     "codes": "pendant, power, power_flag"
   },
   {
     "name": "Pendant of Wisdom",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/pendant_wisdom.png",
     "codes": "pendant, wisdom, wisdom_flag"
   },
   {
     "name": "Pendant of Courage",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/pendant_courage.png",
     "codes": "pendant, courage, courage_flag"
   },
@@ -736,49 +732,42 @@
   {
     "name": "Sage Gulley",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_gulley.png",
     "codes": "gulley, gulley_flag"
   },
   {
     "name": "Sage Oren",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_oren.png",
     "codes": "oren, oren_flag"
   },
   {
     "name": "Sage Seres",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_seres.png",
     "codes": "seres, seres_flag"
   },
   {
     "name": "Sage Osfala",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_osfala.png",
     "codes": "osfala, osfala_flag"
   },
   {
     "name": "Sage Impa",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_impa.png",
     "codes": "impa, impa_flag"
   },
   {
     "name": "Sage Irene",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_irene.png",
     "codes": "irene, irene_flag"
   },
   {
     "name": "Sage Rosso",
     "type": "toggle",
-    "loop": true,
     "img": "images/prizes/sage_rosso.png",
     "codes": "rosso, rosso_flag"
   }

@@ -129,7 +129,6 @@
               "[advanced], $adv_glitched_access_dm_west_top, hammer",
               "[hell], $hell_access_dm_west_top, hammer"
             ],
-            "capture_item": true,
             "item_count": 1
           },
           {
@@ -236,7 +235,6 @@
               "[advanced], $adv_glitched_access_dm_west_top",
               "[hell], $hell_access_dm_west_top"
             ],
-            "capture_item": true,
             "item_count": 1
           }
         ]
@@ -258,7 +256,6 @@
               "[glitched], merge, hookshot",
               "[advanced], $adv_glitched_access_dm_east_top, merge, hookshot"
             ],
-            "capture_item": true,
             "item_count": 1
           }
         ]
@@ -275,7 +272,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "access_rules": [
               "$access_dm_east_top, merge, hammer",
               "[glitched], merge, hookshot, hammer",
@@ -339,7 +335,6 @@
               "crack_hyfi, merge",
               "not_cracksanity, crack_lofi, merge, quake_on"
             ],
-            "capture_item": true,
             "item_count": 1
           }
         ]
@@ -367,7 +362,6 @@
               "$access_ldm_west, $attack_iceproof",
               "[glitched], $glitched_access_ldm_west, $attack_iceproof"
             ],
-            "capture_item": true,
             "item_count": 1
           }
         ]
@@ -415,7 +409,6 @@
               "[glitched], $glitched_access_ldm_west, $attack, [hammer]",
               "[glitched], $glitched_access_ldm_west, $attack, [trod]"
             ],
-            "capture_item": true,
             "item_count": 1
           }
         ]
@@ -437,7 +430,6 @@
               "[glitched], frod, $glitched_access_ldm_east_top",
               "[hell], frod, $hell_access_ldm_east_top"
             ],
-            "capture_item": true,
             "item_count": 1
           }
         ]

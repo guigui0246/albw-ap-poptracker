@@ -128,7 +128,6 @@
               "[advanced], $adv_th_statue_clip, boots",
               "[advanced], $adv_th_statue_clip, trod"
             ],
-            "capture_item": true,
             "inspectable_sequence_break": true,
             "hosted_item": "tt_b2_eyegores"
           },
@@ -227,7 +226,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "tt_b3_big_chest_hidden",
             "access_rules": [
               "$thEscapeEquipment, $attack",
@@ -412,7 +410,6 @@
               "[advanced], $adv_th_statue_clip, boots",
               "[advanced], $adv_th_statue_clip, trod"
             ],
-            "capture_item": true,
             "hosted_item": "tt_b2_eyegores"
           },
           {
@@ -439,7 +436,6 @@
           },
           {
             "name": "(B3) Big Chest (Hidden)",
-            "capture_item": true,
             "hosted_item": "tt_b3_big_chest_hidden",
             "access_rules": [
               "$thEscapeEquipment, $attack",

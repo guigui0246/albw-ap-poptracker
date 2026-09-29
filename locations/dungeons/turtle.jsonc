@@ -217,7 +217,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "tr_b1_big_chest_center",
             "access_rules": [
               "$enterTR, $shielded_switch",
@@ -427,7 +426,6 @@
           },
           {
             "name": "(B1) Big Chest (Center)",
-            "capture_item": true,
             "hosted_item": "tr_b1_big_chest_center",
             "access_rules": [
               "$enterTR, $shielded_switch",

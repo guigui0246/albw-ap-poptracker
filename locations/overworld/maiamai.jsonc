@@ -1,7 +1,6 @@
 [
   {
     "name": "Mother Maiamai's Item Upgrades",
-    "always_allow_chest_manipulation": true,
     "visibility_rules": ["$motherMaiamai"],
     "map_locations": [
       {
@@ -15,7 +14,6 @@
       {
         "name": "Bow",
         "access_rules": ["maiamai_bow", "^$canUpgradeItemBow, bow"],
-        "capture_item": true,
         "hosted_item": "maiamai_bow"
       },
       {
@@ -24,7 +22,6 @@
           "maiamai_boomerang",
           "^$canUpgradeItemBoomerang, boomerang"
         ],
-        "capture_item": true,
         "hosted_item": "maiamai_boomerang"
       },
       {
@@ -33,7 +30,6 @@
           "maiamai_hookshot",
           "^$canUpgradeItemHookshot, hookshot"
         ],
-        "capture_item": true,
         "hosted_item": "maiamai_hookshot"
       },
       {
@@ -42,25 +38,21 @@
           "maiamai_hammer",
           "^$canUpgradeItemHammer, hammer"
         ],
-        "capture_item": true,
         "hosted_item": "maiamai_hammer"
       },
       {
         "name": "Bombs",
         "access_rules": ["maiamai_bombs", "^$canUpgradeItemBombs, bombs"],
-        "capture_item": true,
         "hosted_item": "maiamai_bombs"
       },
       {
         "name": "Fire Rod",
         "access_rules": ["maiamai_fire_rod", "^$canUpgradeItemFireRod, frod"],
-        "capture_item": true,
         "hosted_item": "maiamai_fire_rod"
       },
       {
         "name": "Ice Rod",
         "access_rules": ["maiamai_ice_rod", "^$canUpgradeItemIceRod, irod"],
-        "capture_item": true,
         "hosted_item": "maiamai_ice_rod"
       },
       {
@@ -69,13 +61,11 @@
           "maiamai_tornado_rod",
           "^$canUpgradeItemTornadoRod, trod"
         ],
-        "capture_item": true,
         "hosted_item": "maiamai_tornado_rod"
       },
       {
         "name": "Sand Rod",
         "access_rules": ["maiamai_sand_rod", "^$canUpgradeItemSandRod, srod"],
-        "capture_item": true,
         "hosted_item": "maiamai_sand_rod"
       }
       // ,

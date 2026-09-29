@@ -161,7 +161,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "hosted_item": "th_8f_fairy_room",
             "access_rules": [
               "merge, $th_small_keys|2",
@@ -305,7 +304,6 @@
           },
           {
             "name": "(8F) Fairy Room",
-            "capture_item": true,
             "hosted_item": "th_8f_fairy_room",
             "access_rules": [
               "merge, $th_small_keys|2",

@@ -6,70 +6,60 @@
     "name": "Maiamai Bow Upgrade",
     "type": "toggle",
     "img": "images/items/framed_bow.png",
-    "loop": true,
     "codes": "maiamai_bow"
   },
   {
     "name": "Maiamai Boomerang Upgrade",
     "type": "toggle",
     "img": "images/items/framed_boomerang.png",
-    "loop": true,
     "codes": "maiamai_boomerang"
   },
   {
     "name": "Maiamai Hookshot Upgrade",
     "type": "toggle",
     "img": "images/items/framed_hookshot.png",
-    "loop": true,
     "codes": "maiamai_hookshot"
   },
   {
     "name": "Maiamai Hammer Upgrade",
     "type": "toggle",
     "img": "images/items/framed_hammer.png",
-    "loop": true,
     "codes": "maiamai_hammer"
   },
   {
     "name": "Maiamai Bombs Upgrade",
     "type": "toggle",
     "img": "images/items/framed_bombs.png",
-    "loop": true,
     "codes": "maiamai_bombs"
   },
   {
     "name": "Maiamai Fire Rod Upgrade",
     "type": "toggle",
     "img": "images/items/framed_frod.png",
-    "loop": true,
     "codes": "maiamai_fire_rod"
   },
   {
     "name": "Maiamai Ice Rod Upgrade",
     "type": "toggle",
     "img": "images/items/framed_irod.png",
-    "loop": true,
     "codes": "maiamai_ice_rod"
   },
   {
     "name": "Maiamai Tornado Rod Upgrade",
     "type": "toggle",
     "img": "images/items/framed_trod.png",
-    "loop": true,
     "codes": "maiamai_tornado_rod"
   },
   {
     "name": "Maiamai Sand Rod Upgrade",
     "type": "toggle",
     "img": "images/items/framed_srod.png",
-    "loop": true,
     "codes": "maiamai_sand_rod"
   },
   {
     "name": "Great Spin Upgrade",
     "type": "toggle",
     "img": "images/items/maiamai.png",
-    "loop": true,
     "codes": "maiamai_100_reward"
   },
   // Eastern Palace

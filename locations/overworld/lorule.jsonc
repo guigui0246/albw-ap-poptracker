@@ -119,7 +119,6 @@
             "map": "lorule",
             "x": 1134,
             "y": 578,
-            "badge_size": 40,
             "shape": "trapezoid"
           }
         ],
@@ -158,7 +157,6 @@
               "^$access_lorule_graveyard, titansmitt, [lampless], $attack, $ls_small_key",
               "$lampless_access_lorule_graveyard, titansmitt, [lampless], $attack, $ls_small_key"
             ],
-            "capture_item": true,
             "item_count": 1
           },
           {
@@ -262,7 +260,6 @@
                   "[hard], merge, msword",
                   "[hard], merge, fsword, power_glove"
                 ],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -340,7 +337,6 @@
               {
                 "name": "Gilded Sword reward",
                 "access_rules": ["blacksmith, ore_4"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -369,7 +365,6 @@
                   "[], nicebow",
                   "[], niceirod"
                 ],
-                "capture_item": true,
                 "item_count": 1
               },
               {
@@ -429,7 +424,6 @@
               {
                 "name": "Rupee reward",
                 "access_rules": ["tt, sage", "tt, pendant"],
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -518,7 +512,6 @@
               {
                 "name": "Heart Piece reward",
                 "visibility_rules": ["minigames_enabled"],
-                "capture_item": true,
                 "chest_unopened_img": "images/junk/heart_piece.png",
                 "chest_opened_img": "images/junk/heart_piece_collected.png",
                 "item_count": 1
@@ -565,7 +558,6 @@
             "sections": [
               {
                 "name": "Bottle reward",
-                "capture_item": true,
                 "item_count": 1
               }
             ]
@@ -594,7 +586,6 @@
                   "merge, srod, trod",
                   "[glitched], srod"
                 ],
-                "capture_item": true,
                 "item_count": 1
               },
               {
@@ -618,8 +609,7 @@
           {
             "map": "lorule",
             "x": 340,
-            "y": 1560,
-            "badge_size": 40
+            "y": 1560
           }
         ],
         "sections": [
@@ -631,7 +621,6 @@
           },
           {
             "name": "Heart Piece",
-            "capture_item": true,
             "access_rules": [
               "merge, crack_mire_north",
               "not_cracksanity, merge, quake_on, crack_desert_north",

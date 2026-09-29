@@ -91,7 +91,6 @@
   {
     "name": "Eastern Palace Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "ep_big_key",
     "img": "images/items/key_big.png"
   },
@@ -105,7 +104,6 @@
   {
     "name": "Eastern Palace Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "ep_compass",
     "img": "images/items/compass.png"
   },
@@ -114,7 +112,7 @@
     "type": "consumable",
     "codes": "ep_items",
     "max_quantity": 9,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -122,7 +120,6 @@
   {
     "name": "House of Gales Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "hg_big_key",
     "img": "images/items/key_big.png"
   },
@@ -136,7 +133,6 @@
   {
     "name": "House of Gales Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "hg_compass",
     "img": "images/items/compass.png"
   },
@@ -145,7 +141,7 @@
     "type": "consumable",
     "codes": "hg_items",
     "max_quantity": 5,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -153,7 +149,6 @@
   {
     "name": "Tower of Hera Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "th_big_key",
     "img": "images/items/key_big.png"
   },
@@ -167,7 +162,6 @@
   {
     "name": "Tower of Hera Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "th_compass",
     "img": "images/items/compass.png"
   },
@@ -176,7 +170,7 @@
     "type": "consumable",
     "codes": "th_items",
     "max_quantity": 6,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -186,7 +180,7 @@
     "type": "consumable",
     "codes": "hc_items",
     "max_quantity": 3,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -203,7 +197,7 @@
     "type": "consumable",
     "codes": "hs_items",
     "max_quantity": 3,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -220,7 +214,7 @@
     "type": "consumable",
     "codes": "ls_items",
     "max_quantity": 3,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -228,7 +222,6 @@
   {
     "name": "Dark Palace Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "pd_big_key",
     "img": "images/items/key_big.png"
   },
@@ -242,7 +235,6 @@
   {
     "name": "Dark Palace Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "pd_compass",
     "img": "images/items/compass.png"
   },
@@ -251,7 +243,7 @@
     "type": "consumable",
     "codes": "pd_items",
     "max_quantity": 8,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -259,7 +251,6 @@
   {
     "name": "Swamp Palace Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "sp_big_key",
     "img": "images/items/key_big.png"
   },
@@ -273,7 +264,6 @@
   {
     "name": "Swamp Palace Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "sp_compass",
     "img": "images/items/compass.png"
   },
@@ -282,7 +272,7 @@
     "type": "consumable",
     "codes": "sp_items",
     "max_quantity": 6,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -290,7 +280,6 @@
   {
     "name": "Skull Woods Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "sw_big_key",
     "img": "images/items/key_big.png"
   },
@@ -304,7 +293,6 @@
   {
     "name": "Skull Woods Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "sw_compass",
     "img": "images/items/compass.png"
   },
@@ -313,7 +301,7 @@
     "type": "consumable",
     "codes": "sw_items",
     "max_quantity": 4,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -321,7 +309,6 @@
   {
     "name": "Thieves' Hideout Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "tt_big_key",
     "img": "images/items/key_big.png"
   },
@@ -335,7 +322,6 @@
   {
     "name": "Thieves' Hideout Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "tt_compass",
     "img": "images/items/compass.png"
   },
@@ -344,7 +330,7 @@
     "type": "consumable",
     "codes": "tt_items",
     "max_quantity": 8,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -352,7 +338,6 @@
   {
     "name": "Turtle Rock Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "tr_big_key",
     "img": "images/items/key_big.png"
   },
@@ -366,7 +351,6 @@
   {
     "name": "Turtle Rock Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "tr_compass",
     "img": "images/items/compass.png"
   },
@@ -375,7 +359,7 @@
     "type": "consumable",
     "codes": "tr_items",
     "max_quantity": 8,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -383,7 +367,6 @@
   {
     "name": "Desert Palace Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "dp_big_key",
     "img": "images/items/key_big.png"
   },
@@ -397,7 +380,6 @@
   {
     "name": "Desert Palace Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "dp_compass",
     "img": "images/items/compass.png"
   },
@@ -406,7 +388,7 @@
     "type": "consumable",
     "codes": "dp_items",
     "max_quantity": 9,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -414,7 +396,6 @@
   {
     "name": "Ice Ruins Big Key",
     "type": "toggle",
-    "loop": true,
     "codes": "ir_big_key",
     "img": "images/items/key_big.png"
   },
@@ -428,7 +409,6 @@
   {
     "name": "Ice Ruins Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "ir_compass",
     "img": "images/items/compass.png"
   },
@@ -437,7 +417,7 @@
     "type": "consumable",
     "codes": "ir_items",
     "max_quantity": 10,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   },
 
@@ -445,8 +425,7 @@
   {
     "name": "Lorule Castle Trials Door",
     "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
+
     "stages": [
       {
         "img": "images/items/lc_trials_door_disabled.png",
@@ -471,7 +450,6 @@
   {
     "name": "Lorule Castle Compass",
     "type": "toggle",
-    "loop": true,
     "codes": "lc_compass",
     "img": "images/items/compass.png"
   },
@@ -480,7 +458,7 @@
     "type": "consumable",
     "codes": "lc_items",
     "max_quantity": 9,
-    "allow_disabled": false,
+
     "img": "images/checks/chest_small_unopened.png"
   }
 ]

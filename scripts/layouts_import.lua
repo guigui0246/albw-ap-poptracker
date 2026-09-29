@@ -1,7 +1,7 @@
-Tracker:AddLayouts("layouts/items.json")
+Tracker:AddLayouts("layouts/items.jsonc")
 Tracker:AddLayouts("layouts/settings.json")
-Tracker:AddLayouts("layouts/dungeon_items.json")
-Tracker:AddLayouts("layouts/weather_vane.json")
+Tracker:AddLayouts("layouts/dungeon_items.jsonc")
+Tracker:AddLayouts("layouts/weather_vane.jsonc")
 Tracker:AddLayouts("layouts/rewards.json")
 Tracker:AddLayouts("layouts/hints.json")
 

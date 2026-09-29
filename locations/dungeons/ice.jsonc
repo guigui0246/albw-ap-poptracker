@@ -107,7 +107,6 @@
         "sections": [
           {
             "name": "Chest",
-            "capture_item": true,
             "inspectable_sequence_break": true,
             "hosted_item": "ir_b2_long_merge_chest",
             "access_rules": [
@@ -238,7 +237,6 @@
               "$ir_small_keys|2, $switch",
               "[advanced], boots"
             ],
-            "capture_item": true,
             "hosted_item": "ir_b4_southeast_chest_fall"
           }
         ]
@@ -392,7 +390,6 @@
           },
           {
             "name": "(B2) Long Merge Chest",
-            "capture_item": true,
             "hosted_item": "ir_b2_long_merge_chest",
             "access_rules": [
               "{csmc_on, $ir_small_keys|1}",
@@ -412,7 +409,6 @@
               "$ir_small_keys|2, $switch",
               "[advanced], boots"
             ],
-            "capture_item": true,
             "hosted_item": "ir_b4_southeast_chest_fall"
           },
           {

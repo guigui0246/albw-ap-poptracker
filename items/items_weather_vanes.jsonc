@@ -7,8 +7,7 @@
     "name": "Your House Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_your_house",
-    "loop": true
+    "codes": "wv_your_house"
   },
   {
     "type": "toggle",
@@ -53,8 +52,7 @@
     "name": "Kakariko Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_kakariko",
-    "loop": true
+    "codes": "wv_kakariko"
   },
   {
     "type": "toggle",
@@ -99,8 +97,7 @@
     "name": "Eastern Palace Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_eastern",
-    "loop": true
+    "codes": "wv_eastern"
   },
   {
     "type": "toggle",
@@ -145,8 +142,7 @@
     "name": "House of Gales Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_gales",
-    "loop": true
+    "codes": "wv_gales"
   },
   {
     "type": "toggle",
@@ -191,8 +187,7 @@
     "name": "Tower of Hera Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_hera",
-    "loop": true
+    "codes": "wv_hera"
   },
   {
     "type": "toggle",
@@ -237,8 +232,7 @@
     "name": "Witch's House Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_witch",
-    "loop": true
+    "codes": "wv_witch"
   },
   {
     "type": "toggle",
@@ -283,8 +277,7 @@
     "name": "Death Mountain (Hyrule) Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_death_hyrule",
-    "loop": true
+    "codes": "wv_death_hyrule"
   },
   {
     "type": "toggle",
@@ -329,8 +322,7 @@
     "name": "Desert Palace Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_desert",
-    "loop": true
+    "codes": "wv_desert"
   },
   {
     "type": "toggle",
@@ -375,8 +367,7 @@
     "name": "Sanctuary Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_hyrule.png",
-    "codes": "wv_sanctuary",
-    "loop": true
+    "codes": "wv_sanctuary"
   },
   {
     "type": "toggle",
@@ -424,8 +415,7 @@
     "name": "Skull Woods Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_skull",
-    "loop": true
+    "codes": "wv_skull"
   },
   {
     "type": "toggle",
@@ -470,8 +460,7 @@
     "name": "Treacherous Tower Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_treacherous_tower",
-    "loop": true
+    "codes": "wv_treacherous_tower"
   },
   {
     "type": "toggle",
@@ -516,8 +505,7 @@
     "name": "Ice Ruins Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_ice",
-    "loop": true
+    "codes": "wv_ice"
   },
   {
     "type": "toggle",
@@ -562,8 +550,7 @@
     "name": "Lorule Castle Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_lorule_castle",
-    "loop": true
+    "codes": "wv_lorule_castle"
   },
   {
     "type": "toggle",
@@ -608,8 +595,7 @@
     "name": "Graveyard Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_graveyard",
-    "loop": true
+    "codes": "wv_graveyard"
   },
   {
     "type": "toggle",
@@ -654,8 +640,7 @@
     "name": "Thieves' Town Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_thieves",
-    "loop": true
+    "codes": "wv_thieves"
   },
   {
     "type": "toggle",
@@ -700,8 +685,7 @@
     "name": "Dark Palace Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_dark",
-    "loop": true
+    "codes": "wv_dark"
   },
   {
     "type": "toggle",
@@ -746,8 +730,7 @@
     "name": "Blacksmith Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_blacksmith",
-    "loop": true
+    "codes": "wv_blacksmith"
   },
   {
     "type": "toggle",
@@ -792,8 +775,7 @@
     "name": "Vacant House Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_vacant_house",
-    "loop": true
+    "codes": "wv_vacant_house"
   },
   {
     "type": "toggle",
@@ -838,8 +820,7 @@
     "name": "Misery Mire Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_mire",
-    "loop": true
+    "codes": "wv_mire"
   },
   {
     "type": "toggle",
@@ -884,8 +865,7 @@
     "name": "Swamp Palace Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_swamp",
-    "loop": true
+    "codes": "wv_swamp"
   },
   {
     "type": "toggle",
@@ -930,8 +910,7 @@
     "name": "Turtle Rock Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_turtle",
-    "loop": true
+    "codes": "wv_turtle"
   },
   {
     "type": "toggle",
@@ -976,8 +955,7 @@
     "name": "Death Mountain (Lorule) Weather Vane",
     "type": "toggle",
     "img": "images/display/wv_lorule.png",
-    "codes": "wv_death_lorule",
-    "loop": true
+    "codes": "wv_death_lorule"
   },
   {
     "type": "toggle",

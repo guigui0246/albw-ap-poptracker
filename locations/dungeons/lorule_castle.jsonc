@@ -199,7 +199,6 @@
               "[hard], bombs, bow",
               "[], niceirod"
             ],
-            "capture_item": true,
             "hosted_item": "lc_3f_bomb_trial_2"
           },
           {
@@ -248,7 +247,6 @@
           {
             "name": "Chest",
             "hosted_item": "lc_3f_tile_trial_2",
-            "capture_item": true,
             "access_rules": ["^$lc2F, merge"]
           }
         ]
@@ -272,7 +270,6 @@
               "[hard], ^$lc2F, $lc_small_keys|1",
               "[advanced], ^$advanced_lc3F4F"
             ],
-            "capture_item": true,
             "hosted_item": "lc_4f_lamp_trial"
           }
         ]
@@ -317,7 +314,6 @@
               "[advanced], ^$advanced_lc3F4F, hookshot",
               "[advanced], ^$advanced_lc3F4F, irod"
             ],
-            "capture_item": true,
             "hosted_item": "lc_4f_hookshot_trial_2"
           }
         ]
@@ -342,7 +338,6 @@
               "[swordless], net, ^$can_reach_final_boss, $attack",
               "[hard], net, ^$can_reach_final_boss"
             ],
-            "capture_item": true,
             "hosted_item": "lc_zelda"
           }
         ]
@@ -440,7 +435,6 @@
               "[hard], bombs, bow",
               "[], niceirod"
             ],
-            "capture_item": true,
             "hosted_item": "lc_3f_bomb_trial_2"
           },
           {
@@ -450,7 +444,6 @@
           },
           {
             "name": "(3F) Tile Trial (2)",
-            "capture_item": true,
             "hosted_item": "lc_3f_tile_trial_2",
             "access_rules": ["^$lc2F, merge"]
           },
@@ -461,7 +454,6 @@
               "[hard], ^$lc2F, $lc_small_keys|1",
               "[advanced], ^$advanced_lc3F4F"
             ],
-            "capture_item": true,
             "hosted_item": "lc_4f_lamp_trial"
           },
           {
@@ -481,7 +473,6 @@
               "[advanced], ^$advanced_lc3F4F, hookshot",
               "[advanced], ^$advanced_lc3F4F, irod"
             ],
-            "capture_item": true,
             "hosted_item": "lc_4f_hookshot_trial_2"
           }
         ]
@@ -501,7 +492,6 @@
     "sections": [
       {
         "name": "Zelda",
-        "capture_item": true,
         "hosted_item": "lc_zelda",
         "chest_unopened_img": "images/checks/chest_small_unopened.png",
         "chest_opened_img": "images/checks/chest_small_opened.png",
@@ -528,8 +518,7 @@
       {
         "map": "lorule",
         "x": 1024,
-        "y": 792,
-        "badge_size": 40
+        "y": 792
       },
       {
         "map": "throneRoom",

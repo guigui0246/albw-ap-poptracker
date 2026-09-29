@@ -17,6 +17,13 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 <summary>1.7.x</summary>
 
+### 1.7.5
+
+- Fix trial doors back entry
+- Fix crash when unchecking a crack internally after the one it's linked to
+- Cleaning of the code in preparation for 2.0
+- **Changed required poptracker version back to 0.31.0**
+
 ### 1.7.5-prerelease-1
 
 - Better manual tracking of mother maiamai's rewards
