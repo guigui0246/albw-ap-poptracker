@@ -1,6 +1,20 @@
 {
   "versions": [
     {
+      "package_version": "1.7.5",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.5/albw-ap-poptracker-v1.7.5.zip",
+      "sha256": "989D905C386EC4DBE46E802D9405334B422DDEF79FC623ABD7CFF5C4B67C5FC7",
+      "changelog": [
+        "Better manual tracking of mother maiamai's rewards",
+        "Add the auto-fill pendants and sages setting to the dungeon layout so you don't need to search for it in the settings menu",
+        "Display hints in the tracker when autotracking is enabled",
+        "Display crack links in the tracker when autotracking is enabled for cracks already visited",
+        "Fix trial doors back entry",
+        "Fix crash when unchecking a crack internally after the one it's linked to",
+        "Cleaning of the code in preparation for 2.0",
+      ]
+    },
+    {
       "package_version": "1.7.4",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.4/albw-ap-poptracker-v1.7.4.zip",
       "sha256": "3AEA8F450574C9F8A674176B47CFF91BCAA0944110C7E7B40C521A8624B96ADD",
