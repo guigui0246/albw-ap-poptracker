@@ -298,6 +298,26 @@
     ]
   },
   {
+    "name": "Trials Doors Auto-Open from both side",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/keys/Trials0.png",
+        "img_mods": "overlay|images/settings/ON.png",
+        "codes": "trials_auto_open",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/keys/Trials0.png",
+        "img_mods": "@disabled,overlay|images/settings/OFF.png",
+        "codes": "trials_auto_open",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "Required Lorule Castle Trials",
     "type": "progressive",
     "loop": true,

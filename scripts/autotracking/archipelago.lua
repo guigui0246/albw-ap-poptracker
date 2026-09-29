@@ -297,10 +297,6 @@ function updateCracks(important)
                 end
                 local key = entrance .. "\n" .. destination
                 local dest = Tracker:FindObjectForCode(dest_code)
-                if not seen[key] and dest and dest.Active then
-                    seen[key] = true
-                    table.insert(lines, entrance .. " <-> " .. destination)
-                end
                 if dest_code ~= important then
                     if dest then
                         if has(location_code) then
@@ -315,6 +311,21 @@ function updateCracks(important)
                             print(string.format("syncDisplay: could not find destination for code %s", dest_code))
                         end
                     end
+                else
+                    local location = Tracker:FindObjectForCode(location_code)
+                    if location then
+                        if has(dest_code) then
+                            location.Active = true
+                        else
+                            if dest_code == important then
+                                location.Active = false
+                            end
+                        end
+                    end
+                end
+                if not seen[key] and dest and dest.Active then
+                    seen[key] = true
+                    table.insert(lines, entrance .. " <-> " .. destination)
                 end
             else
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP and DEBUG_ON_ITEM then
@@ -716,6 +727,14 @@ function syncDisplay(code)
             keys.AcquiredCount = 5
         end
     end
+
+    local trialsAutoOpen = Tracker:FindObjectForCode("trials_auto_open")
+    if trialsAutoOpen and trialsAutoOpen.Active then
+        local trialsDoor = Tracker:FindObjectForCode("lc_trials_door")
+        if trialsDoor and not trialsDoor.Active then
+            trialsDoor.Active = true
+        end
+    end
 end
 
 
@@ -1029,10 +1048,12 @@ function syncDisplayCallback(code)
     if type(code) == "string" then
         local obj = Tracker:FindObjectForCode(code)
         if obj then
-            if obj.Name == "Information" then
+---@diagnostic disable-next-line: undefined-field
+            local name = obj.Name or obj.name
+            if name == "Information" then
                 return
             end
-            if obj.Name == "Crack Link" then
+            if name == "Crack Link" then
                 return
             end
         end

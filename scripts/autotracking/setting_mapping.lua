@@ -114,27 +114,27 @@ SLOT_CODES =
             [1] = 1  -- Bawmbs excluded
         }
     },
-    -- trials_required =
-    -- {
-    --     code = "lc_trials_door",
-    --     mapping =
-    --     {
-    --         [0] = 1,  -- Door open
-    --         [1] = 0,  -- 1 trial
-    --         [2] = 0,  -- 2 trials
-    --         [3] = 0,  -- 3 trials
-    --         [4] = 0   -- 4 trials
-    --     }
-    -- },
-    -- open_trials_door =
-    -- {
-    --     code = "lc_trials_door",
-    --     mapping =
-    --     {
-    --         [0] = 0,
-    --         [1] = 1
-    --     }
-    -- },
+    trials_required =
+    {
+        code = "lc_trials_door",
+        mapping =
+        {
+            [0] = 1,  -- Door open
+            [1] = 0,  -- 1 trial
+            [2] = 0,  -- 2 trials
+            [3] = 0,  -- 3 trials
+            [4] = 0   -- 4 trials
+        }
+    },
+    open_trials_door =
+    {
+        code = "trials_auto_open",
+        mapping =
+        {
+            [0] = 0,  -- Not opened
+            [1] = 1   -- Opened
+        }
+    },
     dark_rooms_lampless =
     {
         code = "dark_rooms_lampless",
