@@ -105,10 +105,13 @@ function margomill()
     end
 
     return AccessibilityLevel.None
+
+    -- TODO: uncomment later
+    -- return has("bombs") or (has("trod") and attack_iceproof())
 end
 
 -- Return if the player can attack Knucklemaster
--- This is the same as attack(), minus the bow
+-- TODO: This assumes you have merge
 function knucklemaster()
     if has("msword") or (has("swordless") and attack_bowproof()) then
         return AccessibilityLevel.Normal
@@ -191,6 +194,14 @@ end
 -- Pots aren't accounted for here, but may make hitting some switches possible
 function switch()
     return hasAny({ "fsword", "bow", "boomerang", "hookshot", "bombs", "irod", "hammer", "boots" })
+end
+
+function switchBootless()
+    return hasAny({ "fsword", "bow", "boomerang", "hookshot", "bombs", "irod", "hammer" })
+end
+
+function farSwitch()
+    return hasAny({ "bow", "boomerang", "hookshot", "bombs"})
 end
 
 -- Return if Link can hit Crystal Switches
@@ -566,7 +577,7 @@ function barrier_skip()
 end
 
 function yuga2()
-    return hasAny({ "fsword", "bombs", "frod", "irod", "hammer" })
+    return attack_bowproof()
 end
 
 -- Map the Lorule Castle requirement from a progressive item to a number
@@ -904,4 +915,43 @@ function access_ghosts()
         return true
     end
     return has("hint_glasses")
+end
+
+-- Always true in the Archipelago version
+function hearts(amount)
+    return true
+end
+
+-- Return the state of treacherous_tower in the Archipelago version
+function rupees(amount)
+    local treacherous_tower = Tracker:FindObjectForCode("@Lorule Mountain/Treacherous Tower")
+    if treacherous_tower then
+        return treacherous_tower.AccessibilityLevel
+    else
+        print("Treacherous Tower object not found")
+    end
+end
+
+function canDestroyCurtain()
+    return hasAny({ "fsword", "lamp", "frod", "bombs", "boots" })
+end
+
+function canBreakFloorTiles()
+    return hasAny({ "bombs", "hammer" })
+end
+
+function canGreatSpin()
+    return hasAll({ "fsword", "great_spin" })
+end
+
+function moldorm()
+    return has("hammer")
+end
+
+function gemesaur()
+    return has("bombs") and (has("lamp") or hasAll({ "frod", "lampless" }))
+end
+
+function aarghus()
+    return has("hookshot") and attack()
 end

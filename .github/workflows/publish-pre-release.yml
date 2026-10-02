@@ -1,0 +1,88 @@
+name: Publish Pre-release
+
+on:
+  push:
+    branches:
+      - "2.0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-pre-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine prerelease version
+        id: version
+        shell: bash
+        run: |
+          latest=0
+          while IFS= read -r tag; do
+            if [[ "$tag" =~ ^2\.0\.0-prerelease-([0-9]+)$ ]]; then
+              number=${BASH_REMATCH[1]}
+              if (( number > latest )); then
+                latest=$number
+              fi
+            fi
+          done < <(git tag --list '2.0.0-prerelease-*')
+
+          next=$((latest + 1))
+          echo "tag=2.0.0-prerelease-${next}" >> "$GITHUB_OUTPUT"
+
+      - name: Build prerelease package
+        env:
+          PACKAGE_VERSION: ${{ steps.version.outputs.tag }}
+        run: |
+          python - "$PACKAGE_VERSION" "$RUNNER_TEMP/albw-ap-poptracker-$PACKAGE_VERSION.zip" <<'PY'
+          import json
+          import os
+          import sys
+          import zipfile
+          from pathlib import Path
+
+          version = sys.argv[1]
+          archive_path = Path(sys.argv[2])
+          manifest_path = Path("manifest.json")
+          manifest_text = manifest_path.read_text(encoding="utf-8")
+          manifest = json.loads(manifest_text)
+          placeholder = "2.0.0-prerelease-X"
+
+          if manifest.get("package_version") != placeholder:
+              raise SystemExit(f"Expected package_version to be {placeholder}")
+
+          marker = '"package_version": "' + placeholder + '"'
+          if manifest_text.count(marker) != 1:
+              raise SystemExit("Could not uniquely locate package_version in manifest.json")
+          manifest_path.write_text(
+              manifest_text.replace(marker, '"package_version": "' + version + '"', 1),
+              encoding="utf-8",
+          )
+
+          excluded_dirs = {".git", ".github"}
+          excluded_files = set()
+          with zipfile.ZipFile(archive_path, "w", zipfile.ZIP_DEFLATED) as archive:
+              for current_dir, directories, files in os.walk("."):
+                  directories[:] = [directory for directory in directories if directory not in excluded_dirs]
+                  for filename in files:
+                      if filename in excluded_files or filename.endswith(".kra"):
+                          continue
+                      path = Path(current_dir) / filename
+                      archive.write(path, path.relative_to(".").as_posix())
+          PY
+
+      - name: Publish GitHub prerelease
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: ${{ steps.version.outputs.tag }}
+          prerelease: true
+          generate_release_notes: true
+          files: ${{ runner.temp }}/albw-ap-poptracker-${{ steps.version.outputs.tag }}.zip
