@@ -67,7 +67,7 @@ jobs:
           )
 
           excluded_dirs = {".git", ".github"}
-          excluded_files = set()
+          excluded_files = {"flattener.py"}
           with zipfile.ZipFile(archive_path, "w", zipfile.ZIP_DEFLATED) as archive:
               for current_dir, directories, files in os.walk("."):
                   directories[:] = [directory for directory in directories if directory not in excluded_dirs]
