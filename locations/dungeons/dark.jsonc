@@ -24,7 +24,9 @@
           {
             "name": "Chest",
             "hosted_item": "pd_1f_right_pit",
-            "access_rules": ["bombs"]
+            "access_rules": [
+              "bombs"
+            ]
           }
         ]
       },
@@ -58,7 +60,9 @@
           },
           {
             "name": "Main",
-            "access_rules": ["$pd_small_keys|1"],
+            "access_rules": [
+              "$pd_small_keys|1"
+            ],
             "children": [
               {
                 "name": "(1F) Switch Puzzle",
@@ -168,14 +172,19 @@
                 "sections": [
                   {
                     "name": "Chest",
-                    "access_rules": ["merge"],
+                    "access_rules": [
+                      "merge"
+                    ],
                     "hosted_item": "pd_b1_glow_in_the_dark_maze"
                   }
                 ]
               },
               {
                 "name": "Locked Doors",
-                "access_rules": ["$pd_small_keys|4","[],$pd_small_keys|2"],
+                "access_rules": [
+                  "$pd_small_keys|4",
+                  "[],$pd_small_keys|2"
+                ],
                 "children": [
                   {
                     "name": "(1F) Fall From 2F",
@@ -328,6 +337,85 @@
       }
     ],
     "sections": [
+      {
+        "name": "Dark Palace Prize Reward",
+        "hosted_item": "pd",
+        "access_rules": []
+      },
+      {
+        "name": "Gemesaur King Heart Container",
+        "hosted_item": "pd_gemesaur_king",
+        "access_rules": []
+      },
+      {
+        "name": "(B1) Bomb Bowling Chest",
+        "chest_unopened_img": "images/chest_big_unopened.png",
+        "chest_opened_img": "images/chest_big_opened.png",
+        "hosted_item": "pd_b1_bomb_bowling",
+        "access_rules": []
+      },
+      {
+        "name": "(2F) Alcove Chest",
+        "access_rules": [],
+        "hosted_item": "pd_2f_alcove"
+      },
+      {
+        "name": "(2F) Big Chest (Hidden) Chest",
+        "chest_unopened_img": "images/chest_big_unopened.png",
+        "chest_opened_img": "images/chest_big_opened.png",
+        "hosted_item": "pd_2f_big_chest_hidden",
+        "access_rules": []
+      },
+      {
+        "name": "(1F) Fall From 2F Chest",
+        "hosted_item": "pd_1f_fall_from_2f",
+        "access_rules": []
+      },
+      {
+        "name": "(B1) Glow-in-the-Dark Maze Chest",
+        "access_rules": [],
+        "hosted_item": "pd_b1_glow_in_the_dark_maze"
+      },
+      {
+        "name": "(B1) Helmasaur Room (Fall) Chest",
+        "hosted_item": "pd_b1_helmasaur_room_fall",
+        "access_rules": []
+      },
+      {
+        "name": "(B1) Helmasaur Room Chest",
+        "hosted_item": "pd_b1_helmasaur_room",
+        "access_rules": []
+      },
+      {
+        "name": "(B1) Fall From 1F Chest",
+        "hosted_item": "pd_b1_fall_from_1f",
+        "access_rules": []
+      },
+      {
+        "name": "(1F) Hidden Room (Lower) Chest",
+        "hosted_item": "pd_1f_hidden_room_lower",
+        "access_rules": []
+      },
+      {
+        "name": "(1F) Hidden Room (Upper) Chest",
+        "hosted_item": "pd_1f_hidden_room_upper",
+        "access_rules": []
+      },
+      {
+        "name": "(1F) Switch Puzzle Chest",
+        "hosted_item": "pd_1f_switch_puzzle",
+        "access_rules": []
+      },
+      {
+        "name": "(1F) Left Pit Chest",
+        "hosted_item": "pd_1f_left_pit",
+        "access_rules": []
+      },
+      {
+        "name": "(1F) Right Pit Chest",
+        "hosted_item": "pd_1f_right_pit",
+        "access_rules": []
+      }
     ]
   }
 ]
