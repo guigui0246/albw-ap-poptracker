@@ -338,83 +338,159 @@
     ],
     "sections": [
       {
-        "name": "Dark Palace Prize Reward",
-        "hosted_item": "pd",
-        "access_rules": []
+        "name": "(1F) Right Pit Chest",
+        "hosted_item": "pd_1f_right_pit",
+        "access_rules": [
+          "bombs"
+        ]
       },
       {
-        "name": "Gemesaur King Heart Container",
-        "hosted_item": "pd_gemesaur_king",
-        "access_rules": []
+        "name": "(1F) Left Pit Chest",
+        "hosted_item": "pd_1f_left_pit",
+        "access_rules": [
+          "^$lampless,frod,merge,niceirod",
+          "^$lampless,frod,hookshot,niceirod",
+          "^$lampless,bombs,merge",
+          "^$lampless,bombs,boomerang",
+          "^$lampless,boomerang,frod,niceirod",
+          "^$lampless,bombs,hookshot"
+        ]
       },
       {
-        "name": "(B1) Bomb Bowling Chest",
-        "chest_unopened_img": "images/chest_big_unopened.png",
-        "chest_opened_img": "images/chest_big_opened.png",
-        "hosted_item": "pd_b1_bomb_bowling",
-        "access_rules": []
+        "name": "(1F) Switch Puzzle Chest",
+        "hosted_item": "pd_1f_switch_puzzle",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs",
+          "$pd_small_keys|1,^$lampless,frod,niceirod"
+        ]
       },
       {
-        "name": "(2F) Alcove Chest",
-        "access_rules": [],
-        "hosted_item": "pd_2f_alcove"
+        "name": "(1F) Hidden Room (Upper) Chest",
+        "hosted_item": "pd_1f_hidden_room_upper",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs",
+          "$pd_small_keys|1,^$lampless,frod,niceirod"
+        ]
+      },
+      {
+        "name": "(1F) Hidden Room (Lower) Chest",
+        "hosted_item": "pd_1f_hidden_room_lower",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs",
+          "$pd_small_keys|1,^$lampless,frod,niceirod"
+        ]
+      },
+      {
+        "name": "(B1) Fall From 1F Chest",
+        "hosted_item": "pd_b1_fall_from_1f",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs",
+          "$pd_small_keys|1,^$lampless,frod,niceirod"
+        ]
+      },
+      {
+        "name": "(B1) Helmasaur Room Chest",
+        "hosted_item": "pd_b1_helmasaur_room",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs",
+          "$pd_small_keys|1,^$lampless,frod,niceirod"
+        ]
+      },
+      {
+        "name": "(B1) Helmasaur Room (Fall) Chest",
+        "hosted_item": "pd_b1_helmasaur_room_fall",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs",
+          "$pd_small_keys|1,^$lampless,frod,niceirod"
+        ]
+      },
+      {
+        "name": "(B1) Glow-in-the-Dark Maze Chest",
+        "access_rules": [
+          "$pd_small_keys|1,^$lampless,bombs,merge",
+          "$pd_small_keys|1,^$lampless,frod,merge,niceirod"
+        ],
+        "hosted_item": "pd_b1_glow_in_the_dark_maze"
+      },
+      {
+        "name": "(1F) Fall From 2F Chest",
+        "hosted_item": "pd_1f_fall_from_2f",
+        "access_rules": [
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs",
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,niceirod",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,niceirod"
+        ]
       },
       {
         "name": "(2F) Big Chest (Hidden) Chest",
         "chest_unopened_img": "images/chest_big_unopened.png",
         "chest_opened_img": "images/chest_big_opened.png",
         "hosted_item": "pd_2f_big_chest_hidden",
-        "access_rules": []
+        "access_rules": [
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs",
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,niceirod",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,niceirod"
+        ]
       },
       {
-        "name": "(1F) Fall From 2F Chest",
-        "hosted_item": "pd_1f_fall_from_2f",
-        "access_rules": []
+        "name": "(2F) Alcove Chest",
+        "access_rules": [
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,merge",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,merge",
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,merge,niceirod"
+        ],
+        "hosted_item": "pd_2f_alcove"
       },
       {
-        "name": "(B1) Glow-in-the-Dark Maze Chest",
-        "access_rules": [],
-        "hosted_item": "pd_b1_glow_in_the_dark_maze"
+        "name": "(B1) Bomb Bowling Chest",
+        "chest_unopened_img": "images/chest_big_unopened.png",
+        "chest_opened_img": "images/chest_big_opened.png",
+        "hosted_item": "pd_b1_bomb_bowling",
+        "access_rules": [
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs",
+          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,niceirod",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs",
+          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,niceirod"
+        ]
       },
       {
-        "name": "(B1) Helmasaur Room (Fall) Chest",
-        "hosted_item": "pd_b1_helmasaur_room_fall",
-        "access_rules": []
+        "name": "Gemesaur King Heart Container",
+        "hosted_item": "pd_gemesaur_king",
+        "access_rules": [
+          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,merge",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,nicebombs,niceirod",
+          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,irod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,nicebombs",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,nicebombs",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,nicebombs,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,merge",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,irod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,irod,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,irod,niceirod"
+        ]
       },
       {
-        "name": "(B1) Helmasaur Room Chest",
-        "hosted_item": "pd_b1_helmasaur_room",
-        "access_rules": []
-      },
-      {
-        "name": "(B1) Fall From 1F Chest",
-        "hosted_item": "pd_b1_fall_from_1f",
-        "access_rules": []
-      },
-      {
-        "name": "(1F) Hidden Room (Lower) Chest",
-        "hosted_item": "pd_1f_hidden_room_lower",
-        "access_rules": []
-      },
-      {
-        "name": "(1F) Hidden Room (Upper) Chest",
-        "hosted_item": "pd_1f_hidden_room_upper",
-        "access_rules": []
-      },
-      {
-        "name": "(1F) Switch Puzzle Chest",
-        "hosted_item": "pd_1f_switch_puzzle",
-        "access_rules": []
-      },
-      {
-        "name": "(1F) Left Pit Chest",
-        "hosted_item": "pd_1f_left_pit",
-        "access_rules": []
-      },
-      {
-        "name": "(1F) Right Pit Chest",
-        "hosted_item": "pd_1f_right_pit",
-        "access_rules": []
+        "name": "Dark Palace Prize Reward",
+        "hosted_item": "pd",
+        "access_rules": [
+          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,merge",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,nicebombs,niceirod",
+          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,irod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,nicebombs",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,nicebombs",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,nicebombs,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,merge",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,irod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,irod,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,irod,niceirod"
+        ]
       }
     ]
   }

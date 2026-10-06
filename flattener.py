@@ -28,15 +28,69 @@ class JsonTodo(JsonLeaf):
     pass
 
 
+def compare_levels(rules: Rules):
+    order: list[str] = [
+        "normal",
+        "hard",
+        "glitched",
+        "advanced",
+        "hell",
+        ""
+    ]
+    levels = list(filter(lambda x: x.startswith("[") and x[1:-1] in order, rules))
+    if not levels or len(levels) <= 1:
+        return
+    levels = sorted(levels, key=lambda x: order.index(x[1:-1]) if x[1:-1] in order else 10e10, reverse=True)
+    levels.remove(levels[0])
+    for txt in levels:
+        rules.remove(txt)
+
+
+ignore_rules: Rules = []
+
+
+def rule_transform(rule: str) -> str:
+    rules = set(r.strip() for r in rule.split(","))
+    to_remove: set[frozenset[str]] = set()
+    for i in ignore_rules:
+        ign = set(r.strip() for r in i.split(","))
+        if all(s in rules for s in ign):
+            to_remove.add(frozenset(ign))
+    remover: set[str] = set()
+    first = True
+    for e in to_remove:
+        if first:
+            remover = set(e)
+            first = False
+        else:
+            remover &= set(e)
+    rules -= remover
+    rules = sorted(rules)
+    rules = sorted(rules, key=lambda x: x.startswith("["), reverse=True)
+    compare_levels(rules)
+    rules = sorted(set(rules))
+    rules = sorted(rules, key=lambda x: x.startswith("["), reverse=True)
+    return ",".join(rules)
+
+
 def multiply_rules(rules1: Rules, rules2: Rules) -> Rules:
+    if not rules1:
+        return rules2
+    if not rules2:
+        return rules1
     result: Rules = []
     for r1 in rules1:
         for r2 in rules2:
-            result.append(f"{r1},{r2}".strip())
-    return result
+            res = f"{r1},{r2}".strip()
+            result.append(rule_transform(res))
+    return list(set(result))
 
 
 def flatten_json(y: tuple[JsonTree, JsonTodo]) -> JsonTodo:
+    global ignore_rules
+    _rules = y[1]["access_rules"]
+    if (isinstance(_rules, list)):
+        ignore_rules = _rules.copy()
     out = y[1]
     out["sections"] = []
     stack: list[tuple[str, Rules, list[JsonTree | JsonLeaf | JsonItems]]] = [("", [], [y[0].copy()])]
@@ -62,6 +116,7 @@ def flatten_json(y: tuple[JsonTree, JsonTodo]) -> JsonTodo:
                 new_node["access_rules"] = current_rules
                 new_node["name"] = name
                 out["sections"].append(new_node)
+    out["sections"].reverse()
     return out
 
 
