@@ -111,7 +111,7 @@ function margomill()
 end
 
 -- Return if the player can attack Knucklemaster
--- TODO: This assumes you have merge
+-- NOTE: This assumes you have merge
 function knucklemaster()
     if has("msword") or (has("swordless") and attack_bowproof()) then
         return AccessibilityLevel.Normal
@@ -954,4 +954,20 @@ end
 
 function aarghus()
     return has("hookshot") and attack()
+end
+
+function access_dark_palace()
+    return true  -- TODO
+end
+
+function glitched_access_dark_palace()
+    return true  -- TODO
+end
+
+function advanced_access_dark_palace()
+    return true  -- TODO
+end
+
+function hell_access_dark_palace()
+    return true  -- TODO
 end
