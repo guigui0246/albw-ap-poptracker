@@ -11,7 +11,7 @@
         "Display crack links in the tracker when autotracking is enabled for cracks already visited",
         "Fix trial doors back entry",
         "Fix crash when unchecking a crack internally after the one it's linked to",
-        "Cleaning of the code in preparation for 2.0",
+        "Cleaning of the code in preparation for 2.0"
       ]
     },
     {
@@ -19,7 +19,7 @@
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.4/albw-ap-poptracker-v1.7.4.zip",
       "sha256": "3AEA8F450574C9F8A674176B47CFF91BCAA0944110C7E7B40C521A8624B96ADD",
       "changelog": [
-        "Fix swapped IR and TR keyrings.",
+        "Fix swapped IR and TR keyrings."
       ]
     },
     {
@@ -32,7 +32,7 @@
         "Add autotracking to dungeon prizes (sages and pendants)",
         "Remove mother maiamai's last reward",
         "Add keysy settings autotracking",
-        "Add keyring autotracking",
+        "Add keyring autotracking"
       ]
     },
     {
