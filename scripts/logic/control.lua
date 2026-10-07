@@ -539,7 +539,13 @@ function access_central_lorule()
 end
 
 function warpLorule()
-    return hasAll({ "bell", "merge" }) and ((notCracksanity() and has("quake_on")) or hasAny({ "crack_hc", "crack_vacant_house", "crack_skull_woods_pillar", "crack_destroyed_house", "crack_lorule_dm_west", "crack_lofi", "crack_rom_lorule", "crack_philosopher", "crack_graveyard_lorule", "crack_waterfall_lorule", "crack_kus_domain", "crack_n-shaped_house", "crack_thieves_town", "crack_dark_ruins_pillar", "crack_dark_ruins_se", "crack_river_lorule", "crack_swamp_pillar_lorule", "crack_lake_lorule", "crack_lorule_hotfoot", "crack_left_lorule_paradox", "crack_right_lorule_paradox", "crack_mire_exit", "crack_mire_north", "crack_mire_pillar_left", "crack_mire_pillar_right", "crack_mire_middle", "crack_mire_sw", "crack_zaganaga", "crack_lc" }))
+    if not has("bell") then
+        return false
+    end
+    if misery_mire_zaganaga() then
+        return true
+    end
+    return hasAll({ "merge" }) and ((notCracksanity() and has("quake_on")) or hasAny({ "crack_hc", "crack_vacant_house", "crack_skull_woods_pillar", "crack_destroyed_house", "crack_lorule_dm_west", "crack_lofi", "crack_rom_lorule", "crack_philosopher", "crack_graveyard_lorule", "crack_waterfall_lorule", "crack_kus_domain", "crack_n-shaped_house", "crack_thieves_town", "crack_dark_ruins_pillar", "crack_dark_ruins_se", "crack_river_lorule", "crack_swamp_pillar_lorule", "crack_lake_lorule", "crack_lorule_hotfoot", "crack_left_lorule_paradox", "crack_right_lorule_paradox", "crack_mire_exit", "crack_mire_north", "crack_mire_pillar_left", "crack_mire_pillar_right", "crack_mire_middle", "crack_mire_sw", "crack_zaganaga", "crack_lc" }))
 end
 
 function claimDesertPrize()
@@ -556,9 +562,73 @@ function claimDesertPrize()
 end
 
 -- Return if we can perform Reverse Desert Palace
-function reverseDP()
-    return hasAll({ "not_cracksanity", "merge", "crack_desert_palace", "quake_on" })
-            or hasAll({ "cracksanity", "merge", "crack_desert_palace" })
+-- 0 = Entrance
+-- 1 = 1F
+-- 2 = Midway Ledge
+-- 3 = 2F Miniboss
+-- 4 = 2F
+-- 5 = 3F
+-- 6 = Exit 3F
+-- 7 = Zaganaga Ledge
+function reverseDP(section)
+    local ret = AccessibilityLevel.Normal
+    if section == nil then
+        section = 99
+        return AccessibilityLevel.Normal
+    else
+        section = tonumber(section)
+    end
+    print("reverseDP section:", section)
+    if section <= 0 then
+        -- Entrance
+        if not (attack() and has("srod")) then
+            return AccessibilityLevel.None
+        end
+    end
+    print("passed check 0")
+    if section <= 1 then
+        -- 1F
+        if not attack() and not (has("glitched") and hearts(9)) then
+            return AccessibilityLevel.None
+        end
+    end
+    print("passed check 1")
+    if section == 2 then
+        -- Midway Ledge
+        ret = true_for("glitched")
+    end
+    print("passed check 2")
+    if section <= 3 then
+        -- 2F Miniboss
+    end
+    print("passed check 3")
+    if section <= 4 then
+        -- 2F
+    end
+    print("passed check 4")
+    if section <= 5 then
+        -- 3F
+        if not has("srod") then
+            return AccessibilityLevel.None
+        end
+    end
+    print("passed check 5")
+    if section <= 6 then
+        -- Exit 3F
+        if not hearts(9) then
+            return AccessibilityLevel.None
+        end
+    end
+    print("passed check 6")
+    if section <= 7 then
+        -- Zaganaga Ledge
+        if not has("crack_desert_palace") then
+            return AccessibilityLevel.None
+        end
+    end
+    print("passed check 7")
+
+    return ret
 end
 
 -- Can players complete Sanctuary
@@ -970,4 +1040,9 @@ end
 
 function hell_access_dark_palace()
     return true  -- TODO
+end
+
+-- When this is true then fast travel lorule
+function misery_mire_zaganaga()
+    return has("crack_zaganaga")
 end

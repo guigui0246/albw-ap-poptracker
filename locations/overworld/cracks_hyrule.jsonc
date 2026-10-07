@@ -460,7 +460,7 @@
               "[glitched], $glitched_access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
               "[glitched], $glitched_access_desert_palace, [progression_enemies_off], [p_bombs], [srod], [titansmitt], [$switch], [$attack]"
             ],
-            "visibility_rules": ["cracksanity"]
+            "visibility_rules": []
           }
         ],
         "map_locations": [
