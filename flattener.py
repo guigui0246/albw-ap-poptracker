@@ -112,6 +112,8 @@ def flatten_json(y: tuple[JsonTree, JsonTodo]) -> JsonTodo:
                 node = cast(JsonLeaf, node)
                 stack.append((name, current_rules, list(node["sections"])))
             else:
+                if name.endswith("Inspect color"):
+                    continue
                 new_node = cast(JsonItems, node).copy()
                 new_node["access_rules"] = current_rules
                 new_node["name"] = name

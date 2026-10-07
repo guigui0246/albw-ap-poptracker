@@ -38,6 +38,34 @@ function hasNone(items)
     return true
 end
 
+function best(accessibility_levels)
+    local best = AccessibilityLevel.None
+    for _, level in ipairs(accessibility_levels) do
+        if level == AccessibilityLevel.Normal then
+            return AccessibilityLevel.Normal
+        elseif level == AccessibilityLevel.SequenceBreak and best ~= AccessibilityLevel.Normal then
+            best = AccessibilityLevel.SequenceBreak
+        elseif level == AccessibilityLevel.Inspect and best ~= AccessibilityLevel.Normal and best ~= AccessibilityLevel.SequenceBreak then
+            best = AccessibilityLevel.Inspect
+        end
+    end
+    return best
+end
+
+function worst(accessibility_levels)
+    local worst = AccessibilityLevel.Normal
+    for _, level in ipairs(accessibility_levels) do
+        if level == AccessibilityLevel.None then
+            return AccessibilityLevel.None
+        elseif level == AccessibilityLevel.Inspect and worst ~= AccessibilityLevel.None then
+            worst = AccessibilityLevel.Inspect
+        elseif level == AccessibilityLevel.SequenceBreak and worst ~= AccessibilityLevel.None and worst ~= AccessibilityLevel.Inspect then
+            worst = AccessibilityLevel.SequenceBreak
+        end
+    end
+    return worst
+end
+
 function break_skull()
     return hasAny({ "sword", "bow", "boomerang", "hookshot", "power_glove", "boots", "hammer", "bombs", "frod", "irod", "srod" })
 end
@@ -574,7 +602,6 @@ function reverseDP(section)
     local ret = AccessibilityLevel.Normal
     if section == nil then
         section = 99
-        return AccessibilityLevel.Normal
     else
         section = tonumber(section)
     end
@@ -612,14 +639,104 @@ function reverseDP(section)
             return AccessibilityLevel.None
         end
     end
-    if section <= 7 then
-        -- Zaganaga Ledge
-        if not has("crack_desert_palace") then
-            return AccessibilityLevel.None
-        end
+    -- Zaganaga Ledge
+    if not has("crack_desert_palace") then
+        return AccessibilityLevel.None
     end
 
     return ret
+end
+
+-- Best of forward + backward desert palace
+function DP(section)
+    local back = reverseDP(section)
+    local fwd = AccessibilityLevel.None
+
+    if section == nil then
+        section = 99
+    else
+        section = tonumber(section)
+    end
+
+    -- Entrance
+    if access_desert_palace() then
+        fwd = AccessibilityLevel.Normal
+    end
+    if glitched_access_desert_palace() then
+        fwd = best({fwd, true_for("glitched")})
+    end
+    if section >= 1 then
+        -- 1F
+        if not has("srod") then
+            fwd = AccessibilityLevel.None
+        end
+        if not attack() then
+            fwd = AccessibilityLevel.None
+        end
+        -- Either merge or trod in hell
+        if has("merge") then
+        elseif has("trod") then
+            fwd = worst({fwd, true_for("hell")})
+        else
+            return back
+        end
+    end
+    if section >= 2 then
+        -- Midway Ledge
+        if not dp_small_keys(2) then
+            return back
+        end
+        if not has("titansmitt") then
+            return back
+        end
+    end
+    if section >= 3 then
+        -- 2F Miniboss
+        if not hearts(9) then
+            return back
+        end
+    end
+    if section >= 4 then
+        -- 2F
+        if not has("srod") then
+            fwd = AccessibilityLevel.None
+        end
+        if not attack() then
+            fwd = AccessibilityLevel.None
+        end
+        -- Either merge or boots in glitched
+        if has("merge") then
+        elseif has("boots") then
+            fwd = worst({fwd, true_for("glitched")})
+        else
+            return back
+        end
+    end
+    if section >= 5 then
+        -- 3F
+        -- Either merge, srod and 4 keys or boots and tornado in advanced
+        if hasAll({ "merge", "srod" }) and dp_small_keys(4) then
+        elseif hasAll({ "boots", "trod" }) then
+            fwd = worst({fwd, true_for("advanced")})
+        else
+            return back
+        end
+    end
+    if section >= 6 then
+        -- Exit 3F
+        if dp_big_key() and dp_small_keys(5) and has("bombs") then
+        elseif dp_big_key() and dp_small_keys(5) and has("progression_enemies_on") then
+        elseif has("trod") then
+            fwd = worst({fwd, true_for("advanced")})
+        else
+            return back
+        end
+    end
+    if section >= 7 then
+        -- Zaganaga Ledge
+    end
+
+    return best({back, fwd})
 end
 
 -- Can players complete Sanctuary
