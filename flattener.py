@@ -83,7 +83,7 @@ def multiply_rules(rules1: Rules, rules2: Rules) -> Rules:
         for r2 in rules2:
             res = f"{r1},{r2}".strip()
             result.append(rule_transform(res))
-    return list(set(result))
+    return sorted(sorted(set(result)), key=lambda x: x.startswith("["))
 
 
 def flatten_json(y: tuple[JsonTree, JsonTodo]) -> JsonTodo:

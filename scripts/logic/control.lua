@@ -578,55 +578,46 @@ function reverseDP(section)
     else
         section = tonumber(section)
     end
-    print("reverseDP section:", section)
     if section <= 0 then
         -- Entrance
         if not (attack() and has("srod")) then
             return AccessibilityLevel.None
         end
     end
-    print("passed check 0")
     if section <= 1 then
         -- 1F
         if not attack() and not (has("glitched") and hearts(9)) then
             return AccessibilityLevel.None
         end
     end
-    print("passed check 1")
     if section == 2 then
         -- Midway Ledge
         ret = true_for("glitched")
     end
-    print("passed check 2")
     if section <= 3 then
         -- 2F Miniboss
     end
-    print("passed check 3")
     if section <= 4 then
         -- 2F
     end
-    print("passed check 4")
     if section <= 5 then
         -- 3F
         if not has("srod") then
             return AccessibilityLevel.None
         end
     end
-    print("passed check 5")
     if section <= 6 then
         -- Exit 3F
         if not hearts(9) then
             return AccessibilityLevel.None
         end
     end
-    print("passed check 6")
     if section <= 7 then
         -- Zaganaga Ledge
         if not has("crack_desert_palace") then
             return AccessibilityLevel.None
         end
     end
-    print("passed check 7")
 
     return ret
 end
