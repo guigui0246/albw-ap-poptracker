@@ -416,10 +416,10 @@
         "name": "(1F) Fall From 2F Chest",
         "hosted_item": "pd_1f_fall_from_2f",
         "access_rules": [
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs",
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,niceirod",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,niceirod"
+          "$pd_small_keys|4,^$lampless,bombs",
+          "$pd_small_keys|4,^$lampless,frod,niceirod",
+          "[],$pd_small_keys|2,^$lampless,bombs",
+          "[],$pd_small_keys|2,^$lampless,frod,niceirod"
         ]
       },
       {
@@ -428,19 +428,19 @@
         "chest_opened_img": "images/chest_big_opened.png",
         "hosted_item": "pd_2f_big_chest_hidden",
         "access_rules": [
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs",
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,niceirod",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,niceirod"
+          "$pd_small_keys|4,^$lampless,bombs",
+          "$pd_small_keys|4,^$lampless,frod,niceirod",
+          "[],$pd_small_keys|2,^$lampless,bombs",
+          "[],$pd_small_keys|2,^$lampless,frod,niceirod"
         ]
       },
       {
         "name": "(2F) Alcove Chest",
         "access_rules": [
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,merge",
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,merge",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,merge,niceirod"
+          "$pd_small_keys|4,^$lampless,bombs,merge",
+          "$pd_small_keys|4,^$lampless,frod,merge,niceirod",
+          "[],$pd_small_keys|2,^$lampless,bombs,merge",
+          "[],$pd_small_keys|2,^$lampless,frod,merge,niceirod"
         ],
         "hosted_item": "pd_2f_alcove"
       },
@@ -450,46 +450,46 @@
         "chest_opened_img": "images/chest_big_opened.png",
         "hosted_item": "pd_b1_bomb_bowling",
         "access_rules": [
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs",
-          "$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,niceirod",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs",
-          "[],$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,niceirod"
+          "$pd_small_keys|4,^$lampless,bombs",
+          "$pd_small_keys|4,^$lampless,frod,niceirod",
+          "[],$pd_small_keys|2,^$lampless,bombs",
+          "[],$pd_small_keys|2,^$lampless,frod,niceirod"
         ]
       },
       {
         "name": "Gemesaur King Heart Container",
         "hosted_item": "pd_gemesaur_king",
         "access_rules": [
-          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,merge",
-          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,irod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,merge",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,nicebombs",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,irod,niceirod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,nicebombs,niceirod",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,irod",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,nicebombs",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,irod,niceirod",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,nicebombs,niceirod"
+          "$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,bombs,merge",
+          "$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,bombs,irod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,bombs,merge",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,bombs,nicebombs",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,frod,irod,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,frod,nicebombs,niceirod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,bombs,irod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,bombs,nicebombs",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,frod,irod,niceirod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,frod,nicebombs,niceirod"
         ]
       },
       {
         "name": "Dark Palace Prize Reward",
         "hosted_item": "pd",
         "access_rules": [
-          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,merge",
-          "$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,irod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,merge",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,bombs,nicebombs",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,irod,niceirod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
-          "[],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|2,^$lampless,frod,nicebombs,niceirod",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,irod",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,bombs,nicebombs",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,irod,niceirod",
-          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|1,$pd_small_keys|4,^$lampless,frod,nicebombs,niceirod"
+          "$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,bombs,merge",
+          "$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,frod,merge,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,bombs,irod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,bombs,merge",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,bombs,nicebombs",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,frod,irod,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,frod,merge,niceirod",
+          "[],$gemesaur,$pd_big_key,$pd_small_keys|2,^$lampless,frod,nicebombs,niceirod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,bombs,irod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,bombs,nicebombs",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,frod,irod,niceirod",
+          "[hard],$gemesaur,$pd_big_key,$pd_small_keys|4,^$lampless,frod,nicebombs,niceirod"
         ]
       }
     ]

@@ -1,3 +1,5 @@
+from itertools import combinations
+
 import commentjson
 import sys
 from typing import Any, TypedDict, Optional, cast
@@ -28,7 +30,7 @@ class JsonTodo(JsonLeaf):
     pass
 
 
-def compare_levels(rules: Rules):
+def compare_levels(rules: Rules, reverse_logic: bool = False):
     order: list[str] = [
         "normal",
         "hard",
@@ -40,16 +42,33 @@ def compare_levels(rules: Rules):
     levels = list(filter(lambda x: x.startswith("[") and x[1:-1] in order, rules))
     if not levels or len(levels) <= 1:
         return
-    levels = sorted(levels, key=lambda x: order.index(x[1:-1]) if x[1:-1] in order else 10e10, reverse=True)
+    levels = sorted(levels, key=lambda x: order.index(x[1:-1]) if x[1:-1] in order else 10e10, reverse=not reverse_logic)
     levels.remove(levels[0])
     for txt in levels:
         rules.remove(txt)
 
 
+def compare_keys(rules: set[str]) -> set[str]:
+    keywords = ["key"]
+    sep = "|"
+    to_remove: set[str] = set()
+    filt = filter(lambda rule: any(keyword in rule for keyword in keywords) and sep in rule, rules)
+    group = [(rule.split(sep)[0], rule.split(sep)[1]) for rule in filt]
+    groups: dict[str, int] = {}
+    for k, v in group:
+        try:
+            v = int(v)
+            groups[k] = max(groups.get(k, 0), v)
+            to_remove.update({f"{k}{sep}{i}" for i in range(1, groups[k])})
+        except ValueError:
+            continue
+    return {rule for rule in rules if rule not in to_remove}
+
+
 ignore_rules: Rules = []
 
 
-def rule_transform(rule: str) -> str:
+def rule_transform(rule: str, reverse_logic: bool = False) -> str:
     rules = set(r.strip() for r in rule.split(","))
     to_remove: set[frozenset[str]] = set()
     for i in ignore_rules:
@@ -65,12 +84,22 @@ def rule_transform(rule: str) -> str:
         else:
             remover &= set(e)
     rules -= remover
+    rules = compare_keys(rules)
     rules = sorted(rules)
     rules = sorted(rules, key=lambda x: x.startswith("["), reverse=True)
-    compare_levels(rules)
+    compare_levels(rules, reverse_logic=reverse_logic)
     rules = sorted(set(rules))
     rules = sorted(rules, key=lambda x: x.startswith("["), reverse=True)
     return ",".join(rules)
+
+
+def rule_filter(rules: set[str]) -> set[str]:
+    for rule1, rule2 in combinations(set(rules), 2):
+        if rule_transform(",".join([rule1, rule2]), reverse_logic=False) == rule1:
+            rules.discard(rule2)
+        elif rule_transform(",".join([rule1, rule2]), reverse_logic=False) == rule2:
+            rules.discard(rule1)
+    return rules
 
 
 def multiply_rules(rules1: Rules, rules2: Rules) -> Rules:
@@ -83,7 +112,7 @@ def multiply_rules(rules1: Rules, rules2: Rules) -> Rules:
         for r2 in rules2:
             res = f"{r1},{r2}".strip()
             result.append(rule_transform(res))
-    return sorted(sorted(set(result)), key=lambda x: x.startswith("["))
+    return sorted(sorted(rule_filter(set(result))), key=lambda x: x.startswith("["))
 
 
 def flatten_json(y: tuple[JsonTree, JsonTodo]) -> JsonTodo:
@@ -134,3 +163,4 @@ if __name__ == "__main__":
     data[1] = flatten_json(cast(tuple[JsonTree, JsonTodo], data))
     with open(input, "w") as f:
         commentjson.dump(data, f, indent=2)
+        f.write("\n")
