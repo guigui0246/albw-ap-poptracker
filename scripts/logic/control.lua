@@ -1154,3 +1154,17 @@ end
 function misery_mire_zaganaga()
     return has("crack_zaganaga")
 end
+
+function access_eastern_palace()
+    return true  -- TODO
+end
+
+function hard_access_eastern_palace()
+    return true  -- TODO
+end
+
+-- Always true in the Archipelago version
+function eastern_compass()
+    return true
+    -- return has("ep_compass")
+end
