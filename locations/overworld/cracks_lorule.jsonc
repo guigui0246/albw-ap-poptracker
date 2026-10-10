@@ -335,7 +335,7 @@
           "[advanced], merge, quake_on, $advanced_misery_mire_oob, crack_mire_sw",
           "[advanced], merge, quake_on, $advanced_misery_mire_oob, crack_mire_exit"
         ],
-        "visibility_rules": ["cracksanity"]
+        "visibility_rules": []
       }
     ],
     "map_locations": [

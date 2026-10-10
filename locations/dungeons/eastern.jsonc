@@ -5,16 +5,8 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "merge",
-      "bow",
-      "hookshot",
-      "boomerang",
-      "bombs",
-      "great_spin, fsword",
-      "niceirod",
-      "[hard], glove, msword",
-      "[hard], irod, msword",
-      "[hard], bell, wv_eastern, msword"
+      "$access_eastern_palace",
+      "[hard],$hard_access_eastern_palace"
     ],
     "children": [
       {
@@ -30,386 +22,796 @@
           {
             "name": "Chest",
             "hosted_item": "ep_1f_merge_chest",
-            "access_rules": ["merge"]
-          }
-        ]
-      },
-      {
-        "name": "(1F) Left Door Chest",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 143,
-            "y": 618
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_1f_left_door_chest",
-            "inspectable_sequence_break": true,
             "access_rules": [
-              "{csmc_on}",
-              "bow",
-              "hookshot",
-              "boomerang",
-              "bombs",
-              "great_spin, fsword",
-              "niceirod",
-              "[hard]"
-            ]
-          },
-          {
-            "name": "Inspect color",
-            "visibility_rules": ["csmc_on, ep_1f_left_door_chest_ungot_state"],
-            "chest_opened_img": "images/display/transparent.png",
-            "chest_unopened_img": "images/display/transparent.png",
-            "access_rules": [
-              "{}",
-              "bow",
-              "hookshot",
-              "boomerang",
-              "bombs",
-              "great_spin, fsword",
-              "niceirod",
-              "[hard]"
+              "merge,$eastern_compass"
             ]
           }
         ]
       },
       {
-        "name": "(1F) Popo Room",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 87,
-            "y": 506
-          }
+        "name": "F1",
+        "access_rules": [
+          "$farSwitch",
+          "merge",
+          "niceirod",
+          "[hard],msword"
         ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_1f_popo_room",
-            "access_rules": ["$attack"]
-          }
-        ]
-      },
-      {
-        "name": "(1F) Secret Room",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 87,
-            "y": 561
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_1f_secret_room",
-            "access_rules": ["$attack"]
-          }
-        ]
-      },
-      {
-        "name": "(1F) Switch Room",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 277,
-            "y": 508
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_1f_switch_room",
-            "inspectable_sequence_break": true,
-            "access_rules": [
-              "{csmc_on}",
-              "bow",
-              "boomerang",
-              "hookshot",
-              "bombs",
-              "great_spin, fsword",
-              "[hard], irod",
-              "[hard], msword"
-            ]
-          },
-          {
-            "name": "Inspect color",
-            "visibility_rules": ["csmc_on, ep_1f_switch_room_ungot_state"],
-            "chest_opened_img": "images/display/transparent.png",
-            "chest_unopened_img": "images/display/transparent.png",
-            "access_rules": [
-              "{}",
-              "bow",
-              "boomerang",
-              "hookshot",
-              "bombs",
-              "great_spin, fsword",
-              "[hard], irod",
-              "[hard], msword"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(2F) Ball Room",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 493,
-            "y": 150
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_2f_ball_room",
-            "access_rules": ["$ep_small_keys|1, $attack"]
-          }
-        ]
-      },
-      {
-        "name": "(2F) Defeat Popos",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 650,
-            "y": 106
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_2f_defeat_popos",
-            "access_rules": ["$ep_small_keys|1, $attack"]
-          }
-        ]
-      },
-      {
-        "name": "(2F) Switch Room",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 724,
-            "y": 238
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_2f_switch_room",
-            "access_rules": [
-              "$ep_small_keys|1, bow",
-              "$ep_small_keys|1, bombs",
-              "$ep_small_keys|1, irod",
-              "$ep_small_keys|1, $attack, boomerang",
-              "$ep_small_keys|1, $attack, hookshot",
-              "$ep_small_keys|1, great_spin, fsword",
-              // You can use 4 of the 6 pots
-              "[hard], $ep_small_keys|1, $attack"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(2F) Big Chest",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 478,
-            "y": 216
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_2f_big_chest",
-            "access_rules": [
-              "$ep_small_keys|2, $attack",
-              "[advanced], $ep_small_keys|1, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Yuga",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 174,
-            "y": 172
-          }
-        ],
-        "sections": [
-          {
-            "name": "Yuga Rewards",
-            "hosted_item": "ep_yuga",
-            "access_rules": ["^$yuga_eastern"]
-          }
-        ]
-      },
-      {
-        "name": "(3F) Escape Chest",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 261,
-            "y": 172
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_3f_escape_chest",
-            "access_rules": ["^$yuga_eastern, merge"]
-          }
-        ]
-      },
-      {
-        "name": "(1F) Escape Chest",
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 78,
-            "y": 604
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ep_1f_escape_chest",
-            "access_rules": ["^$yuga_eastern, merge"]
-          }
-        ]
-      },
-      {
-        "name": "Eastern Palace Reward",
-        "sections": [
-          {
-            "name": "Reward",
-            "hosted_item": "ep",
-            "access_rules": ["^$yuga_eastern"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "eastern",
-            "x": 174,
-            "y": 690,
-            "size": 24
-          }
-        ]
-      },
-      {
-        "name": "Eastern Palace",
-        "sections": [
-          {
-            "name": "(1F) Merge Chest",
-            "hosted_item": "ep_1f_merge_chest",
-            "access_rules": ["merge"]
-          },
+        "children": [
           {
             "name": "(1F) Left Door Chest",
-            "hosted_item": "ep_1f_left_door_chest",
-            "access_rules": [
-              "{csmc_on}",
-              "bow",
-              "hookshot",
-              "boomerang",
-              "bombs",
-              "great_spin, fsword",
-              "niceirod",
-              "[hard]"
+            "map_locations": [
+              {
+                "map": "eastern",
+                "x": 143,
+                "y": 618
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "ep_1f_left_door_chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "$farSwitch",
+                  "niceirod",
+                  "[hard]" // throw pot from upper room
+                ]
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": [
+                  "csmc_on, ep_1f_left_door_chest_ungot_state"
+                ],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
             ]
           },
           {
             "name": "(1F) Popo Room",
-            "hosted_item": "ep_1f_popo_room",
-            "access_rules": ["$attack"]
+            "map_locations": [
+              {
+                "map": "eastern",
+                "x": 87,
+                "y": 506
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "ep_1f_popo_room",
+                "access_rules": [
+                  "$attack"
+                ]
+              }
+            ]
           },
           {
             "name": "(1F) Secret Room",
-            "hosted_item": "ep_1f_secret_room",
-            "access_rules": ["$attack"]
+            "map_locations": [
+              {
+                "map": "eastern",
+                "x": 87,
+                "y": 561
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "ep_1f_secret_room",
+                "access_rules": [
+                  "$attack"
+                ]
+              }
+            ]
           },
           {
             "name": "(1F) Switch Room",
-            "hosted_item": "ep_1f_switch_room",
-            "access_rules": [
-              "{csmc_on}",
-              "bow",
-              "boomerang",
-              "hookshot",
-              "bombs",
-              "great_spin, fsword",
-              "[hard], irod",
-              "[hard], msword"
+            "map_locations": [
+              {
+                "map": "eastern",
+                "x": 277,
+                "y": 508
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "ep_1f_switch_room",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "$farSwitch",
+                  "[hard], irod", // Ice rod for top and pot for bottom
+                  "[hard], msword"
+                ]
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": [
+                  "csmc_on, ep_1f_switch_room_ungot_state"
+                ],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
             ]
           },
           {
-            "name": "(2F) Ball Room",
-            "hosted_item": "ep_2f_ball_room",
-            "access_rules": ["$ep_small_keys|1, $attack"]
-          },
-          {
-            "name": "(2F) Defeat Popos",
-            "hosted_item": "ep_2f_defeat_popos",
-            "access_rules": ["$ep_small_keys|1, $attack"]
-          },
-          {
-            "name": "(2F) Switch Room",
-            "hosted_item": "ep_2f_switch_room",
+            "name": "Miniboss",
             "access_rules": [
-              "$ep_small_keys|1, bow",
-              "$ep_small_keys|1, bombs",
-              "$ep_small_keys|1, irod",
-              "$ep_small_keys|1, $attack, boomerang",
-              "$ep_small_keys|1, $attack, hookshot",
-              "$ep_small_keys|1, great_spin, fsword",
-              // You can use 4 of the 6 pots
-              "[hard], $ep_small_keys|1, $attack"
+              "$ep_small_keys|1"
+            ],
+            "children": [
+              {
+                "name": "2F",
+                "access_rules": [
+                  "$attack"
+                ],
+                "children": [
+                  {
+                    "name": "(2F) Defeat Popos",
+                    "map_locations": [
+                      {
+                        "map": "eastern",
+                        "x": 650,
+                        "y": 106
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "hosted_item": "ep_2f_defeat_popos",
+                        "access_rules": [
+                          "$attack"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "(2F) Ball Room",
+                    "map_locations": [
+                      {
+                        "map": "eastern",
+                        "x": 493,
+                        "y": 150
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "hosted_item": "ep_2f_ball_room",
+                        "access_rules": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "(2F) Switch Room",
+                    "map_locations": [
+                      {
+                        "map": "eastern",
+                        "x": 724,
+                        "y": 238
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "hosted_item": "ep_2f_switch_room",
+                        "access_rules": [
+                          "$farSwitch",
+                          "irod",
+                          // You can use 4 of the 6 pots
+                          "[hard]"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "(2F) Big Chest",
+                    "map_locations": [
+                      {
+                        "map": "eastern",
+                        "x": 478,
+                        "y": 216
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "hosted_item": "ep_2f_big_chest",
+                        "access_rules": [
+                          "$ep_small_keys|2",
+                          "[advanced], trod"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "3F", // Also known as "Boss"
+                    "access_rules": [
+                      "$ep_small_keys|2,$ep_big_key,$farSwitch",
+                      "[hard],$ep_small_keys|2,$ep_big_key",
+                      "[hard],$ep_big_key,irod",
+                      "[hard],$ep_big_key,bombs",
+                      "[glitched],msword,greatspin",
+                      "[advanced],trod"
+                    ],
+                    "children": [
+                      {
+                        "name": "Post Yuga",
+                        "access_rules": [
+                          "bow",
+                          "[hard],bombs",
+                          "[hard],msword",
+                          "[hard],boomerang,$attack",
+                          "[hard],hookshot,$attack",
+                          "[hard],niceirod",
+                          "[hell],irod"   // I quote "gross"
+                        ],
+                        "children": [
+                          {
+                            "name": "Yuga",
+                            "map_locations": [
+                              {
+                                "map": "eastern",
+                                "x": 174,
+                                "y": 172
+                              }
+                            ],
+                            "sections": [
+                              {
+                                "name": "Yuga Rewards",
+                                "hosted_item": "ep_yuga"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Eastern Palace Reward",
+                            "sections": [
+                              {
+                                "name": "Reward",
+                                "hosted_item": "ep"
+                              }
+                            ],
+                            "map_locations": [
+                              {
+                                "map": "eastern",
+                                "x": 174,
+                                "y": 690,
+                                "size": 24
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Escape",
+                            "access_rules": [
+                              "merge"
+                            ],
+                            "children": [
+                              {
+                                "name": "(3F) Escape Chest",
+                                "map_locations": [
+                                  {
+                                    "map": "eastern",
+                                    "x": 261,
+                                    "y": 172
+                                  }
+                                ],
+                                "sections": [
+                                  {
+                                    "name": "Chest",
+                                    "hosted_item": "ep_3f_escape_chest"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "(1F) Escape Chest",
+                                "map_locations": [
+                                  {
+                                    "map": "eastern",
+                                    "x": 78,
+                                    "y": 604
+                                  }
+                                ],
+                                "sections": [
+                                  {
+                                    "name": "Chest",
+                                    "hosted_item": "ep_1f_escape_chest"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             ]
-          },
-          {
-            "name": "(2F) Big Chest",
-            "hosted_item": "ep_2f_big_chest",
-            "access_rules": [
-              "$ep_small_keys|2, $attack",
-              "[advanced], $ep_small_keys|1, trod"
-            ]
-          },
-          {
-            "name": "Yuga",
-            "hosted_item": "ep_yuga",
-            "access_rules": ["^$yuga_eastern"]
-          },
-          {
-            "name": "(3F) Escape Chest",
-            "hosted_item": "ep_3f_escape_chest",
-            "access_rules": ["^$yuga_eastern, merge"]
-          },
-          {
-            "name": "(1F) Escape Chest",
-            "hosted_item": "ep_1f_escape_chest",
-            "access_rules": ["^$yuga_eastern, merge"]
-          },
-          {
-            "name": "Reward",
-            "hosted_item": "ep",
-            "access_rules": ["^$yuga_eastern"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1921,
-            "y": 820,
-            "size": 80
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Eastern Palace",
+    "access_rules": [
+      "$access_eastern_palace",
+      "[hard],$hard_access_eastern_palace"
+    ],
+    "sections": [
+      {
+        "name": "(1F) Merge Chest Chest",
+        "hosted_item": "ep_1f_merge_chest",
+        "access_rules": [
+          "$eastern_compass,merge"
+        ]
+      },
+      {
+        "name": "(1F) Left Door Chest Chest",
+        "hosted_item": "ep_1f_left_door_chest",
+        "inspectable_sequence_break": true,
+        "access_rules": [
+          "$farSwitch,merge",
+          "$farSwitch,niceirod",
+          "$farSwitch,{csmc_on}",
+          "merge,niceirod",
+          "merge,{csmc_on}",
+          "niceirod,{csmc_on}",
+          "[hard],$farSwitch,msword",
+          "[hard],merge",
+          "[hard],msword,niceirod",
+          "[hard],msword,{csmc_on}"
+        ]
+      },
+      {
+        "name": "(1F) Popo Room Chest",
+        "hosted_item": "ep_1f_popo_room",
+        "access_rules": [
+          "$attack,$farSwitch",
+          "$attack,merge",
+          "$attack,niceirod",
+          "[hard],$attack,msword"
+        ]
+      },
+      {
+        "name": "(1F) Secret Room Chest",
+        "hosted_item": "ep_1f_secret_room",
+        "access_rules": [
+          "$attack,$farSwitch",
+          "$attack,merge",
+          "$attack,niceirod",
+          "[hard],$attack,msword"
+        ]
+      },
+      {
+        "name": "(1F) Switch Room Chest",
+        "hosted_item": "ep_1f_switch_room",
+        "inspectable_sequence_break": true,
+        "access_rules": [
+          "$farSwitch,merge",
+          "$farSwitch,niceirod",
+          "$farSwitch,{csmc_on}",
+          "merge,{csmc_on}",
+          "niceirod,{csmc_on}",
+          "[hard],$farSwitch,irod",
+          "[hard],$farSwitch,msword",
+          "[hard],irod,merge",
+          "[hard],irod,msword",
+          "[hard],irod,niceirod",
+          "[hard],merge,msword",
+          "[hard],msword,niceirod",
+          "[hard],msword,{csmc_on}"
+        ]
+      },
+      {
+        "name": "(2F) Defeat Popos Chest",
+        "hosted_item": "ep_2f_defeat_popos",
+        "access_rules": [
+          "$attack,$ep_small_keys|1,$farSwitch",
+          "$attack,$ep_small_keys|1,merge",
+          "$attack,$ep_small_keys|1,niceirod",
+          "[hard],$attack,$ep_small_keys|1,msword"
+        ]
+      },
+      {
+        "name": "(2F) Ball Room Chest",
+        "hosted_item": "ep_2f_ball_room",
+        "access_rules": [
+          "$attack,$ep_small_keys|1,$farSwitch",
+          "$attack,$ep_small_keys|1,merge",
+          "$attack,$ep_small_keys|1,niceirod",
+          "[hard],$attack,$ep_small_keys|1,msword"
+        ]
+      },
+      {
+        "name": "(2F) Switch Room Chest",
+        "hosted_item": "ep_2f_switch_room",
+        "access_rules": [
+          "$attack,$ep_small_keys|1,$farSwitch,irod",
+          "$attack,$ep_small_keys|1,$farSwitch,merge",
+          "$attack,$ep_small_keys|1,$farSwitch,niceirod",
+          "$attack,$ep_small_keys|1,irod,merge",
+          "$attack,$ep_small_keys|1,irod,niceirod",
+          "[hard],$attack,$ep_small_keys|1,$farSwitch,msword",
+          "[hard],$attack,$ep_small_keys|1,irod,msword",
+          "[hard],$attack,$ep_small_keys|1,merge",
+          "[hard],$attack,$ep_small_keys|1,niceirod"
+        ]
+      },
+      {
+        "name": "(2F) Big Chest Chest",
+        "hosted_item": "ep_2f_big_chest",
+        "access_rules": [
+          "$attack,$ep_small_keys|2,$farSwitch",
+          "$attack,$ep_small_keys|2,merge",
+          "$attack,$ep_small_keys|2,niceirod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,niceirod,trod",
+          "[hard],$attack,$ep_small_keys|2,msword"
+        ]
+      },
+      {
+        "name": "Yuga Yuga Rewards",
+        "hosted_item": "ep_yuga",
+        "access_rules": [
+          "$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,merge",
+          "$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,niceirod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bombs,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,boomerang,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bow,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,hookshot,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,msword,niceirod,trod",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bombs,greatspin,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,boomerang,greatspin,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bow,greatspin,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,hookshot,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bombs,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,bombs,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,boomerang,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,boomerang,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bow,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,bow,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,hookshot,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,hookshot,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,boomerang",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,bow",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,hookshot",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,boomerang,irod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bow,irod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,hookshot,irod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,bow,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,bow,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,irod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,merge",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,merge",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,niceirod",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,greatspin,irod,msword",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,irod,trod",
+          "[hell],$attack,$ep_small_keys|1,greatspin,irod,merge,msword",
+          "[hell],$attack,$ep_small_keys|1,greatspin,irod,msword,niceirod",
+          "[hell],$attack,$ep_small_keys|1,irod,merge,trod",
+          "[hell],$attack,$ep_small_keys|1,irod,msword,trod",
+          "[hell],$attack,$ep_small_keys|1,irod,niceirod,trod"
+        ]
+      },
+      {
+        "name": "Eastern Palace Reward Reward",
+        "hosted_item": "ep",
+        "access_rules": [
+          "$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,merge",
+          "$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,niceirod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bombs,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,boomerang,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bow,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,hookshot,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,msword,niceirod,trod",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bombs,greatspin,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,boomerang,greatspin,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bow,greatspin,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,hookshot,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bombs,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,bombs,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,boomerang,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,boomerang,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bow,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,bow,greatspin,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,hookshot,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,hookshot,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,boomerang",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,bow",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,hookshot",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,boomerang,irod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bow,irod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,hookshot,irod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,bow,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,bow,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,irod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,merge",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,merge",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,niceirod",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,greatspin,irod,msword",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,irod,trod",
+          "[hell],$attack,$ep_small_keys|1,greatspin,irod,merge,msword",
+          "[hell],$attack,$ep_small_keys|1,greatspin,irod,msword,niceirod",
+          "[hell],$attack,$ep_small_keys|1,irod,merge,trod",
+          "[hell],$attack,$ep_small_keys|1,irod,msword,trod",
+          "[hell],$attack,$ep_small_keys|1,irod,niceirod,trod"
+        ]
+      },
+      {
+        "name": "(3F) Escape Chest Chest",
+        "hosted_item": "ep_3f_escape_chest",
+        "access_rules": [
+          "$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,merge,niceirod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bombs,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,boomerang,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bow,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,hookshot,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,msword,niceirod,trod",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bombs,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,boomerang,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bow,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,hookshot,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bombs,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,boomerang,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bow,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,hookshot,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,boomerang,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,bow,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,hookshot,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,boomerang,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bow,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,hookshot,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,bow,merge,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,irod,merge",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,merge,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,merge,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,merge,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,merge,niceirod",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,greatspin,irod,merge,msword",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,irod,merge,trod",
+          "[hell],$attack,$ep_small_keys|1,greatspin,irod,merge,msword,niceirod",
+          "[hell],$attack,$ep_small_keys|1,irod,merge,msword,trod",
+          "[hell],$attack,$ep_small_keys|1,irod,merge,niceirod,trod"
+        ]
+      },
+      {
+        "name": "(1F) Escape Chest Chest",
+        "hosted_item": "ep_1f_escape_chest",
+        "access_rules": [
+          "$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,merge,niceirod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bombs,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,boomerang,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,bow,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,hookshot,merge,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,$farSwitch,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bombs,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,boomerang,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,bow,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,merge,msword,trod",
+          "[advanced],$attack,$ep_small_keys|1,hookshot,merge,niceirod,trod",
+          "[advanced],$attack,$ep_small_keys|1,merge,msword,niceirod,trod",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bombs,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,boomerang,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,bow,greatspin,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,hookshot,merge,msword",
+          "[glitched],$attack,$ep_small_keys|1,$farSwitch,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bombs,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,boomerang,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,bow,greatspin,merge,msword,niceirod",
+          "[glitched],$attack,$ep_small_keys|1,greatspin,hookshot,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,boomerang,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,bow,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,hookshot,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,boomerang,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bow,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,hookshot,irod,merge",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,boomerang,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,bow,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,hookshot,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bombs,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,boomerang,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,bow,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,hookshot,irod,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|1,irod,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bombs,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,boomerang,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,bow,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,merge,msword",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,hookshot,merge,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,merge,msword,niceirod",
+          "[hard],$attack,$ep_big_key,$ep_small_keys|2,bow,merge,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,$farSwitch,bombs,irod,merge",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,merge,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|1,bombs,irod,merge,niceirod",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,merge,msword",
+          "[hell],$attack,$ep_big_key,$ep_small_keys|2,$farSwitch,irod,merge,niceirod",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,greatspin,irod,merge,msword",
+          "[hell],$attack,$ep_small_keys|1,$farSwitch,irod,merge,trod",
+          "[hell],$attack,$ep_small_keys|1,greatspin,irod,merge,msword,niceirod",
+          "[hell],$attack,$ep_small_keys|1,irod,merge,msword,trod",
+          "[hell],$attack,$ep_small_keys|1,irod,merge,niceirod,trod"
+        ]
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "hyrule",
+        "x": 1921,
+        "y": 820,
+        "size": 80
       }
     ]
   }

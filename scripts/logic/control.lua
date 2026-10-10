@@ -38,6 +38,34 @@ function hasNone(items)
     return true
 end
 
+function best(accessibility_levels)
+    local best = AccessibilityLevel.None
+    for _, level in ipairs(accessibility_levels) do
+        if level == AccessibilityLevel.Normal then
+            return AccessibilityLevel.Normal
+        elseif level == AccessibilityLevel.SequenceBreak and best ~= AccessibilityLevel.Normal then
+            best = AccessibilityLevel.SequenceBreak
+        elseif level == AccessibilityLevel.Inspect and best ~= AccessibilityLevel.Normal and best ~= AccessibilityLevel.SequenceBreak then
+            best = AccessibilityLevel.Inspect
+        end
+    end
+    return best
+end
+
+function worst(accessibility_levels)
+    local worst = AccessibilityLevel.Normal
+    for _, level in ipairs(accessibility_levels) do
+        if level == AccessibilityLevel.None then
+            return AccessibilityLevel.None
+        elseif level == AccessibilityLevel.Inspect and worst ~= AccessibilityLevel.None then
+            worst = AccessibilityLevel.Inspect
+        elseif level == AccessibilityLevel.SequenceBreak and worst ~= AccessibilityLevel.None and worst ~= AccessibilityLevel.Inspect then
+            worst = AccessibilityLevel.SequenceBreak
+        end
+    end
+    return worst
+end
+
 function break_skull()
     return hasAny({ "sword", "bow", "boomerang", "hookshot", "power_glove", "boots", "hammer", "bombs", "frod", "irod", "srod" })
 end
@@ -94,21 +122,12 @@ function progression_enemies_floor()
 end
 
 -- Return if the player can attack Margomill
--- This is the same as attack(), minus the ice rod
 function margomill()
-    if hg_big_key() and attack_iceproof() then
-        if hg_small_keys(4) then
-            return AccessibilityLevel.Normal
-        elseif hg_small_keys(2) then
-            return AccessibilityLevel.SequenceBreak
-        end
-    end
-
-    return AccessibilityLevel.None
+    return has("bombs") or (has("trod") and attack_iceproof())
 end
 
 -- Return if the player can attack Knucklemaster
--- This is the same as attack(), minus the bow
+-- NOTE: This assumes you have merge
 function knucklemaster()
     if has("msword") or (has("swordless") and attack_bowproof()) then
         return AccessibilityLevel.Normal
@@ -191,6 +210,14 @@ end
 -- Pots aren't accounted for here, but may make hitting some switches possible
 function switch()
     return hasAny({ "fsword", "bow", "boomerang", "hookshot", "bombs", "irod", "hammer", "boots" })
+end
+
+function switchBootless()
+    return hasAny({ "fsword", "bow", "boomerang", "hookshot", "bombs", "irod", "hammer" })
+end
+
+function farSwitch()
+    return hasAny({ "bow", "boomerang", "hookshot", "bombs"})
 end
 
 -- Return if Link can hit Crystal Switches
@@ -359,32 +386,6 @@ function turtleLake()
     end
 end
 
--- Can reach House of Gales 2F (assume TRod)
-function hog2F()
-    if hg_small_keys(1) then
-        if has("merge") and switch() then
-            return AccessibilityLevel.Normal
-        elseif hasAny({ "bow", "boomerang", "hookshot", "bombs", "irod", "msword" }) or hasAll({ "great_spin", "fsword" }) then
-            return true_for("hard")
-        end
-    end
-
-    return AccessibilityLevel.None
-end
-
--- Can reach House of Gales 3F (assume TRod)
-function hog3F()
-    if has("merge") then
-        if hg_small_keys(3) and fire_enemy() then
-            return hog2F()
-        else
-            return true_for("glitched")
-        end
-    else
-        return AccessibilityLevel.None
-    end
-end
-
 -- Can open Thieves' Hideout B1 Door
 function thB1DoorOpen()
     if has("merge") and switch() then
@@ -528,7 +529,13 @@ function access_central_lorule()
 end
 
 function warpLorule()
-    return hasAll({ "bell", "merge" }) and ((notCracksanity() and has("quake_on")) or hasAny({ "crack_hc", "crack_vacant_house", "crack_skull_woods_pillar", "crack_destroyed_house", "crack_lorule_dm_west", "crack_lofi", "crack_rom_lorule", "crack_philosopher", "crack_graveyard_lorule", "crack_waterfall_lorule", "crack_kus_domain", "crack_n-shaped_house", "crack_thieves_town", "crack_dark_ruins_pillar", "crack_dark_ruins_se", "crack_river_lorule", "crack_swamp_pillar_lorule", "crack_lake_lorule", "crack_lorule_hotfoot", "crack_left_lorule_paradox", "crack_right_lorule_paradox", "crack_mire_exit", "crack_mire_north", "crack_mire_pillar_left", "crack_mire_pillar_right", "crack_mire_middle", "crack_mire_sw", "crack_zaganaga", "crack_lc" }))
+    if not has("bell") then
+        return false
+    end
+    if misery_mire_zaganaga() then
+        return true
+    end
+    return hasAll({ "merge" }) and ((notCracksanity() and has("quake_on")) or hasAny({ "crack_hc", "crack_vacant_house", "crack_skull_woods_pillar", "crack_destroyed_house", "crack_lorule_dm_west", "crack_lofi", "crack_rom_lorule", "crack_philosopher", "crack_graveyard_lorule", "crack_waterfall_lorule", "crack_kus_domain", "crack_n-shaped_house", "crack_thieves_town", "crack_dark_ruins_pillar", "crack_dark_ruins_se", "crack_river_lorule", "crack_swamp_pillar_lorule", "crack_lake_lorule", "crack_lorule_hotfoot", "crack_left_lorule_paradox", "crack_right_lorule_paradox", "crack_mire_exit", "crack_mire_north", "crack_mire_pillar_left", "crack_mire_pillar_right", "crack_mire_middle", "crack_mire_sw", "crack_zaganaga", "crack_lc" }))
 end
 
 function claimDesertPrize()
@@ -545,9 +552,153 @@ function claimDesertPrize()
 end
 
 -- Return if we can perform Reverse Desert Palace
-function reverseDP()
-    return hasAll({ "not_cracksanity", "merge", "crack_desert_palace", "quake_on" })
-            or hasAll({ "cracksanity", "merge", "crack_desert_palace" })
+-- 0 = Entrance
+-- 1 = 1F
+-- 2 = Midway Ledge
+-- 3 = 2F Miniboss
+-- 4 = 2F
+-- 5 = 3F
+-- 6 = Exit 3F
+-- 7 = Zaganaga Ledge
+function reverseDP(section)
+    local ret = AccessibilityLevel.Normal
+    if section == nil then
+        section = 99
+    else
+        section = tonumber(section)
+    end
+    if section <= 0 then
+        -- Entrance
+        if not (attack() and has("srod")) then
+            return AccessibilityLevel.None
+        end
+    end
+    if section <= 1 then
+        -- 1F
+        if not attack() and not (has("glitched") and hearts(9)) then
+            return AccessibilityLevel.None
+        end
+    end
+    if section == 2 then
+        -- Midway Ledge
+        ret = true_for("glitched")
+    end
+    if section <= 3 then
+        -- 2F Miniboss
+    end
+    if section <= 4 then
+        -- 2F
+    end
+    if section <= 5 then
+        -- 3F
+        if not has("srod") then
+            return AccessibilityLevel.None
+        end
+    end
+    if section <= 6 then
+        -- Exit 3F
+        if not hearts(9) then
+            return AccessibilityLevel.None
+        end
+    end
+    -- Zaganaga Ledge
+    if not has("crack_desert_palace") then
+        return AccessibilityLevel.None
+    end
+
+    return ret
+end
+
+-- Best of forward + backward desert palace
+function DP(section)
+    local back = reverseDP(section)
+    local fwd = AccessibilityLevel.None
+
+    if section == nil then
+        section = 99
+    else
+        section = tonumber(section)
+    end
+
+    -- Entrance
+    if access_desert_palace() then
+        fwd = AccessibilityLevel.Normal
+    end
+    if glitched_access_desert_palace() then
+        fwd = best({fwd, true_for("glitched")})
+    end
+    if section >= 1 then
+        -- 1F
+        if not has("srod") then
+            fwd = AccessibilityLevel.None
+        end
+        if not attack() then
+            fwd = AccessibilityLevel.None
+        end
+        -- Either merge or trod in hell
+        if has("merge") then
+        elseif has("trod") then
+            fwd = worst({fwd, true_for("hell")})
+        else
+            return back
+        end
+    end
+    if section >= 2 then
+        -- Midway Ledge
+        if not dp_small_keys(2) then
+            return back
+        end
+        if not has("titansmitt") then
+            return back
+        end
+    end
+    if section >= 3 then
+        -- 2F Miniboss
+        if not hearts(9) then
+            return back
+        end
+    end
+    if section >= 4 then
+        -- 2F
+        if not has("srod") then
+            fwd = AccessibilityLevel.None
+        end
+        if not attack() then
+            fwd = AccessibilityLevel.None
+        end
+        -- Either merge or boots in glitched
+        if has("merge") then
+        elseif has("boots") then
+            fwd = worst({fwd, true_for("glitched")})
+        else
+            return back
+        end
+    end
+    if section >= 5 then
+        -- 3F
+        -- Either merge, srod and 4 keys or boots and tornado in advanced
+        if hasAll({ "merge", "srod" }) and dp_small_keys(4) then
+        elseif hasAll({ "boots", "trod" }) then
+            fwd = worst({fwd, true_for("advanced")})
+        else
+            return back
+        end
+    end
+    if section >= 6 then
+        -- Exit 3F
+        if dp_big_key() and dp_small_keys(5) and has("bombs") then
+        elseif dp_big_key() and dp_small_keys(5) and has("progression_enemies_on") then
+        elseif has("trod") then
+            fwd = worst({fwd, true_for("advanced")})
+        else
+            return back
+        end
+    end
+    if section >= 7 then
+        -- Zaganaga Ledge
+    end
+
+    return best({back, fwd})
 end
 
 -- Can players complete Sanctuary
@@ -566,7 +717,7 @@ function barrier_skip()
 end
 
 function yuga2()
-    return hasAny({ "fsword", "bombs", "frod", "irod", "hammer" })
+    return attack_bowproof()
 end
 
 -- Map the Lorule Castle requirement from a progressive item to a number
@@ -904,4 +1055,106 @@ function access_ghosts()
         return true
     end
     return has("hint_glasses")
+end
+
+-- Always true in the Archipelago version
+function hearts(amount)
+    return true
+end
+
+-- Return the state of treacherous_tower in the Archipelago version
+function rupees(amount)
+    local treacherous_tower = Tracker:FindObjectForCode("@Lorule Mountain/Treacherous Tower")
+    if treacherous_tower then
+        return treacherous_tower.AccessibilityLevel
+    else
+        print("Treacherous Tower object not found")
+    end
+end
+
+function canDestroyCurtain()
+    return hasAny({ "fsword", "lamp", "frod", "bombs", "boots" })
+end
+
+function canBreakFloorTiles()
+    return hasAny({ "bombs", "hammer" })
+end
+
+function canGreatSpin()
+    return hasAll({ "fsword", "great_spin" })
+end
+
+function moldorm()
+    return has("hammer")
+end
+
+function gemesaur()
+    return has("bombs") and (has("lamp") or hasAll({ "frod", "lampless" }))
+end
+
+function aarghus()
+    return has("hookshot") and attack()
+end
+
+function access_dark_palace()
+    return true  -- TODO
+end
+
+function glitched_access_dark_palace()
+    return true  -- TODO
+end
+
+function advanced_access_dark_palace()
+    return true  -- TODO
+end
+
+function hell_access_dark_palace()
+    return true  -- TODO
+end
+
+-- When this is true then fast travel lorule
+function misery_mire_zaganaga()
+    return has("crack_zaganaga")
+end
+
+function access_eastern_palace()
+    return true  -- TODO
+end
+
+function hard_access_eastern_palace()
+    return true  -- TODO
+end
+
+-- Always true in the Archipelago version
+function eastern_compass()
+    return true
+    -- return has("ep_compass")
+end
+
+function access_house_of_gales()
+    return true  -- TODO
+end
+
+function advanced_access_house_of_gales()
+    return true  -- TODO
+end
+
+function hell_access_house_of_gales()
+    return true  -- TODO
+end
+
+function can_hit_hog_1f_switch()
+    if farSwitch() then
+        return true
+    end
+    if has("irod") then
+        return true
+    end
+    if canGreatSpin() then
+        return true
+    end
+    if has("merge") and hasAny({ "fsword", "hammer" }) then
+        return true
+    end
+    return false
 end
