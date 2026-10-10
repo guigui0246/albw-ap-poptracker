@@ -29,7 +29,9 @@
               {
                 "name": "Chest",
                 "hosted_item": "hg_1f_torches",
-                "access_rules": ["$fire"]
+                "access_rules": [
+                  "$fire"
+                ]
               }
             ]
           },
@@ -113,7 +115,9 @@
                   },
                   {
                     "name": "Inspect color",
-                    "visibility_rules": ["csmc_on, hg_1f_west_room_secret_ungot_state"],
+                    "visibility_rules": [
+                      "csmc_on, hg_1f_west_room_secret_ungot_state"
+                    ],
                     "chest_opened_img": "images/display/transparent.png",
                     "chest_unopened_img": "images/display/transparent.png",
                     "access_rules": [
@@ -219,7 +223,9 @@
                           },
                           {
                             "name": "Inspect color",
-                            "visibility_rules": ["csmc_on, hg_3f_fire_bubbles_ungot_state"],
+                            "visibility_rules": [
+                              "csmc_on, hg_3f_fire_bubbles_ungot_state"
+                            ],
                             "chest_opened_img": "images/display/transparent.png",
                             "chest_unopened_img": "images/display/transparent.png",
                             "access_rules": [
@@ -253,7 +259,9 @@
                           },
                           {
                             "name": "Inspect color",
-                            "visibility_rules": ["csmc_on, hg_3f_rat_room_ungot_state"],
+                            "visibility_rules": [
+                              "csmc_on, hg_3f_rat_room_ungot_state"
+                            ],
                             "chest_opened_img": "images/display/transparent.png",
                             "chest_unopened_img": "images/display/transparent.png",
                             "access_rules": [
@@ -343,6 +351,158 @@
       }
     ],
     "sections": [
+      {
+        "name": "(1F) Torches Chest",
+        "hosted_item": "hg_1f_torches",
+        "access_rules": [
+          "$fire,trod"
+        ]
+      },
+      {
+        "name": "(1F) Switch Room (may need to die to escape) Chest",
+        "hosted_item": "hg_1f_switch_room",
+        "access_rules": [
+          "trod"
+        ]
+      },
+      {
+        "name": "(1F) Fire Bubbles Chest",
+        "hosted_item": "hg_1f_fire_bubbles",
+        "access_rules": [
+          "$fire_enemy,merge,trod",
+          "[hard],merge,net,trod"
+        ]
+      },
+      {
+        "name": "(1F) West Room Chest",
+        "hosted_item": "hg_1f_west_room",
+        "access_rules": [
+          "$hg_small_keys|1,merge,trod",
+          "[hard],$hg_small_keys|1,trod"
+        ]
+      },
+      {
+        "name": "(1F) West Room Secret Chest",
+        "hosted_item": "hg_1f_west_room_secret",
+        "inspectable_sequence_break": true,
+        "access_rules": [
+          "$hg_small_keys|1,merge,trod,{csmc_on}",
+          "[hard],$hg_small_keys|1,merge,trod",
+          "[hard],$hg_small_keys|1,trod,{csmc_on}"
+        ]
+      },
+      {
+        "name": "(2F) Narrow Ledge Chest",
+        "access_rules": [
+          "$can_hit_hog_1f_switch,$hg_small_keys|1,boomerang,merge,trod",
+          "$can_hit_hog_1f_switch,$hg_small_keys|1,hookshot,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|1,boomerang,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|1,hookshot,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|1,merge,trod",
+          "[hard],$hg_small_keys|1,boomerang,merge,msword,trod",
+          "[hard],$hg_small_keys|1,hookshot,merge,msword,trod"
+        ],
+        "hosted_item": "hg_2f_narrow_ledge"
+      },
+      {
+        "name": "(2F) Big Chest Chest",
+        "hosted_item": "hg_2f_big_chest",
+        "access_rules": [
+          "$can_hit_hog_1f_switch,$hg_small_keys|1,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|1,trod",
+          "[hard],$hg_small_keys|1,merge,msword,trod"
+        ]
+      },
+      {
+        "name": "(2F) Fire Ring Chest",
+        "access_rules": [
+          "[glitched],$can_hit_hog_1f_switch,$hg_small_keys|1,boots,merge,trod",
+          "[glitched],$hg_small_keys|1,boots,merge,msword,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|3,merge,trod",
+          "[hard],$hg_small_keys|3,merge,msword,trod",
+          "[hell],$can_hit_hog_1f_switch,$hg_small_keys|1,merge,trod",
+          "[hell],$hg_small_keys|1,merge,msword,trod"
+        ],
+        "hosted_item": "hg_2f_fire_ring"
+      },
+      {
+        "name": "(3F) Fire Bubbles Chest",
+        "hosted_item": "hg_3f_fire_bubbles",
+        "inspectable_sequence_break": true,
+        "access_rules": [
+          "[glitched],$can_hit_hog_1f_switch,$fire,$hg_small_keys|1,merge,trod",
+          "[glitched],$can_hit_hog_1f_switch,$hg_small_keys|1,$hg_small_keys|2},csmc_on,merge,trod,{glitched",
+          "[glitched],$can_hit_hog_1f_switch,$hg_small_keys|1,$hg_small_keys|4},merge,trod,{csmc_on",
+          "[glitched],$fire,$hg_small_keys|1,merge,msword,trod",
+          "[glitched],$hg_small_keys|1,$hg_small_keys|2},csmc_on,merge,msword,trod,{glitched",
+          "[glitched],$hg_small_keys|1,$hg_small_keys|4},merge,msword,trod,{csmc_on",
+          "[hard],$can_hit_hog_1f_switch,$fire,$fire_enemy,$hg_small_keys|3,$switch,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire,$hg_small_keys|3,$switch,merge,net,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_small_keys|2},$hg_small_keys|3,$switch,csmc_on,merge,trod,{glitched",
+          "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_small_keys|3,$hg_small_keys|4},$switch,merge,trod,{csmc_on",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|2},$hg_small_keys|3,$switch,csmc_on,merge,net,trod,{glitched",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|3,$hg_small_keys|4},$switch,merge,net,trod,{csmc_on",
+          "[hard],$fire,$fire_enemy,$hg_small_keys|3,$switch,merge,msword,trod",
+          "[hard],$fire,$hg_small_keys|3,$switch,merge,msword,net,trod",
+          "[hard],$fire_enemy,$hg_small_keys|2},$hg_small_keys|3,$switch,csmc_on,merge,msword,trod,{glitched",
+          "[hard],$fire_enemy,$hg_small_keys|3,$hg_small_keys|4},$switch,merge,msword,trod,{csmc_on",
+          "[hard],$hg_small_keys|2},$hg_small_keys|3,$switch,csmc_on,merge,msword,net,trod,{glitched",
+          "[hard],$hg_small_keys|3,$hg_small_keys|4},$switch,merge,msword,net,trod,{csmc_on"
+        ]
+      },
+      {
+        "name": "(3F) Rat Room Chest",
+        "hosted_item": "hg_3f_rat_room",
+        "inspectable_sequence_break": true,
+        "access_rules": [
+          "[],$can_hit_hog_1f_switch,$fire_enemy,$hg_small_keys|3,$switch,merge,trod",
+          "[],$can_hit_hog_1f_switch,$hg_small_keys|3,$switch,merge,net,trod",
+          "[],$fire_enemy,$hg_small_keys|3,$switch,merge,msword,trod",
+          "[],$hg_small_keys|3,$switch,merge,msword,net,trod",
+          "[glitched],$can_hit_hog_1f_switch,$fire,$hg_small_keys|1,merge,trod",
+          "[glitched],$can_hit_hog_1f_switch,$hg_small_keys|1,merge,trod,{csmc_on}",
+          "[glitched],$can_hit_hog_1f_switch,$hg_small_keys|4,merge,trod",
+          "[glitched],$fire,$hg_small_keys|1,merge,msword,trod",
+          "[glitched],$hg_small_keys|1,merge,msword,trod,{csmc_on}",
+          "[glitched],$hg_small_keys|4,merge,msword,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire,$fire_enemy,$hg_small_keys|3,$switch,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire,$hg_small_keys|3,$switch,merge,net,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_small_keys|3,$switch,merge,trod,{csmc_on}",
+          "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_small_keys|4,$switch,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|3,$switch,merge,net,trod,{csmc_on}",
+          "[hard],$can_hit_hog_1f_switch,$hg_small_keys|4,$switch,merge,net,trod",
+          "[hard],$fire,$fire_enemy,$hg_small_keys|3,$switch,merge,msword,trod",
+          "[hard],$fire,$hg_small_keys|3,$switch,merge,msword,net,trod",
+          "[hard],$fire_enemy,$hg_small_keys|3,$switch,merge,msword,trod,{csmc_on}",
+          "[hard],$fire_enemy,$hg_small_keys|4,$switch,merge,msword,trod",
+          "[hard],$hg_small_keys|3,$switch,merge,msword,net,trod,{csmc_on}",
+          "[hard],$hg_small_keys|4,$switch,merge,msword,net,trod"
+        ]
+      },
+      {
+        "name": "Margomill Heart Container",
+        "hosted_item": "hg_margomill",
+        "access_rules": [
+          "[glitched],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|4,^$margomill,merge,trod",
+          "[glitched],$hg_big_key,$hg_small_keys|4,^$margomill,merge,msword,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,net,trod",
+          "[hard],$fire_enemy,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,msword,trod",
+          "[hard],$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,msword,net,trod"
+        ]
+      },
+      {
+        "name": "House of Gales Rewards Reward",
+        "hosted_item": "hg",
+        "access_rules": [
+          "[glitched],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|4,^$margomill,merge,trod",
+          "[glitched],$hg_big_key,$hg_small_keys|4,^$margomill,merge,msword,trod",
+          "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,trod",
+          "[hard],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,net,trod",
+          "[hard],$fire_enemy,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,msword,trod",
+          "[hard],$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,msword,net,trod"
+        ]
+      }
     ]
   }
 ]
