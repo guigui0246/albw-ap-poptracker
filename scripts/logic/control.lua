@@ -122,20 +122,8 @@ function progression_enemies_floor()
 end
 
 -- Return if the player can attack Margomill
--- This is the same as attack(), minus the ice rod
 function margomill()
-    if hg_big_key() and attack_iceproof() then
-        if hg_small_keys(4) then
-            return AccessibilityLevel.Normal
-        elseif hg_small_keys(2) then
-            return AccessibilityLevel.SequenceBreak
-        end
-    end
-
-    return AccessibilityLevel.None
-
-    -- TODO: uncomment later
-    -- return has("bombs") or (has("trod") and attack_iceproof())
+    return has("bombs") or (has("trod") and attack_iceproof())
 end
 
 -- Return if the player can attack Knucklemaster
@@ -395,32 +383,6 @@ function turtleLake()
         elseif beeFakeFlippers() then
             return true_for("hell")
         end
-    end
-end
-
--- Can reach House of Gales 2F (assume TRod)
-function hog2F()
-    if hg_small_keys(1) then
-        if has("merge") and switch() then
-            return AccessibilityLevel.Normal
-        elseif hasAny({ "bow", "boomerang", "hookshot", "bombs", "irod", "msword" }) or hasAll({ "great_spin", "fsword" }) then
-            return true_for("hard")
-        end
-    end
-
-    return AccessibilityLevel.None
-end
-
--- Can reach House of Gales 3F (assume TRod)
-function hog3F()
-    if has("merge") then
-        if hg_small_keys(3) and fire_enemy() then
-            return hog2F()
-        else
-            return true_for("glitched")
-        end
-    else
-        return AccessibilityLevel.None
     end
 end
 
@@ -1167,4 +1129,32 @@ end
 function eastern_compass()
     return true
     -- return has("ep_compass")
+end
+
+function access_house_of_gales()
+    return true  -- TODO
+end
+
+function advanced_access_house_of_gales()
+    return true  -- TODO
+end
+
+function hell_access_house_of_gales()
+    return true  -- TODO
+end
+
+function can_hit_hog_1f_switch()
+    if farSwitch() then
+        return true
+    end
+    if has("irod") then
+        return true
+    end
+    if canGreatSpin() then
+        return true
+    end
+    if has("merge") and hasAny({ "fsword", "hammer" }) then
+        return true
+    end
+    return false
 end
