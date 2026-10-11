@@ -276,7 +276,8 @@
                       {
                         "name": "Boss",
                         "access_rules": [
-                          "$hg_small_keys|4,$hg_big_key"
+                          "$hg_small_keys|4,$hg_big_key",
+                          "[],$hg_small_keys|2,$hg_big_key"
                         ],
                         "children": [
                           {
@@ -483,6 +484,10 @@
         "name": "Margomill Heart Container",
         "hosted_item": "hg_margomill",
         "access_rules": [
+          "[],$can_hit_hog_1f_switch,$fire_enemy,$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,trod",
+          "[],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,net,trod",
+          "[],$fire_enemy,$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,msword,trod",
+          "[],$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,msword,net,trod",
           "[glitched],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|4,^$margomill,merge,trod",
           "[glitched],$hg_big_key,$hg_small_keys|4,^$margomill,merge,msword,trod",
           "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,trod",
@@ -495,6 +500,10 @@
         "name": "House of Gales Rewards Reward",
         "hosted_item": "hg",
         "access_rules": [
+          "[],$can_hit_hog_1f_switch,$fire_enemy,$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,trod",
+          "[],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,net,trod",
+          "[],$fire_enemy,$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,msword,trod",
+          "[],$hg_big_key,$hg_small_keys|3,$switch,^$margomill,merge,msword,net,trod",
           "[glitched],$can_hit_hog_1f_switch,$hg_big_key,$hg_small_keys|4,^$margomill,merge,trod",
           "[glitched],$hg_big_key,$hg_small_keys|4,^$margomill,merge,msword,trod",
           "[hard],$can_hit_hog_1f_switch,$fire_enemy,$hg_big_key,$hg_small_keys|4,$switch,^$margomill,merge,trod",
