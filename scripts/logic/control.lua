@@ -610,6 +610,14 @@ function reverseDP(section)
 end
 
 -- Best of forward + backward desert palace
+-- 0 = Entrance
+-- 1 = 1F
+-- 2 = Midway Ledge
+-- 3 = 2F Miniboss
+-- 4 = 2F
+-- 5 = 3F
+-- 6 = Exit 3F
+-- 7 = Zaganaga Ledge
 function DP(section)
     local back = reverseDP(section)
     local fwd = AccessibilityLevel.None
@@ -1173,4 +1181,31 @@ end
 
 function hell_access_hera()
     return true  -- TODO hell_access_dm_west_top
+end
+
+function ravio_shop()
+    if has("ravio_shop_open") then
+        return AccessibilityLevel.Normal
+    end
+    return best({ access_hyrule_field() })
+end
+
+-- Use ^$warpHyrule
+-- TODO add the warp logic and the edges:
+-- To HyruleField: house, kak, sanct, witch
+-- To DesertPalaceWV: desert
+-- To EasternRuinsUpper: eastern
+-- To HouseOfGalesIsland: gales
+-- To DeathMountainBase: deathMountain
+-- To DeathMountainWestTop: hera
+-- TODO complete
+function warpHyrule()
+    if not has("bell") then
+        return AccessibilityLevel.None
+    end
+    return best({ DP(2), DP(7) })
+end
+
+function access_hyrule_field()
+    return AccessibilityLevel.Normal
 end

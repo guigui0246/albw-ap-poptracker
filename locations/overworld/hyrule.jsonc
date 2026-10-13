@@ -5,679 +5,6 @@
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "children": [
       {
-        "name": "Lost Woods Area",
-        "children": [
-          {
-            "name": "Lost Woods behind large rock",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 354,
-                "y": 256
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": [
-                  "{csmc_on}",
-                  "{hell, boomerang}",
-                  "{hell, nice_items_off, hookshot}",
-                  "titansmitt",
-                  "[hell], boomerang",
-                  "[hell], nice_items_off, hookshot"
-                ],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, lost_woods_behind_large_rock_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{}",
-                  "{hell, boomerang}",
-                  "{hell, nice_items_off, hookshot}",
-                  "titansmitt",
-                  "[hell], boomerang",
-                  "[hell], nice_items_off, hookshot"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Lost Woods Alcove",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 231,
-                "y": 227
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  "{glitched, boomerang}",
-                  "{glitched, nice_items_off, hookshot}",
-                  "merge",
-                  "[glitched], boomerang, $escape",
-                  "[glitched], nice_items_off, hookshot, $escape",
-                  "[hell], boomerang",
-                  "[hell], nice_items_off, hookshot"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Master Sword Pedestal",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 142,
-                "y": 149
-              }
-            ],
-            "sections": [
-              {
-                "name": "Master Sword",
-                "chest_opened_img": "images/prizes/pendant.png",
-                "access_rules": [
-                  "ped_requirement_3, power, wisdom, courage",
-                  "ped_requirement_2, power, wisdom"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Rosso's House",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 700,
-                "y": 146
-              }
-            ],
-            "sections": [
-              {
-                "name": "Power Glove",
-                "access_rules": ["rosso"],
-                "item_count": 1
-              },
-              {
-                "name": "Smash Rocks",
-                "access_rules": ["rosso, power_glove"],
-                "item_count": 1
-              },
-              {
-                "hosted_item": "crack_rossos_house",
-                "name": "Rosso's House Crack",
-                "access_rules": ["rosso", "{cracksanity, merge, quake_on, !$has_crack_map}"],
-                "visibility_rules": ["cracksanity"]
-              }
-            ]
-          },
-          {
-            "name": "Rosso Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 696,
-                "y": 74
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "access_rules": [
-                  "hammer",
-                  "[glitched], boomerang",
-                  "[glitched], nice_items_off, hookshot",
-                  "[advanced], nice_items_off, shield, trod"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Fortune-Teller",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 438,
-                "y": 672
-              }
-            ],
-            "sections": [
-              {
-                "name": "Hint-Glasses",
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Hyrule Hotfoot",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1953,
-                "y": 1551
-              },
-              {
-                "map": "hyrule",
-                "x": 654,
-                "y": 91
-              }
-            ],
-            "sections": [
-              {
-                "name": "75s reward",
-                "access_rules": ["boots", "[hard]"],
-                "visibility_rules": ["minigames_enabled"],
-                "item_count": 1
-              },
-              {
-                "name": "65s reward",
-                "access_rules": [
-                  "boots",
-                  "[hard], merge, bell, not_cracksanity",
-                  "[hell]"
-                ],
-                "visibility_rules": ["minigames_enabled"],
-                "item_count": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "River Area",
-        "children": [
-          {
-            "name": "Dampe",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 948,
-                "y": 630
-              }
-            ],
-            "sections": [
-              {
-                "name": "Forgotten Sword reward",
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Hyrule Sanctuary",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1147,
-                "y": 652,
-                "size": 64
-              }
-            ],
-            "access_rules": [
-              "fsword",
-              "power_glove",
-              "lamp",
-              "frod",
-              "bombs",
-              "irod",
-              "boots"
-            ],
-            "sections": [
-              {
-                "name": "Entrance",
-                "item_count": 1
-              },
-              {
-                "name": "Lower Chest",
-                "access_rules": ["lamp", "^$lampless, frod"],
-                "item_count": 1
-              },
-              {
-                "name": "Upper Chest",
-                "access_rules": ["lamp", "^$lampless, frod"],
-                "item_count": 1
-              },
-              {
-                "name": "Ledge Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": ["lamp, merge", "^$lampless, frod, merge"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Graveyard",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1162,
-                "y": 580
-              }
-            ],
-            "sections": [
-              {
-                "hosted_item": "crack_graveyard",
-                "name": "Hyrule Graveyard Ledge Crack",
-                "access_rules": [
-                  "{cracksanity, merge, quake_on, !$has_crack_map}",
-                  "crack_graveyard"
-                ],
-                "visibility_rules": ["cracksanity"]
-              },
-              {
-                "name": "Ledge Cave Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  "merge, crack_graveyard",
-                  "not_cracksanity, merge, quake_on, crack_graveyard_lorule"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "River Mini-Dungeon",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1350,
-                "y": 586
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on, bombs}", "bombs, merge"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, river_mini_dungeon_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{bombs}", "bombs, merge"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Sanctuary Pegs",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 836,
-                "y": 660
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on}", "hammer"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, sanctuary_pegs_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{}", "hammer"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Zora's Domain Ledge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1826,
-                "y": 668
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": [
-                  "{csmc_on, flippers}",
-                  "{csmc_on, hell, $beeBoost}",
-                  "merge"
-                ],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, zoras_domain_ledge_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{flippers}", "{hell, $beeBoost}", "merge"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "River Area",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1804,
-                "y": 370
-              }
-            ],
-            "sections": [
-              {
-                "name": "Bump into Shady Guy",
-                "access_rules": ["merge", "[hell], $beeBoost"],
-                "hosted_item": "shadyguy",
-                "item_count": 0
-              }
-            ]
-          },
-          {
-            "name": "Waterfall Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1848,
-                "y": 551
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  "flippers",
-                  "[glitched], merge",
-                  "[advanced], $fakeFlippers",
-                  "[hell], $beeBoost"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Queen Oren",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1804,
-                "y": 290
-              }
-            ],
-            "sections": [
-              {
-                "name": "Zora Flippers reward",
-                "access_rules": [
-                  "merge, oren, smooth_gem",
-                  "[hell], oren, smooth_gem, $beeBoost"
-                ],
-                "item_count": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Kakariko Village",
-        "children": [
-          {
-            "name": "Milk Bar (Trade Letter in a Bottle)",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 353,
-                "y": 1170
-              }
-            ],
-            "sections": [
-              {
-                "name": "Premium Milk reward",
-                "hosted_item": "milk",
-                "access_rules": ["letter"],
-                "visibility_rules": ["^$noAPConnection"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Stylish Woman's House",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 226,
-                "y": 1078
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece reward",
-                "item_count": 1,
-                "access_rules": [
-                  "not_cracksanity, merge, quake_on, crack_thieves_town",
-                  "merge, crack_stylish_woman"
-                ]
-              },
-              {
-                "name": "Stylish Woman's House Crack",
-                "hosted_item": "crack_stylish_woman",
-                "access_rules": ["{merge, quake_on, !$has_crack_map}", "crack_stylish_woman"],
-                "visibility_rules": ["cracksanity"]
-              }
-            ]
-          },
-          {
-            "name": "Woman's House",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 444,
-                "y": 967
-              }
-            ],
-            "sections": [
-              {
-                "name": "Roof Maiamai under rock",
-                "item_count": 1,
-                //"capture_item": true,
-                "visibility_rules": ["maiamai_mayhem_on"],
-                "access_rules": ["power_glove"]
-              },
-              {
-                "name": "Rupee reward",
-                "access_rules": ["power_glove"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Bee House",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 353,
-                "y": 1074
-              }
-            ],
-            "sections": [
-              {
-                "name": "Bug Net reward (Need empty bottle)",
-                "access_rules": ["bottle"],
-                "item_count": 1
-              },
-              {
-                "name": "Bee Badge reward (Need golden bee)",
-                "access_rules": ["golden_bee", "[hell], bottle, net"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Cucco Rush (Rooster Mode)",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 379,
-                "y": 1437
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece reward",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "visibility_rules": ["minigames_enabled"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Kakariko Item Shop",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 142,
-                "y": 944
-              }
-            ],
-            "sections": [
-              {
-                "name": "Scoot Fruit",
-                "hosted_item": "scoot"
-              }
-            ]
-          },
-          {
-            "name": "Kakariko Jail",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 300,
-                "y": 853
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on}", "merge"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, kakariko_jail_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{}", "merge"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Street Merchant",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 216,
-                "y": 959
-              }
-            ],
-            "sections": [
-              {
-                "name": "Left",
-                "chest_opened_img": "images/checks/soldout.png",
-                "item_count": 1
-              },
-              {
-                "name": "Right",
-                "chest_opened_img": "images/checks/soldout.png",
-                "access_rules": ["shadyguy"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Shady Guy",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 377,
-                "y": 915
-              }
-            ],
-            "sections": [
-              {
-                "name": "Smooth Gem reward",
-                "access_rules": ["shadyguy, merge", "shadyguy, boots"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Kakariko Well",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 111,
-                "y": 863
-              }
-            ],
-            "sections": [
-              {
-                "name": "Top Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": ["power_glove", "[hard]"],
-                "item_count": 1
-              },
-              {
-                "name": "Bottom Chest",
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Rupee Rush (Score 100+) (Buy any item from Ravio to unlock)",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 221,
-                "y": 1473
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece reward",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "visibility_rules": ["minigames_enabled"],
-                "item_count": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Ravio's Shop",
         "color": "#a000ac",
         "map_locations": [
@@ -695,36 +22,45 @@
           {
             "name": "For Sale",
             "clear_as_group": false,
+            "access_rules": ["^$ravio_shop"],
             "item_count": 8
           },
           {
-            "name": "Rented by Osfala",
+            "name": "Rented by Osfala (Shop 6)",
             "item_count": 1,
-            "access_rules": ["{}", "osfala"]
+            "access_rules": [
+              // "{}", // Auto hinted
+              "osfala"
+            ]
           }
         ]
       },
       {
-        "name": "Hyrule Castle Area",
+        "name": "Hyrule Field",
+        "access_rules": [
+          "^$warpHyrule,wv_your_house",
+          "^$warpHyrule,wv_kakariko",
+          "^$warpHyrule,wv_sanctuary",
+          "^$warpHyrule,wv_witch",
+          "^$access_hyrule_field"
+        ],
         "children": [
           {
-            "name": "Blacksmith",
+            "name": "Your House Weather Vane",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 644,
-                "y": 1056
+                "x": 1049,
+                "y": 1377,
+                "size": 32,
+                "shape": "trapezoid"
               }
             ],
             "sections": [
               {
-                "name": "Captain's Sword",
-                "item_count": 1
-              },
-              {
-                "name": "Tempered Sword reward",
-                "access_rules": ["ore_2"],
-                "hosted_item": "blacksmith"
+                "name": "Weather Vane",
+                "hosted_item": "wv_your_house",
+                "visibility_rules": ["wv_shuffle_on"]
               }
             ]
           },
@@ -743,33 +79,9 @@
                 "chest_unopened_img": "images/junk/heart_piece.png",
                 "chest_opened_img": "images/junk/heart_piece_collected.png",
                 "access_rules": [
-                  //"{}",
                   "merge",
-                  "[glitched], $boost",
-                  "[hell], $beeBoost"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Blacksmith Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 670,
-                "y": 1136
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  "titansmitt",
-                  "[glitched], $boost",
-                  "[hell], $beeBoost"
+                  "[glitched], frod, nicebombs",
+                  "[hell]" // beeBoost but it's missing the check
                 ],
                 "item_count": 1
               }
@@ -788,7 +100,6 @@
               {
                 "name": "Heart Piece",
                 "access_rules": [
-                  //"{}",
                   "power_glove"
                 ],
                 "item_count": 1
@@ -813,489 +124,156 @@
             ]
           },
           {
-            "name": "Cucco Mini-Dungeon",
+            "name": "[Mai] Blacksmith Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 564,
-                "y": 1654
+                "x": 640,
+                "y": 919,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Silver Rupee",
-                "access_rules": ["merge"],
-                "item_count": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Eastern Ruins",
-        "children": [
-          {
-            "name": "Bird Lover",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1438,
-                "y": 1403
-              }
-            ],
-            "sections": [
-              {
-                "name": "Bottle reward",
-                "access_rules": ["flippers"],
-                "item_count": 1
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
               }
             ]
           },
           {
-            "name": "Irene the Witch",
+            "name": "[Mai] Hyrule Castle Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 1403,
-                "y": 1403
-              },
-              {
-                "map": "hyrule",
-                "x": 536,
-                "y": 672
-              },
-              {
-                "map": "hyrule",
-                "x": 716,
-                "y": 739
+                "x": 845,
+                "y": 839,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Bell reward",
-                "access_rules": ["irene"],
-                "item_count": 1
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
               }
             ]
           },
           {
-            "name": "Eastern Ruins Cave",
+            "name": "[Mai] Hyrule Castle Tiles",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 1918,
-                "y": 944
+                "x": 849,
+                "y": 1236,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": ["bombs, merge"],
-                "item_count": 1
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["trod"]
               }
             ]
           },
           {
-            "name": "Peg Circle",
+            "name": "[Mai] Blacksmith Tiles",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 1948,
-                "y": 1448
+                "x": 589,
+                "y": 1082,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  //"{}",
-                  "hammer",
-                  "[glitched], boomerang",
-                  "[glitched], hookshot",
-                  "[advanced], trod",
-                  "[hell], srod"
-                ],
-                "item_count": 1
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["trod"]
               }
             ]
           },
           {
-            "name": "Gated Area",
-            "access_rules": [
-              "merge",
-              "bow",
-              "hookshot",
-              "boomerang",
-              "bombs",
-              "irod",
-              "great_spin, fsword",
-              "bell, wv_eastern",
-              "[hard], power_glove"
-            ],
-            "children": [
-              {
-                "name": "Armos Chest",
-                "map_locations": [
-                  {
-                    "map": "hyrule",
-                    "x": 1729,
-                    "y": 837
-                  }
-                ],
-                "sections": [
-                  {
-                    "name": "Chest",
-                    "item_count": 1
-                  }
-                ]
-              },
-              {
-                "name": "Hookshot Chest",
-                "map_locations": [
-                  {
-                    "map": "hyrule",
-                    "x": 1729,
-                    "y": 916
-                  }
-                ],
-                "sections": [
-                  {
-                    "name": "Chest",
-                    "inspectable_sequence_break": true,
-                    "access_rules": ["{csmc_on}", "hookshot"],
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Inspect color",
-                    "visibility_rules": ["csmc_on, eastern_ruins_hookshot_chest_ungot_state"],
-                    "chest_opened_img": "images/display/transparent.png",
-                    "chest_unopened_img": "images/display/transparent.png",
-                    "access_rules": [
-                      "{}", "hookshot"
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Merge Chest",
-                "map_locations": [
-                  {
-                    "map": "hyrule",
-                    "x": 1812,
-                    "y": 811
-                  }
-                ],
-                "sections": [
-                  {
-                    "name": "Chest",
-                    "inspectable_sequence_break": true,
-                    "access_rules": [
-                      "{csmc_on}",
-                      "merge",
-                      "[glitched], trod",
-                      "[glitched], frod",
-                      "[glitched], nicebombs",
-                      "[hell], bombs"
-                    ],
-                    "item_count": 1
-                  },
-                  {
-                    "name": "Inspect color",
-                    "visibility_rules": ["csmc_on, eastern_ruins_merge_chest_ungot_state"],
-                    "chest_opened_img": "images/display/transparent.png",
-                    "chest_unopened_img": "images/display/transparent.png",
-                    "access_rules": [
-                      "{}",
-                      "merge",
-                      "[glitched], trod",
-                      "[glitched], frod",
-                      "[glitched], nicebombs",
-                      "[hell], bombs"
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Merge Mini-Dungeon",
-                "map_locations": [
-                  {
-                    "map": "hyrule",
-                    "x": 1632,
-                    "y": 925
-                  }
-                ],
-                "sections": [
-                  {
-                    "name": "Rupee reward",
-                    "access_rules": ["merge"],
-                    "item_count": 1
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Southern Ruins",
-        "children": [
-          {
-            "name": "Southern Ruins Ledge",
+            "name": "[Mai] Haunted Grove Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 835,
-                "y": 1770
+                "x": 660,
+                "y": 1285,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on}", "merge"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, southern_ruins_ledge_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{}", "merge"
-                ]
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
               }
             ]
           },
           {
-            "name": "Runaway Item Seller",
+            "name": "[Mai] Your House Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 1070,
-                "y": 1573
+                "x": 907,
+                "y": 1335,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Rupee reward",
-                "access_rules": ["bombs, scoot"],
-                "item_count": 1
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
               }
             ]
           },
           {
-            "name": "Southern Ruins Pillars Cave",
+            "name": "[Mai] Behind Your House",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
-                "x": 1139,
-                "y": 1768
+                "x": 1081,
+                "y": 1353,
+                "size": 32,
+                "shape": "diamond"
               }
             ],
             "sections": [
               {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": ["bombs"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Flippers Mini-Dungeon",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 967,
-                "y": 1866
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": [
-                  "{csmc_on, titansmitt}",
-                  "{csmc_on, glitched, fsword, irod}",
-                  "{csmc_on, advanced, irod}",
-                  "titansmitt, flippers, hookshot, boomerang",
-                  "[hard], titansmitt, hookshot, flippers, msword",
-                  "[hard], titansmitt, hookshot, flippers, bombs",
-                  "[glitched], fsword, irod, flippers, hookshot",
-                  "[glitched], fsword, irod, nicebombs",
-                  "[glitched], titansmitt, nicebombs",
-                  "[glitched], great_spin, fsword, irod",
-                  "[glitched], great_spin, fsword, titansmitt",
-                  "[glitched], fsword, niceirod, boomerang",
-                  "[glitched], fsword, niceirod, hookshot",
-                  "[glitched], fsword, niceirod, flippers",
-                  "[advanced], irod, flippers, hookshot",
-                  "[advanced], irod, nicebombs",
-                  "[advanced], niceirod, boomerang",
-                  "[advanced], niceirod, hookshot",
-                  "[advanced], niceirod, flippers, fsword",
-                  "[advanced], niceirod, flippers, bow",
-                  "[advanced], niceirod, flippers, boots",
-                  "[advanced], niceirod, flippers, hammer",
-                  "[hell], niceirod"
-                ],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, southern_ruins_flippers_mini_dungeon_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{titansmitt}",
-                  "{glitched, fsword, irod}",
-                  "{advanced, irod}",
-                  "titansmitt, flippers, hookshot, boomerang",
-                  "[hard], titansmitt, hookshot, flippers, msword",
-                  "[hard], titansmitt, hookshot, flippers, bombs",
-                  "[glitched], fsword, irod, flippers, hookshot",
-                  "[glitched], fsword, irod, nicebombs",
-                  "[glitched], titansmitt, nicebombs",
-                  "[glitched], great_spin, fsword, irod",
-                  "[glitched], great_spin, fsword, titansmitt",
-                  "[glitched], fsword, niceirod, boomerang",
-                  "[glitched], fsword, niceirod, hookshot",
-                  "[glitched], fsword, niceirod, flippers",
-                  "[advanced], irod, flippers, hookshot",
-                  "[advanced], irod, nicebombs",
-                  "[advanced], niceirod, boomerang",
-                  "[advanced], niceirod, hookshot",
-                  "[advanced], niceirod, flippers, fsword",
-                  "[advanced], niceirod, flippers, bow",
-                  "[advanced], niceirod, flippers, boots",
-                  "[advanced], niceirod, flippers, hammer",
-                  "[hell], niceirod"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Lake Hylia",
-        "children": [
-          {
-            "name": "Lake Hylia Ledge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1731,
-                "y": 1678
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": [
-                  "{csmc_on, flippers}",
-                  "{csmc_on, wv_gales, bell}",
-                  "merge"
-                ],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, lake_hylia_ledge_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{flippers}",
-                  "{wv_gales, bell}",
-                  "merge"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Ice Rod Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1800,
-                "y": 1548
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on, trod}", "{csmc_on, irod}", "bombs"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, lake_hylia_ice_rod_cave_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{trod}", "{irod}", "bombs"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Lake Hylia Eastern Shore",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1887,
-                "y": 1695
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "access_rules": [
-                  "flippers",
-                  "[glitched], frod",
-                  "[glitched], nicebombs",
-                  "[hell], $beeBoost"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lake Hylia Dark Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1331,
-                "y": 1917
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "access_rules": ["$fire"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lakeside Item Shop",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1318,
-                "y": 1592
-              }
-            ],
-            "sections": [
-              {
-                "name": "Scoot Fruit",
-                "hosted_item": "scoot"
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
               }
             ]
           }

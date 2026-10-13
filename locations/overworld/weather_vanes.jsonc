@@ -4,25 +4,6 @@
     "children": [
       // Hyrule Weather Vanes ------------------------------------------------------------------------------------------
       {
-        "name": "Your House Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1049,
-            "y": 1377,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_your_house",
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "Kakariko Weather Vane",
         "map_locations": [
           {
