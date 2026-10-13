@@ -1158,3 +1158,19 @@ function can_hit_hog_1f_switch()
     end
     return false
 end
+
+function access_hera()
+    return true  -- TODO access_dm_west_top
+end
+
+function glitched_access_hera()
+    return true  -- TODO
+end
+
+function advanced_access_hera()
+    return true  -- TODO adv_glitched_access_dm_west_top
+end
+
+function hell_access_hera()
+    return true  -- TODO hell_access_dm_west_top
+end
