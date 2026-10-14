@@ -38,6 +38,7 @@ function hasNone(items)
     return true
 end
 
+-- Use that when multiple ways to access an area exist
 function best(accessibility_levels)
     local best = AccessibilityLevel.None
     for _, level in ipairs(accessibility_levels) do
@@ -52,6 +53,7 @@ function best(accessibility_levels)
     return best
 end
 
+-- Use that when multiple requirements exist for the same way of accessing an area
 function worst(accessibility_levels)
     local worst = AccessibilityLevel.Normal
     for _, level in ipairs(accessibility_levels) do
@@ -100,6 +102,11 @@ end
 -- Can the player attack
 function attack()
     return hasAny({ "fsword", "bow", "bombs", "frod", "irod", "hammer", "boots", "nicetrod", "nicehookshot", "superlamp", "supernet" }) or (has("lamp_net_on") and hasAny({"lamp", "net"}))
+end
+
+-- Shield (requires the player to have the sword as well)
+function shield()
+    return has("fsword") and has("shield")
 end
 
 -- Same as attack(), minus the bow
@@ -1206,7 +1213,6 @@ end
 
 -- Use ^$warpHyrule
 -- TODO add the warp logic and the edges:
--- To HyruleField: house, kak, sanct, witch
 -- To DesertPalaceWV: desert
 -- To EasternRuinsUpper: eastern
 -- To HouseOfGalesIsland: gales
@@ -1217,7 +1223,7 @@ function warpHyrule()
     if not has("bell") then
         return AccessibilityLevel.None
     end
-    return best({ DP(2), DP(7) })
+    return best({ DP(2), DP(7), access_hyrule_field() })
 end
 
 function access_hyrule_field()
@@ -1228,93 +1234,327 @@ function access_maiamai_cave()
     return access_hyrule_field()
 end
 
+function access_Irene()
+    return access_hyrule_field()
+end
 
--- From hyrule fields
--- edge!(Irene),
--- edge!(KakarikoVillage),
--- edge!(LakeHyliaArea),
--- edge!(SanctuaryArea),
--- edge!(SouthernRuins),
--- edge!(EasternRuins),
--- edge!(EasternRuinsUpper => {
---     normal: |p| p.can_hit_far_switch() || p.has_ice_rod() || p.can_merge(),
---     hard: |p| p.has_power_glove(),
--- }),
--- edge!(EasternRuinsEastLedge, |p| p.has_power_glove()),
--- edge!(WitchCave, |p| p.has_bombs()),
--- edge!(ZoraDomainArea => {
---     normal: |p| p.can_merge(),
---     hell: |_| true, // Bee Boost
--- }),
--- edge!(WaterfallCaveShallowWater, |p| p.has_flippers()),
--- edge!(BlacksmithHouse),
--- edge!(BlacksmithCave => {
---     normal: |p| p.has_titans_mitt(),
---     glitched: |p| p.has_fire_rod() || p.has_nice_bombs(),
---     hell: |_| true, // Bee Boost
--- }),
--- edge!(LostWoods),
--- edge!(HyruleCastleCourtyard, |p| p.has_master_sword() || p.swordless_mode()),
--- edge!(FortuneTeller),
--- edge!(KakarikoJailCell),
--- edge!(WellUpper => {
---     normal: |p| p.has_power_glove(),
---     hard: |_| true, // Cucco jump
--- }),
--- edge!(WellLower),
--- edge!(MilkBar),
--- edge!(BeeGuyHouse),
--- edge!(KakarikoItemShop),
--- edge!(LakesideItemShop),
--- edge!(ItemSellerCave, |p| p.has_bombs()),
--- edge!(FlippersDungeon => {
---     normal: |p| p.has_titans_mitt(),
---     glitched: |p| p.has_sword() && p.has_ice_rod(),
---     adv_glitched: |p| p.has_ice_rod(),
--- }),
--- edge!(SouthernRuinsBombCave, |p| p.has_bombs()),
--- edge!(LakeDarkCave),
--- edge!(IceRodCave, |p| p.has_bombs()),
--- edge!(Sanctuary, |p| p.has_sword()
---     || p.has_bombs()
---     || p.has_fire_rod()
---     || p.has_ice_rod()
---     || p.has_lamp()
---     || p.has_boots()),
--- edge!(MoldormCave => {
---     normal: |p| p.has_power_glove(),
---     glitched: |_| true, // Crow boost
--- }),
--- edge!(RossosHouse, |p| p.has_sage_rosso()),
--- edge!(RossoCave => {
---     normal: |p| p.has_hammer(),
---     glitched: |p| p.has_boomerang() || (p.not_nice_mode() && p.has_hookshot()),
---     adv_glitched: |p| p.not_nice_mode() && (p.can_use_shield() && p.has_tornado_rod()),
--- }),
--- edge!(TornadoRodDungeon, |p| p.has_bombs()),
--- edge!(HouseOfGalesIsland => {
---     normal: |p| p.has_flippers(),
---     adv_glitched: |p| {
---         (p.has_hookshot() && p.has_ice_rod())
---             || (p.has_boots() && (p.has_fire_rod() || p.has_nice_bombs()))
---     },
---     hell: |p| p.has_boots(), // Bee Boost
--- }),
--- edge!(BridgeShallowWater => {
---     normal: |p| p.has_flippers(),
---     glitched: |p| p.has_fire_rod() || p.has_nice_bombs(),
---     hell: |_| true, // Bee Boost
--- }),
--- edge!(WitchHouse),
--- edge!(SanctuaryChurch, |p| p.has_opened_sanctuary_doors()),
--- edge!(CuccoDungeonLedge, |p| p.can_merge()),
--- edge!(WaterfallLedge => {
---     normal: |p| p.has_flippers(),
---     adv_glitched: |p| p.has_boots() && (p.has_fire_rod() || p.has_nice_bombs()), // todo hookshot?
---     hell: |p| p.has_boots(),
--- }),
--- edge!(CuccoHouse),
--- edge!(WomanHouse),
--- edge!(StylishWomanHouse, |p| p.has_opened_stylish_womans_house()),
--- edge!(ZoraRiver, |p| p.has_flippers()),
--- edge!(LakeHylia, |p| p.has_flippers()),
+function access_kakariko_village()
+    return access_hyrule_field()
+end
+
+function access_lake_hylia_area()
+    return access_hyrule_field()
+end
+
+function access_sanctuary_area()
+    return access_hyrule_field()
+end
+
+function access_southern_ruins()
+    return access_hyrule_field()
+end
+
+function access_eastern_ruins()
+    return access_hyrule_field()
+end
+
+function access_eastern_ruins_upper()
+    local hyrule_way = AccessibilityLevel.None
+    if has("power_glove") then
+        hyrule_way = best({ hyrule_way, true_for("hard") })
+    end
+    if farSwitch() then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if hasAny({ "ice_rod", "merge" }) then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_eastern_ruins_east_ledge()
+    local hyrule_way = AccessibilityLevel.None
+    if has("power_glove") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_witch_cave()
+    local hyrule_way = AccessibilityLevel.None
+    if has("bombs") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_zora_domain_area()
+    local hyrule_way = AccessibilityLevel.None
+    if beeBoost() then
+        hyrule_way = best({ hyrule_way, true_for("hell") })
+    end
+    if has("merge") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_waterfall_cave_shallow_water()
+    local hyrule_way = AccessibilityLevel.None
+    if has("flippers") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_blacksmith_house()
+    return access_hyrule_field()
+end
+
+function access_blacksmith_cave()
+    local hyrule_way = AccessibilityLevel.None
+    if has("titansmitt") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if hasAny({ "frod", "nicebombs" }) then
+        hyrule_way = best({ hyrule_way, true_for("glitched") })
+    end
+    if beeBoost() then
+        hyrule_way = best({ hyrule_way, true_for("hell") })
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_lost_woods()
+    return access_hyrule_field()
+end
+
+function access_hyrule_castle_courtyard()
+    local hyrule_way = true_for("swordless")
+    if has("msword") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_fortune_teller()
+    return access_hyrule_field()
+end
+
+function access_kakariko_jail_cell()
+    return access_hyrule_field()
+end
+
+function access_well_upper()
+    local hyrule_way = true_for("hard")  -- Cucco jump
+    if has("power_glove") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_well_lower()
+    return access_hyrule_field()
+end
+
+function access_milk_bar()
+    return access_hyrule_field()
+end
+
+function access_bee_guy_house()
+    return access_hyrule_field()
+end
+
+function access_kakariko_item_shop()
+    return access_hyrule_field()
+end
+
+function access_lakeside_item_shop()
+    return access_hyrule_field()
+end
+
+function access_item_seller_cave()
+    local hyrule_way = AccessibilityLevel.None
+    if has("bombs") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_flippers_dungeon()
+    local hyrule_way = AccessibilityLevel.None
+    if has("titansmitt") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if hasAll({ "irod", "fsword" }) then
+        hyrule_way = best({ hyrule_way, true_for("glitched") })
+    end
+    if has("irod") then
+        hyrule_way = best({ hyrule_way, true_for("hell") })
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_southern_ruins_bomb_cave()
+    local hyrule_way = AccessibilityLevel.None
+    if has("bombs") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_lake_dark_cave()
+    return access_hyrule_field()
+end
+
+function access_ice_rod_cave()
+    local hyrule_way = AccessibilityLevel.None
+    if has("bombs") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_sanctuary()
+    local hyrule_way = AccessibilityLevel.None
+    if hasAny({ "sword", "bombs", "frod", "irod", "lamp", "boots" }) then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_moldorm_cave()
+    local hyrule_way = true_for("glitched")  -- Crow boost
+    if has("power_glove") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_rosso_house()
+    local hyrule_way = AccessibilityLevel.None
+    if has("rosso") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_rosso_cave()
+    local hyrule_way = AccessibilityLevel.None
+    if has("hammer") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if has("boomerang") then
+        hyrule_way = best({ hyrule_way, true_for("glitched") })
+    end
+    if has("hookshot") and not has("nicehookshot") then
+        hyrule_way = best({ hyrule_way, worst({ true_for("glitched"), true_for("nice_mode_off") }) })
+    end
+    if shield() and has("trod") and not has("nicetrod") then
+        hyrule_way = best({ hyrule_way, worst({ true_for("advanced"), true_for("nice_mode_off") }) })
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_tornado_rod_dungeon()
+    local hyrule_way = AccessibilityLevel.None
+    if has("bombs") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_house_of_gales_island()
+    local hyrule_way = AccessibilityLevel.None
+    if has("flippers") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if hasAll({ "hookshot", "irod" }) then
+        hyrule_way = best({ hyrule_way, true_for("advanced") })
+    end
+    if has("boots") and hasAny({ "frod", "nicebombs" }) then
+        hyrule_way = best({ hyrule_way, true_for("advanced") })
+    end
+    if beeBoost() then
+        hyrule_way = best({ hyrule_way, true_for("hell") })
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_bridge_shallow_water()
+    local hyrule_way = AccessibilityLevel.None
+    if has("flippers") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if hasAny({ "frod", "nicebombs" }) then
+        hyrule_way = best({ hyrule_way, true_for("glitched") })
+    end
+    if beeBoost() then
+        hyrule_way = best({ hyrule_way, true_for("hell") })
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_witch_house()
+    return access_hyrule_field()
+end
+
+function access_sanctuary_church()
+    -- From hyrule field, it requires opening sanctuary doors which is done from entering the sanctuary church itself
+    return AccessibilityLevel.None
+end
+
+function access_cucco_dungeon_ledge()
+    local hyrule_way = AccessibilityLevel.None
+    if has("merge") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_waterfall_ledge()
+    local hyrule_way = AccessibilityLevel.None
+    if has("flippers") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    if has("boots") and hasAny({ "frod", "nicebombs" }) then
+        hyrule_way = best({ hyrule_way, true_for("advanced") })
+    end
+    if has("boots") then
+        hyrule_way = best({ hyrule_way, true_for("hell") })
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_cucco_house()
+    return access_hyrule_field()
+end
+
+function access_woman_house()
+    return access_hyrule_field()
+end
+
+function access_stylish_woman_house()
+    -- From hyrule field, it requires opening the stylish woman's house which is done from entering the stylish woman's house itself
+    return AccessibilityLevel.None
+end
+
+function access_maiamai_cave()
+    return access_hyrule_field()
+end
+
+function access_zora_river()
+    local hyrule_way = AccessibilityLevel.None
+    if has("flippers") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
+
+function access_lake_hylia()
+    local hyrule_way = AccessibilityLevel.None
+    if has("flippers") then
+        hyrule_way = AccessibilityLevel.Normal
+    end
+    return worst({ access_hyrule_field(), hyrule_way })
+end
