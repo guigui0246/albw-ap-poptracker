@@ -423,25 +423,6 @@
         "name": "Kakariko Village",
         "children": [
           {
-            "name": "Kakariko Bush",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 514,
-                "y": 949,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
-              }
-            ]
-          },
-          {
             "name": "Kakariko Sand",
             "map_locations": [
               {
@@ -458,46 +439,6 @@
                 "item_count": 1,
                 "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["srod"]
-              }
-            ]
-          },
-          {
-            "name": "Cucco Ranch Tree",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 450,
-                "y": 1362,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["boots"]
-              }
-            ]
-          },
-          {
-            "name": "Hyrule Rupee Rush Wall",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 135,
-                "y": 1480,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais, minigames_enabled"],
-                "access_rules": ["merge"]
               }
             ]
           }

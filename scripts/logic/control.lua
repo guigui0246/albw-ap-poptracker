@@ -1223,18 +1223,14 @@ function warpHyrule()
     if not has("bell") then
         return AccessibilityLevel.None
     end
-    return best({ DP(2), DP(7), access_hyrule_field() })
+    return best({ DP(2), DP(7), access_hyrule_field(), access_kakariko_village() })
 end
 
 function access_hyrule_field()
     return AccessibilityLevel.Normal
 end
 
-function access_maiamai_cave()
-    return access_hyrule_field()
-end
-
-function access_Irene()
+function access_irene()
     return access_hyrule_field()
 end
 

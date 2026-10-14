@@ -499,6 +499,234 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Irene",
+        "access_rules": [
+          "^$access_irene"
+        ],
+        "children": [
+          {
+            "name": "Irene the Witch",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1403,
+                "y": 1403
+              },
+              {
+                "map": "hyrule",
+                "x": 536,
+                "y": 672
+              },
+              {
+                "map": "hyrule",
+                "x": 716,
+                "y": 739
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bell reward",
+                "access_rules": ["irene"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kakariko Village",
+        "access_rules": [
+          "^$access_kakariko_village"
+        ],
+        "children": [
+          {
+            "name": "Kakariko Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 293,
+                "y": 978,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_kakariko",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "Street Merchant",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 216,
+                "y": 959
+              }
+            ],
+            "sections": [
+              {
+                "name": "Left",
+                "chest_opened_img": "images/checks/soldout.png",
+                "item_count": 1
+              },
+              {
+                "name": "Right",
+                "chest_opened_img": "images/checks/soldout.png",
+                "access_rules": ["shadyguy"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Shady Guy",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 377,
+                "y": 915
+              }
+            ],
+            "sections": [
+              {
+                "name": "Smooth Gem reward",
+                "access_rules": ["shadyguy, merge", "shadyguy, boots"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Cucco Rush (Rooster Mode)",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 379,
+                "y": 1437
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece reward",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "visibility_rules": ["minigames_enabled"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Rupee Rush (Score 100+) (Buy any item from Ravio to unlock)",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 221,
+                "y": 1473
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece reward",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "visibility_rules": ["minigames_enabled"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Kakariko Bush",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 514,
+                "y": 949,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
+              }
+            ]
+          },
+          {
+            "name": "Woman's Roof",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 444,
+                "y": 967
+              }
+            ],
+            "sections": [
+              {
+                "name": "[Mai] Roof Maiamai under rock (use a cucco)",
+                "item_count": 1,
+                "chest_unopened_img": "images/items/maiamai.png",
+                "chest_opened_img": "images/items/maiamai_opened.png",
+                "visibility_rules": ["maiamai_mayhem_on"],
+                "access_rules": ["power_glove"]
+              },
+              {
+                "name": "Reward inside house",
+                "access_rules": ["power_glove"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Hyrule Rupee Rush Wall",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 135,
+                "y": 1480,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on, minigames_enabled", "$forceShowMaiamais, minigames_enabled"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Cucco Ranch Tree",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 450,
+                "y": 1362,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

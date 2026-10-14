@@ -4,25 +4,6 @@
     "children": [
       // Hyrule Weather Vanes ------------------------------------------------------------------------------------------
       {
-        "name": "Kakariko Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 293,
-            "y": 978,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_kakariko",
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "Eastern Palace Weather Vane",
         "map_locations": [
           {
