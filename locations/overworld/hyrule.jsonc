@@ -276,6 +276,227 @@
                 "access_rules": ["merge"]
               }
             ]
+          },
+          {
+            "name": "Your House Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1120,
+                "y": 1440,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Crack",
+                "hosted_item": "crack_your_house",
+                "visibility_rules": ["cracksanity"]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Hotfoot Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_hyrule_hotfoot",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1895,
+                "y": 1535,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Right Paradox Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_right_hyrule_paradox",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 677,
+                "y": 1709,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Misery Mire Entrance Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_mire_entrance",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 653,
+                "y": 1845,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Lost Woods Pillar Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_lost_woods_pillar",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 102,
+                "y": 342,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Sahasrahla's House Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_sahasrahlas_house",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 362,
+                "y": 834,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Eastern Ruins Pillar Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_eastern_ruins_pillar",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1401,
+                "y": 1099,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Swamp Pillar Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_swamp_pillar",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 952,
+                "y": 1561,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Lake Hylia Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_lake_hylia",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1331,
+                "y": 1845,
+                "shape": "trapezoid"
+              }
+            ]
+          },
+          {
+            "name": "Eastern Ruins SE Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_eastern_ruins_se",
+                "name": "Crack",
+                "access_rules": ["bombs"],
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1803,
+                "y": 1313,
+                "shape": "trapezoid"
+              }
+            ]
           }
         ]
       }

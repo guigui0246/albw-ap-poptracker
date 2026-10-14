@@ -2,6 +2,7 @@
   {
     "name": "Mother Maiamai's Item Upgrades",
     "visibility_rules": ["$motherMaiamai"],
+    "access_rules": ["^$access_maiamai_cave"],
     "map_locations": [
       {
         "map": "hyrule",

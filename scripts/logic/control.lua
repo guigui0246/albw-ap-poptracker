@@ -1190,6 +1190,20 @@ function ravio_shop()
     return best({ access_hyrule_field() })
 end
 
+function cracks()
+    if hasAll({ "merge", "quake_on" }) then
+        return true
+    end
+    return false
+end
+
+function cracksInspect()
+    if cracks() and not has_crack_map() then
+        return true
+    end
+    return false
+end
+
 -- Use ^$warpHyrule
 -- TODO add the warp logic and the edges:
 -- To HyruleField: house, kak, sanct, witch
@@ -1209,3 +1223,98 @@ end
 function access_hyrule_field()
     return AccessibilityLevel.Normal
 end
+
+function access_maiamai_cave()
+    return access_hyrule_field()
+end
+
+
+-- From hyrule fields
+-- edge!(Irene),
+-- edge!(KakarikoVillage),
+-- edge!(LakeHyliaArea),
+-- edge!(SanctuaryArea),
+-- edge!(SouthernRuins),
+-- edge!(EasternRuins),
+-- edge!(EasternRuinsUpper => {
+--     normal: |p| p.can_hit_far_switch() || p.has_ice_rod() || p.can_merge(),
+--     hard: |p| p.has_power_glove(),
+-- }),
+-- edge!(EasternRuinsEastLedge, |p| p.has_power_glove()),
+-- edge!(WitchCave, |p| p.has_bombs()),
+-- edge!(ZoraDomainArea => {
+--     normal: |p| p.can_merge(),
+--     hell: |_| true, // Bee Boost
+-- }),
+-- edge!(WaterfallCaveShallowWater, |p| p.has_flippers()),
+-- edge!(BlacksmithHouse),
+-- edge!(BlacksmithCave => {
+--     normal: |p| p.has_titans_mitt(),
+--     glitched: |p| p.has_fire_rod() || p.has_nice_bombs(),
+--     hell: |_| true, // Bee Boost
+-- }),
+-- edge!(LostWoods),
+-- edge!(HyruleCastleCourtyard, |p| p.has_master_sword() || p.swordless_mode()),
+-- edge!(FortuneTeller),
+-- edge!(KakarikoJailCell),
+-- edge!(WellUpper => {
+--     normal: |p| p.has_power_glove(),
+--     hard: |_| true, // Cucco jump
+-- }),
+-- edge!(WellLower),
+-- edge!(MilkBar),
+-- edge!(BeeGuyHouse),
+-- edge!(KakarikoItemShop),
+-- edge!(LakesideItemShop),
+-- edge!(ItemSellerCave, |p| p.has_bombs()),
+-- edge!(FlippersDungeon => {
+--     normal: |p| p.has_titans_mitt(),
+--     glitched: |p| p.has_sword() && p.has_ice_rod(),
+--     adv_glitched: |p| p.has_ice_rod(),
+-- }),
+-- edge!(SouthernRuinsBombCave, |p| p.has_bombs()),
+-- edge!(LakeDarkCave),
+-- edge!(IceRodCave, |p| p.has_bombs()),
+-- edge!(Sanctuary, |p| p.has_sword()
+--     || p.has_bombs()
+--     || p.has_fire_rod()
+--     || p.has_ice_rod()
+--     || p.has_lamp()
+--     || p.has_boots()),
+-- edge!(MoldormCave => {
+--     normal: |p| p.has_power_glove(),
+--     glitched: |_| true, // Crow boost
+-- }),
+-- edge!(RossosHouse, |p| p.has_sage_rosso()),
+-- edge!(RossoCave => {
+--     normal: |p| p.has_hammer(),
+--     glitched: |p| p.has_boomerang() || (p.not_nice_mode() && p.has_hookshot()),
+--     adv_glitched: |p| p.not_nice_mode() && (p.can_use_shield() && p.has_tornado_rod()),
+-- }),
+-- edge!(TornadoRodDungeon, |p| p.has_bombs()),
+-- edge!(HouseOfGalesIsland => {
+--     normal: |p| p.has_flippers(),
+--     adv_glitched: |p| {
+--         (p.has_hookshot() && p.has_ice_rod())
+--             || (p.has_boots() && (p.has_fire_rod() || p.has_nice_bombs()))
+--     },
+--     hell: |p| p.has_boots(), // Bee Boost
+-- }),
+-- edge!(BridgeShallowWater => {
+--     normal: |p| p.has_flippers(),
+--     glitched: |p| p.has_fire_rod() || p.has_nice_bombs(),
+--     hell: |_| true, // Bee Boost
+-- }),
+-- edge!(WitchHouse),
+-- edge!(SanctuaryChurch, |p| p.has_opened_sanctuary_doors()),
+-- edge!(CuccoDungeonLedge, |p| p.can_merge()),
+-- edge!(WaterfallLedge => {
+--     normal: |p| p.has_flippers(),
+--     adv_glitched: |p| p.has_boots() && (p.has_fire_rod() || p.has_nice_bombs()), // todo hookshot?
+--     hell: |p| p.has_boots(),
+-- }),
+-- edge!(CuccoHouse),
+-- edge!(WomanHouse),
+-- edge!(StylishWomanHouse, |p| p.has_opened_stylish_womans_house()),
+-- edge!(ZoraRiver, |p| p.has_flippers()),
+-- edge!(LakeHylia, |p| p.has_flippers()),
