@@ -872,6 +872,231 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Sanctuary Area",
+        "access_rules": ["^$access_sanctuary_area"],
+        "children": [
+          {
+            "name": "Witch's House Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1639,
+                "y": 700,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_witch",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "Sanctuary Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 918,
+                "y": 648,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_sanctuary",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "Dampe",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 948,
+                "y": 630
+              }
+            ],
+            "sections": [
+              {
+                "name": "Forgotten Sword reward",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Sanctuary Pegs",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 836,
+                "y": 660
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": ["{csmc_on}", "hammer"],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, sanctuary_pegs_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "hammer"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Sanctuary Wall",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 859,
+                "y": 696,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Wooden Bridge",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1407,
+                "y": 910,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "flippers",
+                  "[advanced], boots, frod",
+                  "[advanced], boots, nicebombs",
+                  "[hell], boots"  // bee boost + fake flippers
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Southern Ruins",
+        "access_rules": ["^$access_southern_ruins"],
+        "children": [
+          {
+            "name": "Southern Ruins Ledge",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 835,
+                "y": 1770
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": ["{csmc_on}", "merge"],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, southern_ruins_ledge_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "merge"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Southern Ruins Pillars",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1132,
+                "y": 1665,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Outside Flippers Mini-Dungeon",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 994,
+                "y": 1881,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["flippers"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Southern Ruins Big Rock",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 660,
+                "y": 1915,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["titansmitt"]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

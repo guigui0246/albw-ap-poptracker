@@ -262,26 +262,6 @@
         "name": "River Area",
         "children": [
           {
-            "name": "Sanctuary Wall",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 859,
-                "y": 696,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["merge"]
-              }
-            ]
-          },
-          {
             "name": "Witch's House",
             "map_locations": [
               {
@@ -366,30 +346,6 @@
                   "[hell], merge, boots",
                   "[hell], merge, frod",
                   "[hell], merge, bombs"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Wooden Bridge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1407,
-                "y": 910,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": [
-                  "flippers",
-                  "[advanced], $fakeFlippers",
-                  "[hell], boots"
                 ]
               }
             ]
@@ -602,26 +558,6 @@
         "name": "Desert",
         "children": [
           {
-            "name": "Southern Ruins Big Rock",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 660,
-                "y": 1915,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["titansmitt"]
-              }
-            ]
-          },
-          {
             "name": "Buried in the Desert",
             "map_locations": [
               {
@@ -671,26 +607,6 @@
         "name": "Southern Ruins",
         "children": [
           {
-            "name": "Southern Ruins Pillars",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1132,
-                "y": 1665,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["boots"]
-              }
-            ]
-          },
-          {
             "name": "Southern Ruins Bomb Cave",
             "map_locations": [
               {
@@ -707,26 +623,6 @@
                 "item_count": 1,
                 "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["bombs, flippers"]
-              }
-            ]
-          },
-          {
-            "name": "Outside Flippers Mini-Dungeon",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 994,
-                "y": 1881,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["flippers"]
               }
             ]
           }

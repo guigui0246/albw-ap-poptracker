@@ -199,22 +199,6 @@
         "name": "River Area",
         "children": [
           {
-            "name": "Dampe",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 948,
-                "y": 630
-              }
-            ],
-            "sections": [
-              {
-                "name": "Forgotten Sword reward",
-                "item_count": 1
-              }
-            ]
-          },
-          {
             "name": "Hyrule Sanctuary",
             "map_locations": [
               {
@@ -311,33 +295,6 @@
                 "chest_unopened_img": "images/display/transparent.png",
                 "access_rules": [
                   "{bombs}", "bombs, merge"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Sanctuary Pegs",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 836,
-                "y": 660
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on}", "hammer"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, sanctuary_pegs_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{}", "hammer"
                 ]
               }
             ]
@@ -826,33 +783,6 @@
       {
         "name": "Southern Ruins",
         "children": [
-          {
-            "name": "Southern Ruins Ledge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 835,
-                "y": 1770
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on}", "merge"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, southern_ruins_ledge_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{}", "merge"
-                ]
-              }
-            ]
-          },
           {
             "name": "Runaway Item Seller",
             "map_locations": [
