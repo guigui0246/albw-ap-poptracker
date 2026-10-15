@@ -727,6 +727,151 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Lake Hylia Area",
+        "access_rules": [
+          "^$access_lake_hylia_area"
+        ],
+        "children": [
+          {
+            "name": "Lake Hylia Ledge",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1731,
+                "y": 1678
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on, flippers}",
+                  "{csmc_on, wv_gales, bell}",
+                  "merge"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lake_hylia_ledge_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{flippers}",
+                  "{wv_gales, bell}",
+                  "merge"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lake Hylia Eastern Shore",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1887,
+                "y": 1695
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "access_rules": [
+                  "flippers",
+                  "[glitched], frod",
+                  "[glitched], nicebombs",
+                  "[hell], $beeBoost"
+                ],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Outside Maiamai Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1451,
+                "y": 1526,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lake Hylia East River",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1824,
+                "y": 1837,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "flippers"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Hyrule Hotfoot Rock",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1963,
+                "y": 1687,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["titansmitt, merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lake Hylia Shallow Ring",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1591,
+                "y": 1844,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["flippers"]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

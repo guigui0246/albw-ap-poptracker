@@ -737,26 +737,6 @@
         "name": "Lake Hylia",
         "children": [
           {
-            "name": "Outside Maiamai Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1451,
-                "y": 1526,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["merge"]
-              }
-            ]
-          },
-          {
             "name": "Lake Hylia Island Tile",
             "map_locations": [
               {
@@ -778,70 +758,6 @@
                   "[advanced], trod, $fakeFlippers",
                   "[advanced], trod, irod, hookshot"
                 ]
-              }
-            ]
-          },
-          {
-            "name": "Lake Hylia Shallow Ring",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1591,
-                "y": 1844,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["flippers"]
-              }
-            ]
-          },
-          {
-            "name": "Lake Hylia East River",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1824,
-                "y": 1837,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": [
-                  "flippers",
-                  "[advanced], $fakeFlippers",
-                  "[hell], boots"
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Hyrule Hotfoot Rock",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1963,
-                "y": 1687,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["titansmitt, merge"]
               }
             ]
           }

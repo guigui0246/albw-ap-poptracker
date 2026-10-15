@@ -968,39 +968,6 @@
         "name": "Lake Hylia",
         "children": [
           {
-            "name": "Lake Hylia Ledge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1731,
-                "y": 1678
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": [
-                  "{csmc_on, flippers}",
-                  "{csmc_on, wv_gales, bell}",
-                  "merge"
-                ],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, lake_hylia_ledge_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{flippers}",
-                  "{wv_gales, bell}",
-                  "merge"
-                ]
-              }
-            ]
-          },
-          {
             "name": "Ice Rod Cave",
             "map_locations": [
               {
@@ -1024,28 +991,6 @@
                 "access_rules": [
                   "{trod}", "{irod}", "bombs"
                 ]
-              }
-            ]
-          },
-          {
-            "name": "Lake Hylia Eastern Shore",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1887,
-                "y": 1695
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "access_rules": [
-                  "flippers",
-                  "[glitched], frod",
-                  "[glitched], nicebombs",
-                  "[hell], $beeBoost"
-                ],
-                "item_count": 1
               }
             ]
           },
