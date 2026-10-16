@@ -114,31 +114,6 @@
         ]
       },
       {
-        "name": "Hyrule River Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_river",
-            "name": "Crack",
-            "access_rules": [
-              "crack_river",
-              "{}",
-              "flippers",
-              "[glitched], $boost",
-              "[hell], $hellBoost"
-            ],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1611,
-            "y": 1410,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Hyrule Left Paradox Crack",
         "sections": [
           {

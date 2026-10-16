@@ -1227,6 +1227,11 @@ function warpHyrule()
 end
 
 function access_hyrule_field()
+    -- Ravio's Shop
+    -- Zora river + flippers
+    -- Bridge Shallow Water + flippers
+    -- Lake Hylia + flippers
+    -- EasternRuinsBlockedCrack aka has("crack_eastern_ruins_se")
     return AccessibilityLevel.Normal
 end
 
@@ -1300,7 +1305,14 @@ function access_waterfall_cave_shallow_water()
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local zora_river_way = AccessibilityLevel.None
+    if has("flippers") then
+        zora_river_way = AccessibilityLevel.Normal
+    end
+    return best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_zora_river(), zora_river_way })
+    })
 end
 
 function access_blacksmith_house()
@@ -1488,7 +1500,14 @@ function access_bridge_shallow_water()
     if beeBoost() then
         hyrule_way = best({ hyrule_way, true_for("hell") })
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local lake_hylia_way = AccessibilityLevel.None
+    if has("flippers") then
+        lake_hylia_way = AccessibilityLevel.Normal
+    end
+    return best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_lake_hylia(), lake_hylia_way })
+    })
 end
 
 function access_witch_house()
@@ -1519,7 +1538,14 @@ function access_waterfall_ledge()
     if has("boots") then
         hyrule_way = best({ hyrule_way, true_for("hell") })
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local zora_river_way = AccessibilityLevel.None
+    if has("flippers") then
+        zora_river_way = AccessibilityLevel.Normal
+    end
+    return best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_zora_river(), zora_river_way })
+    })
 end
 
 function access_cucco_house()
