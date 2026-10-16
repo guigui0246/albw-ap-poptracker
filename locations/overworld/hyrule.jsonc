@@ -708,6 +708,8 @@
           },
           {
             "name": "[Mai] Cucco Ranch Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -791,6 +793,8 @@
           },
           {
             "name": "[Mai] Outside Maiamai Cave",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -811,6 +815,8 @@
           },
           {
             "name": "[Mai] Lake Hylia East River",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -833,6 +839,8 @@
           },
           {
             "name": "[Mai] Hyrule Hotfoot Rock",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -853,6 +861,8 @@
           },
           {
             "name": "[Mai] Lake Hylia Shallow Ring",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -960,6 +970,8 @@
           },
           {
             "name": "[Mai] Sanctuary Wall",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -980,6 +992,8 @@
           },
           {
             "name": "[Mai] Wooden Bridge",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -1038,6 +1052,8 @@
           },
           {
             "name": "[Mai] Southern Ruins Pillars",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -1058,6 +1074,8 @@
           },
           {
             "name": "[Mai] Outside Flippers Mini-Dungeon",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -1078,6 +1096,8 @@
           },
           {
             "name": "[Mai] Southern Ruins Big Rock",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -1093,6 +1113,193 @@
                 "item_count": 1,
                 "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": ["titansmitt"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Eastern Ruins",
+        "access_rules": [
+          "^$access_eastern_ruins"
+        ],
+        "children": [
+          {
+            "name": "Peg Circle",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1948,
+                "y": 1448
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "access_rules": [
+                  "hammer",
+                  "[glitched], boomerang",
+                  "[glitched], hookshot",
+                  "[advanced], trod",
+                  "[hell], srod"
+                ],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Bird Lover",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1438,
+                "y": 1403
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bottle reward",
+                "access_rules": ["flippers"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Eastern Ruins Wall",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1708,
+                "y": 1001,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Eastern Ruins Yellow Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1782,
+                "y": 1201,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Eastern Ruins Green Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1702,
+                "y": 1368,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Eastern Ruins Rock",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1908,
+                "y": 1478,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["titansmitt, merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Eastern Ruins Bonk Rocks",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1471,
+                "y": 1174,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Eastern Ruins River",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1473,
+                "y": 1421,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "flippers",
+                  "[advanced], frod",
+                  "[advanced], nicebombs",
+                  "[hell], boots" // bee boost fake flippers
+                ]
               }
             ]
           }

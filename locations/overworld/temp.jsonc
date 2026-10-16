@@ -602,23 +602,6 @@
         "name": "Eastern Ruins",
         "children": [
           {
-            "name": "Bird Lover",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1438,
-                "y": 1403
-              }
-            ],
-            "sections": [
-              {
-                "name": "Bottle reward",
-                "access_rules": ["flippers"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
             "name": "Eastern Ruins Cave",
             "map_locations": [
               {
@@ -633,32 +616,6 @@
                 "chest_unopened_img": "images/junk/heart_piece.png",
                 "chest_opened_img": "images/junk/heart_piece_collected.png",
                 "access_rules": ["bombs, merge"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Peg Circle",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1948,
-                "y": 1448
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  //"{}",
-                  "hammer",
-                  "[glitched], boomerang",
-                  "[glitched], hookshot",
-                  "[advanced], trod",
-                  "[hell], srod"
-                ],
                 "item_count": 1
               }
             ]
