@@ -4,42 +4,6 @@
     "access_rules": ["{merge, quake_on, !$has_crack_map}", "merge, quake_on"],
     "children": [
       {
-        "name": "Your House Crack",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1120,
-            "y": 1440,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Crack",
-            "hosted_item": "crack_your_house",
-            "visibility_rules": ["cracksanity"]
-          }
-        ]
-      },
-      {
-        "name": "Lost Woods Pillar Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_lost_woods_pillar",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 102,
-            "y": 342,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Hyrule Death West Crack",
         "sections": [
           {
@@ -105,33 +69,6 @@
         ]
       },
       {
-        "name": "Hyrule Waterfall Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_waterfall",
-            "name": "Crack",
-            "access_rules": [
-              "crack_waterfall",
-              "{}",
-              "flippers",
-              "[advanced], $fakeFlippers",
-              "[hell], $beeFakeFlippers",
-              "[hell], hookshot, $hellBoost",
-              "[hell], boots, $hellBoost"
-            ],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1425,
-            "y": 545,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Zora's Domain Crack",
         "sections": [
           {
@@ -150,140 +87,6 @@
         ]
       },
       {
-        "name": "Sahasrahla's House Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_sahasrahlas_house",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 362,
-            "y": 834,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Eastern Ruins Pillar Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_eastern_ruins_pillar",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1401,
-            "y": 1099,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Eastern Ruins SE Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_eastern_ruins_se",
-            "name": "Crack",
-            "access_rules": ["{}", "bombs"],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1803,
-            "y": 1313,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Hyrule River Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_river",
-            "name": "Crack",
-            "access_rules": [
-              "crack_river",
-              "{}",
-              "flippers",
-              "[glitched], $boost",
-              "[hell], $hellBoost"
-            ],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1611,
-            "y": 1410,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Hyrule Swamp Pillar Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_swamp_pillar",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 952,
-            "y": 1561,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Lake Hylia Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_lake_hylia",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1331,
-            "y": 1845,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Hyrule Hotfoot Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_hyrule_hotfoot",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1895,
-            "y": 1535,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Hyrule Left Paradox Crack",
         "sections": [
           {
@@ -297,42 +100,6 @@
             "map": "hyrule",
             "x": 590,
             "y": 1727,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Hyrule Right Paradox Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_right_hyrule_paradox",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 677,
-            "y": 1709,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
-        "name": "Misery Mire Entrance Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_mire_entrance",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 653,
-            "y": 1845,
             "shape": "trapezoid"
           }
         ]
@@ -460,7 +227,7 @@
               "[glitched], $glitched_access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
               "[glitched], $glitched_access_desert_palace, [progression_enemies_off], [p_bombs], [srod], [titansmitt], [$switch], [$attack]"
             ],
-            "visibility_rules": ["cracksanity"]
+            "visibility_rules": []
           }
         ],
         "map_locations": [

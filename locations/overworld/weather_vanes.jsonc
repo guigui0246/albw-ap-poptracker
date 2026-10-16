@@ -4,44 +4,6 @@
     "children": [
       // Hyrule Weather Vanes ------------------------------------------------------------------------------------------
       {
-        "name": "Your House Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1049,
-            "y": 1377,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_your_house",
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
-        "name": "Kakariko Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 293,
-            "y": 978,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_kakariko",
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "Eastern Palace Weather Vane",
         "map_locations": [
           {
@@ -126,26 +88,7 @@
         ]
       },
       {
-        "name": "Witch's House Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1639,
-            "y": 700,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Death Mountain Weather Vane",
-            "hosted_item": "wv_witch",
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
-        "name": "Weather Vane",
+        "name": "Death Mountain Weather Vane",
         "map_locations": [
           {
             "map": "hyrule",
@@ -190,25 +133,6 @@
               "cracksanity, merge, crack_desert_sw, srod",
               "[glitched], $access_desert"
             ],
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
-        "name": "Sanctuary Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 918,
-            "y": 648,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_sanctuary",
             "visibility_rules": ["wv_shuffle_on"]
           }
         ]

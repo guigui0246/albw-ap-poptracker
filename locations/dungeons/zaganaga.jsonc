@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Misery Mire Zaganaga Area",
+    "color": "#2d3bb7",
+    "chest_unopened_img": "images/checks/chest_small_unopened.png",
+    "chest_opened_img": "images/checks/chest_small_opened.png",
+    "access_rules": [
+      "$misery_mire_zaganaga"
+    ],
+    "children": [
+      {
+        "name": "Reward Basket",
+        "access_rules": [
+          "srod,$hearts|9,msword",
+          "[swordless],srod,$hearts|9,$attack",
+          "[hard],srod,$attack",
+          "[hell],bow",
+          "[hell],msword"
+        ],
+        "map_locations": [
+          {
+            "map": "lorule",
+            "x": 192,
+            "y": 1602,
+            "size": 80
+          }
+        ],
+        "sections": [
+          {
+            "name": "Zaganaga",
+            "hosted_item": "dp_zaganaga"
+          },
+          {
+            "name": "Reward",
+            "hosted_item": "dp"
+          }
+        ]
+      }
+    ]
+  }
+]
