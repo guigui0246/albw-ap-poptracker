@@ -679,7 +679,7 @@
               },
               {
                 "name": "Reward inside house",
-                "access_rules": ["power_glove"],
+                "access_rules": ["^$access_woman_house, power_glove"],
                 "item_count": 1
               }
             ]
@@ -1330,6 +1330,36 @@
                 "x": 1611,
                 "y": 1410,
                 "shape": "trapezoid"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cucco House Rear",
+        "access_rules": [
+          "^$access_cucco_house_rear"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Kakariko Sand",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 210,
+                "y": 1186,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["srod"]
               }
             ]
           }

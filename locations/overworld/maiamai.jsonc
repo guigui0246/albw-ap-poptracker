@@ -376,31 +376,6 @@
         ]
       },
       {
-        "name": "Kakariko Village",
-        "children": [
-          {
-            "name": "Kakariko Sand",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 210,
-                "y": 1186,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["srod"]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Hyrule Castle Area",
         "children": [
           {
@@ -423,11 +398,6 @@
               }
             ]
           }
-        ]
-      },
-      {
-        "name": "Eastern Ruins",
-        "children": [
         ]
       },
       {

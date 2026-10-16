@@ -1223,7 +1223,13 @@ function warpHyrule()
     if not has("bell") then
         return AccessibilityLevel.None
     end
-    return best({ DP(2), DP(7), access_hyrule_field(), access_kakariko_village() })
+    return best({
+        DP(2),
+        DP(7),
+        access_hyrule_field(),
+        access_kakariko_village(),
+        access_cucco_house_rear()
+    })
 end
 
 function access_hyrule_field()
@@ -1232,6 +1238,9 @@ function access_hyrule_field()
     -- Bridge Shallow Water + flippers
     -- Lake Hylia + flippers
     -- EasternRuinsBlockedCrack aka has("crack_eastern_ruins_se")
+    -- access_maiamai_cave
+    -- Woman's House
+    -- Cucco House
     return AccessibilityLevel.Normal
 end
 
@@ -1550,6 +1559,10 @@ end
 
 function access_cucco_house()
     return access_hyrule_field()
+end
+
+function access_cucco_house_rear()
+    return access_cucco_house()
 end
 
 function access_woman_house()
