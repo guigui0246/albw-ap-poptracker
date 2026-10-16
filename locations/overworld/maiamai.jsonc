@@ -325,32 +325,6 @@
             ]
           },
           {
-            "name": "Waterfall Ledge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1475,
-                "y": 559,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": [
-                  "merge, flippers",
-                  "[advanced], merge, $fakeFlippers",
-                  "[hell], merge, boots",
-                  "[hell], merge, frod",
-                  "[hell], merge, bombs"
-                ]
-              }
-            ]
-          },
-          {
             "name": "Hyrule Graveyard Wall",
             "map_locations": [
               {

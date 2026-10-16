@@ -362,14 +362,14 @@
         "access_rules": [
           "$farSwitch,merge",
           "$farSwitch,niceirod",
-          "$farSwitch,{csmc_on}",
           "merge,niceirod",
-          "merge,{csmc_on}",
-          "niceirod,{csmc_on}",
+          "{$farSwitch,csmc_on}",
+          "{[hard],csmc_on,msword}",
+          "{csmc_on,merge}",
+          "{csmc_on,niceirod}",
           "[hard],$farSwitch,msword",
           "[hard],merge",
-          "[hard],msword,niceirod",
-          "[hard],msword,{csmc_on}"
+          "[hard],msword,niceirod"
         ]
       },
       {
@@ -399,17 +399,17 @@
         "access_rules": [
           "$farSwitch,merge",
           "$farSwitch,niceirod",
-          "$farSwitch,{csmc_on}",
-          "merge,{csmc_on}",
-          "niceirod,{csmc_on}",
+          "{$farSwitch,csmc_on}",
+          "{[hard],csmc_on,msword}",
+          "{csmc_on,merge}",
+          "{csmc_on,niceirod}",
           "[hard],$farSwitch,irod",
           "[hard],$farSwitch,msword",
           "[hard],irod,merge",
           "[hard],irod,msword",
           "[hard],irod,niceirod",
           "[hard],merge,msword",
-          "[hard],msword,niceirod",
-          "[hard],msword,{csmc_on}"
+          "[hard],msword,niceirod"
         ]
       },
       {

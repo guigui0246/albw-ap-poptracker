@@ -471,7 +471,7 @@
         "inspectable_sequence_break": true,
         "access_rules": [
           "^$DP|1,srod,titansmitt",
-          "^$DP|1,{csmc_on}",
+          "{^$DP|1,csmc_on}",
           "[hell],^$DP|1,srod,trod"
         ]
       },
@@ -481,7 +481,7 @@
         "inspectable_sequence_break": true,
         "access_rules": [
           "$dp_small_keys|5,^$DP|1,merge,srod",
-          "^$DP|1,{csmc_on}",
+          "{^$DP|1,csmc_on}",
           "[],$dp_small_keys|1,^$DP|1,merge,srod",
           "[],$dp_small_keys|1,^$DP|1,srod,trod",
           "[hell],$dp_small_keys|5,^$DP|1,srod,trod"

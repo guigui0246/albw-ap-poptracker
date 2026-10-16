@@ -1211,6 +1211,23 @@ function cracksInspect()
     return false
 end
 
+local AntiLoop = {}
+
+-- check wether you are allowed to run this function
+-- Useless if it's just a return as the function it's returning will have it
+local function check(name)
+    if AntiLoop[name] then
+        return false
+    end
+    AntiLoop[name] = true
+    return true
+end
+
+-- free after running to allow future runs
+local function free(name)
+    AntiLoop[name] = nil
+end
+
 -- Use ^$warpHyrule
 -- TODO add the warp logic and the edges:
 -- To DesertPalaceWV: desert
@@ -1241,6 +1258,8 @@ function access_hyrule_field()
     -- access_maiamai_cave
     -- Woman's House
     -- Cucco House
+    -- Waterfall ledga + flippers
+    -- Waterfall ledga + advanced + hookshot
     return AccessibilityLevel.Normal
 end
 
@@ -1269,6 +1288,9 @@ function access_eastern_ruins()
 end
 
 function access_eastern_ruins_upper()
+    if not check("access_eastern_ruins_upper") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("power_glove") then
         hyrule_way = best({ hyrule_way, true_for("hard") })
@@ -1279,26 +1301,41 @@ function access_eastern_ruins_upper()
     if hasAny({ "ice_rod", "merge" }) then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_eastern_ruins_upper")
+    return result
 end
 
 function access_eastern_ruins_east_ledge()
+    if not check("access_eastern_ruins_east_ledge") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("power_glove") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_eastern_ruins_east_ledge")
+    return result
 end
 
 function access_witch_cave()
+    if not check("access_witch_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_witch_cave")
+    return result
 end
 
 function access_zora_domain_area()
+    if not check("access_zora_domain_area") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if beeBoost() then
         hyrule_way = best({ hyrule_way, true_for("hell") })
@@ -1306,10 +1343,15 @@ function access_zora_domain_area()
     if has("merge") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_zora_domain_area")
+    return result
 end
 
 function access_waterfall_cave_shallow_water()
+    if not check("access_waterfall_cave_shallow_water") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1318,10 +1360,12 @@ function access_waterfall_cave_shallow_water()
     if has("flippers") then
         zora_river_way = AccessibilityLevel.Normal
     end
-    return best({
+    local result = best({
         worst({ access_hyrule_field(), hyrule_way }),
         worst({ access_zora_river(), zora_river_way })
     })
+    free("access_waterfall_cave_shallow_water")
+    return result
 end
 
 function access_blacksmith_house()
@@ -1329,6 +1373,9 @@ function access_blacksmith_house()
 end
 
 function access_blacksmith_cave()
+    if not check("access_blacksmith_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("titansmitt") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1339,7 +1386,9 @@ function access_blacksmith_cave()
     if beeBoost() then
         hyrule_way = best({ hyrule_way, true_for("hell") })
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_blacksmith_cave")
+    return result
 end
 
 function access_lost_woods()
@@ -1347,11 +1396,16 @@ function access_lost_woods()
 end
 
 function access_hyrule_castle_courtyard()
+    if not check("access_hyrule_castle_courtyard") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = true_for("swordless")
     if has("msword") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_hyrule_castle_courtyard")
+    return result
 end
 
 function access_fortune_teller()
@@ -1363,11 +1417,16 @@ function access_kakariko_jail_cell()
 end
 
 function access_well_upper()
+    if not check("access_well_upper") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = true_for("hard")  -- Cucco jump
     if has("power_glove") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_well_upper")
+    return result
 end
 
 function access_well_lower()
@@ -1391,14 +1450,22 @@ function access_lakeside_item_shop()
 end
 
 function access_item_seller_cave()
+    if not check("access_item_seller_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_item_seller_cave")
+    return result
 end
 
 function access_flippers_dungeon()
+    if not check("access_flippers_dungeon") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("titansmitt") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1409,15 +1476,22 @@ function access_flippers_dungeon()
     if has("irod") then
         hyrule_way = best({ hyrule_way, true_for("hell") })
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_flippers_dungeon")
+    return result
 end
 
 function access_southern_ruins_bomb_cave()
+    if not check("access_southern_ruins_bomb_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_southern_ruins_bomb_cave")
+    return result
 end
 
 function access_lake_dark_cave()
@@ -1425,38 +1499,61 @@ function access_lake_dark_cave()
 end
 
 function access_ice_rod_cave()
+    if not check("access_ice_rod_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_ice_rod_cave")
+    return result
 end
 
 function access_sanctuary()
+    if not check("access_sanctuary") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if hasAny({ "sword", "bombs", "frod", "irod", "lamp", "boots" }) then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_sanctuary")
+    return result
 end
 
 function access_moldorm_cave()
+    if not check("access_moldorm_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = true_for("glitched")  -- Crow boost
     if has("power_glove") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_moldorm_cave")
+    return result
 end
 
 function access_rosso_house()
+    if not check("access_rosso_house") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("rosso") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_rosso_house")
+    return result
 end
 
 function access_rosso_cave()
+    if not check("access_rosso_cave") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("hammer") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1470,18 +1567,28 @@ function access_rosso_cave()
     if shield() and has("trod") and not has("nicetrod") then
         hyrule_way = best({ hyrule_way, worst({ true_for("advanced"), true_for("nice_mode_off") }) })
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_rosso_cave")
+    return result
 end
 
 function access_tornado_rod_dungeon()
+    if not check("access_tornado_rod_dungeon") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_tornado_rod_dungeon")
+    return result
 end
 
 function access_house_of_gales_island()
+    if not check("access_house_of_gales_island") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1495,10 +1602,15 @@ function access_house_of_gales_island()
     if beeBoost() then
         hyrule_way = best({ hyrule_way, true_for("hell") })
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_house_of_gales_island")
+    return result
 end
 
 function access_bridge_shallow_water()
+    if not check("access_bridge_shallow_water") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1513,10 +1625,12 @@ function access_bridge_shallow_water()
     if has("flippers") then
         lake_hylia_way = AccessibilityLevel.Normal
     end
-    return best({
+    local result = best({
         worst({ access_hyrule_field(), hyrule_way }),
         worst({ access_lake_hylia(), lake_hylia_way })
     })
+    free("access_bridge_shallow_water")
+    return result
 end
 
 function access_witch_house()
@@ -1529,14 +1643,22 @@ function access_sanctuary_church()
 end
 
 function access_cucco_dungeon_ledge()
+    if not check("access_cucco_dungeon_ledge") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("merge") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_cucco_dungeon_ledge")
+    return result
 end
 
 function access_waterfall_ledge()
+    if not check("access_waterfall_ledge") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
@@ -1551,10 +1673,12 @@ function access_waterfall_ledge()
     if has("flippers") then
         zora_river_way = AccessibilityLevel.Normal
     end
-    return best({
+    local result = best({
         worst({ access_hyrule_field(), hyrule_way }),
         worst({ access_zora_river(), zora_river_way })
     })
+    free("access_waterfall_ledge")
+    return result
 end
 
 function access_cucco_house()
@@ -1579,17 +1703,34 @@ function access_maiamai_cave()
 end
 
 function access_zora_river()
+    if not check("access_zora_river") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local waterfall_ledge_way = AccessibilityLevel.None
+    if has("flippers") then
+        waterfall_ledge_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_waterfall_ledge(), waterfall_ledge_way })
+    })
+    free("access_zora_river")
+    return result
 end
 
 function access_lake_hylia()
+    if not check("access_lake_hylia") then
+        return AccessibilityLevel.None
+    end
     local hyrule_way = AccessibilityLevel.None
     if has("flippers") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    return worst({ access_hyrule_field(), hyrule_way })
+    local result = worst({ access_hyrule_field(), hyrule_way })
+    free("access_lake_hylia")
+    return result
 end

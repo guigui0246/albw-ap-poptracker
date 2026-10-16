@@ -69,7 +69,8 @@ ignore_rules: Rules = []
 
 
 def rule_transform(rule: str, reverse_logic: bool = False) -> str:
-    rules = set(r.strip() for r in rule.split(","))
+    inspect = rule.startswith("{")
+    rules = set(r.strip() for r in rule.removeprefix('{').removesuffix('}').split(","))
     to_remove: set[frozenset[str]] = set()
     for i in ignore_rules:
         ign = set(r.strip() for r in i.split(","))
@@ -90,7 +91,10 @@ def rule_transform(rule: str, reverse_logic: bool = False) -> str:
     compare_levels(rules, reverse_logic=reverse_logic)
     rules = sorted(set(rules))
     rules = sorted(rules, key=lambda x: x.startswith("["), reverse=True)
-    return ",".join(rules)
+    new_rule = ",".join(rules)
+    if inspect:
+        new_rule = f"{{{new_rule}}}"
+    return new_rule
 
 
 def rule_filter(rules: set[str]) -> set[str]:
@@ -110,7 +114,10 @@ def multiply_rules(rules1: Rules, rules2: Rules) -> Rules:
     result: Rules = []
     for r1 in rules1:
         for r2 in rules2:
-            res = f"{r1},{r2}".strip()
+            inspect = r1.startswith("{") or r2.startswith("{")
+            res = f"{r1.removeprefix('{').removesuffix('}')},{r2.removeprefix('{').removesuffix('}')}".strip()
+            if inspect:
+                res = f"{{{res}}}"
             result.append(rule_transform(res))
     return sorted(sorted(rule_filter(set(result))), key=lambda x: x.startswith("["))
 
