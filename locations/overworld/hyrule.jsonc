@@ -1418,6 +1418,82 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Cucco Dungeon Ledge",
+        "access_rules": [
+          "^$access_cucco_dungeon_ledge"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Outside Cucco Mini-Dungeon",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 590,
+                "y": 1690,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["titansmitt"]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Left Paradox Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_left_hyrule_paradox",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 590,
+                "y": 1727,
+                "shape": "trapezoid"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cucco Dungeon",
+        "access_rules": [
+          "$access_cucco_dungeon"
+        ],
+        "children": [
+          {
+            "name": "Cucco Mini-Dungeon",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 564,
+                "y": 1654
+              }
+            ],
+            "sections": [
+              {
+                "name": "Silver Rupee",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       }
     ]
   }

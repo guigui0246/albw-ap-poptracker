@@ -87,24 +87,6 @@
         ]
       },
       {
-        "name": "Hyrule Left Paradox Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_left_hyrule_paradox",
-            "name": "Crack",
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 590,
-            "y": 1727,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Desert Right Pillar Crack",
         "sections": [
           {

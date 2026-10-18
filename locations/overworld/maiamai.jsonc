@@ -350,31 +350,6 @@
         ]
       },
       {
-        "name": "Hyrule Castle Area",
-        "children": [
-          {
-            "name": "Outside Cucco Mini-Dungeon",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 590,
-                "y": 1690,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["merge, titansmitt"]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Desert",
         "children": [
           {

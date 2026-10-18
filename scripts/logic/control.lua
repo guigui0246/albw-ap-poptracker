@@ -1260,6 +1260,7 @@ function access_hyrule_field()
     -- Cucco House
     -- Waterfall ledga + flippers
     -- Waterfall ledga + advanced + hookshot
+    -- Cucco dungeon ledge
     return AccessibilityLevel.Normal
 end
 
@@ -1650,9 +1651,16 @@ function access_cucco_dungeon_ledge()
     if has("merge") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        access_cucco_dungeon(),
+    })
     free("access_cucco_dungeon_ledge")
     return result
+end
+
+function access_cucco_dungeon()
+    return access_cucco_dungeon_ledge()
 end
 
 function access_waterfall_ledge()
