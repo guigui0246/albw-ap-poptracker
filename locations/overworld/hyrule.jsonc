@@ -1524,6 +1524,111 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Eastern Ruins Upper",
+        "access_rules": [
+          "$access_eastern_ruins_upper",
+          "^$warpHyrule,wv_eastern"
+        ],
+        "children": [
+          {
+            "name": "Eastern Palace Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1990,
+                "y": 827,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_eastern",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "Armos Chest",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1729,
+                "y": 837
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Hookshot Chest",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1729,
+                "y": 916
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": ["{csmc_on}", "hookshot"],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, eastern_ruins_hookshot_chest_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Merge Chest",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1812,
+                "y": 811
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "merge",
+                  "[glitched], trod",
+                  "[glitched], frod",
+                  "[glitched], nicebombs",
+                  "[hell], bombs"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, eastern_ruins_merge_chest_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

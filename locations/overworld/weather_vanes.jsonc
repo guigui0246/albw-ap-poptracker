@@ -4,37 +4,6 @@
     "children": [
       // Hyrule Weather Vanes ------------------------------------------------------------------------------------------
       {
-        "name": "Eastern Palace Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1990,
-            "y": 827,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_eastern",
-            "access_rules": [
-              "wv_eastern",
-              "merge",
-              "fsword, great_spin",
-              "bow",
-              "boomerang",
-              "hookshot",
-              "bombs",
-              "irod",
-              "bell, wv_eastern",
-              "[hard], power_glove"
-            ],
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "House of Gales Weather Vane",
         "map_locations": [
           {

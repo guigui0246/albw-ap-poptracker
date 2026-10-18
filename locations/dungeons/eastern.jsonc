@@ -5,8 +5,7 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "$access_eastern_palace",
-      "[hard],$hard_access_eastern_palace"
+      "^$access_eastern_palace"
     ],
     "children": [
       {
@@ -344,8 +343,7 @@
   {
     "name": "Eastern Palace",
     "access_rules": [
-      "$access_eastern_palace",
-      "[hard],$hard_access_eastern_palace"
+      "^$access_eastern_palace"
     ],
     "sections": [
       {

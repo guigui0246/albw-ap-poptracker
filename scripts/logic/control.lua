@@ -1133,11 +1133,7 @@ function misery_mire_zaganaga()
 end
 
 function access_eastern_palace()
-    return true  -- TODO
-end
-
-function hard_access_eastern_palace()
-    return true  -- TODO
+    return access_eastern_ruins_upper()
 end
 
 -- Always true in the Archipelago version
@@ -1231,7 +1227,6 @@ end
 -- Use ^$warpHyrule
 -- TODO add the warp logic and the edges:
 -- To DesertPalaceWV: desert
--- To EasternRuinsUpper: eastern
 -- To HouseOfGalesIsland: gales
 -- To DeathMountainBase: deathMountain
 -- To DeathMountainWestTop: hera
@@ -1245,7 +1240,10 @@ function warpHyrule()
         DP(7),
         access_hyrule_field(),
         access_kakariko_village(),
-        access_cucco_house_rear()
+        access_cucco_house_rear(),
+        access_waterfall_ledge(),
+        access_cucco_dungeon_ledge(),
+        access_eastern_ruins_upper(),
     })
 end
 
@@ -1262,6 +1260,7 @@ function access_hyrule_field()
     -- Waterfall ledga + advanced + hookshot
     -- Cucco dungeon ledge
     -- Witch house
+    -- Eastern Ruins Upper
     return AccessibilityLevel.Normal
 end
 
@@ -1316,7 +1315,17 @@ function access_eastern_ruins_east_ledge()
     if has("power_glove") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local eastern_ruins_upper_way = AccessibilityLevel.None
+    if has("merge") then
+        eastern_ruins_upper_way = AccessibilityLevel.Normal
+    end
+    if has("trod") then -- Armos Boost
+        eastern_ruins_upper_way = best({ eastern_ruins_upper_way, true_for("glitched") })
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_eastern_ruins_upper(), eastern_ruins_upper_way }),
+    })
     free("access_eastern_ruins_east_ledge")
     return result
 end
@@ -1329,7 +1338,14 @@ function access_witch_cave()
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local eastern_ruins_upper_way = AccessibilityLevel.None
+    if has("bombs") then
+        eastern_ruins_upper_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_eastern_ruins_upper(), eastern_ruins_upper_way }),
+    })
     free("access_witch_cave")
     return result
 end
@@ -1742,4 +1758,8 @@ function access_lake_hylia()
     local result = worst({ access_hyrule_field(), hyrule_way })
     free("access_lake_hylia")
     return result
+end
+
+function access_merge_dungeon()
+    return access_eastern_ruins_upper()
 end
