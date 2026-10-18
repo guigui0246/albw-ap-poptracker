@@ -262,26 +262,6 @@
         "name": "River Area",
         "children": [
           {
-            "name": "Witch's House",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1600,
-                "y": 677,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["merge"]
-              }
-            ]
-          },
-          {
             "name": "Zora's Domain",
             "map_locations": [
               {

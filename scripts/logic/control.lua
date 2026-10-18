@@ -1261,6 +1261,7 @@ function access_hyrule_field()
     -- Waterfall ledga + flippers
     -- Waterfall ledga + advanced + hookshot
     -- Cucco dungeon ledge
+    -- Witch house
     return AccessibilityLevel.Normal
 end
 
