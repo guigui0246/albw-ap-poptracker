@@ -1232,10 +1232,13 @@ end
 -- To DeathMountainWestTop: hera
 -- TODO complete
 function warpHyrule()
+    if not check("warpHyrule") then
+        return AccessibilityLevel.None
+    end
     if not has("bell") then
         return AccessibilityLevel.None
     end
-    return best({
+    local result = best({
         DP(2),
         DP(7),
         access_hyrule_field(),
@@ -1244,7 +1247,12 @@ function warpHyrule()
         access_waterfall_ledge(),
         access_cucco_dungeon_ledge(),
         access_eastern_ruins_upper(),
+        access_eastern_ruins_east_ledge(),
+        access_zora_domain_area(),
+        access_waterfall_cave_shallow_water(),
     })
+    free("warpHyrule")
+    return result
 end
 
 function access_hyrule_field()
@@ -1261,6 +1269,9 @@ function access_hyrule_field()
     -- Cucco dungeon ledge
     -- Witch house
     -- Eastern Ruins Upper
+    -- Eastern Ruins East Ledge
+    -- Witch cave
+    -- Zora Domain Area
     return AccessibilityLevel.Normal
 end
 
@@ -1302,7 +1313,15 @@ function access_eastern_ruins_upper()
     if hasAny({ "ice_rod", "merge" }) then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local east_ledge_way = AccessibilityLevel.None
+    if has("merge") then
+        east_ledge_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_eastern_ruins_east_ledge(), east_ledge_way }),
+        access_witch_cave(),
+    })
     free("access_eastern_ruins_upper")
     return result
 end
@@ -1361,7 +1380,10 @@ function access_zora_domain_area()
     if has("merge") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        access_zora_domain(),
+    })
     free("access_zora_domain_area")
     return result
 end
@@ -1378,12 +1400,22 @@ function access_waterfall_cave_shallow_water()
     if has("flippers") then
         zora_river_way = AccessibilityLevel.Normal
     end
+    local zora_domain_area_way = true_for("glitched")  -- Crow boost
+    if has("flippers") then
+        zora_domain_area_way = AccessibilityLevel.Normal
+    end
     local result = best({
         worst({ access_hyrule_field(), hyrule_way }),
-        worst({ access_zora_river(), zora_river_way })
+        worst({ access_zora_river(), zora_river_way }),
+        worst({ access_zora_domain_area(), zora_domain_area_way }),
+        access_waterfall_cave(),
     })
     free("access_waterfall_cave_shallow_water")
     return result
+end
+
+function access_waterfall_cave()
+    return access_waterfall_cave_shallow_water()
 end
 
 function access_blacksmith_house()
@@ -1739,9 +1771,14 @@ function access_zora_river()
     if has("flippers") then
         waterfall_ledge_way = AccessibilityLevel.Normal
     end
+    local waterfall_cave_shallow_water_way = AccessibilityLevel.None
+    if has("flippers") then
+        waterfall_cave_shallow_water_way = AccessibilityLevel.Normal
+    end
     local result = best({
         worst({ access_hyrule_field(), hyrule_way }),
-        worst({ access_waterfall_ledge(), waterfall_ledge_way })
+        worst({ access_waterfall_ledge(), waterfall_ledge_way }),
+        worst({ access_waterfall_cave_shallow_water(), waterfall_cave_shallow_water_way })
     })
     free("access_zora_river")
     return result
@@ -1762,4 +1799,21 @@ end
 
 function access_merge_dungeon()
     return access_eastern_ruins_upper()
+end
+
+function access_eastern_ruins_bomb_cave_upper()
+    if not check("access_eastern_ruins_bomb_cave_upper") then
+        return AccessibilityLevel.None
+    end
+    local east_ledge_way = AccessibilityLevel.None
+    if has("bombs") then
+        east_ledge_way = AccessibilityLevel.Normal
+    end
+    local result = worst({ access_eastern_ruins_east_ledge(), east_ledge_way })
+    free("access_eastern_ruins_bomb_cave_upper")
+    return result
+end
+
+function access_zora_domain()
+    return access_zora_domain_area()
 end

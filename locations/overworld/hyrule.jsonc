@@ -1629,6 +1629,182 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Zora Domain",
+        "access_rules": [
+          "^$access_zora_domain"
+        ],
+        "children": [
+          {
+            "name": "Queen Oren",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1804,
+                "y": 290
+              }
+            ],
+            "sections": [
+              {
+                "name": "Zora Flippers reward",
+                "access_rules": [
+                  "oren, smooth_gem"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Zora Domain Area",
+        "access_rules": [
+          "^$access_zora_domain_area"
+        ],
+        "children": [
+          {
+            "name": "River Area",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1804,
+                "y": 370
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bump into Shady Guy",
+                "hosted_item": "shadyguy",
+                "item_count": 0
+              }
+            ]
+          },
+          {
+            "name": "Zora's Domain Ledge",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1826,
+                "y": 668
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "merge"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, zoras_domain_ledge_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "merge"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Zora's Domain",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1789,
+                "y": 396,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "flippers"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] South of Zora's Domain",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1889,
+                "y": 764,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "Zora's Domain Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_zoras_domain",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1851,
+                "y": 765,
+                "shape": "trapezoid"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Waterfall Cave",
+        "access_rules": [
+          "^$access_waterfall_cave"
+        ],
+        "children": [
+          {
+            "name": "Waterfall Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1848,
+                "y": 551
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       }
     ]
   }
