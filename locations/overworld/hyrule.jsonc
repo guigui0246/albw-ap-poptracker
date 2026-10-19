@@ -507,6 +507,471 @@
                 "shape": "trapezoid"
               }
             ]
+          },
+          {
+            "name": "[Ghost] Lost Woods Chest",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 270,
+                "y": 260,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Lost Woods",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Moldorm Cave",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                // TODO
+                // "x": 720,
+                // "y": 400,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Moldorm Cave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Fortune-Teller Hyrule",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 360,
+                "y": 665,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Fortune Teller",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Sanctuary",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 840,
+                "y": 655,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Sanctuary",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Graveyard Hyrule",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1152,
+                "y": 659,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Graveyard Hyrule",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Well",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 94,
+                "y": 833,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Well",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Shady Guy",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 410,
+                "y": 918,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Shady Guy",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Stylish Woman",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 270,
+                "y": 1102,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Stylish Woman",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Blacksmith Cave",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 675,
+                "y": 1150,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Blacksmith Cave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Eastern Ruins Entrance",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1614,
+                "y": 1101,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Eastern Ruins Entrance",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Rupee Rush Hyrule",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 200,
+                "y": 1500,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Rupee Rush Hyrule",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Cuccos",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 403,
+                "y": 1385,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Cuccos",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] South Bridge",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                // TODO
+                // "x": 720,
+                // "y": 400,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "South Bridge",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Southern Ruins",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1215,
+                "y": 1875,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Southern Ruins",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Hyrule Hotfoot",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1933,
+                "y": 1598,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Hyrule Hotfoot",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Letter",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                // TODO
+                // "x": 720,
+                // "y": 400,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Letter",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] StreetPass Tree",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1000,
+                "y": 1385,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "StreetPass Tree",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Behind Blacksmith",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 665,
+                "y": 962,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Behind Blacksmith",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Graveyard Ledge",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1200,
+                "y": 589,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Graveyard Ledge",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Hyrule Castle Rocks",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1192,
+                "y": 869,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Hyrule Castle Rocks",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Witch's House",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1650,
+                "y": 685,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Witch's House",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
           }
         ]
       },
@@ -1791,6 +2256,50 @@
                 "shape": "trapezoid"
               }
             ]
+          },
+          {
+            "name": "[Ghost] Zora's Domain",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1835,
+                "y": 396,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Zora Domain",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Waterfall Cave",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1880,
+                "y": 600,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Waterfall Cave",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
           }
         ]
       },
@@ -1919,6 +2428,28 @@
                 "access_rules": [
                   "trod"
                 ]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] House of Gales Island",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1644,
+                "y": 1725,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "House of Gales Island",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
               }
             ]
           }

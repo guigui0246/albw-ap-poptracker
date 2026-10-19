@@ -91,6 +91,30 @@
                   "ped_requirement_2, power, wisdom"
                 ],
                 "item_count": 1
+              },
+              {
+                "name": "[Ghost] Lost Woods Maze 1",
+                "chest_unopened_img": "images/items/unknown_compass.png",
+                "chest_opened_img": "images/items/compass.png",
+                "access_rules": ["{$access_ghosts}"],
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              },
+              {
+                "name": "[Ghost] Lost Woods Maze 2",
+                "chest_unopened_img": "images/items/unknown_compass.png",
+                "chest_opened_img": "images/items/compass.png",
+                "access_rules": ["{$access_ghosts}"],
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              },
+              {
+                "name": "[Ghost] Lost Woods Maze 3",
+                "chest_unopened_img": "images/items/unknown_compass.png",
+                "chest_opened_img": "images/items/compass.png",
+                "access_rules": ["{$access_ghosts}"],
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
               }
             ]
           },
