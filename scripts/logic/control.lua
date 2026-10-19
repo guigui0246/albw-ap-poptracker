@@ -1249,6 +1249,8 @@ function warpHyrule()
         access_graveyard_ledge_hyrule(),
         access_hyrule_castle_courtyard(),
         access_hyrule_castle_roof(),
+        access_lost_woods(),
+        access_master_sword_area(),
     })
     free("warpHyrule")
     return result
@@ -1281,6 +1283,8 @@ function access_hyrule_field()
     -- access_hyrule_castle_courtyard + msword
     -- access_hyrule_castle_courtyard + swordless
     -- Hyrule castle roof
+    -- Lost Woods
+    -- Fortune-Teller
     return AccessibilityLevel.Normal
 end
 
@@ -1453,7 +1457,15 @@ function access_blacksmith_cave()
 end
 
 function access_lost_woods()
-    return access_hyrule_field()
+    if not check("access_lost_woods") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_hyrule_field(),
+        access_master_sword_area(),
+    })
+    free("access_lost_woods")
+    return result
 end
 
 function access_hyrule_castle_courtyard()
@@ -1905,5 +1917,21 @@ function access_hyrule_castle_dungeon()
         crack_hc_way
     })
     free("access_hyrule_castle_dungeon")
+    return result
+end
+
+function access_master_sword_area()
+    if not check("access_master_sword_area") then
+        return AccessibilityLevel.None
+    end
+    local lost_woods_way = AccessibilityLevel.None
+    if hasAll({ "ped_requirement_3", "power", "wisdom", "courage" }) or hasAll({ "ped_requirement_2", "power", "wisdom" }) then
+        lost_woods_way = AccessibilityLevel.Normal
+    end
+    local result = worst({
+        access_lost_woods(),
+        lost_woods_way
+    })
+    free("access_master_sword_area")
     return result
 end

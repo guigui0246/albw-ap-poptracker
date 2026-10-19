@@ -2831,6 +2831,335 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Lost Woods",
+        "access_rules": [
+          "^$access_lost_woods"
+        ],
+        "children": [
+          {
+            "name": "Lost Woods Alcove",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 231,
+                "y": 227
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "access_rules": [
+                  "merge",
+                  "[glitched], boomerang, $escape",
+                  "[glitched], nice_items_off, hookshot, $escape",
+                  "[hell], boomerang", // Escape with crow
+                  "[hell], nice_items_off, hookshot" // Escape with crow
+                ],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Lost Woods behind large rock",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 354,
+                "y": 256
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "titansmitt",
+                  "[hell], boomerang", // Escape with crow
+                  "[hell], nice_items_off, hookshot" // Escape with crow
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lost_woods_behind_large_rock_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lost Woods Bush",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 98,
+                "y": 189,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lost Woods Rock",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 350,
+                "y": 183,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["power_glove"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lost Woods Path Rock",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 226,
+                "y": 710,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "titansmitt",
+                  "power_glove, hammer",
+                  "[glitched], power_glove, hookshot",
+                  "[glitched], power_glove, boomerang, $escape"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Fortune-Teller Tent",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 410,
+                "y": 672,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Hotfoot",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1953,
+                "y": 1551
+              },
+              {
+                "map": "hyrule",
+                "x": 654,
+                "y": 91
+              }
+            ],
+            "sections": [
+              {
+                "name": "75s reward",
+                "access_rules": ["boots", "[hard]"],
+                "visibility_rules": ["minigames_enabled"],
+                "item_count": 1
+              },
+              {
+                "name": "65s reward",
+                "access_rules": [
+                  "boots",
+                  "[hard], merge, bell, $cracks, not_cracksanity",
+                  "[hell]"  // Can just walk it
+                ],
+                "visibility_rules": ["minigames_enabled"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Rosso Wall",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 711,
+                "y": 255,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Small Pond",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 625,
+                "y": 704,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["flippers"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lost Woods Tree",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 320,
+                "y": 352,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["boots"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Master Sword Area",
+        "access_rules": [
+          "^$access_master_sword_area"
+        ],
+        "children": [
+          {
+            "name": "Master Sword Pedestal",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 142,
+                "y": 149
+              }
+            ],
+            "sections": [
+              {
+                "name": "Master Sword",
+                "chest_opened_img": "images/prizes/pendant.png",
+                "item_count": 1
+              },
+              {
+                "name": "[Ghost] Lost Woods Maze 1",
+                "chest_unopened_img": "images/items/unknown_compass.png",
+                "chest_opened_img": "images/items/compass.png",
+                "access_rules": ["{$access_ghosts}"],
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              },
+              {
+                "name": "[Ghost] Lost Woods Maze 2",
+                "chest_unopened_img": "images/items/unknown_compass.png",
+                "chest_opened_img": "images/items/compass.png",
+                "access_rules": ["{$access_ghosts}"],
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              },
+              {
+                "name": "[Ghost] Lost Woods Maze 3",
+                "chest_unopened_img": "images/items/unknown_compass.png",
+                "chest_opened_img": "images/items/compass.png",
+                "access_rules": ["{$access_ghosts}"],
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fortune-Teller",
+        "access_rules": [
+          "^$access_fortune_teller"
+        ],
+        "children": [
+          {
+            "name": "Fortune-Teller",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 438,
+                "y": 672
+              }
+            ],
+            "sections": [
+              {
+                "name": "Hint-Glasses",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       }
     ]
   }
