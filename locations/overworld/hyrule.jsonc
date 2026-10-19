@@ -42,7 +42,17 @@
           "^$warpHyrule,wv_kakariko",
           "^$warpHyrule,wv_sanctuary",
           "^$warpHyrule,wv_witch",
-          "^$access_hyrule_field"
+          "^$access_hyrule_field",
+          "crack_your_house",
+          "crack_hyrule_hotfoot",
+          "crack_right_hyrule_paradox",
+          "crack_mire_entrance",
+          "crack_lost_woods_pillar",
+          "crack_sahasrahlas_house",
+          "crack_eastern_ruins_pillar",
+          "crack_swamp_pillar",
+          "crack_lake_hylia",
+          "crack_eastern_ruins_se"
         ],
         "children": [
           {
@@ -1308,7 +1318,8 @@
       {
         "name": "Bridge Shallow Water",
         "access_rules": [
-          "^$access_bridge_shallow_water"
+          "^$access_bridge_shallow_water",
+          "crack_river"
         ],
         "children": [
           {
@@ -1368,7 +1379,8 @@
       {
         "name": "Waterfall Ledge",
         "access_rules": [
-          "^$access_waterfall_ledge"
+          "^$access_waterfall_ledge",
+          "crack_waterfall"
         ],
         "children": [
           {
@@ -1422,7 +1434,8 @@
       {
         "name": "Cucco Dungeon Ledge",
         "access_rules": [
-          "^$access_cucco_dungeon_ledge"
+          "^$access_cucco_dungeon_ledge",
+          "crack_left_hyrule_paradox"
         ],
         "children": [
           {
@@ -1660,7 +1673,8 @@
       {
         "name": "Zora Domain Area",
         "access_rules": [
-          "^$access_zora_domain_area"
+          "^$access_zora_domain_area",
+          "crack_zoras_domain"
         ],
         "children": [
           {
@@ -1913,7 +1927,8 @@
       {
         "name": "Rosso House",
         "access_rules": [
-          "^$access_rosso_house"
+          "^$access_rosso_house",
+          "crack_rossos_house"
         ],
         "children": [
           {
@@ -2003,6 +2018,86 @@
                 "access_rules": [
                   "{}", "merge"
                 ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Graveyard Ledge Hyrule",
+        "access_rules": [
+          "^$access_graveyard_ledge_hyrule",
+          "crack_graveyard"
+        ],
+        "children": [
+          {
+            "name": "Hyrule Graveyard Wall",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1112,
+                "y": 579,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "access_rules": [
+                  "merge"
+                ],
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"]
+              }
+            ]
+          },
+          {
+            "name": "Graveyard",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1156,
+                "y": 580
+              }
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_graveyard",
+                "name": "Hyrule Graveyard Ledge Crack",
+                "access_rules": [
+                  "$cracks",
+                  "{$cracksInspect}"
+                ],
+                "visibility_rules": ["cracksanity"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Graveyard Ledge Cave",
+        "access_rules": [
+          "^$access_graveyard_ledge_cave"
+        ],
+        "children": [
+          {
+            "name": "Graveyard",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1162,
+                "y": 580
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ledge Cave Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "item_count": 1
               }
             ]
           }

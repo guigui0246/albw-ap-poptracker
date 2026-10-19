@@ -1246,6 +1246,7 @@ function warpHyrule()
         access_zora_domain_area(),
         access_waterfall_cave_shallow_water(),
         access_house_of_gales_island(),
+        access_graveyard_ledge_hyrule(),
     })
     free("warpHyrule")
     return result
@@ -1272,6 +1273,7 @@ function access_hyrule_field()
     -- access_house_of_gales_island + flippers
     -- RossoCave
     -- Tornado Rod Dungeon
+    -- Graveyard Ledge Hyrule
     return AccessibilityLevel.Normal
 end
 
@@ -1831,4 +1833,17 @@ end
 
 function access_zora_domain()
     return access_zora_domain_area()
+end
+
+function access_graveyard_ledge_hyrule()
+    if not check("access_graveyard_ledge_hyrule") then
+        return AccessibilityLevel.None
+    end
+    local result = access_graveyard_ledge_cave()
+    free("access_graveyard_ledge_hyrule")
+    return result
+end
+
+function access_graveyard_ledge_cave()
+    return access_graveyard_ledge_hyrule()
 end
