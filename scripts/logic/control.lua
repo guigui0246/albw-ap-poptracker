@@ -1143,15 +1143,10 @@ function eastern_compass()
 end
 
 function access_house_of_gales()
-    return true  -- TODO
-end
-
-function advanced_access_house_of_gales()
-    return true  -- TODO
-end
-
-function hell_access_house_of_gales()
-    return true  -- TODO
+    if has("trod") then
+        return access_house_of_gales_island()
+    end
+    return AccessibilityLevel.None
 end
 
 function can_hit_hog_1f_switch()
@@ -1250,6 +1245,7 @@ function warpHyrule()
         access_eastern_ruins_east_ledge(),
         access_zora_domain_area(),
         access_waterfall_cave_shallow_water(),
+        access_house_of_gales_island(),
     })
     free("warpHyrule")
     return result
@@ -1264,14 +1260,18 @@ function access_hyrule_field()
     -- access_maiamai_cave
     -- Woman's House
     -- Cucco House
-    -- Waterfall ledga + flippers
-    -- Waterfall ledga + advanced + hookshot
+    -- Waterfall ledge + flippers
+    -- Waterfall ledge + advanced + hookshot
     -- Cucco dungeon ledge
     -- Witch house
     -- Eastern Ruins Upper
     -- Eastern Ruins East Ledge
     -- Witch cave
     -- Zora Domain Area
+    -- Eastern Ruins Bomb Cave Lower
+    -- access_house_of_gales_island + flippers
+    -- RossoCave
+    -- Tornado Rod Dungeon
     return AccessibilityLevel.Normal
 end
 
@@ -1321,6 +1321,8 @@ function access_eastern_ruins_upper()
         worst({ access_hyrule_field(), hyrule_way }),
         worst({ access_eastern_ruins_east_ledge(), east_ledge_way }),
         access_witch_cave(),
+        access_merge_mini_dungeon(),
+        access_eastern_ruins_bomb_cave_upper(),
     })
     free("access_eastern_ruins_upper")
     return result
@@ -1797,7 +1799,7 @@ function access_lake_hylia()
     return result
 end
 
-function access_merge_dungeon()
+function access_merge_mini_dungeon()
     return access_eastern_ruins_upper()
 end
 
@@ -1811,6 +1813,19 @@ function access_eastern_ruins_bomb_cave_upper()
     end
     local result = worst({ access_eastern_ruins_east_ledge(), east_ledge_way })
     free("access_eastern_ruins_bomb_cave_upper")
+    return result
+end
+
+function access_eastern_ruins_bomb_cave_lower()
+    if not check("access_eastern_ruins_bomb_cave_lower") then
+        return AccessibilityLevel.None
+    end
+    local bomb_cave_upper_way = true_for("hard") -- It's not obvious but you can just walk
+    if has("merge") then
+        bomb_cave_upper_way = AccessibilityLevel.Normal
+    end
+    local result = worst({ access_eastern_ruins_bomb_cave_upper(), bomb_cave_upper_way })
+    free("access_eastern_ruins_bomb_cave_lower")
     return result
 end
 

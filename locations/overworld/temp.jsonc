@@ -95,56 +95,6 @@
             ]
           },
           {
-            "name": "Rosso's House",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 700,
-                "y": 146
-              }
-            ],
-            "sections": [
-              {
-                "name": "Power Glove",
-                "access_rules": ["rosso"],
-                "item_count": 1
-              },
-              {
-                "name": "Smash Rocks",
-                "access_rules": ["rosso, power_glove"],
-                "item_count": 1
-              },
-              {
-                "hosted_item": "crack_rossos_house",
-                "name": "Rosso's House Crack",
-                "access_rules": ["rosso", "{cracksanity, merge, quake_on, !$has_crack_map}"],
-                "visibility_rules": ["cracksanity"]
-              }
-            ]
-          },
-          {
-            "name": "Rosso Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 696,
-                "y": 74
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "access_rules": [
-                  "hammer",
-                  "[glitched], boomerang",
-                  "[glitched], nice_items_off, hookshot",
-                  "[advanced], nice_items_off, shield, trod"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
             "name": "Fortune-Teller",
             "map_locations": [
               {
@@ -269,33 +219,6 @@
                   "not_cracksanity, merge, quake_on, crack_graveyard_lorule"
                 ],
                 "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "River Mini-Dungeon",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1350,
-                "y": 586
-              }
-            ],
-            "sections": [
-              {
-                "name": "Chest",
-                "inspectable_sequence_break": true,
-                "access_rules": ["{csmc_on, bombs}", "bombs, merge"],
-                "item_count": 1
-              },
-              {
-                "name": "Inspect color",
-                "visibility_rules": ["csmc_on, river_mini_dungeon_ungot_state"],
-                "chest_opened_img": "images/display/transparent.png",
-                "chest_unopened_img": "images/display/transparent.png",
-                "access_rules": [
-                  "{bombs}", "bombs, merge"
-                ]
               }
             ]
           }
@@ -483,63 +406,6 @@
                   "[hell], $beeBoost"
                 ],
                 "item_count": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Eastern Ruins",
-        "children": [
-          {
-            "name": "Eastern Ruins Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1918,
-                "y": 944
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": ["bombs, merge"],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Gated Area",
-            "access_rules": [
-              "merge",
-              "bow",
-              "hookshot",
-              "boomerang",
-              "bombs",
-              "irod",
-              "great_spin, fsword",
-              "bell, wv_eastern",
-              "[hard], power_glove"
-            ],
-            "children": [
-              {
-                "name": "Merge Mini-Dungeon",
-                "map_locations": [
-                  {
-                    "map": "hyrule",
-                    "x": 1632,
-                    "y": 925
-                  }
-                ],
-                "sections": [
-                  {
-                    "name": "Rupee reward",
-                    "access_rules": ["merge"],
-                    "item_count": 1
-                  }
-                ]
               }
             ]
           }

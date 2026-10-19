@@ -359,37 +359,6 @@
             ]
           }
         ]
-      },
-
-      {
-        "name": "Lake Hylia",
-        "children": [
-          {
-            "name": "Lake Hylia Island Tile",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1644,
-                "y": 1685,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": [
-                  "trod, flippers",
-                  "trod, wv_gales, bell",
-                  "[advanced], trod, $fakeFlippers",
-                  "[advanced], trod, irod, hookshot"
-                ]
-              }
-            ]
-          }
-        ]
       }
     ]
   },

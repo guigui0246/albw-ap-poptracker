@@ -1805,6 +1805,208 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Merge Mini-Dungeon",
+        "access_rules": [
+          "^$access_merge_mini_dungeon"
+        ],
+        "children": [
+          {
+            "name": "Merge Mini-Dungeon",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1632,
+                "y": 925
+              }
+            ],
+            "sections": [
+              {
+                "name": "Rupee reward",
+                "access_rules": ["merge"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "East Ruins Bomb Cave Upper",
+        "access_rules": [
+          "^$access_east_ruins_bomb_cave_upper"
+        ],
+        "children": [
+          {
+            "name": "Eastern Ruins Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1918,
+                "y": 944
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "access_rules": ["merge"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "House of Gales Island",
+        "access_rules": [
+          "^$access_house_of_gales_island",
+          "^$warpHyrule,wv_gales"
+        ],
+        "children": [
+          {
+            "name": "House of Gales Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1559,
+                "y": 1738,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_gales",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Lake Hylia Island Tile",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1644,
+                "y": 1685,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "trod"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rosso House",
+        "access_rules": [
+          "^$access_rosso_house"
+        ],
+        "children": [
+          {
+            "name": "Rosso's House",
+            "access_rules": ["rosso"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 700,
+                "y": 146
+              }
+            ],
+            "sections": [
+              {
+                "name": "Power Glove",
+                "item_count": 1
+              },
+              {
+                "name": "Smash Rocks",
+                "access_rules": ["power_glove"],
+                "item_count": 1
+              },
+              {
+                "hosted_item": "crack_rossos_house",
+                "name": "Rosso's House Crack",
+                "access_rules": [
+                  "$cracks",
+                  "{$cracksInspect}"
+                ],
+                "visibility_rules": ["cracksanity"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rosso Cave",
+        "access_rules": [
+          "^$access_rosso_cave"
+        ],
+        "children": [
+          {
+            "name": "Rosso Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 696,
+                "y": 74
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tornado Rod Dungeon",
+        "access_rules": [
+          "^$access_tornado_rod_dungeon"
+        ],
+        "children": [
+          {
+            "name": "River Mini-Dungeon",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1350,
+                "y": 586
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": ["{csmc_on}", "merge"],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, river_mini_dungeon_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}", "merge"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

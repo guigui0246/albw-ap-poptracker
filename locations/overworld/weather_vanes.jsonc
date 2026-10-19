@@ -4,32 +4,6 @@
     "children": [
       // Hyrule Weather Vanes ------------------------------------------------------------------------------------------
       {
-        "name": "House of Gales Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1559,
-            "y": 1738,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_gales",
-            "access_rules": [
-              "wv_gales",
-              "flippers",
-              "[advanced], irod, hookshot",
-              "[advanced], $fakeFlippers",
-              "[hell], $beeFakeFlippers"
-            ],
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "Tower of Hera Weather Vane",
         "map_locations": [
           {
