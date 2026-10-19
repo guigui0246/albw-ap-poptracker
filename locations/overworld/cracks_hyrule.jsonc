@@ -204,36 +204,5 @@
         ]
       }
     ]
-  },
-  {
-    "name": "[HC] Crack",
-    "map_locations": [
-      {
-        "map": "hyrule",
-        "x": 1024,
-        "y": 792,
-        "shape": "trapezoid"
-      },
-      {
-        "map": "hyrule_castle",
-        "x": 166,
-        "y": 86,
-        "size": 36
-      }
-    ],
-    "sections": [
-      {
-        "name": "Crack",
-        "hosted_item": "crack_hc",
-        "access_rules": [
-          "crack_hc",
-          "msword, merge",
-          "swordless, merge, ^$knucklemaster",
-          // Twoga is immune to Bow
-          "[], merge, $barrier_skip",
-          "{cracksanity, merge, quake_on, !$has_crack_map}"
-        ]
-      }
-    ]
   }
 ]

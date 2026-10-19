@@ -1247,6 +1247,8 @@ function warpHyrule()
         access_waterfall_cave_shallow_water(),
         access_house_of_gales_island(),
         access_graveyard_ledge_hyrule(),
+        access_hyrule_castle_courtyard(),
+        access_hyrule_castle_roof(),
     })
     free("warpHyrule")
     return result
@@ -1274,6 +1276,11 @@ function access_hyrule_field()
     -- RossoCave
     -- Tornado Rod Dungeon
     -- Graveyard Ledge Hyrule
+    -- Blacksmith House
+    -- Blacksmith Cave
+    -- access_hyrule_castle_courtyard + msword
+    -- access_hyrule_castle_courtyard + swordless
+    -- Hyrule castle roof
     return AccessibilityLevel.Normal
 end
 
@@ -1457,7 +1464,16 @@ function access_hyrule_castle_courtyard()
     if has("msword") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    if barrier_skip() then
+        hyrule_way = best({ hyrule_way, AccessibilityLevel.SequenceBreak })
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        access_hyrule_castle_interior(),
+        access_hyrule_castle_right_room(),
+        access_hyrule_castle_left_room(),
+        access_hyrule_castle_roof(),
+    })
     free("access_hyrule_castle_courtyard")
     return result
 end
@@ -1846,4 +1862,48 @@ end
 
 function access_graveyard_ledge_cave()
     return access_graveyard_ledge_hyrule()
+end
+
+function access_hyrule_castle_left_room()
+    return access_hyrule_castle_courtyard()
+end
+
+function access_hyrule_castle_right_room()
+    return access_hyrule_castle_courtyard()
+end
+
+function access_hyrule_castle_interior()
+    if not check("access_hyrule_castle_interior") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_hyrule_castle_courtyard(),
+        access_hyrule_castle_roof(),
+    })
+    free("access_hyrule_castle_interior")
+    return result
+end
+
+function access_hyrule_castle_roof()
+    return access_hyrule_castle_interior()
+end
+
+function access_hyrule_castle_dungeon()
+    if not check("access_hyrule_castle_dungeon") then
+        return AccessibilityLevel.None
+    end
+    local hyrule_roof_way = AccessibilityLevel.None
+    if hearts(6) then
+        hyrule_roof_way = AccessibilityLevel.Normal
+    end
+    local crack_hc_way = AccessibilityLevel.None
+    if has("crack_hc") and yuga2() then
+        crack_hc_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_hyrule_castle_roof(), hyrule_roof_way }),
+        crack_hc_way
+    })
+    free("access_hyrule_castle_dungeon")
+    return result
 end

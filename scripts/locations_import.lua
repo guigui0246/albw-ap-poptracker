@@ -6,7 +6,6 @@ if not string.match(Tracker.ActiveVariantUID, "items_only$") then
   Tracker:AddLocations("locations/dungeons/eastern.jsonc")
   Tracker:AddLocations("locations/dungeons/gales.jsonc")
   Tracker:AddLocations("locations/dungeons/hera.jsonc")
-  Tracker:AddLocations("locations/dungeons/hyrule_castle.jsonc")
 
   Tracker:AddLocations("locations/dungeons/dark.jsonc")
   Tracker:AddLocations("locations/dungeons/swamp.jsonc")

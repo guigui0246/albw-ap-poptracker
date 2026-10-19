@@ -2633,6 +2633,204 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Blacksmith House",
+        "access_rules": [
+          "^$access_blacksmith_house"
+        ],
+        "children": [
+          {
+            "name": "Blacksmith",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 644,
+                "y": 1056
+              }
+            ],
+            "sections": [
+              {
+                "name": "Table",
+                "item_count": 1
+              },
+              {
+                "name": "Tempered Sword reward",
+                "access_rules": ["ore_2"],
+                "hosted_item": "blacksmith"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blacksmith Cave",
+        "access_rules": [
+          "^$access_blacksmith_cave"
+        ],
+        "children": [
+          {
+            "name": "Blacksmith Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 670,
+                "y": 1136
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyrule Castle Interior",
+        "access_rules": [
+          "^$access_hyrule_castle_interior"
+        ],
+        "children": [
+          {
+            "name": "Throne",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1024,
+                "y": 934
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1,
+                "access_rules": [
+                  "impa"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyrule Castle Left Room",
+        "access_rules": [
+          "^$access_hyrule_castle_left_room"
+        ],
+        "children": [
+          {
+            "name": "West Wing",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 928,
+                "y": 926
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyrule Castle Roof",
+        "access_rules": [
+          "^$access_hyrule_castle_roof",
+          "{csmc_on}"
+        ],
+        "children": [
+          {
+            "name": "Battlement",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1070,
+                "y": 1048
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1,
+                "inspectable_sequence_break": true
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, battlement_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyrule Castle Dungeon",
+        "access_rules": [
+          "^$access_hyrule_castle_dungeon",
+          "crack_hc"
+        ],
+        "children": [
+          {
+            "name": "Hyrule Dungeon Castle Boss",
+            "access_rules": [
+              "merge,$attack",
+              "irod",
+              "[hard],bow",
+              "[hard],nicebombs",
+              "crack_hc"
+            ],
+            "children": [
+              {
+                "name": "Zelda Study",
+                "access_rules": [
+                  "$yuga2",
+                  "crack_hc"
+                ],
+                "children": [
+                  {
+                    "name": "[HC] Crack",
+                    "map_locations": [
+                      {
+                        "map": "hyrule",
+                        "x": 1024,
+                        "y": 792,
+                        "shape": "trapezoid"
+                      },
+                      {
+                        "map": "hyrule_castle",
+                        "x": 166,
+                        "y": 86,
+                        "size": 36
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Crack",
+                        "access_rules": [
+                          "merge",  // This crack is never closed
+                          "{$cracksInspect}"
+                        ],
+                        "hosted_item": "crack_hc"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

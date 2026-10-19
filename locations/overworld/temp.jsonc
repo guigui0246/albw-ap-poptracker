@@ -356,55 +356,6 @@
         ]
       },
       {
-        "name": "Hyrule Castle Area",
-        "children": [
-          {
-            "name": "Blacksmith",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 644,
-                "y": 1056
-              }
-            ],
-            "sections": [
-              {
-                "name": "Captain's Sword",
-                "item_count": 1
-              },
-              {
-                "name": "Tempered Sword reward",
-                "access_rules": ["ore_2"],
-                "hosted_item": "blacksmith"
-              }
-            ]
-          },
-          {
-            "name": "Blacksmith Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 670,
-                "y": 1136
-              }
-            ],
-            "sections": [
-              {
-                "name": "Heart Piece",
-                "chest_unopened_img": "images/junk/heart_piece.png",
-                "chest_opened_img": "images/junk/heart_piece_collected.png",
-                "access_rules": [
-                  "titansmitt",
-                  "[glitched], $boost",
-                  "[hell], $beeBoost"
-                ],
-                "item_count": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Southern Ruins",
         "children": [
           {
