@@ -1285,6 +1285,14 @@ function access_hyrule_field()
     -- Hyrule castle roof
     -- Lost Woods
     -- Fortune-Teller
+    -- Kakariko Jail Cell
+    -- Kakariko Well Lower
+    -- Stylish Woman's House
+    -- Milk Bar
+    -- Bee Guy House
+    -- Kakariko Item Shop
+    -- Lakeside Item Shop
+    -- Item seller cave
     return AccessibilityLevel.Normal
 end
 
@@ -1512,7 +1520,15 @@ function access_well_upper()
 end
 
 function access_well_lower()
-    return access_hyrule_field()
+    if not check("access_well_lower") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_hyrule_field(),
+        access_well_upper(),
+    })
+    free("access_well_lower")
+    return result
 end
 
 function access_milk_bar()
@@ -1779,7 +1795,19 @@ function access_cucco_house_rear()
 end
 
 function access_woman_house()
-    return access_hyrule_field()
+    if not check("access_woman_house") then
+        return AccessibilityLevel.None
+    end
+    local crack_way = AccessibilityLevel.None
+    if has("crack_stylish_woman") then
+        crack_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        access_hyrule_field(),
+        crack_way,
+    })
+    free("access_woman_house")
+    return result
 end
 
 function access_stylish_woman_house()
