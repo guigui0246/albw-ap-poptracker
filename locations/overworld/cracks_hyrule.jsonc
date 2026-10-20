@@ -46,29 +46,6 @@
         ]
       },
       {
-        "name": "Sanctuary Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_sanctuary",
-            "name": "Crack",
-            "access_rules": [
-              "{cracksanity}",
-              "$sanctuary",
-              "[lampless], $lampless_sanctuary"
-            ],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 948,
-            "y": 555,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Desert Right Pillar Crack",
         "sections": [
           {

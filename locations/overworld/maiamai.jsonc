@@ -161,32 +161,6 @@
             ]
           }
         ]
-      },
-
-      {
-        "name": "Southern Ruins",
-        "children": [
-          {
-            "name": "Southern Ruins Bomb Cave",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 1200,
-                "y": 1844,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["bombs, flippers"]
-              }
-            ]
-          }
-        ]
       }
     ]
   },

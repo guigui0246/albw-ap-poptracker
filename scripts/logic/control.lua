@@ -718,12 +718,24 @@ end
 
 -- Can players complete Sanctuary
 function sanctuary()
-    return hs_small_key() and ((has("lamp") and attack()) or hasAll({ "lampless", "frod" }))
-end
-
--- [Lampless] Can players complete Sanctuary
-function lampless_sanctuary()
-    return hs_small_key() and (has("frod") or sanctuary())
+    if not hs_small_key() then
+        return AccessibilityLevel.None
+    end
+    local normal = AccessibilityLevel.None
+    if attack() then
+        normal = AccessibilityLevel.Normal
+    end
+    local hard = AccessibilityLevel.Normal
+    if not has("lamp") then
+        if has("frod") then
+            normal = worst({ normal, true_for("lampless") })
+            -- Firerod gives attack so hard and normal are the same
+        else
+            normal = AccessibilityLevel.None
+            hard = AccessibilityLevel.None
+        end
+    end
+    return best({ normal, hard })
 end
 
 -- Never in logic
@@ -1251,6 +1263,7 @@ function warpHyrule()
         access_hyrule_castle_roof(),
         access_lost_woods(),
         access_master_sword_area(),
+        access_southern_ruins_pillars(),
     })
     free("warpHyrule")
     return result
@@ -1293,6 +1306,12 @@ function access_hyrule_field()
     -- Kakariko Item Shop
     -- Lakeside Item Shop
     -- Item seller cave
+    -- Flippers Dungeon
+    -- Southern Ruins Bomb Cave
+    -- Lake Dark Cave
+    -- Ice Rod Cave
+    -- Sanctuary Church (useless, needs to finish Sanctuary to unlock it)
+    -- Sanctuary
     return AccessibilityLevel.Normal
 end
 
@@ -1587,7 +1606,10 @@ function access_southern_ruins_bomb_cave()
     if has("bombs") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        access_southern_ruins_pillars(),
+    })
     free("access_southern_ruins_bomb_cave")
     return result
 end
@@ -1737,7 +1759,19 @@ end
 
 function access_sanctuary_church()
     -- From hyrule field, it requires opening sanctuary doors which is done from entering the sanctuary church itself
-    return AccessibilityLevel.None
+    if not check("access_sanctuary_church") then
+        return AccessibilityLevel.None
+    end
+    local crack_way = AccessibilityLevel.None
+    if has("crack_sanctuary") then
+        crack_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        crack_way,
+        worst({ access_sanctuary(), sanctuary() }),
+    })
+    free("access_sanctuary_church")
+    return result
 end
 
 function access_cucco_dungeon_ledge()
@@ -1962,4 +1996,8 @@ function access_master_sword_area()
     })
     free("access_master_sword_area")
     return result
+end
+
+function access_southern_ruins_pillars()
+    return access_southern_ruins_bomb_cave()
 end

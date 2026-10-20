@@ -7,30 +7,6 @@
     "access_rules": ["{$access_ghosts}"],
     "children": [
       {
-        "name": "Lost Woods Area",
-        "children": [
-          {
-            "name": "Death Mountain Access",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 700,
-                "y": 400,
-                "size": 32,
-                "shape": "trapezoid"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Ghost_DeathMountainAccess",
-                "item_count": 1,
-                "visibility_rules": ["hint_ghosts"]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Eastern Ruins",
         "children": [
           {

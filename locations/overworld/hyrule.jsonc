@@ -538,9 +538,8 @@
             "map_locations": [
               {
                 "map": "hyrule",
-                // TODO
-                // "x": 720,
-                // "y": 400,
+                "x": 700,
+                "y": 400,
                 "size": 32,
                 "shape": "trapezoid"
               }
@@ -3402,6 +3401,244 @@
               {
                 "name": "Rupee reward",
                 "access_rules": ["scoot"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Flippers Dungeon",
+        "access_rules": [
+          "^$access_flippers_dungeon"
+        ],
+        "children": [
+          {
+            "name": "Flippers Mini-Dungeon",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 967,
+                "y": 1866
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "boomerang,hookshot,flippers",
+                  "[hard],hookshot,flippers,msword",
+                  "[hard],hookshot,flippers,bombs",
+                  "[glitched],nicebombs",
+                  "[glitched],$canGreatSpin",
+                  "[glitched],niceirod,boomerang",
+                  "[glitched],niceirod,hookshot",
+                  "[glitched],niceirod,flippers,fsword",
+                  "[glitched],niceirod,flippers,bow",
+                  "[glitched],niceirod,flippers,boots",
+                  "[glitched],niceirod,flippers,hammer",
+                  "[hell],niceirod"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, southern_ruins_flippers_mini_dungeon_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Southern Ruins Bomb Cave",
+        "access_rules": [
+          "^$access_southern_ruins_bomb_cave"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Southern Ruins Bomb Cave",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1200,
+                "y": 1844,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["flippers"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Southern Ruins Pillars",
+        "access_rules": [
+          "^$access_southern_ruins_pillars"
+        ],
+        "children": [
+          {
+            "name": "Southern Ruins Pillars Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1139,
+                "y": 1768
+              }
+            ],
+            "sections": [
+              {
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "access_rules": ["bombs"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lake Dark Cave",
+        "access_rules": [
+          "^$access_lake_dark_cave"
+        ],
+        "children": [
+          {
+            "name": "Lake Hylia Dark Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1331,
+                "y": 1917
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "access_rules": ["$fire"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ice Rod Cave",
+        "access_rules": [
+          "^$access_ice_rod_cave"
+        ],
+        "children": [
+          {
+            "name": "Ice Rod Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1800,
+                "y": 1548
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": ["{csmc_on, trod}", "{csmc_on, irod}", "bombs"],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, lake_hylia_ice_rod_cave_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{trod}", "{irod}", "bombs"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sanctuary Church",
+        "access_rules": [
+          "^$access_sanctuary_church"
+        ],
+        "children": [
+          {
+            "name": "Sanctuary Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_sanctuary",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 948,
+                "y": 555,
+                "shape": "trapezoid"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sanctuary",
+        "access_rules": [
+          "^$access_sanctuary"
+        ],
+        "children": [
+          {
+            "name": "Hyrule Sanctuary",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1147,
+                "y": 652,
+                "size": 64
+              }
+            ],
+            "sections": [
+              {
+                "name": "[HS] Entrance",
+                "item_count": 1
+              },
+              {
+                "name": "[HS] Lower Chest",
+                "access_rules": ["lamp", "^$lampless, frod"],
+                "item_count": 1
+              },
+              {
+                "name": "[HS] Upper Chest",
+                "access_rules": ["lamp", "^$lampless, frod"],
+                "item_count": 1
+              },
+              {
+                "name": "[HS] Ledge Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "access_rules": ["lamp, merge", "^$lampless, frod, merge"],
                 "item_count": 1
               }
             ]
