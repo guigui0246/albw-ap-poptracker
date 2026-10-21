@@ -17,6 +17,11 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 <summary>1.7.x</summary>
 
+### 1.7.6
+
+- Fix log messages spam
+- Fix crack links overlapping
+
 ### 1.7.5
 
 - Fix trial doors back entry
