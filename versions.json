@@ -3,7 +3,7 @@
     {
       "package_version": "1.7.5",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.5/albw-ap-poptracker-v1.7.5.zip",
-      "sha256": "989D905C386EC4DBE46E802D9405334B422DDEF79FC623ABD7CFF5C4B67C5FC7",
+      "sha256": "2D41DE2F6123ED9C8F345532C30C8B226274937288B8615F1F859909FDC46BBF",
       "changelog": [
         "Better manual tracking of mother maiamai's rewards",
         "Add the auto-fill pendants and sages setting to the dungeon layout so you don't need to search for it in the settings menu",
