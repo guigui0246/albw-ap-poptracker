@@ -1239,10 +1239,10 @@ end
 -- To DeathMountainWestTop: hera
 -- TODO complete
 function warpHyrule()
-    if not check("warpHyrule") then
+    if not has("bell") then
         return AccessibilityLevel.None
     end
-    if not has("bell") then
+    if not check("warpHyrule") then
         return AccessibilityLevel.None
     end
     local result = best({
@@ -1264,6 +1264,8 @@ function warpHyrule()
         access_lost_woods(),
         access_master_sword_area(),
         access_southern_ruins_pillars(),
+        access_moldorm_ledge(),
+        access_death_mountain_base(),
     })
     free("warpHyrule")
     return result
@@ -1312,6 +1314,22 @@ function access_hyrule_field()
     -- Ice Rod Cave
     -- Sanctuary Church (useless, needs to finish Sanctuary to unlock it)
     -- Sanctuary
+    -- Moldorm Cave
+    -- Moldorm Ledge
+    -- "^$warpHyrule,wv_your_house",
+    -- "^$warpHyrule,wv_kakariko",
+    -- "^$warpHyrule,wv_sanctuary",
+    -- "^$warpHyrule,wv_witch",
+    -- "crack_your_house",
+    -- "crack_hyrule_hotfoot",
+    -- "crack_right_hyrule_paradox",
+    -- "crack_mire_entrance",
+    -- "crack_lost_woods_pillar",
+    -- "crack_sahasrahlas_house",
+    -- "crack_eastern_ruins_pillar",
+    -- "crack_swamp_pillar",
+    -- "crack_lake_hylia",
+    -- "crack_eastern_ruins_se"
     return AccessibilityLevel.Normal
 end
 
@@ -1357,12 +1375,17 @@ function access_eastern_ruins_upper()
     if has("merge") then
         east_ledge_way = AccessibilityLevel.Normal
     end
+    local warp_way = AccessibilityLevel.None
+    if has("wv_eastern") then
+        warp_way = warpHyrule()
+    end
     local result = best({
         worst({ access_hyrule_field(), hyrule_way }),
         worst({ access_eastern_ruins_east_ledge(), east_ledge_way }),
         access_witch_cave(),
         access_merge_mini_dungeon(),
         access_eastern_ruins_bomb_cave_upper(),
+        warp_way,
     })
     free("access_eastern_ruins_upper")
     return result
@@ -1412,6 +1435,9 @@ function access_witch_cave()
 end
 
 function access_zora_domain_area()
+    if has("crack_zoras_domain") then
+        return AccessibilityLevel.Normal
+    end
     if not check("access_zora_domain_area") then
         return AccessibilityLevel.None
     end
@@ -1652,12 +1678,23 @@ function access_moldorm_cave()
     if has("power_glove") then
         hyrule_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local moldorm_cave_top_way = AccessibilityLevel.None
+    if has("titansmitt") then
+        moldorm_cave_top_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        worst({ access_moldorm_cave_top(), moldorm_cave_top_way }),
+        access_death_mountain_base(),
+    })
     free("access_moldorm_cave")
     return result
 end
 
 function access_rosso_house()
+    if has("crack_rossos_house") then
+        return AccessibilityLevel.Normal
+    end
     if not check("access_rosso_house") then
         return AccessibilityLevel.None
     end
@@ -1722,12 +1759,22 @@ function access_house_of_gales_island()
     if beeBoost() then
         hyrule_way = best({ hyrule_way, true_for("hell") })
     end
-    local result = worst({ access_hyrule_field(), hyrule_way })
+    local warp_way = AccessibilityLevel.None
+    if has("wv_gales") then
+        warp_way = warpHyrule()
+    end
+    local result = best({
+        worst({ access_hyrule_field(), hyrule_way }),
+        warp_way
+    })
     free("access_house_of_gales_island")
     return result
 end
 
 function access_bridge_shallow_water()
+    if has("crack_river") then
+        return AccessibilityLevel.Normal
+    end
     if not check("access_bridge_shallow_water") then
         return AccessibilityLevel.None
     end
@@ -1758,23 +1805,22 @@ function access_witch_house()
 end
 
 function access_sanctuary_church()
+    if has("crack_sanctuary") then
+        return AccessibilityLevel.Normal
+    end
     -- From hyrule field, it requires opening sanctuary doors which is done from entering the sanctuary church itself
     if not check("access_sanctuary_church") then
         return AccessibilityLevel.None
     end
-    local crack_way = AccessibilityLevel.None
-    if has("crack_sanctuary") then
-        crack_way = AccessibilityLevel.Normal
-    end
-    local result = best({
-        crack_way,
-        worst({ access_sanctuary(), sanctuary() }),
-    })
+    local result = worst({ access_sanctuary(), sanctuary() })
     free("access_sanctuary_church")
     return result
 end
 
 function access_cucco_dungeon_ledge()
+    if has("crack_left_hyrule_paradox") then
+        return AccessibilityLevel.Normal
+    end
     if not check("access_cucco_dungeon_ledge") then
         return AccessibilityLevel.None
     end
@@ -1795,6 +1841,9 @@ function access_cucco_dungeon()
 end
 
 function access_waterfall_ledge()
+    if has("crack_waterfall") then
+        return AccessibilityLevel.Normal
+    end
     if not check("access_waterfall_ledge") then
         return AccessibilityLevel.None
     end
@@ -1829,19 +1878,10 @@ function access_cucco_house_rear()
 end
 
 function access_woman_house()
-    if not check("access_woman_house") then
-        return AccessibilityLevel.None
-    end
-    local crack_way = AccessibilityLevel.None
     if has("crack_stylish_woman") then
-        crack_way = AccessibilityLevel.Normal
+        return AccessibilityLevel.Normal
     end
-    local result = best({
-        access_hyrule_field(),
-        crack_way,
-    })
-    free("access_woman_house")
-    return result
+    return access_hyrule_field()
 end
 
 function access_stylish_woman_house()
@@ -1926,6 +1966,9 @@ function access_zora_domain()
 end
 
 function access_graveyard_ledge_hyrule()
+    if has("crack_graveyard") then
+        return AccessibilityLevel.Normal
+    end
     if not check("access_graveyard_ledge_hyrule") then
         return AccessibilityLevel.None
     end
@@ -2000,4 +2043,65 @@ end
 
 function access_southern_ruins_pillars()
     return access_southern_ruins_bomb_cave()
+end
+
+function access_moldorm_cave_top()
+    if not check("access_moldorm_cave_top") then
+        return AccessibilityLevel.None
+    end
+    local moldorm_cave_way = AccessibilityLevel.None
+    if has("titansmitt") then
+        moldorm_cave_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_moldorm_cave(), moldorm_cave_way }),
+        access_moldorm_ledge()
+    })
+    free("access_moldorm_cave_top")
+    return result
+end
+
+function access_death_mountain_base()
+    if has("crack_dm_west") then
+        return AccessibilityLevel.Normal
+    end
+    return access_moldorm_cave()
+end
+
+function access_moldorm_ledge()
+    return access_moldorm_cave_top()
+end
+
+function access_death_bomb_cave()
+    if not check("access_death_bomb_cave") then
+        return AccessibilityLevel.None
+    end
+    local death_mountain_way = AccessibilityLevel.None
+    if hasAll({ "bombs", "merge" }) then
+        death_mountain_way = AccessibilityLevel.Normal
+    end
+    local result = worst({ access_death_mountain_base(), death_mountain_way })
+    free("access_death_bomb_cave")
+    return result
+end
+
+function death_wv_cave_left()
+    return access_death_mountain_base()
+end
+
+function access_death_fairy_cave()
+    if not check("access_death_fairy_cave") then
+        return AccessibilityLevel.None
+    end
+    local death_mountain_way = AccessibilityLevel.None
+    if has("merge") then
+        death_mountain_way = AccessibilityLevel.Normal
+    end
+    local result = worst({ access_death_mountain_base(), death_mountain_way })
+    free("access_death_fairy_cave")
+    return result
+end
+
+function access_donkey_cave_lower()
+    return access_death_mountain_base()
 end

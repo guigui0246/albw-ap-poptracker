@@ -38,21 +38,7 @@
       {
         "name": "Hyrule Field",
         "access_rules": [
-          "^$warpHyrule,wv_your_house",
-          "^$warpHyrule,wv_kakariko",
-          "^$warpHyrule,wv_sanctuary",
-          "^$warpHyrule,wv_witch",
-          "^$access_hyrule_field",
-          "crack_your_house",
-          "crack_hyrule_hotfoot",
-          "crack_right_hyrule_paradox",
-          "crack_mire_entrance",
-          "crack_lost_woods_pillar",
-          "crack_sahasrahlas_house",
-          "crack_eastern_ruins_pillar",
-          "crack_swamp_pillar",
-          "crack_lake_hylia",
-          "crack_eastern_ruins_se"
+          "^$access_hyrule_field"
         ],
         "children": [
           {
@@ -1782,8 +1768,7 @@
       {
         "name": "Bridge Shallow Water",
         "access_rules": [
-          "^$access_bridge_shallow_water",
-          "crack_river"
+          "^$access_bridge_shallow_water"
         ],
         "children": [
           {
@@ -1843,8 +1828,7 @@
       {
         "name": "Waterfall Ledge",
         "access_rules": [
-          "^$access_waterfall_ledge",
-          "crack_waterfall"
+          "^$access_waterfall_ledge"
         ],
         "children": [
           {
@@ -1898,8 +1882,7 @@
       {
         "name": "Cucco Dungeon Ledge",
         "access_rules": [
-          "^$access_cucco_dungeon_ledge",
-          "crack_left_hyrule_paradox"
+          "^$access_cucco_dungeon_ledge"
         ],
         "children": [
           {
@@ -2005,8 +1988,7 @@
       {
         "name": "Eastern Ruins Upper",
         "access_rules": [
-          "$access_eastern_ruins_upper",
-          "^$warpHyrule,wv_eastern"
+          "$access_eastern_ruins_upper"
         ],
         "children": [
           {
@@ -2137,8 +2119,7 @@
       {
         "name": "Zora Domain Area",
         "access_rules": [
-          "^$access_zora_domain_area",
-          "crack_zoras_domain"
+          "^$access_zora_domain_area"
         ],
         "children": [
           {
@@ -2383,8 +2364,7 @@
       {
         "name": "House of Gales Island",
         "access_rules": [
-          "^$access_house_of_gales_island",
-          "^$warpHyrule,wv_gales"
+          "^$access_house_of_gales_island"
         ],
         "children": [
           {
@@ -2457,8 +2437,7 @@
       {
         "name": "Rosso House",
         "access_rules": [
-          "^$access_rosso_house",
-          "crack_rossos_house"
+          "^$access_rosso_house"
         ],
         "children": [
           {
@@ -2556,8 +2535,7 @@
       {
         "name": "Graveyard Ledge Hyrule",
         "access_rules": [
-          "^$access_graveyard_ledge_hyrule",
-          "crack_graveyard"
+          "^$access_graveyard_ledge_hyrule"
         ],
         "children": [
           {
@@ -3640,6 +3618,109 @@
                 "chest_opened_img": "images/junk/heart_piece_collected.png",
                 "access_rules": ["lamp, merge", "^$lampless, frod, merge"],
                 "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Moldorm Ledge",
+        "access_rules": [
+          "^$access_moldorm_ledge"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Moldorm Ledge",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 730,
+                "y": 333,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": ["merge"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Mountain Base",
+        "access_rules": [
+          "^$access_death_mountain_base"
+        ],
+        "children": [
+          {
+            "name": "Death Mountain Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1027,
+                "y": 349,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_death_hyrule",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "[Mai] Death Mountain Base Rock",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1142,
+                "y": 468,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "power_glove"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Death West Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_dm_west",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 935,
+                "y": 310,
+                "shape": "trapezoid"
               }
             ]
           }

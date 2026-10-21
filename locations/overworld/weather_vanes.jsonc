@@ -31,30 +31,6 @@
         ]
       },
       {
-        "name": "Death Mountain Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1027,
-            "y": 349,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_death_hyrule",
-            "access_rules": [
-              "wv_death_hyrule",
-              "$access_dm_west_base",
-              "[glitched]"
-            ],
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "Desert Palace Weather Vane",
         "map_locations": [
           {

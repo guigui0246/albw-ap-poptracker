@@ -4,25 +4,6 @@
     "access_rules": ["{merge, quake_on, !$has_crack_map}", "merge, quake_on"],
     "children": [
       {
-        "name": "Hyrule Death West Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_dm_west",
-            "name": "Crack",
-            "access_rules": ["$access_dm_west_base", "[glitched]"],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 935,
-            "y": 310,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Hyrule Rosso's Ore Mine Crack",
         "sections": [
           {

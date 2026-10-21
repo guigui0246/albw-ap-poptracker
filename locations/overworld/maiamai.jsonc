@@ -90,31 +90,6 @@
     "chest_opened_img": "images/items/maiamai_opened.png",
     "children": [
       {
-        "name": "Lost Woods Area",
-        "children": [
-          {
-            "name": "Moldorm Ledge",
-            "map_locations": [
-              {
-                "map": "hyrule",
-                "x": 730,
-                "y": 333,
-                "size": 32,
-                "shape": "diamond"
-              }
-            ],
-            "sections": [
-              {
-                "name": "Maiamai",
-                "item_count": 1,
-                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
-                "access_rules": ["merge, titansmitt"]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Desert",
         "children": [
           {
