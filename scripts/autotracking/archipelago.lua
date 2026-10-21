@@ -1046,14 +1046,9 @@ ON_SYNC = {
 
 function syncDisplayCallback(code)
     if type(code) == "string" then
-        local obj = Tracker:FindObjectForCode(code)
-        if obj then
----@diagnostic disable-next-line: undefined-field
-            local name = obj.Name or obj.name
-            if name == "Information" then
-                return
-            end
-            if name == "Crack Link" then
+        for singleCode in code:gmatch("[^,%s]+") do
+            if singleCode:match("^important_hint_panel_line_%d+$")
+                or singleCode:match("^crack_link_%d+$") then
                 return
             end
         end
