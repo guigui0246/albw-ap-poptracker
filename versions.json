@@ -1,7 +1,15 @@
 {
   "versions": [
     {
-      "package_version": "1.7.5",
+      "package_version": "1.7.7",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.7/albw-ap-poptracker-v1.7.7.zip",
+      "sha256": "6685B399E3BAE1E2C64A704B0A9CAA9A9901E2276D9F213902A783142BC8B374",
+      "changelog": [
+        "Fix manifest version"
+      ]
+    },
+    {
+      "package_version": "1.7.6",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.6/albw-ap-poptracker-v1.7.6.zip",
       "sha256": "905F9236371F2DF8E6E7D57A9CE8D6D454F1DACF524CE250C2DB9B9636F99D35",
       "changelog": [
