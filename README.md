@@ -17,6 +17,10 @@ Forked from [Legend's ALBW AP PopTracker](https://github.com/Legendgreat/albw-ap
 
 <summary>1.7.x</summary>
 
+### 1.7.7
+
+- Fix version number in manifest
+
 ### 1.7.6
 
 - Fix log messages spam
