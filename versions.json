@@ -2,6 +2,15 @@
   "versions": [
     {
       "package_version": "1.7.5",
+      "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.6/albw-ap-poptracker-v1.7.6.zip",
+      "sha256": "905F9236371F2DF8E6E7D57A9CE8D6D454F1DACF524CE250C2DB9B9636F99D35",
+      "changelog": [
+        "Fix log messages spam",
+        "Fix crack links overlapping"
+      ]
+    },
+    {
+      "package_version": "1.7.5",
       "download_url": "https://github.com/guigui0246/albw-ap-poptracker/releases/download/1.7.5/albw-ap-poptracker-v1.7.5.zip",
       "sha256": "2D41DE2F6123ED9C8F345532C30C8B226274937288B8615F1F859909FDC46BBF",
       "changelog": [
