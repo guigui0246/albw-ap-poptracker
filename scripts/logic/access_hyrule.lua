@@ -25,9 +25,3 @@ function glitched_access_desert_palace()
 
     return false
 end
-
--- Return if we can reach Desert Palace 2F
-function dp2F()
-    return (has("keysy_small") or has_amount("dp_small_keys", 2))
-            and hasAll({ "merge", "srod", "titansmitt" }) and switch() and attack()
-end

@@ -187,6 +187,11 @@
         "name": "Nice Bow",
         "img": "images/items/bow_nice.png",
         "codes": "p_bow, nicebow"
+      },
+      {
+        "name": "Nice Bow + Bow of Light",
+        "img": "images/items/bow_light.png",
+        "codes": "p_bow, nicebow, bow_of_light"
       }
     ]
   },
@@ -194,7 +199,7 @@
     "name": "Bow of Light",
     "type": "toggle",
     "img": "images/items/bow_light.png",
-    "codes": "bow_of_light, bowoflight, bow_light, bowlight"
+    "codes": "bow_of_light, bowoflight"
   },
   {
     "name": "Bug Net",

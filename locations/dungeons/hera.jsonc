@@ -5,342 +5,360 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "power_glove, merge, hammer",
-      "$access_dm_west_top, hammer",
-      "[glitched], merge, hammer",
-      "[advanced], hammer, $adv_glitched_access_dm_west_top",
-      "[hell], hammer, $hell_access_dm_west_top"
+      "$access_hera",
+      "$glitched_access_hera",
+      "$advanced_access_hera",
+      "$hell_access_hera"
     ],
     "children": [
       {
-        "name": "(1F) Outside",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 958,
-            "y": 857
-          }
+        "name": "Bottom",
+        "access_rules": [
+          "hammer"
         ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "th_1f_outside",
-            "access_rules": ["merge", "[advanced], fsword, bombs, trod"]
-          }
-        ]
-      },
-      {
-        "name": "(1F) Center",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 977,
-            "y": 955
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "th_1f_center",
-            "access_rules": ["merge", "[advanced], fsword, bombs"]
-          }
-        ]
-      },
-      {
-        "name": "(3F) Platform",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 183,
-            "y": 971
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            //"capture_item": true,
-            "hosted_item": "th_3f_platform",
-            "access_rules": ["merge", "[advanced], fsword, bombs"]
-          }
-        ]
-      },
-      {
-        "name": "(5F) Red/Blue Switches",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 1445,
-            "y": 604
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "th_5f_red_blue_switches",
-            "access_rules": [
-              "merge, $th_small_keys|1",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(6F) Left Mole",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 927,
-            "y": 528
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            //"capture_item": true,
-            "hosted_item": "th_6f_left_mole",
-            "access_rules": [
-              "merge, $th_small_keys|1",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(6F) Right Mole",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 1027,
-            "y": 528
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "th_6f_right_mole",
-            "access_rules": [
-              "merge, $th_small_keys|1",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(7F) Outside (Ledge)",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 636,
-            "y": 683
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "th_7f_outside_ledge",
-            "access_rules": [
-              "merge, $th_small_keys|2",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(8F) Fairy Room",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 145,
-            "y": 539
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "th_8f_fairy_room",
-            "access_rules": [
-              "merge, $th_small_keys|2",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "(11F) Big Chest",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 1043,
-            "y": 170
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "chest_unopened_img": "images/chest_big_unopened.png",
-            "chest_opened_img": "images/chest_big_opened.png",
-            "hosted_item": "th_11f_big_chest",
-            "access_rules": [
-              "merge, $th_small_keys|2",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Moldorm",
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 183,
-            "y": 189
-          }
-        ],
-        "sections": [
-          {
-            "name": "Heart Container",
-            //"capture_item": true,
-            "hosted_item": "th_moldorm",
-            "access_rules": [
-              "merge, $th_small_keys|2, $th_big_key",
-              "[advanced], merge, bombs, trod, $th_big_key",
-              "[advanced], fsword, bombs, trod, $th_big_key"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Tower of Hera Rewards",
-        "access_rules": ["merge", "[advanced], fsword, bombs, trod"],
-        "map_locations": [
-          {
-            "map": "hera",
-            "x": 183,
-            "y": 139,
-            "size": 36
-          }
-        ],
-        "sections": [
-          {
-            "name": "Reward",
-            "hosted_item": "th",
-            "access_rules": [
-              "merge, $th_small_keys|2, $th_big_key",
-              "[advanced], merge, bombs, trod, $th_big_key",
-              "[advanced], fsword, bombs, trod, $th_big_key"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Tower of Hera",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1211,
-            "y": 39,
-            "size": 80
-          }
-        ],
-        "sections": [
+        "children": [
           {
             "name": "(1F) Outside",
-            "hosted_item": "th_1f_outside",
-            "access_rules": ["merge", "[advanced], fsword, bombs, trod"]
+            "map_locations": [
+              {
+                "map": "hera",
+                "x": 958,
+                "y": 857
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "th_1f_outside",
+                "access_rules": [
+                  "merge",
+                  "[advanced], fsword, bombs, trod"
+                ]
+              }
+            ]
           },
           {
             "name": "(1F) Center",
-            "hosted_item": "th_1f_center",
-            "access_rules": ["merge", "[advanced], fsword, bombs"]
+            "map_locations": [
+              {
+                "map": "hera",
+                "x": 977,
+                "y": 955
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "th_1f_center",
+                "access_rules": [
+                  "merge",
+                  "[advanced], fsword, bombs"
+                ]
+              }
+            ]
           },
           {
             "name": "(3F) Platform",
-            //"capture_item": true,
-            "hosted_item": "th_3f_platform",
-            "access_rules": ["merge", "[advanced], fsword, bombs"]
+            "map_locations": [
+              {
+                "map": "hera",
+                "x": 183,
+                "y": 971
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "hosted_item": "th_3f_platform",
+                "access_rules": [
+                  "merge",
+                  "[advanced], fsword, bombs"
+                ]
+              }
+            ]
           },
           {
-            "name": "(5F) Red/Blue Switches",
-            "hosted_item": "th_5f_red_blue_switches",
+            "name": "Middle",
             "access_rules": [
-              "merge, $th_small_keys|1",
-              "[advanced], merge, bombs, trod",
+              "$th_small_keys|1, merge",
               "[advanced], fsword, bombs, trod"
-            ]
-          },
-          {
-            "name": "(6F) Left Mole",
-            //"capture_item": true,
-            "hosted_item": "th_6f_left_mole",
-            "access_rules": [
-              "merge, $th_small_keys|1",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          },
-          {
-            "name": "(6F) Right Mole",
-            "hosted_item": "th_6f_right_mole",
-            "access_rules": [
-              "merge, $th_small_keys|1",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          },
-          {
-            "name": "(7F) Outside (Ledge)",
-            "hosted_item": "th_7f_outside_ledge",
-            "access_rules": [
-              "merge, $th_small_keys|2",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          },
-          {
-            "name": "(8F) Fairy Room",
-            "hosted_item": "th_8f_fairy_room",
-            "access_rules": [
-              "merge, $th_small_keys|2",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          },
-          {
-            "name": "(11F) Big Chest",
-            "chest_unopened_img": "images/chest_big_unopened.png",
-            "chest_opened_img": "images/chest_big_opened.png",
-            "hosted_item": "th_11f_big_chest",
-            "access_rules": [
-              "merge, $th_small_keys|2",
-              "[advanced], merge, bombs, trod",
-              "[advanced], fsword, bombs, trod"
-            ]
-          },
-          {
-            "name": "Moldorm",
-            //"capture_item": true,
-            "hosted_item": "th_moldorm",
-            "access_rules": [
-              "merge, $th_small_keys|2, $th_big_key",
-              "[advanced], merge, bombs, trod, $th_big_key",
-              "[advanced], fsword, bombs, trod, $th_big_key"
-            ]
-          },
-          {
-            "name": "Reward",
-            "hosted_item": "th",
-            "access_rules": [
-              "merge, $th_small_keys|2, $th_big_key",
-              "[advanced], merge, bombs, trod, $th_big_key",
-              "[advanced], fsword, bombs, trod, $th_big_key"
+            ],
+            "children": [
+              {
+                "name": "(5F) Red/Blue Switches",
+                "map_locations": [
+                  {
+                    "map": "hera",
+                    "x": 1445,
+                    "y": 604
+                  }
+                ],
+                "sections": [
+                  {
+                    "name": "Chest",
+                    "hosted_item": "th_5f_red_blue_switches"
+                  }
+                ]
+              },
+              {
+                "name": "(6F) Right Mole",
+                "map_locations": [
+                  {
+                    "map": "hera",
+                    "x": 1027,
+                    "y": 528
+                  }
+                ],
+                "sections": [
+                  {
+                    "name": "Chest",
+                    "hosted_item": "th_6f_right_mole"
+                  }
+                ]
+              },
+              {
+                "name": "(6F) Left Mole",
+                "map_locations": [
+                  {
+                    "map": "hera",
+                    "x": 927,
+                    "y": 528
+                  }
+                ],
+                "sections": [
+                  {
+                    "name": "Chest",
+                    "hosted_item": "th_6f_left_mole"
+                  }
+                ]
+              },
+              {
+                "name": "Top",
+                "access_rules": [
+                  "$th_small_keys|2",
+                  "[advanced], bombs, trod"
+                ],
+                "children": [
+                  {
+                    "name": "(7F) Outside (Ledge)",
+                    "map_locations": [
+                      {
+                        "map": "hera",
+                        "x": 636,
+                        "y": 683
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "hosted_item": "th_7f_outside_ledge"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "(8F) Fairy Room",
+                    "map_locations": [
+                      {
+                        "map": "hera",
+                        "x": 145,
+                        "y": 539
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "hosted_item": "th_8f_fairy_room"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "(11F) Big Chest",
+                    "map_locations": [
+                      {
+                        "map": "hera",
+                        "x": 1043,
+                        "y": 170
+                      }
+                    ],
+                    "sections": [
+                      {
+                        "name": "Chest",
+                        "chest_unopened_img": "images/chest_big_unopened.png",
+                        "chest_opened_img": "images/chest_big_opened.png",
+                        "hosted_item": "th_11f_big_chest"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Boss",
+                    "access_rules": [
+                      "$th_big_key"
+                    ],
+                    "children": [
+                      {
+                        "name": "Post Boss",
+                        "access_rules": [
+                          "$moldorm"
+                        ],
+                        "children": [
+                          {
+                            "name": "Moldorm",
+                            "map_locations": [
+                              {
+                                "map": "hera",
+                                "x": 183,
+                                "y": 189
+                              }
+                            ],
+                            "sections": [
+                              {
+                                "name": "Heart Container",
+                                "hosted_item": "th_moldorm"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Tower of Hera Rewards",
+                            "map_locations": [
+                              {
+                                "map": "hera",
+                                "x": 183,
+                                "y": 139,
+                                "size": 36
+                              }
+                            ],
+                            "sections": [
+                              {
+                                "name": "Reward",
+                                "hosted_item": "th"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             ]
           }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tower of Hera",
+    "color": "#FF0000",
+    "chest_unopened_img": "images/checks/chest_small_unopened.png",
+    "chest_opened_img": "images/checks/chest_small_opened.png",
+    "map_locations": [
+      {
+        "map": "hyrule",
+        "x": 1211,
+        "y": 39,
+        "size": 80
+      }
+    ],
+    "access_rules": [
+      "$access_hera",
+      "$glitched_access_hera",
+      "$advanced_access_hera",
+      "$hell_access_hera"
+    ],
+    "sections": [
+      {
+        "name": "(1F) Outside Chest",
+        "hosted_item": "th_1f_outside",
+        "access_rules": [
+          "hammer,merge",
+          "[advanced],bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "(1F) Center Chest",
+        "hosted_item": "th_1f_center",
+        "access_rules": [
+          "hammer,merge",
+          "[advanced],bombs,fsword,hammer"
+        ]
+      },
+      {
+        "name": "(3F) Platform Chest",
+        "hosted_item": "th_3f_platform",
+        "access_rules": [
+          "hammer,merge",
+          "[advanced],bombs,fsword,hammer"
+        ]
+      },
+      {
+        "name": "(5F) Red/Blue Switches Chest",
+        "hosted_item": "th_5f_red_blue_switches",
+        "access_rules": [
+          "$th_small_keys|1,hammer,merge",
+          "[advanced],bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "(6F) Right Mole Chest",
+        "hosted_item": "th_6f_right_mole",
+        "access_rules": [
+          "$th_small_keys|1,hammer,merge",
+          "[advanced],bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "(6F) Left Mole Chest",
+        "hosted_item": "th_6f_left_mole",
+        "access_rules": [
+          "$th_small_keys|1,hammer,merge",
+          "[advanced],bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "(7F) Outside (Ledge) Chest",
+        "hosted_item": "th_7f_outside_ledge",
+        "access_rules": [
+          "$th_small_keys|2,hammer,merge",
+          "[advanced],$th_small_keys|1,bombs,hammer,merge,trod",
+          "[advanced],$th_small_keys|2,bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "(8F) Fairy Room Chest",
+        "hosted_item": "th_8f_fairy_room",
+        "access_rules": [
+          "$th_small_keys|2,hammer,merge",
+          "[advanced],$th_small_keys|1,bombs,hammer,merge,trod",
+          "[advanced],$th_small_keys|2,bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "(11F) Big Chest Chest",
+        "chest_unopened_img": "images/chest_big_unopened.png",
+        "chest_opened_img": "images/chest_big_opened.png",
+        "hosted_item": "th_11f_big_chest",
+        "access_rules": [
+          "$th_small_keys|2,hammer,merge",
+          "[advanced],$th_small_keys|1,bombs,hammer,merge,trod",
+          "[advanced],$th_small_keys|2,bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "Moldorm Heart Container",
+        "hosted_item": "th_moldorm",
+        "access_rules": [
+          "$moldorm,$th_big_key,$th_small_keys|2,hammer,merge",
+          "[advanced],$moldorm,$th_big_key,$th_small_keys|1,bombs,hammer,merge,trod",
+          "[advanced],$moldorm,$th_big_key,$th_small_keys|2,bombs,fsword,hammer,trod"
+        ]
+      },
+      {
+        "name": "Tower of Hera Rewards Reward",
+        "hosted_item": "th",
+        "access_rules": [
+          "$moldorm,$th_big_key,$th_small_keys|2,hammer,merge",
+          "[advanced],$moldorm,$th_big_key,$th_small_keys|1,bombs,hammer,merge,trod",
+          "[advanced],$moldorm,$th_big_key,$th_small_keys|2,bombs,fsword,hammer,trod"
         ]
       }
     ]
