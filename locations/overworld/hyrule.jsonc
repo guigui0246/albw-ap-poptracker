@@ -2335,9 +2335,9 @@
         ]
       },
       {
-        "name": "East Ruins Bomb Cave Upper",
+        "name": "Eastern Ruins Bomb Cave Upper",
         "access_rules": [
-          "^$access_east_ruins_bomb_cave_upper"
+          "^$access_eastern_ruins_bomb_cave_upper"
         ],
         "children": [
           {
