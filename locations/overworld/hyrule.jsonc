@@ -3725,6 +3725,190 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Death Bomb Cave",
+        "access_rules": [
+          "^$access_death_bomb_cave",
+          "{csmc_on,$access_death_mountain_base}"
+        ],
+        "children": [
+          {
+            "name": "Death Mountain Blocked Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 885,
+                "y": 373
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, dm_blocked_cave_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Weather Vane Cave Left",
+        "access_rules": [
+          "^$access_death_wv_cave_left"
+        ],
+        "children": [
+          {
+            "name": "Death Mountain Open Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 985,
+                "y": 373
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Fairy Cave",
+        "access_rules": [
+          "^$access_death_fairy_cave"
+        ],
+        "children": [
+          {
+            "name": "Death Mountain Fairy Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1193,
+                "y": 385
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "hammer",
+                  "bombs"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, dm_fairy_cave_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Donkey Cave Upper",
+        "access_rules": [
+          "^$access_donkey_cave_upper"
+        ],
+        "children": [
+          {
+            "name": "Donkey Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1095,
+                "y": 221
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  "{csmc_on}",
+                  "hammer"
+                ],
+                "item_count": 1
+              },
+              {
+                "name": "Inspect color",
+                "visibility_rules": ["csmc_on, dm_donkey_cave_ungot_state"],
+                "chest_opened_img": "images/display/transparent.png",
+                "chest_unopened_img": "images/display/transparent.png",
+                "access_rules": [
+                  "{}"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Cave Ledge",
+        "access_rules": [
+          "^$access_death_cave_ledge"
+        ],
+        "children": [
+          {
+            "name": "Donkey Cave Ledge",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1025,
+                "y": 251
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Death Mountain West Ledge",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1045,
+                "y": 245,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "chest_unopened_img": "images/items/maiamai.png",
+                "chest_opened_img": "images/items/maiamai_opened.png",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "merge"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

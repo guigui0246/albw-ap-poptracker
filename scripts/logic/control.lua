@@ -558,6 +558,16 @@ function claimDesertPrize()
             or hasAll({ "label_rosso_dp", "rosso" })
 end
 
+function can_get_potions()
+    if not has("bottle") then
+        return AccessibilityLevel.None
+    end
+    return best({
+        access_milk_bar(),
+        access_witch_house(),
+    })
+end
+
 -- Return if we can perform Reverse Desert Palace
 -- 0 = Entrance
 -- 1 = 1F
@@ -1266,6 +1276,7 @@ function warpHyrule()
         access_southern_ruins_pillars(),
         access_moldorm_ledge(),
         access_death_mountain_base(),
+        access_death_west_ledge(),
     })
     free("warpHyrule")
     return result
@@ -2065,7 +2076,18 @@ function access_death_mountain_base()
     if has("crack_dm_west") then
         return AccessibilityLevel.Normal
     end
-    return access_moldorm_cave()
+    if not check("access_death_mountain_base") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_moldorm_cave(),
+        access_death_bomb_cave(),
+        access_death_wv_cave_left(),
+        access_death_fairy_cave(),
+        access_donkey_cave_lower(),
+    })
+    free("access_death_mountain_base")
+    return result
 end
 
 function access_moldorm_ledge()
@@ -2085,7 +2107,7 @@ function access_death_bomb_cave()
     return result
 end
 
-function death_wv_cave_left()
+function access_death_wv_cave_left()
     return access_death_mountain_base()
 end
 
@@ -2103,5 +2125,61 @@ function access_death_fairy_cave()
 end
 
 function access_donkey_cave_lower()
-    return access_death_mountain_base()
+    if not check("access_donkey_cave_lower") then
+        return AccessibilityLevel.None
+    end
+    local donkey_upper_way = AccessibilityLevel.None
+    if has("merge") then
+        donkey_upper_way = AccessibilityLevel.Normal
+    end
+    if has("bluemail") then
+        donkey_upper_way = worst({
+            can_get_potions(),
+            true_for("advanced")
+        })
+    end
+    local result = best({
+        access_death_mountain_base(),
+        worst({ access_donkey_cave_upper(), donkey_upper_way })
+    })
+    free("access_donkey_cave_lower")
+    return result
+end
+
+function access_donkey_cave_upper()
+    if not check("access_donkey_cave_upper") then
+        return AccessibilityLevel.None
+    end
+    local donkey_lower_way = AccessibilityLevel.None
+    if has("merge") then
+        donkey_lower_way = AccessibilityLevel.Normal
+    end
+    if has("bluemail") then
+        donkey_lower_way = worst({
+            can_get_potions(),
+            true_for("advanced")
+        })
+    end
+    local result = best({
+        worst({ access_donkey_cave_lower(), donkey_lower_way }),
+        access_death_west_ledge(),
+    })
+    free("access_donkey_cave_upper")
+    return result
+end
+
+function access_death_west_ledge()
+    return access_donkey_cave_upper()
+end
+
+function access_death_second_floor()
+    if not check("access_death_second_floor") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_donkey_cave_upper(),
+        access_death_west_ledge()
+    })
+    free("access_death_second_floor")
+    return result
 end
