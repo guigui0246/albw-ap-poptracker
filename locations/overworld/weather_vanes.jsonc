@@ -4,33 +4,6 @@
     "children": [
       // Hyrule Weather Vanes ------------------------------------------------------------------------------------------
       {
-        "name": "Tower of Hera Weather Vane",
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1224,
-            "y": 95,
-            "size": 32,
-            "shape": "trapezoid"
-          }
-        ],
-        "sections": [
-          {
-            "name": "Weather Vane",
-            "hosted_item": "wv_hera",
-            "access_rules": [
-              "wv_hera",
-              "power_glove, merge",
-              "$access_dm_west_top",
-              "[glitched], merge",
-              "[advanced], $adv_glitched_access_dm_west_top",
-              "[hell], $hell_access_dm_west_top"
-            ],
-            "visibility_rules": ["wv_shuffle_on"]
-          }
-        ]
-      },
-      {
         "name": "Desert Palace Weather Vane",
         "map_locations": [
           {

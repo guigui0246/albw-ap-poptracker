@@ -1240,7 +1240,9 @@
             ],
             "sections": [
               {
-                "name": "Chest",
+                "name": "Heart Piece",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
                 "access_rules": [
                   "flippers",
                   "[glitched], frod",
@@ -3905,6 +3907,135 @@
                 "access_rules": [
                   "merge"
                 ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Amida Cave Upper",
+        "access_rules": [
+          "^$access_amida_cave_upper"
+        ],
+        "children": [
+          {
+            "name": "Death Mountain West Highest Cave",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 963,
+                "y": 173
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death West Top Ledge",
+        "access_rules": [
+          "^$access_death_top_left_ledge"
+        ],
+        "children": [
+          {
+            "name": "[Ghost] Spectacle Rock",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                // TODO
+                // "x": 720,
+                // "y": 400,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Spectacle Rock",
+                "item_count": 1,
+                "visibility_rules": ["hint_ghosts"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Spectacle Rock",
+        "access_rules": [
+          "^$access_spectacle_rock"
+        ],
+        "children": [
+          {
+            "name": "Spectacle Rock",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1025,
+                "y": 51
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "chest_unopened_img": "images/junk/heart_piece.png",
+                "chest_opened_img": "images/junk/heart_piece_collected.png",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Mountain West Top",
+        "access_rules": [
+          "^$access_dm_west_top"
+        ],
+        "children": [
+          {
+            "name": "Tower of Hera Weather Vane",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1224,
+                "y": 95,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Weather Vane",
+                "hosted_item": "wv_hera",
+                "visibility_rules": ["wv_shuffle_on"]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Tower of Hera",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1184,
+                "y": 120,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Ghost_TowerOfHera",
+                "item_count": 1
               }
             ]
           }

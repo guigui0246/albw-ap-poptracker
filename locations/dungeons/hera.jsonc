@@ -5,10 +5,7 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "$access_hera",
-      "$glitched_access_hera",
-      "$advanced_access_hera",
-      "$hell_access_hera"
+      "^$access_hera"
     ],
     "children": [
       {

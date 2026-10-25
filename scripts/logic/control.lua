@@ -1187,22 +1187,6 @@ function can_hit_hog_1f_switch()
     return false
 end
 
-function access_hera()
-    return true  -- TODO access_dm_west_top
-end
-
-function glitched_access_hera()
-    return true  -- TODO
-end
-
-function advanced_access_hera()
-    return true  -- TODO adv_glitched_access_dm_west_top
-end
-
-function hell_access_hera()
-    return true  -- TODO hell_access_dm_west_top
-end
-
 function ravio_shop()
     if has("ravio_shop_open") then
         return AccessibilityLevel.Normal
@@ -1241,6 +1225,19 @@ local function free(name)
     AntiLoop[name] = nil
 end
 
+function access_hera()
+    if not check("access_hera") then
+        return AccessibilityLevel.None
+    end
+    local dm_west_top_way = AccessibilityLevel.None
+    if has("hammer") then
+        dm_west_top_way = AccessibilityLevel.Normal
+    end
+    local result = worst({ access_dm_west_top(), dm_west_top_way })
+    free("access_hera")
+    return result
+end
+
 -- Use ^$warpHyrule
 -- TODO add the warp logic and the edges:
 -- To DesertPalaceWV: desert
@@ -1277,6 +1274,11 @@ function warpHyrule()
         access_moldorm_ledge(),
         access_death_mountain_base(),
         access_death_west_ledge(),
+        access_death_second_floor(),
+        access_death_third_floor(),
+        access_death_top_left_ledge(),
+        access_spectacle_rock(),
+        access_dm_west_top(),
     })
     free("warpHyrule")
     return result
@@ -2085,6 +2087,7 @@ function access_death_mountain_base()
         access_death_wv_cave_left(),
         access_death_fairy_cave(),
         access_donkey_cave_lower(),
+        access_death_second_floor(),
     })
     free("access_death_mountain_base")
     return result
@@ -2102,11 +2105,19 @@ function access_death_bomb_cave()
     if hasAll({ "bombs", "merge" }) then
         death_mountain_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_death_mountain_base(), death_mountain_way })
+    local death_second_floor_way = AccessibilityLevel.None
+    if has("bombs") and hasAny({ "boomerang", "hookshot" }) then
+        death_second_floor_way = true_for("glitched")
+    end
+    local result = best({
+        worst({ access_death_mountain_base(), death_mountain_way }),
+        worst({ access_death_second_floor(), death_second_floor_way }),
+    })
     free("access_death_bomb_cave")
     return result
 end
 
+-- access_death_weather_vane_cave_left
 function access_death_wv_cave_left()
     return access_death_mountain_base()
 end
@@ -2119,7 +2130,17 @@ function access_death_fairy_cave()
     if has("merge") then
         death_mountain_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_death_mountain_base(), death_mountain_way })
+    local death_second_floor_way = AccessibilityLevel.None
+    if hasAny({ "frod", "nicebombs", "boomerang", "hookshot" }) then
+        death_second_floor_way = true_for("glitched")
+    end
+    if has("bombs") then
+        death_second_floor_way = best({ death_second_floor_way, true_for("hell") })
+    end
+    local result = best({
+        worst({ access_death_mountain_base(), death_mountain_way }),
+        worst({ access_death_second_floor(), death_second_floor_way }),
+    })
     free("access_death_fairy_cave")
     return result
 end
@@ -2163,13 +2184,26 @@ function access_donkey_cave_upper()
     local result = best({
         worst({ access_donkey_cave_lower(), donkey_lower_way }),
         access_death_west_ledge(),
+        access_death_second_floor(),
     })
     free("access_donkey_cave_upper")
     return result
 end
 
 function access_death_west_ledge()
-    return access_donkey_cave_upper()
+    if not check("access_death_west_ledge") then
+        return AccessibilityLevel.None
+    end
+    local death_third_floor_way = AccessibilityLevel.None
+    if hasAny({ "frod", "nicebombs" }) then
+        death_third_floor_way = true_for("glitched")
+    end
+    local result = best({
+        access_donkey_cave_upper(),
+        worst({ access_death_third_floor(), death_third_floor_way })
+    })
+    free("access_death_west_ledge")
+    return result
 end
 
 function access_death_second_floor()
@@ -2178,8 +2212,135 @@ function access_death_second_floor()
     end
     local result = best({
         access_donkey_cave_upper(),
-        access_death_west_ledge()
+        access_death_west_ledge(),
+        access_amida_cave_lower(),
+        access_death_third_floor(),
     })
     free("access_death_second_floor")
+    return result
+end
+
+function access_amida_cave_lower()
+    if not check("access_amida_cave_lower") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_death_second_floor(),
+        access_death_third_floor(),
+        access_amida_cave_upper(),
+    })
+    free("access_amida_cave_lower")
+    return result
+end
+
+function access_death_third_floor()
+    if not check("access_death_third_floor") then
+        return AccessibilityLevel.None
+    end
+    local restult = best({
+        access_amida_cave_lower(),
+        access_amida_cave_upper(),
+        access_death_top_left_ledge(),
+        access_spectacle_rock(),
+        access_dm_west_top(),
+    })
+    free("access_death_third_floor")
+    return restult
+end
+
+function access_amida_cave_upper()
+    if not check("access_amida_cave_upper") then
+        return AccessibilityLevel.None
+    end
+    local amida_lower_way = AccessibilityLevel.None
+    if has("boots") then
+        amida_lower_way = true_for("glitched")
+    end
+    local result = best({
+        worst({ access_amida_cave_lower(), amida_lower_way }),
+        access_death_third_floor(),
+        access_death_top_left_ledge(),
+    })
+    free("access_amida_cave_upper")
+    return result
+end
+
+function access_death_top_left_ledge()
+    if not check("access_death_top_left_ledge") then
+        return AccessibilityLevel.None
+    end
+    local dm_west_top_way = AccessibilityLevel.None
+    if has("merge") then
+        dm_west_top_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        access_amida_cave_upper(),
+        worst({ access_dm_west_top(), dm_west_top_way })
+    })
+    free("access_death_top_left_ledge")
+    return result
+end
+
+function access_spectacle_rock()
+    if not check("access_spectacle_rock") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_death_top_left_ledge(),
+        access_spectacle_rock_cave_left(),
+        access_dm_west_top(),
+    })
+    free("access_spectacle_rock")
+    return result
+end
+
+-- access_death_mountain_west_top
+function access_dm_west_top()
+    if not check("access_dm_west_top") then
+        return AccessibilityLevel.None
+    end
+    local top_left_ledge_way = AccessibilityLevel.None
+    if has("merge") then
+        top_left_ledge_way = AccessibilityLevel.Normal
+    end
+    local warp_way = AccessibilityLevel.None
+    if has("wv_hera") then
+        warp_way = warpHyrule()
+    end
+    local result = best({
+        worst({ access_death_top_left_ledge(), top_left_ledge_way }),
+        access_spectacle_rock_cave_right(),
+        warp_way,
+    })
+    free("access_dm_west_top")
+    return result
+end
+
+function access_spectacle_rock_cave_left()
+    return access_spectacle_rock()
+end
+
+function access_spectacle_rock_cave_right()
+    if not check("access_spectacle_rock_cave_right") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_spectacle_rock_cave_left(),
+        access_dm_west_top(),
+    })
+    free("access_spectacle_rock_cave_right")
+    return result
+end
+
+function access_dm_east_top()
+    if not check("access_dm_east_top") then
+        return AccessibilityLevel.None
+    end
+    local dm_west_top_way = AccessibilityLevel.None
+    if has("hookshot") then
+        dm_west_top_way = AccessibilityLevel.Normal
+    end
+    local result = worst({ access_dm_west_top(), dm_west_top_way })
+    free("access_dm_east_top")
     return result
 end
