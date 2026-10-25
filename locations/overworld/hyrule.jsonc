@@ -2541,7 +2541,7 @@
         ],
         "children": [
           {
-            "name": "Hyrule Graveyard Wall",
+            "name": "[Mai] Hyrule Graveyard Wall",
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
@@ -3887,7 +3887,7 @@
             ]
           },
           {
-            "name": "Death Mountain West Ledge",
+            "name": "[Mai] Death Mountain West Ledge",
             "map_locations": [
               {
                 "map": "hyrule",
