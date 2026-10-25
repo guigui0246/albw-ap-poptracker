@@ -1834,7 +1834,7 @@
         ],
         "children": [
           {
-            "name": "Waterfall Ledge",
+            "name": "[Mai] Waterfall Ledge",
             "chest_unopened_img": "images/items/maiamai.png",
             "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
@@ -3888,6 +3888,8 @@
           },
           {
             "name": "[Mai] Death Mountain West Ledge",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
             "map_locations": [
               {
                 "map": "hyrule",
@@ -3900,8 +3902,6 @@
             "sections": [
               {
                 "name": "Maiamai",
-                "chest_unopened_img": "images/items/maiamai.png",
-                "chest_opened_img": "images/items/maiamai_opened.png",
                 "item_count": 1,
                 "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
