@@ -4,29 +4,6 @@
     "access_rules": ["{merge, quake_on, !$has_crack_map}", "merge, quake_on"],
     "children": [
       {
-        "name": "Hyrule Rosso's Ore Mine Crack",
-        "sections": [
-          {
-            "hosted_item": "crack_rom",
-            "name": "Crack",
-            "access_rules": [
-              "{}",
-              "$access_dm_east_bottom",
-              "[advanced], $adv_glitched_access_dm_east_bottom"
-            ],
-            "visibility_rules": ["cracksanity"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "hyrule",
-            "x": 1478,
-            "y": 360,
-            "shape": "trapezoid"
-          }
-        ]
-      },
-      {
         "name": "Desert Right Pillar Crack",
         "sections": [
           {

@@ -52,6 +52,9 @@ function check_inspectable_states()
             end
         else
             print("Error: Inspectable or Got item not found for code: " .. inspectable)
+            if got then
+                got.CurrentStage = 1
+            end
         end
     end
 end

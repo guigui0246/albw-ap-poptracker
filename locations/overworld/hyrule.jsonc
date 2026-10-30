@@ -4034,7 +4034,288 @@
             ],
             "sections": [
               {
-                "name": "Ghost_TowerOfHera",
+                "name": "Tower Of Hera",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Death Mountain East Top",
+        "access_rules": [
+          "^$access_dm_east_top"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Outside Hookshot Mini-Dungeon",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1910,
+                "y": 168,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "merge"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Floating Island",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1710,
+                "y": 87,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Floating Island",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "[Ghost] Fire Cave",
+            "chest_unopened_img": "images/items/unknown_compass.png",
+            "chest_opened_img": "images/items/compass.png",
+            "access_rules": ["{$access_ghosts}"],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1710,
+                "y": 172,
+                "size": 32,
+                "shape": "trapezoid"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Fire Cave",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hookshot Dungeon",
+        "access_rules": [
+          "^$access_hookshot_dungeon"
+        ],
+        "children": [
+          {
+            "name": "Hookshot Mini-Dungeon",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1878,
+                "y": 168
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "access_rules": [
+                  "merge, hookshot"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fire Cave Center",
+        "access_rules": [
+          "^$access_fire_cave_center"
+        ],
+        "children": [
+          {
+            "name": "Fire Cave Pillar",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1718,
+                "y": 176
+              }
+            ],
+            "sections": [
+              {
+                "name": "Chest",
+                "access_rules": [
+                  "merge, hammer"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bouldering Ledge Bottom",
+        "access_rules": [
+          "^$access_bouldering_ledge_bottom"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Fire Cave Ledge",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1639,
+                "y": 254,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "power_glove"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bouldering Ledge Right",
+        "access_rules": [
+          "^$access_bouldering_ledge_right"
+        ],
+        "children": [
+          {
+            "name": "Bouldering Guy",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1695,
+                "y": 227
+              }
+            ],
+            "sections": [
+              {
+                "name": "Bouldering Guy",
+                "access_rules": [
+                  "milk"
+                ],
+                "hosted_item": "letter_check"
+              },
+              {
+                "name": "Bouldering Guy's Trash",
+                "access_rules": [
+                  "milk"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rosso Ore Mine",
+        "access_rules": [
+          "^$access_rosso_ore_mine"
+        ],
+        "children": [
+          {
+            "name": "[Mai] Rosso's Ore Mine",
+            "chest_unopened_img": "images/items/maiamai.png",
+            "chest_opened_img": "images/items/maiamai_opened.png",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1324,
+                "y": 390,
+                "size": 32,
+                "shape": "diamond"
+              }
+            ],
+            "sections": [
+              {
+                "name": "Maiamai",
+                "item_count": 1,
+                "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
+                "access_rules": [
+                  "power_glove"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hyrule Rosso's Ore Mine Crack",
+            "access_rules": [
+              "$cracks",
+              "{$cracksInspect}"
+            ],
+            "sections": [
+              {
+                "hosted_item": "crack_rom",
+                "name": "Crack",
+                "visibility_rules": ["cracksanity"]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1478,
+                "y": 360,
+                "shape": "trapezoid"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Floating Island Hyrule",
+        "access_rules": [
+          "^$access_floating_island_hyrule"
+        ],
+        "children": [
+          {
+            "name": "Floating Island",
+            "map_locations": [
+              {
+                "map": "hyrule",
+                "x": 1625,
+                "y": 79
+              }
+            ],
+            "sections": [
+              {
+                "name": "Hyrule Floating Island Crack",
+                "hosted_item": "crack_hyfi",
+                "access_rules": [
+                  "$cracks",
+                  "{$cracksInspect}"
+                ],
+                "visibility_rules": ["cracksanity"]
+              },
+              {
+                "name": "Floating Island",
                 "item_count": 1
               }
             ]

@@ -1279,6 +1279,11 @@ function warpHyrule()
         access_death_top_left_ledge(),
         access_spectacle_rock(),
         access_dm_west_top(),
+        access_dm_east_top(),
+        access_bouldering_ledge_left(),
+        access_bouldering_ledge_bottom(),
+        access_bouldering_ledge_right(),
+        access_rosso_ore_mine(),
     })
     free("warpHyrule")
     return result
@@ -2307,10 +2312,15 @@ function access_dm_west_top()
     if has("wv_hera") then
         warp_way = warpHyrule()
     end
+    local dm_east_top_way = AccessibilityLevel.None
+    if has("hookshot") then
+        dm_east_top_way = AccessibilityLevel.Normal
+    end
     local result = best({
         worst({ access_death_top_left_ledge(), top_left_ledge_way }),
         access_spectacle_rock_cave_right(),
         warp_way,
+        worst({ access_dm_east_top(), dm_east_top_way })
     })
     free("access_dm_west_top")
     return result
@@ -2340,7 +2350,157 @@ function access_dm_east_top()
     if has("hookshot") then
         dm_west_top_way = AccessibilityLevel.Normal
     end
-    local result = worst({ access_dm_west_top(), dm_west_top_way })
+    local result = best({
+        worst({ access_dm_west_top(), dm_west_top_way }),
+        access_hookshot_dungeon(),
+        access_fire_cave_top(),
+    })
     free("access_dm_east_top")
     return result
+end
+
+function access_fire_cave_top()
+    if not check("access_fire_cave_top") then
+        return AccessibilityLevel.None
+    end
+    local result = best({
+        access_dm_east_top(),
+        access_fire_cave_bottom(),
+    })
+    free("access_fire_cave_top")
+    return result
+end
+
+function access_hookshot_dungeon()
+    return access_dm_east_top()
+end
+
+function access_bouldering_ledge_right()
+    if not check("access_bouldering_ledge_right") then
+        return AccessibilityLevel.None
+    end
+    local dm_east_top_way = AccessibilityLevel.None
+    if hasAll({ "trod", "boots" }) then
+        dm_east_top_way = true_for("glitched")
+    end
+    local bouldering_ledge_way = AccessibilityLevel.None
+    if hasAll({ "merge" }) then
+        bouldering_ledge_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_dm_east_top(), dm_east_top_way }),
+        worst({ access_bouldering_ledge_left(), bouldering_ledge_way }),
+    })
+    free("access_bouldering_ledge_right")
+    return result
+end
+
+function access_rosso_ore_mine()
+    if has("crack_rom") then
+        return AccessibilityLevel.Normal
+    end
+    if not check("access_rosso_ore_mine") then
+        return AccessibilityLevel.None
+    end
+    local dm_east_top_way = AccessibilityLevel.None
+    if hasAll({ "trod", "boots" }) then
+        dm_east_top_way = true_for("glitched")
+    end
+    local bouldering_ledge_way = AccessibilityLevel.None
+    if hasAll({ "nicebombs" }) then
+        bouldering_ledge_way = true_for("glitched")
+    end
+    local result = best({
+        worst({ access_dm_east_top(), dm_east_top_way }),
+        access_fire_cave_bottom(),
+        worst({ access_bouldering_ledge_left(), bouldering_ledge_way }),
+        worst({ access_bouldering_ledge_right(), bouldering_ledge_way }),
+    })
+    free("access_rosso_ore_mine")
+    return result
+end
+
+function access_fire_cave_center()
+    if not check("access_fire_cave_center") then
+        return AccessibilityLevel.None
+    end
+    local fire_cave_middle_way = AccessibilityLevel.None
+    if has("merge") then
+        fire_cave_middle_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        access_fire_cave_top(),
+        worst({ access_fire_cave_middle(), fire_cave_middle_way }),
+    })
+    free("access_fire_cave_center")
+    return result
+end
+
+function access_fire_cave_middle()
+    if not check("access_fire_cave_middle") then
+        return AccessibilityLevel.None
+    end
+    local fire_cave_center_way = AccessibilityLevel.None
+    if has("merge") then
+        fire_cave_center_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_fire_cave_center(), fire_cave_center_way }),
+        access_bouldering_ledge_left(),
+        access_bouldering_ledge_bottom(),
+    })
+    free("access_fire_cave_middle")
+    return result
+end
+
+function access_fire_cave_bottom()
+    if not check("access_fire_cave_bottom") then
+        return AccessibilityLevel.None
+    end
+    local fire_cave_center_way = AccessibilityLevel.None
+    if has("merge") then
+        fire_cave_center_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ access_fire_cave_center(), fire_cave_center_way }),
+        access_rosso_ore_mine(),
+    })
+    free("access_fire_cave_bottom")
+    return result
+end
+
+function access_bouldering_ledge_left()
+    if not check("access_bouldering_ledge_left") then
+        return AccessibilityLevel.None
+    end
+    local bouldering_ledge_way = AccessibilityLevel.None
+    if has("merge") then
+        bouldering_ledge_way = AccessibilityLevel.Normal
+    end
+    local results = best({
+        access_fire_cave_middle(),
+        worst({ access_bouldering_ledge_right(), bouldering_ledge_way }),
+    })
+    free("access_bouldering_ledge_left")
+    return results
+end
+
+function access_bouldering_ledge_bottom()
+    if not check("access_bouldering_ledge_bottom") then
+        return AccessibilityLevel.None
+    end
+    local results = best({
+        access_fire_cave_middle(),
+        access_bouldering_ledge_left(),
+        access_bouldering_ledge_right(),
+    })
+    free("access_bouldering_ledge_bottom")
+    return results
+end
+
+function access_floating_island_hyrule()
+    if has("crack_hyfi") then
+        return AccessibilityLevel.Normal
+    end
+    return AccessibilityLevel.None
 end
