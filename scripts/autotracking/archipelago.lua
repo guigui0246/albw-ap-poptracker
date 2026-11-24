@@ -1052,6 +1052,9 @@ function syncDisplayCallback(code)
                 return
             end
         end
+    else
+        print(string.format("syncDisplay: invalid code type %s for code %s", type(code), code))
+        return
     end
     for _, callback in ipairs(ON_SYNC) do
         callback(code)

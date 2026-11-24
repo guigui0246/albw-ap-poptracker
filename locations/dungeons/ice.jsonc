@@ -5,9 +5,7 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "frod, $access_ldm_east_top",
-      "[glitched], frod, $glitched_access_ldm_east_top",
-      "[hell], frod, $hell_access_ldm_east_top"
+      "^$access_ice_ruins"
     ],
     "children": [
       {
@@ -22,59 +20,10 @@
         "sections": [
           {
             "name": "Chest",
-            "hosted_item": "ir_1f_hidden_chest"
-          }
-        ]
-      },
-      {
-        "name": "(B1) Narrow Ledge",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 663,
-            "y": 167
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "access_rules": ["$ir_small_keys|1", "[advanced], boots, trod"],
-            //"capture_item": true,
-            "hosted_item": "ir_b1_narrow_ledge"
-          }
-        ]
-      },
-      {
-        "name": "(B1) East Chest",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 663,
-            "y": 250
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "access_rules": ["$ir_small_keys|1", "[advanced], boots, trod"],
-            "hosted_item": "ir_b1_east_chest"
-          }
-        ]
-      },
-      {
-        "name": "(B1) Upper Chest",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 593,
-            "y": 230
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "access_rules": ["$ir_small_keys|2", "[advanced], boots, trod"],
-            "hosted_item": "ir_b1_upper_chest"
+            "hosted_item": "ir_1f_hidden_chest",
+            "access_rules": [
+              "$ice_compass"
+            ]
           }
         ]
       },
@@ -90,41 +39,7 @@
         "sections": [
           {
             "name": "Chest",
-            //"capture_item": true,
             "hosted_item": "ir_b2_ice_pillar"
-          }
-        ]
-      },
-      {
-        "name": "(B2) Long Merge Chest",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 972,
-            "y": 134
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "inspectable_sequence_break": true,
-            "hosted_item": "ir_b2_long_merge_chest",
-            "access_rules": [
-              "{csmc_on, $ir_small_keys|1}",
-              "$ir_small_keys|2, $switch, scroll",
-              "[advanced], boots"
-            ]
-          },
-          {
-            "name": "Inspect color",
-            "visibility_rules": ["csmc_on, ir_b2_long_merge_chest_ungot_state"],
-            "chest_opened_img": "images/display/transparent.png",
-            "chest_unopened_img": "images/display/transparent.png",
-            "access_rules": [
-              "{$ir_small_keys|1}",
-              "$ir_small_keys|2, $switch, scroll",
-              "[advanced], boots"
-            ]
           }
         ]
       },
@@ -161,6 +76,117 @@
         ]
       },
       {
+        "name": "(B5) Big Chest",
+        "map_locations": [
+          {
+            "map": "ice",
+            "x": 574,
+            "y": 644
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ir_b5_big_chest"
+          }
+        ]
+      },
+      {
+        "name": "(B1) Narrow Ledge",
+        "map_locations": [
+          {
+            "map": "ice",
+            "x": 663,
+            "y": 167
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "access_rules": [
+              "merge, $ir_small_keys|1",
+              "[advanced], merge, boots, trod"
+            ],
+            "hosted_item": "ir_b1_narrow_ledge"
+          }
+        ]
+      },
+      {
+        "name": "(B1) East Chest",
+        "map_locations": [
+          {
+            "map": "ice",
+            "x": 663,
+            "y": 250
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "access_rules": [
+              "$ir_small_keys|1",
+              "[advanced], boots, trod"
+            ],
+            "hosted_item": "ir_b1_east_chest"
+          }
+        ]
+      },
+      {
+        "name": "(B1) Upper Chest",
+        "map_locations": [
+          {
+            "map": "ice",
+            "x": 593,
+            "y": 230
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "access_rules": [
+              "$ir_small_keys|2",
+              "[advanced], boots, trod"
+            ],
+            "hosted_item": "ir_b1_upper_chest"
+          }
+        ]
+      },
+      {
+        "name": "(B2) Long Merge Chest",
+        "map_locations": [
+          {
+            "map": "ice",
+            "x": 972,
+            "y": 134
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "inspectable_sequence_break": true,
+            "hosted_item": "ir_b2_long_merge_chest",
+            "access_rules": [
+              "{csmc_on, $ir_small_keys|1}",
+              "$ir_small_keys|2, merge, $switch, scroll",
+              "[advanced], boots"
+            ]
+          },
+          {
+            "name": "Inspect color",
+            "visibility_rules": [
+              "csmc_on, ir_b2_long_merge_chest_ungot_state"
+            ],
+            "chest_opened_img": "images/display/transparent.png",
+            "chest_unopened_img": "images/display/transparent.png",
+            "access_rules": [
+              "{$ir_small_keys|1}",
+              "$ir_small_keys|2, merge, $switch, scroll",
+              "[advanced], boots"
+            ]
+          }
+        ]
+      },
+      {
         "name": "(B3) Big Chest (Puzzle)",
         "map_locations": [
           {
@@ -173,7 +199,10 @@
           {
             "name": "Chest",
             "hosted_item": "ir_b3_big_chest_puzzle",
-            "access_rules": ["$ir_small_keys|2, $switch", "[advanced], boots"]
+            "access_rules": [
+              "$ir_small_keys|2, merge, $switch",
+              "[advanced], boots"
+            ]
           }
         ]
       },
@@ -191,13 +220,13 @@
             "name": "Chest",
             "hosted_item": "ir_b4_switches",
             "access_rules": [
-              "$ir_small_keys|2, progression_enemies_on",
-              "$ir_small_keys|2, bombs",
-              "$ir_small_keys|2, fsword, greatspin",
-              "$ir_small_keys|2, niceirod",
+              "$ir_small_keys|2, merge, progression_enemies_on",
+              "$ir_small_keys|2, merge, bombs",
+              "$ir_small_keys|2, merge, $canGreatSpin",
+              "$ir_small_keys|2, merge, niceirod",
               "[advanced], boots, progression_enemies_on",
               "[advanced], boots, bombs",
-              "[advanced], boots, fsword, greatspin",
+              "[advanced], boots, $canGreatSpin",
               "[advanced], boots, niceirod"
             ]
           }
@@ -215,8 +244,31 @@
         "sections": [
           {
             "name": "Chest",
-            "access_rules": ["$ir_small_keys|2", "[advanced], boots"],
+            "access_rules": [
+              "$ir_small_keys|2, merge",
+              "[advanced], boots"
+            ],
             "hosted_item": "ir_b4_southwest_chest_fall"
+          }
+        ]
+      },
+      {
+        "name": "(B4) Narrow Platform",
+        "map_locations": [
+          {
+            "map": "ice",
+            "x": 170,
+            "y": 700
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "access_rules": [
+              "$ir_small_keys|2, merge",
+              "[advanced], boots"
+            ],
+            "hosted_item": "ir_b4_narrow_platform"
           }
         ]
       },
@@ -234,7 +286,7 @@
             "name": "Chest",
             "access_rules": [
               "$ir_small_keys|3",
-              "$ir_small_keys|2, $switch",
+              "$ir_small_keys|2, $switch, merge",
               "[advanced], boots"
             ],
             "hosted_item": "ir_b4_southeast_chest_fall"
@@ -242,192 +294,201 @@
         ]
       },
       {
-        "name": "(B4) Narrow Platform",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 170,
-            "y": 700
-          }
+        "name": "Ice Ruins Boss",
+        "access_rules": [
+          "$ir_small_keys|3, $ir_big_key, merge",
+          "[advanced], boots"
         ],
-        "sections": [
+        "children": [
           {
-            "name": "Chest",
-            "access_rules": ["$ir_small_keys|2", "[advanced], boots"],
-            "hosted_item": "ir_b4_narrow_platform"
-          }
-        ]
-      },
-      {
-        "name": "(B5) Big Chest",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 574,
-            "y": 644
-          }
-        ],
-        "sections": [
-          {
-            "name": "Chest",
-            "hosted_item": "ir_b5_big_chest"
-          }
-        ]
-      },
-      {
-        "name": "Dharkstare",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 971,
-            "y": 573
-          }
-        ],
-        "sections": [
-          {
-            "name": "Heart Container",
-            //"capture_item": true,
+            "name": "Ice Ruins Post Boss",
             "access_rules": [
-              "$ir_small_keys|3, $ir_big_key",
-              "[advanced], boots"
+              "$dharkstare"
             ],
-            "hosted_item": "ir_dharkstare"
-          }
-        ]
-      },
-      {
-        "name": "Ice Ruins Rewards",
-        "map_locations": [
-          {
-            "map": "ice",
-            "x": 971,
-            "y": 528,
-            "size": 24
-          }
-        ],
-        "sections": [
-          {
-            "name": "Reward",
-            "hosted_item": "ir",
-            "access_rules": [
-              "$ir_small_keys|3, $ir_big_key",
-              "[advanced], boots"
+            "children": [
+              {
+                "name": "Dharkstare",
+                "map_locations": [
+                  {
+                    "map": "ice",
+                    "x": 971,
+                    "y": 573
+                  }
+                ],
+                "sections": [
+                  {
+                    "name": "Heart Container",
+                    "hosted_item": "ir_dharkstare"
+                  }
+                ]
+              },
+              {
+                "name": "Ice Ruins Rewards",
+                "map_locations": [
+                  {
+                    "map": "ice",
+                    "x": 971,
+                    "y": 528,
+                    "size": 24
+                  }
+                ],
+                "sections": [
+                  {
+                    "name": "Reward",
+                    "hosted_item": "ir"
+                  }
+                ]
+              }
             ]
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Ice Ruins",
+    "map_locations": [
+      {
+        "map": "lorule",
+        "x": 1880,
+        "y": 156,
+        "size": 80
+      }
+    ],
+    "access_rules": [
+      "^$access_ldm_east_top"
+    ],
+    "sections": [
+      {
+        "name": "(1F) Hidden Chest Chest",
+        "hosted_item": "ir_1f_hidden_chest",
+        "access_rules": [
+          "$ice_compass,^$access_ice_ruins"
+        ]
       },
       {
-        "name": "Ice Ruins",
-        "map_locations": [
-          {
-            "map": "lorule",
-            "x": 1880,
-            "y": 156,
-            "size": 80
-          }
+        "name": "(B2) Ice Pillar Chest",
+        "hosted_item": "ir_b2_ice_pillar",
+        "access_rules": [
+          "^$access_ice_ruins"
+        ]
+      },
+      {
+        "name": "(B3) Grate Chest (Left) Chest",
+        "hosted_item": "ir_b3_grate_chest_left",
+        "access_rules": [
+          "^$access_ice_ruins"
+        ]
+      },
+      {
+        "name": "(B3) Grate Chest (Right) Chest",
+        "hosted_item": "ir_b3_grate_chest_right",
+        "access_rules": [
+          "^$access_ice_ruins"
+        ]
+      },
+      {
+        "name": "(B5) Big Chest Chest",
+        "hosted_item": "ir_b5_big_chest",
+        "access_rules": [
+          "^$access_ice_ruins"
+        ]
+      },
+      {
+        "name": "(B1) Narrow Ledge Chest",
+        "access_rules": [
+          "$ir_small_keys|1,^$access_ice_ruins,merge",
+          "[advanced],^$access_ice_ruins,boots,merge,trod"
         ],
-        "sections": [
-          {
-            "name": "(1F) Hidden Chest",
-            "hosted_item": "ir_1f_hidden_chest"
-          },
-          {
-            "name": "(B2) Ice Pillar",
-            //"capture_item": true,
-            "hosted_item": "ir_b2_ice_pillar"
-          },
-          {
-            "name": "(B3) Grate Chest (Left)",
-            "hosted_item": "ir_b3_grate_chest_left"
-          },
-          {
-            "name": "(B3) Grate Chest (Right)",
-            "hosted_item": "ir_b3_grate_chest_right"
-          },
-          {
-            "name": "(B5) Big Chest",
-            "hosted_item": "ir_b5_big_chest"
-          },
-          {
-            "name": "(B1) East Chest",
-            "access_rules": ["$ir_small_keys|1", "[advanced], boots, trod"],
-            "hosted_item": "ir_b1_east_chest"
-          },
-          {
-            "name": "(B1) Narrow Ledge",
-            "access_rules": ["$ir_small_keys|1", "[advanced], boots, trod"],
-            //"capture_item": true,
-            "hosted_item": "ir_b1_narrow_ledge"
-          },
-          {
-            "name": "(B1) Upper Chest",
-            "access_rules": ["$ir_small_keys|2", "[advanced], boots, trod"],
-            "hosted_item": "ir_b1_upper_chest"
-          },
-          {
-            "name": "(B4) Switches",
-            "hosted_item": "ir_b4_switches",
-            "access_rules": [
-              "$ir_small_keys|2, progression_enemies_on",
-              "$ir_small_keys|2, bombs",
-              "$ir_small_keys|2, fsword, greatspin",
-              "$ir_small_keys|2, niceirod",
-              "[advanced], boots, progression_enemies_on",
-              "[advanced], boots, bombs",
-              "[advanced], boots, fsword, greatspin",
-              "[advanced], boots, niceirod"
-            ]
-          },
-          {
-            "name": "(B4) Southwest Chest (Fall)",
-            "access_rules": ["$ir_small_keys|2", "[advanced], boots"],
-            "hosted_item": "ir_b4_southwest_chest_fall"
-          },
-          {
-            "name": "(B4) Narrow Platform",
-            "access_rules": ["$ir_small_keys|2", "[advanced], boots"],
-            "hosted_item": "ir_b4_narrow_platform"
-          },
-          {
-            "name": "(B2) Long Merge Chest",
-            "hosted_item": "ir_b2_long_merge_chest",
-            "access_rules": [
-              "{csmc_on, $ir_small_keys|1}",
-              "$ir_small_keys|2, $switch, scroll",
-              "[advanced], boots"
-            ]
-          },
-          {
-            "name": "(B3) Big Chest (Puzzle)",
-            "hosted_item": "ir_b3_big_chest_puzzle",
-            "access_rules": ["$ir_small_keys|2, $switch", "[advanced], boots"]
-          },
-          {
-            "name": "(B4) Southeast Chest (Fall)",
-            "access_rules": [
-              "$ir_small_keys|3",
-              "$ir_small_keys|2, $switch",
-              "[advanced], boots"
-            ],
-            "hosted_item": "ir_b4_southeast_chest_fall"
-          },
-          {
-            "name": "Dharkstare",
-            //"capture_item": true,
-            "access_rules": [
-              "$ir_small_keys|3, $ir_big_key",
-              "[advanced], boots"
-            ],
-            "hosted_item": "ir_dharkstare"
-          },
-          {
-            "name": "Reward",
-            "hosted_item": "ir",
-            "access_rules": [
-              "$ir_small_keys|3, $ir_big_key",
-              "[advanced], boots"
-            ]
-          }
+        "hosted_item": "ir_b1_narrow_ledge"
+      },
+      {
+        "name": "(B1) East Chest Chest",
+        "access_rules": [
+          "$ir_small_keys|1,^$access_ice_ruins",
+          "[advanced],^$access_ice_ruins,boots,trod"
+        ],
+        "hosted_item": "ir_b1_east_chest"
+      },
+      {
+        "name": "(B1) Upper Chest Chest",
+        "access_rules": [
+          "$ir_small_keys|2,^$access_ice_ruins",
+          "[advanced],^$access_ice_ruins,boots,trod"
+        ],
+        "hosted_item": "ir_b1_upper_chest"
+      },
+      {
+        "name": "(B2) Long Merge Chest Chest",
+        "inspectable_sequence_break": true,
+        "hosted_item": "ir_b2_long_merge_chest",
+        "access_rules": [
+          "$ir_small_keys|2,$switch,^$access_ice_ruins,merge,scroll",
+          "{$ir_small_keys|1,^$access_ice_ruins,csmc_on}",
+          "[advanced],^$access_ice_ruins,boots"
+        ]
+      },
+      {
+        "name": "(B3) Big Chest (Puzzle) Chest",
+        "hosted_item": "ir_b3_big_chest_puzzle",
+        "access_rules": [
+          "$ir_small_keys|2,$switch,^$access_ice_ruins,merge",
+          "[advanced],^$access_ice_ruins,boots"
+        ]
+      },
+      {
+        "name": "(B4) Switches Chest",
+        "hosted_item": "ir_b4_switches",
+        "access_rules": [
+          "$canGreatSpin,$ir_small_keys|2,^$access_ice_ruins,merge",
+          "$ir_small_keys|2,^$access_ice_ruins,bombs,merge",
+          "$ir_small_keys|2,^$access_ice_ruins,merge,niceirod",
+          "$ir_small_keys|2,^$access_ice_ruins,merge,progression_enemies_on",
+          "[advanced],$canGreatSpin,^$access_ice_ruins,boots",
+          "[advanced],^$access_ice_ruins,bombs,boots",
+          "[advanced],^$access_ice_ruins,boots,niceirod",
+          "[advanced],^$access_ice_ruins,boots,progression_enemies_on"
+        ]
+      },
+      {
+        "name": "(B4) Southwest Chest (Fall) Chest",
+        "access_rules": [
+          "$ir_small_keys|2,^$access_ice_ruins,merge",
+          "[advanced],^$access_ice_ruins,boots"
+        ],
+        "hosted_item": "ir_b4_southwest_chest_fall"
+      },
+      {
+        "name": "(B4) Narrow Platform Chest",
+        "access_rules": [
+          "$ir_small_keys|2,^$access_ice_ruins,merge",
+          "[advanced],^$access_ice_ruins,boots"
+        ],
+        "hosted_item": "ir_b4_narrow_platform"
+      },
+      {
+        "name": "(B4) Southeast Chest (Fall) Chest",
+        "access_rules": [
+          "$ir_small_keys|2,$switch,^$access_ice_ruins,merge",
+          "$ir_small_keys|3,^$access_ice_ruins",
+          "[advanced],^$access_ice_ruins,boots"
+        ],
+        "hosted_item": "ir_b4_southeast_chest_fall"
+      },
+      {
+        "name": "Dharkstare Heart Container",
+        "hosted_item": "ir_dharkstare",
+        "access_rules": [
+          "$dharkstare,$ir_big_key,$ir_small_keys|3,^$access_ice_ruins,merge",
+          "[advanced],$dharkstare,^$access_ice_ruins,boots"
+        ]
+      },
+      {
+        "name": "Ice Ruins Rewards Reward",
+        "hosted_item": "ir",
+        "access_rules": [
+          "$dharkstare,$ir_big_key,$ir_small_keys|3,^$access_ice_ruins,merge",
+          "[advanced],$dharkstare,^$access_ice_ruins,boots"
         ]
       }
     ]

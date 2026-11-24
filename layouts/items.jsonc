@@ -28,7 +28,7 @@
         "hint_glasses"
       ],
       ["bell", "maiamai", "ore", "bottle", "trade", "foul", "scoot"],
-      ["quake", "great_spin", "", "", "", "", "bow_of_light"]
+      ["quake", "great_spin", "", "", "", "", "bowoflight"]
     ]
   },
   // Used in horizontal full map tracker
@@ -61,7 +61,7 @@
         "hint_glasses"
       ],
       ["bell", "maiamai", "ore", "bottle", "trade", "foul", "scoot"],
-      ["quake", "great_spin", "", "", "", "", "bow_of_light"]
+      ["quake", "great_spin", "", "", "", "", "bowoflight"]
     ]
   },
   // Used in vertical compact map tracker
@@ -94,7 +94,7 @@
         "hint_glasses"
       ],
       ["bell", "maiamai", "ore", "bottle", "trade", "foul", "scoot"],
-      ["quake", "great_spin", "", "", "", "", "bow_of_light"]
+      ["quake", "great_spin", "", "", "", "", "bowoflight"]
     ]
   }
 }
