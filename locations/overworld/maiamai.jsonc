@@ -129,8 +129,7 @@
                 "item_count": 1,
                 "visibility_rules": ["maiamai_mayhem_on", "$forceShowMaiamais"],
                 "access_rules": [
-                  "$access_desert_palace, srod",
-                  "[glitched], $glitched_access_desert_palace, srod"
+                  "^$access_desert_palace, srod"
                 ]
               }
             ]

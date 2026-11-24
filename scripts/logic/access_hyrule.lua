@@ -6,22 +6,3 @@ function access_desert()
     if hasAll({ "cracksanity", "merge" , "crack_desert_palace", "scoot" }) then return true end
     return false
 end
-
--- Desert Palace
-function access_desert_palace()
-    if weather_vane("wv_desert") and has("srod") then return true end
-    if notCracksanity() and hasAll({ "merge", "quake_on", "srod" }) then return true end
-    if hasAll({ "cracksanity", "crack_desert_sw", "srod" }) then return true end
-    if hasAll({ "cracksanity", "crack_desert_palace" }) then return true end
-    if access_desert() and hasAll({ "srod", "scroll" }) then return true end
-
-    return false
-end
-
--- [Glitched] Desert Palace
-function glitched_access_desert_palace()
-    if access_desert_palace() then return true end
-    if has("srod") and access_desert() then return true end
-
-    return false
-end

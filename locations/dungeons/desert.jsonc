@@ -5,8 +5,7 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "$access_desert_palace",
-      "[glitched], $glitched_access_desert_palace",
+      "^$access_desert_palace",
       "^$reverseDP"
     ],
     "children": [
@@ -428,8 +427,7 @@
     "chest_unopened_img": "images/checks/chest_small_unopened.png",
     "chest_opened_img": "images/checks/chest_small_opened.png",
     "access_rules": [
-      "$access_desert_palace",
-      "[glitched], $glitched_access_desert_palace",
+      "^$access_desert_palace",
       "^$reverseDP"
     ],
     "sections": [

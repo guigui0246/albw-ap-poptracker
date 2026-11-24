@@ -121,10 +121,8 @@
             "name": "Crack",
             "access_rules": [
               "{!$has_crack_map}",
-              "$access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
-              "$access_desert_palace, [progression_enemies_off], [p_bombs], [srod], [titansmitt], [$switch], [$attack]",
-              "[glitched], $glitched_access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
-              "[glitched], $glitched_access_desert_palace, [progression_enemies_off], [p_bombs], [srod], [titansmitt], [$switch], [$attack]"
+              "^$access_desert_palace, [progression_enemies_on], [srod], [titansmitt], [$switch], [$attack]",
+              "^$access_desert_palace, [progression_enemies_off], [p_bombs], [srod], [titansmitt], [$switch], [$attack]"
             ],
             "visibility_rules": []
           }
