@@ -990,6 +990,12 @@ function eastern_compass()
     -- return has("ep_compass")
 end
 
+-- Always true in the Archipelago version
+function ice_compass()
+    return true
+    -- return has("ir_compass")
+end
+
 function access_house_of_gales()
     if has("trod") then
         return access_house_of_gales_island()
@@ -2505,10 +2511,28 @@ function access_dark_ruins()
     return access_dark_palace()
 end
 
-function access_ice_ruins()
-    return AccessibilityLevel.None
+function access_ice_ruins_foyer()
+    if not check("access_ice_ruins_foyer") then
+        return AccessibilityLevel.None
+    end
+    local center_way = AccessibilityLevel.None
+    if has("frod") then
+        center_way = AccessibilityLevel.Normal
+    end
+    local result = best({
+        worst({ center_way, access_ice_ruins() })
+    })
+    free("access_ice_ruins_foyer")
+    return result
 end
 
 function access_ldm_east_top()
-    return access_ice_ruins()
+    return access_ice_ruins_foyer()
+end
+
+function access_ice_ruins()
+    if not has("frod") then
+        return AccessibilityLevel.None
+    end
+    return access_ice_ruins_foyer()
 end
